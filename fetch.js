@@ -1,1 +1,1 @@
-fetch('material-style.min.css').then((response) => response.text().then(text => chrome.devtools.panels.applyStyleSheet(text)));
+fetch('material-style.css').then((response) => response.text().then(text => chrome.devtools.panels.applyStyleSheet(text)));

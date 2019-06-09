@@ -59,13 +59,13 @@
   .cm-hr {color: #999 !important;}
   .cm-link{color:$link-color !important;}
 
-  .CodeMirror{color:#89DDFF !important; background-color: $main-color !important;}
-  .CodeMirror-gutter-performance{background-color:$main-color !important;}
-  .CodeMirror-gutter-coverage{background-color:$main-color !important;}
-  .CodeMirror-gutters{background-color:$main-color !important;}
-  .cm-execution-line-tail .cm-inline-breakpoint{background-color:$main-color !important;}
-  .cm-inline-breakpoint.cm-inline-conditional{background-color:$accent-color !important;}
-  .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler{background-color:$main-color !important;}
+  .CodeMirror{color:#89DDFF !important; background-color: $background !important;}
+  .CodeMirror-gutter-performance{background-color: $background !important;}
+  .CodeMirror-gutter-coverage{background-color: $background !important;}
+  .CodeMirror-gutters{background-color: $background !important;}
+  .cm-execution-line-tail .cm-inline-breakpoint{background-color: $background !important;}
+  .cm-inline-breakpoint.cm-inline-conditional{background-color: $accent2 !important;}
+  .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler{background-color: $background !important;}
   .CodeMirror .text-editor-value-decoration{
     background-color:#425B67 !important;
     color:$text-color !important;
@@ -77,15 +77,15 @@
     filter: hue-rotate(-240deg) !important;
   }
   .cm-execution-line {
-    background-color: rgba(darken($accent-color, 10%), 0.6) !important;;
+    background-color: rgba(darken($accent2, 10%), 0.6) !important;;
   }
   .cm-execution-line-outline {
-    outline: rgba(darken($accent-color, 5%), 0.6) !important;
+    outline: rgba(darken($accent2, 5%), 0.6) !important;
   }
   .cm-execution-line-tail {
-    background-color: rgba(darken($accent-color, 2%), 0.6) !important;;
+    background-color: rgba(darken($accent2, 2%), 0.6) !important;;
   }
   .cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before {
-    background-color: rgba(darken($accent-color, 10%), 0.4) !important;
+    background-color: rgba(darken($accent2, 10%), 0.4) !important;
   }
 }

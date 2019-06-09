@@ -28,5 +28,5 @@ gulp.task('debugStyles', () => {
 });
 
 gulp.task('watchStyles', () => {
-    gulp.watch(paths.styles.src, ['debugStyles']);
+    gulp.watch(paths.styles.src, gulp.parallel('debugStyles'));
 });

@@ -90,6 +90,12 @@
   .tree-outline li.overloaded.filter-match {
     background-color: rgba(172,228,255, 0.1) !important;
   }
+  .tree-outline li.odd-row {
+    background: $background !important;
+  }
+  .tree-outline li:hover {
+    background: $selBg !important;
+  }
 
   .node-label-name{color:desaturate( $tag-name-color, 10% ) !important;}
   .node-label-class, .node-label-pseudo{color:desaturate( $attribute-name-color, 10% ) !important;}
