@@ -1,20 +1,66 @@
 :host-context(.-theme-with-dark-background) {
-  .value.object-value-node:hover{background-color:rgba(38, 103, 199, 0.1) !important;}
-  .object-value-function-prefix, .object-value-boolean{color: lighten($keyword-color, 5%) !important;}
-  .object-value-function.linkified:hover{background-color:rgba(255, 255, 255, 0.1) !important;}
-  .object-value-number{color:lighten($number-color, 5%) !important;}
-  .object-value-bigint{color:rgb(158, 255, 158) !important;}
-  .object-value-string, .object-value-regexp, .object-value-symbol{color:lighten($string-color, 5%) !important;}
-  .object-value-node{color:rgb(189, 198, 207) !important;}
-  .object-value-null, .object-value-undefined{color:rgb(127, 127, 127) !important;}
-  .object-properties-section .object-description{color:rgb(127, 127, 127) !important;}
-  .name{color: lighten(#EEFFE3, 5%) !important;}
-  .object-properties-preview .name{color:rgb(169, 169, 169) !important;}
+  .value.object-value-node:hover {
+    background-color: rgba(38, 103, 199, 0.1) !important;
+  }
+
+  .object-value-function-prefix, .object-value-boolean {
+    color: $keyword-color !important;
+  }
+
+  .object-value-function.linkified:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .object-value-number {
+    color: $number-color !important;
+  }
+
+  .object-value-bigint {
+    color: $string-color !important;
+  }
+
+  .object-value-string, .object-value-regexp, .object-value-symbol {
+    color: $string-color !important;
+  }
+
+  .object-value-node {
+    color: $text-color !important;
+  }
+
+  .object-value-null, .object-value-undefined {
+    color: rgb(127, 127, 127) !important;
+  }
+
+  .object-properties-section .object-description {
+    color: rgb(127, 127, 127) !important;
+  }
+
+  .name {
+    color: $var-color !important;
+  }
+
+  .object-properties-preview .name {
+    color: $text-color !important;
+  }
 }
 
 .-theme-with-dark-background {
-  .object-value-number, .object-value-number.source-code{color:lighten($number-color, 5%) !important;}
-  .object-value-string, .object-value-string.source-code, .object-value-string-quote{color:lighten($string-color, 5%) !important;}
-  .name.source-code{color: lighten(#EEFFE3, 5%) !important;}
-  #console-prompt .console-prompt-icon {filter: hue-rotate(-40deg) !important;}
+  .object-value-number,
+  .object-value-number.source-code {
+    color: $number-color !important;
+  }
+
+  .object-value-string,
+  .object-value-string.source-code,
+  .object-value-string-quote {
+    color: $string-color !important;
+  }
+
+  .name.source-code {
+    color: $var-color !important;
+  }
+
+  #console-prompt .console-prompt-icon {
+    filter: hue-rotate(-40deg) !important;
+  }
 }

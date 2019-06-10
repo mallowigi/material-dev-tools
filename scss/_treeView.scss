@@ -5,7 +5,7 @@
   }
 
   .elements-disclosure li.selected:focus .selected-hint:before {
-    color: var(--selection-fg-color) !important;
+    color: $selBg !important;
   }
 
   .elements-disclosure li.selected .selection {
@@ -14,11 +14,11 @@
   }
 
   .elements-disclosure ol li.selected:focus {
-    color: var(--selection-fg-color) !important;
+    color: $selFg !important;
   }
 
   .elements-disclosure ol li.parent.selected:focus::before {
-    background-color: var(--selection-fg-color) !important;
+    background-color: $selFg !important;
   }
 
   .elements-disclosure ol li.selected:focus * {
@@ -26,7 +26,7 @@
   }
 
   .elements-disclosure ol li.selected:focus .selection {
-    background-color: var(--selection-bg-color) !important;
+    background-color: $selBg !important;
   }
 
   .elements-tree-outline ol.shadow-root-depth-4 {
@@ -57,7 +57,7 @@
   .elements-disclosure li.elements-drag-over .selection {
     display: block !important;
     margin-top: -2px !important;
-    border-top: 2px solid var(--selection-bg-color) !important;
+    border-top: 2px solid $selBg !important;
   }
 
   .elements-disclosure li.in-clipboard .highlight {
@@ -72,32 +72,49 @@
     background-color: rgba(216, 206, 147, 0.2) !important;
   }
 
-  .tree-outline li.odd-row{background-color:#212C31 !important;}
-  .tree-outline li:hover:not(.selected) .selection {background-color:rgba(128,203,207, 0.3) !important;}
+  .tree-outline li.odd-row {
+    background-color: $darkerBg !important;
+  }
+
+  .tree-outline li:hover:not(.selected) .selection {
+    background-color: rgba($lighterBg, 0.3) !important;
+  }
 }
 
 :host-context(.-theme-with-dark-background) {
   .elements-disclosure li.hovered:not(.selected) .selection {
-    background-color: rgba(128,203,207, 0.1) !important;
+    background-color: rgba(128, 203, 207, 0.1) !important;
   }
 
   .styles-section .simple-selector.filter-match {
-    background-color: rgba(172,228,255, 0.2) !important;
+    background-color: rgba(172, 228, 255, 0.2) !important;
   }
+
   .tree-outline li.filter-match {
-    background-color: rgba(172,228,255, 0.2) !important;
+    background-color: rgba(172, 228, 255, 0.2) !important;
   }
+
   .tree-outline li.overloaded.filter-match {
-    background-color: rgba(172,228,255, 0.1) !important;
+    background-color: rgba(172, 228, 255, 0.1) !important;
   }
+
   .tree-outline li.odd-row {
     background: $background !important;
   }
+
   .tree-outline li:hover {
     background: $selBg !important;
   }
 
-  .node-label-name{color:desaturate( $tag-name-color, 10% ) !important;}
-  .node-label-class, .node-label-pseudo{color:desaturate( $attribute-name-color, 10% ) !important;}
-  .node-label-id{color:desaturate( #7194DA, 10% ) !important;}
+  .node-label-name {
+    color: $tag-name-color !important;
+  }
+
+  .node-label-class, .node-label-pseudo {
+    color: $attribute-name-color !important;
+  }
+
+  .node-label-id {
+    color: $function-color !important;
+  }
 }

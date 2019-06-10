@@ -1,40 +1,78 @@
 /* ==========================================================================
    Dark Theme
    ========================================================================== */
-$background: #263238;
-$darkerBg: #212c31;
-$lighterBg: #32424a;
-$foreground: #b0bec5;
-$primary: #607d8b;
-$selBg: #546e7a;
-$selFg: #ffffff;
-$button: #2e3c43;
-$disabled: #415967;
-$contrast: #1e272c;
-$second: #314549;
-$border: #2a373e;
-$highlight: #425b67;
-$tree: #546e7a;
-$notif: #1e272c;
-$accent1: #009688;
-$excluded: #2e3c43;
-$accent2: #80cbcf;
-$accent3: #ff4081;
+:root {
+  --background: #263238;
+  --darkerBg: #212c31;
+  --lighterBg: #32424a;
+  --foreground: #b0bec5;
+  --primary: #607d8b;
+  --selBg: #546e7a;
+  --selFg: #ffffff;
+  --button: #2e3c43;
+  --disabled: #415967;
+  --contrast: #1e272c;
+  --second: #314549;
+  --border: #2a373e;
+  --highlight: #425b67;
+  --tree: #546e7a;
+  --notif: #1e272c;
+  --accent1: #009688;
+  --excluded: #2e3c43;
+  --accent2: #80cbcf;
+  --accent3: #ff4081;
 
-$tag-name-color: #f07178;
-$attribute-name-color: #ffcb6b;
-$comment-color: #546e7a;
-$keyword-color: #c792ea;
-$var-color: #eeffff;
-$operator-color: #89ddff;
-$function-color: #82aaff;
-$string-color: #c3e88d;
-$number-color: #f78c6c;
-$link-color: #80cbc4;
-$text-color: #c3cee3;
-$ignored-color: #ab79c7;
+  --tag-name-color: #f07178;
+  --attribute-name-color: #ffcb6b;
+  --comment-color: #546e7a;
+  --keyword-color: #c792ea;
+  --error-color: #ff5370;
+  --var-color: #eeffff;
+  --operator-color: #89ddff;
+  --function-color: #82aaff;
+  --string-color: #c3e88d;
+  --number-color: #f78c6c;
+  --link-color: #80cbc4;
+  --text-color: #c3cee3;
+  --ignored-color: #ab79c7;
+}
 
-:host-context(.-theme-with-dark-background), .-theme-with-dark-background {
+$background: var(--background);
+$darkerBg: var(--darkerBg);
+$lighterBg: var(--lighterBg);
+$foreground: var(--foreground);
+$primary: var(--primary);
+$selBg: var(--selBg);
+$selFg: var(--selFg);
+$button: var(--button);
+$disabled: var(--disabled);
+$contrast: var(--contrast);
+$second: var(--second);
+$border: var(--border);
+$highlight: var(--highlight);
+$tree: var(--tree);
+$notif: var(--notif);
+$accent1: var(--accent1);
+$excluded: var(--excluded);
+$accent2: var(--accent2);
+$accent3: var(--accent3);
+
+$tag-name-color: var(--tag-name-color);
+$attribute-name-color: var(--attribute-name-color);
+$comment-color: var(--comment-color);
+$keyword-color: var(--keyword-color);
+$var-color: var(--var-color);
+$error-color: var(--error-color);
+$operator-color: var(--operator-color);
+$function-color: var(--function-color);
+$string-color: var(--string-color);
+$number-color: var(--number-color);
+$link-color: var(--link-color);
+$text-color: var(--text-color);
+$ignored-color: var(--ignored-color);
+
+:host-context(.-theme-with-dark-background),
+.-theme-with-dark-background {
   ol li.selected:focus .webkit-html-tag,
   ol li.selected:focus .webkit-html-tag-name,
   ol li.selected:focus .webkit-html-close-tag-name,
@@ -49,53 +87,32 @@ $ignored-color: #ab79c7;
 ========================================================================== */
 :host-context(.-theme-with-dark-background) {
   .webkit-html-attribute-name {color: $attribute-name-color !important;}
-
   .webkit-html-attribute-value {color: $string-color !important;}
-
   .webkit-html-comment {color: $comment-color !important;}
-
   .webkit-html-doctype {color: $operator-color !important;}
-
   .devtools-link {color: $link-color !important;}
-
   .webkit-html-tag {color: $operator-color !important;}
-
   .webkit-html-tag-name {color: $tag-name-color !important;}
-
   .webkit-html-close-tag-name {color: $tag-name-color !important;}
-
   .webkit-html-text-node {color: $text-color !important;}
-
   .webkit-html-css-node {color: $text-color !important;}
-
   .webkit-html-js-node {color: $text-color !important;}
-
   .webkit-html-pseudo-element {color: $var-color !important;}
-
   .webkit-css-selector {color: $tag-name-color !important;}
-
   .webkit-css-at-rule {color: $keyword-color !important;}
-
   .webkit-css-color {color: $number-color !important;}
-
   .webkit-css-comment {color: $comment-color !important;}
-
   .webkit-css-important {color: $keyword-color !important;}
-
   .webkit-css-keyword {color: $keyword-color !important;}
-
   .webkit-css-number {color: $number-color !important;}
-
   .webkit-css-property {color: $accent2 !important;}
-
   .webkit-css-string {color: $string-color !important;}
-
   .webkit-css-url {color: $link-color !important;}
 }
 
 .-theme-with-dark-background {
   --accent-color: #{$accent2} !important;
-  --accent-color-b: #{transparentize($accent2, 0.5)} !important;
+  --accent-color-b: #{rgba($accent2, 0.5)} !important;
   --accent-color-c: #{$accent3} !important;
   --toolbar-bg-color: #{$contrast} !important;
   --toolbar-hover-bg-color: #{$highlight} !important;
@@ -110,8 +127,8 @@ $ignored-color: #ab79c7;
   --divider-color: #{$border} !important;
   --focus-ring-active-shadow: 0 0 0 1px rgba(172, 228, 255, 0.6) !important;
   --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
-  --editor-selection-bg-color: #{transparentize($selBg, 0.5)} !important;
-  --editor-selection-inactive-bg-color: #{transparentize($selBg, 0.7)} !important;
+  --editor-selection-bg-color: #{rgba($selBg, 0.5)} !important;
+  --editor-selection-inactive-bg-color: #{rgba($selBg, 0.3)} !important;
 }
 
 // these are the roots
@@ -126,7 +143,7 @@ $ignored-color: #ab79c7;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: transparentize($accent1, .5) !important;
+    background: rgba($accent1, .5) !important;
     border-radius: 16px !important;
   }
 
@@ -263,7 +280,7 @@ $ignored-color: #ab79c7;
       background-color: $background !important;
 
       &:nth-child(2) {
-        background-color: darken($background, 10%) !important;
+        background-color: $darkerBg !important;
       }
     }
   }
@@ -299,7 +316,7 @@ $ignored-color: #ab79c7;
   }
 
   .breakpoint-hit {
-    background-color: rgba(darken($accent2, 10%), 0.5) !important;
+    background-color: rgba($darkerBg, 0.5) !important;
     color: $text-color !important;
   }
 
@@ -369,7 +386,7 @@ $ignored-color: #ab79c7;
   /* Tabbed Pane
    ========================================================================== */
   .tabbed-pane-content.has-no-tabs {
-    background-color: lighten($background, 5%) !important;
+    background-color: $lighterBg !important;
   }
 
   .tabbed-pane-header {
