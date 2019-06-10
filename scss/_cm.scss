@@ -77,16 +77,15 @@
     filter: hue-rotate(-240deg) !important;
   }
   .cm-execution-line {
-    background-color: rgba($accent2, 0.6) !important;;
+    background-color: $accent2Alpha !important;;
   }
   .cm-execution-line-outline {
-    outline: rgba($accent2, 0.6) !important;
+    outline: $accent2Alpha !important;
   }
   .cm-execution-line-tail {
-    background-color: rgba($accent2, 0.6) !important;;
+    background-color: $accent2Alpha !important;;
   }
   .cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before {
-    background-color: rgba($accent2, 0.4) !important;
+    background-color: $accent2Alpha !important;
   }
 }
-

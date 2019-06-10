@@ -2,25 +2,29 @@
    Dark Theme
    ========================================================================== */
 :root {
-  --background: #263238;
-  --darkerBg: #212c31;
-  --lighterBg: #32424a;
-  --foreground: #b0bec5;
-  --primary: #607d8b;
-  --selBg: #546e7a;
-  --selFg: #ffffff;
-  --button: #2e3c43;
-  --disabled: #415967;
-  --contrast: #1e272c;
-  --second: #314549;
-  --border: #2a373e;
-  --highlight: #425b67;
-  --tree: #546e7a;
-  --notif: #1e272c;
-  --accent1: #009688;
-  --excluded: #2e3c43;
-  --accent2: #80cbcf;
-  --accent3: #ff4081;
+  --background: rgb(38, 50, 56);
+  --darkerBg: rgb(33, 44, 49);
+  --lighterBg: rgb(50, 66, 74);
+  --foreground: rgb(176, 190, 197);
+  --primary: rgb(96, 125, 139);
+  --selBg: rgb(84, 110, 122);
+  --selBgAlpha: rgba(84, 110, 122, 0.5);
+  --selFg: rgb(255, 255, 255);
+  --button: rgb(46, 60, 67);
+  --disabled: rgb(65, 89, 103);
+  --contrast: rgb(30, 39, 44);
+  --second: rgb(49, 69, 73);
+  --border: rgb(42, 55, 62);
+  --highlight: rgb(66, 91, 103);
+  --tree: rgb(84, 110, 122);
+  --notif: rgb(30, 39, 44);
+  --accent1: rgb(0, 150, 136);
+  --accentAlpha: rgba(0, 150, 136, .5);
+  --excluded: rgb(46, 60, 67);
+  --excludedAlpha: rgba(46, 60, 67, .3);
+  --accent2: rgb(128, 203, 207);
+  --accent2Alpha: rgba(128, 203, 207, .5);
+  --accent3: rgb(255, 64, 129);
 
   --tag-name-color: #f07178;
   --attribute-name-color: #ffcb6b;
@@ -43,6 +47,7 @@ $lighterBg: var(--lighterBg);
 $foreground: var(--foreground);
 $primary: var(--primary);
 $selBg: var(--selBg);
+$selBgAlpha: var(--selBgAlpha);
 $selFg: var(--selFg);
 $button: var(--button);
 $disabled: var(--disabled);
@@ -53,8 +58,11 @@ $highlight: var(--highlight);
 $tree: var(--tree);
 $notif: var(--notif);
 $accent1: var(--accent1);
+$accentAlpha: var(--accentAlpha);
 $excluded: var(--excluded);
+$excludedAlpha: var(--excludedAlpha);
 $accent2: var(--accent2);
+$accent2Alpha: var(--accent2Alpha);
 $accent3: var(--accent3);
 
 $tag-name-color: var(--tag-name-color);
@@ -79,7 +87,7 @@ $ignored-color: var(--ignored-color);
   ol li.selected:focus .webkit-html-attribute-value,
   ol li.selected:focus .webkit-html-attribute-name,
   ol li.selected:focus .devtools-link {
-    color: var(--selection-fg-color) !important;
+    color: $selFg !important;
   }
 }
 
@@ -87,26 +95,47 @@ $ignored-color: var(--ignored-color);
 ========================================================================== */
 :host-context(.-theme-with-dark-background) {
   .webkit-html-attribute-name {color: $attribute-name-color !important;}
+
   .webkit-html-attribute-value {color: $string-color !important;}
+
   .webkit-html-comment {color: $comment-color !important;}
+
   .webkit-html-doctype {color: $operator-color !important;}
+
   .devtools-link {color: $link-color !important;}
+
   .webkit-html-tag {color: $operator-color !important;}
+
   .webkit-html-tag-name {color: $tag-name-color !important;}
+
   .webkit-html-close-tag-name {color: $tag-name-color !important;}
+
   .webkit-html-text-node {color: $text-color !important;}
+
   .webkit-html-css-node {color: $text-color !important;}
+
   .webkit-html-js-node {color: $text-color !important;}
+
   .webkit-html-pseudo-element {color: $var-color !important;}
+
   .webkit-css-selector {color: $tag-name-color !important;}
+
   .webkit-css-at-rule {color: $keyword-color !important;}
+
   .webkit-css-color {color: $number-color !important;}
+
   .webkit-css-comment {color: $comment-color !important;}
+
   .webkit-css-important {color: $keyword-color !important;}
+
   .webkit-css-keyword {color: $keyword-color !important;}
+
   .webkit-css-number {color: $number-color !important;}
+
   .webkit-css-property {color: $accent2 !important;}
+
   .webkit-css-string {color: $string-color !important;}
+
   .webkit-css-url {color: $link-color !important;}
 }
 
@@ -114,7 +143,7 @@ $ignored-color: var(--ignored-color);
   --accent-color: #{$accent2} !important;
   --accent-color-b: #{rgba($accent2, 0.5)} !important;
   --accent-color-c: #{$accent3} !important;
-  --toolbar-bg-color: #{$contrast} !important;
+  --toolbar-bg-color: #{$darkerBg} !important;
   --toolbar-hover-bg-color: #{$highlight} !important;
   --selection-fg-color: #{$selFg} !important;
   --selection-bg-color: #{$selBg} !important;
@@ -125,10 +154,10 @@ $ignored-color: var(--ignored-color);
   0 2px 4px 2px rgba(0, 0, 0, 0.2),
   0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
   --divider-color: #{$border} !important;
-  --focus-ring-active-shadow: 0 0 0 1px rgba(172, 228, 255, 0.6) !important;
+  --focus-ring-active-shadow: 0 0 0 1px #{$accent1} !important;
   --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
-  --editor-selection-bg-color: #{rgba($selBg, 0.5)} !important;
-  --editor-selection-inactive-bg-color: #{rgba($selBg, 0.3)} !important;
+  --editor-selection-bg-color: #{$selBgAlpha} !important;
+  --editor-selection-inactive-bg-color: #{$excludedAlpha} !important;
 }
 
 // these are the roots
@@ -143,7 +172,7 @@ $ignored-color: var(--ignored-color);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba($accent1, .5) !important;
+    background: $accentAlpha !important;
     border-radius: 16px !important;
   }
 
@@ -153,7 +182,7 @@ $ignored-color: var(--ignored-color);
 
   .root-view,
   .network-status-pane,
-  .timeline-landing-page{
+  .timeline-landing-page {
     background-color: $background !important;
     color: $text-color !important;
   }
@@ -170,11 +199,15 @@ $ignored-color: var(--ignored-color);
   }
 
   .panel-sidebar {
-    background-color: var(--toolbar-bg-color) !important;
+    background-color: $contrast !important;
   }
 
   .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
     background-color: $background !important;
+  }
+
+  .toolbar-item {
+    color: $text-color !important;
   }
 
   select.toolbar-item[data-keyboard-focus="true"]:focus > * {
@@ -204,7 +237,6 @@ $ignored-color: var(--ignored-color);
     background-color: $background !important;
   }
 
-
   /* Inspector
      ========================================================================== */
   input {
@@ -225,7 +257,7 @@ $ignored-color: var(--ignored-color);
   /* View Container
      ========================================================================== */
   .expandable-view-title {
-    background-color: var(--toolbar-bg-color);
+    background-color: $contrast;
   }
 
   .expandable-view-title.expanded, .expandable-view-title:last-child {
@@ -236,6 +268,21 @@ $ignored-color: var(--ignored-color);
     border-bottom-color: $border;
   }
 
+  // Search inputs
+  .styles-sidebar-pane-toolbar,
+  .styles-sidebar-pane-filter-box > input,
+  .toolbar-input,
+  .filter-input-field {
+    background-color: $contrast !important;
+    border-bottom: 1px solid $border !important;
+  }
+
+  /* Filter bar
+     ========================================================================== */
+  .filter-bitset-filter span.selected {
+    background: $accent1 !important;
+    color: $selFg !important;
+  }
 
   /* Text Prompt
      ========================================================================== */
@@ -259,7 +306,7 @@ $ignored-color: var(--ignored-color);
   /* Scripts
      ========================================================================== */
   .scripts-debug-toolbar {
-    background-color: var(--toolbar-bg-color) !important;
+    background-color: $contrast !important;
     border-bottom-color: $border !important;
   }
 
@@ -268,13 +315,29 @@ $ignored-color: var(--ignored-color);
   }
 
   .navigator-tabbed-pane {
-    background-color: var(--toolbar-bg-color) !important;
+    background-color: $contrast !important;
   }
 
   input[type="radio"]:checked {
     filter: hue-rotate(322deg) brightness(105%) contrast(80%) !important;
   }
 
+  .resources-dividers-label-bar {
+    background: $contrast !important;
+  }
+
+  /* Network grid
+   ==========================================================================
+   */
+
+
+  .network-waterfall-header,
+  .network-log-grid.data-grid th {
+    border-color: $border!important;
+    &:hover {
+      background: $highlight !important;
+    }
+  }
   .network-log-grid.data-grid table.data {
     > tr {
       background-color: $background !important;
@@ -285,12 +348,61 @@ $ignored-color: var(--ignored-color);
     }
   }
 
-  .resources-dividers-label-bar {
-    background: var(--toolbar-bg-color) !important;
+  .data-grid-data-grid-node:nth-child(2n) {
+    background: $second !important;
+
+    td {
+      border-color: $border !important;
+    }
+  }
+
+  .data-grid-data-grid-node:nth-child(2n+1) {
+    background: $excluded !important;
+
+    td {
+      border-color: $border !important;
+    }
+  }
+
+  /* Network
+   =================================================================
+   */
+  .network-item-view {
+    background: $background !important;
+  }
+
+  .network-dim-cell {
+    color: $primary !important;
+  }
+
+  .network-error-row {
+    color: $error-color !important;
+  }
+
+  .toolbar-item {
+    color: $text-color !important;
   }
 }
 
 :host-context(.-theme-with-dark-background) {
+  ::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $accentAlpha !important;
+    border-radius: 16px !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $accent1 !important;
+  }
+
   .styles-section .selector {
     color: $primary !important;
   }
@@ -422,8 +534,48 @@ $ignored-color: var(--ignored-color);
 
 
   .resources-dividers-label-bar {
-    background: var(--toolbar-bg-color) !important;
+    background: $contrast !important;
   }
+
+  /* Network
+   =================================================================
+   */
+  .network-error-row {
+    color: $error-color !important;
+  }
+
+  .toolbar-item {
+    color: $text-color !important;
+  }
+
+  .tree-outline > .parent {
+    color: $primary !important;
+  }
+
+  .tree-outline .header-name {
+    color: $accent1 !important;
+  }
+
+  .empty-view {
+    color: $disabled !important;
+  }
+
+  .network-timing-table-header td {
+    color: $primary !important;
+  }
+
+  /* Navigator
+  ====================================================
+   */
+  // folders
+  .navigator-nw-folder-tree-item .icon {
+    background: $tree !important;
+  }
+
+  //icons
+  //.navigator-file-tree-item .icon {
+  //  background: $foreground !important;
+  //}
 
   //input[type="checkbox"]:not(.dt-checkbox-themed) {
   //  position: absolute !important; // take it out of document flow
