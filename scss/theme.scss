@@ -267,6 +267,10 @@ $ignored-color: #ab79c7;
       }
     }
   }
+
+  .resources-dividers-label-bar {
+    background: var(--toolbar-bg-color) !important;
+  }
 }
 
 :host-context(.-theme-with-dark-background) {
@@ -397,6 +401,11 @@ $ignored-color: #ab79c7;
     .content {
       background: $highlight !important;
     }
+  }
+
+
+  .resources-dividers-label-bar {
+    background: var(--toolbar-bg-color) !important;
   }
 
   //input[type="checkbox"]:not(.dt-checkbox-themed) {

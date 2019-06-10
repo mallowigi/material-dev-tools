@@ -6,7 +6,7 @@ const cleanCSS = require('gulp-clean-css');
 const paths = {
     styles: {
         src: 'scss/theme.scss',
-        dest: '.'
+        dest: 'dist'
     }
 };
 
