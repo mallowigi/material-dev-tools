@@ -93,7 +93,8 @@ $ignored-color: var(--ignored-color);
 
 /* Syntax Highlighting
 ========================================================================== */
-:host-context(.-theme-with-dark-background) {
+:host-context(.-theme-with-dark-background),
+.-theme-with-dark-background {
   .webkit-html-attribute-name {
     color: $attribute-name-color !important;
   }
@@ -205,6 +206,8 @@ $ignored-color: var(--ignored-color);
 }
 
 // these are the roots
+:host-context(:not(.platform-mac).-theme-with-dark-background),
+:host-context(.-theme-with-dark-background),
 :not(.platform-mac).-theme-with-dark-background,
 .-theme-with-dark-background {
   ::-webkit-scrollbar {
@@ -418,6 +421,12 @@ $ignored-color: var(--ignored-color);
     background: $background !important;
   }
 
+  .network-summary-bar {
+    background: $darkerBg !important;
+    border: $border !important;
+  }
+
+
   .network-dim-cell {
     color: $primary !important;
   }
@@ -429,30 +438,13 @@ $ignored-color: var(--ignored-color);
   .toolbar-item {
     color: $text-color !important;
   }
-}
-
-:host-context(:not(.platform-mac).-theme-with-dark-background),
-:host-context(.-theme-with-dark-background) {
-  ::-webkit-scrollbar {
-    width: 10px !important;
-    height: 10px !important;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: $background !important;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: $accentAlpha !important;
-    border-radius: 16px !important;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: $accent1 !important;
-  }
 
   .sidebar-pane-section-toolbar {
     background: $button !important;
+  }
+
+  .styles-section:focus {
+    background: $lighterBg!important;
   }
 
   .styles-section .selector {
@@ -476,7 +468,7 @@ $ignored-color: var(--ignored-color);
   }
 
   input[type="checkbox"]:not(.dt-checkbox-themed) {
-    filter: hue-rotate(322deg) brightness(105%) contrast(80%) !important;
+    filter: none !important;
   }
 
   .breakpoint-hit {
@@ -640,9 +632,11 @@ $ignored-color: var(--ignored-color);
   /* Popups
    ========================================================
    */
-  .soft-context-menu {
-    background: $second !important;
+  .soft-context-menu,
+  .tooltip{
+    background: $background !important;
   }
+
 
   .item-list {
     background: $second !important;
@@ -650,6 +644,14 @@ $ignored-color: var(--ignored-color);
 
   .subtitle {
     color: $primary !important;
+  }
+
+  .suggest-box {
+    background: $background !important;
+
+    .query {
+      color: $accent1 !important;
+    }
   }
 
   /* Navigator
@@ -665,75 +667,89 @@ $ignored-color: var(--ignored-color);
   //  background: $foreground !important;
   //}
 
-  //input[type="checkbox"]:not(.dt-checkbox-themed) {
-  //  position: absolute !important; // take it out of document flow
-  //  opacity: 0 !important; // hide it
-  //
-  //  & + label {
-  //    position: relative !important;
-  //    cursor: pointer !important;
-  //    padding: 0 !important;
-  //  }
-  //
-  //  // Box.
-  //  & + label:before {
-  //    content: '' !important;
-  //    margin-right: 10px !important;
-  //    display: inline-block !important;
-  //    vertical-align: text-top !important;
-  //    width: 20px !important;
-  //    height: 20px !important;
-  //    background: white !important;
-  //  }
-  //
-  //  // Box hover
-  //  &:hover + label:before {
-  //    background: $contrast !important;
-  //  }
-  //
-  //  // Box focus
-  //  &:focus + label:before {
-  //    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
-  //  }
-  //
-  //  // Box checked
-  //  &:checked + label:before {
-  //    background: #f35429 !important;
-  //  }
-  //
-  //  // Disabled state label.
-  //  &:disabled + label {
-  //    color: #b8b8b8 !important;
-  //    cursor: auto !important;
-  //  }
-  //
-  //  // Disabled box.
-  //  &:disabled + label:before {
-  //    box-shadow: none !important;
-  //    background: #ddd !important;
-  //  }
-  //
-  //  // Checkmark. Could be replaced with an image
-  //  &:checked + label:after {
-  //    content: '' !important;
-  //    position: absolute !important;
-  //    left: 5px !important;
-  //    top: 9px !important;
-  //    background: white !important;
-  //    width: 2px !important;
-  //    height: 2px !important;
-  //    box-shadow:
-  //      2px 0 0 white,
-  //      4px 0 0 white,
-  //      4px -2px 0 white,
-  //      4px -4px 0 white,
-  //      4px -6px 0 white,
-  //      4px -8px 0 white !important;
-  //    transform: rotate(45deg) !important;
-  //  }
-  //}
+  // Cbheckboxes
+  input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
+    position: absolute !important; // take it out of document flow
+    opacity: 0 !important; // hide it
+
+    & + label,
+    & ~ .webkit-css-property {
+      position: relative !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+    }
+
+    // Box.
+    & + label:before,
+    & ~ .webkit-css-property:before {
+      position: relative;
+      content: '' !important;
+      margin-right: 10px !important;
+      display: inline-block !important;
+      vertical-align: text-top !important;
+      width: 12px !important;
+      height: 12px !important;
+      background: $background !important;
+      border: 2px solid $accent1 !important;
+      border-radius: 4px !important;
+    }
+
+    // Box hover
+    &:hover + label:before,
+    &:hover ~ .webkit-css-property:before {
+      background: $contrast !important;
+    }
+
+    // Box focus
+    &:focus + label:before,
+    &:focus ~ .webkit-css-property:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    // Box checked
+    &:checked + label:before,
+    &:checked ~ .webkit-css-property:before {
+      background: $accent1 !important;
+      color: $background !important;
+    }
+
+    // Disabled state label.
+    &:disabled + label,
+    &:disabled ~ .webkit-css-property {
+      color: #b8b8b8 !important;
+      cursor: auto !important;
+    }
+
+    // Disabled box.
+    &:disabled + label:before,
+    &:disabled ~ .webkit-css-property:before {
+      box-shadow: none !important;
+      background: #ddd !important;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after,
+    &:checked ~ .webkit-css-property:after {
+      content: '' !important;
+      position: absolute !important;
+      left: 3px !important;
+      top: 5px !important;
+      background: $background !important;
+      width: 2px !important;
+      height: 2px !important;
+      box-shadow:
+        2px 0 0 $background,
+        4px 0 0 $background,
+        4px -2px 0 $background,
+        4px -4px 0 $background,
+        4px -6px 0 $background,
+        4px -8px 0 $background !important;
+      transform: rotate(45deg) !important;
+    }
+  }
 
 }
+
 
 @import "console";
 @import "cm";
