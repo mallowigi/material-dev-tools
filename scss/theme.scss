@@ -94,49 +94,93 @@ $ignored-color: var(--ignored-color);
 /* Syntax Highlighting
 ========================================================================== */
 :host-context(.-theme-with-dark-background) {
-  .webkit-html-attribute-name {color: $attribute-name-color !important;}
+  .webkit-html-attribute-name {
+    color: $attribute-name-color !important;
+  }
 
-  .webkit-html-attribute-value {color: $string-color !important;}
+  .webkit-html-attribute-value {
+    color: $string-color !important;
+  }
 
-  .webkit-html-comment {color: $comment-color !important;}
+  .webkit-html-comment {
+    color: $comment-color !important;
+  }
 
-  .webkit-html-doctype {color: $operator-color !important;}
+  .webkit-html-doctype {
+    color: $operator-color !important;
+  }
 
-  .devtools-link {color: $link-color !important;}
+  .devtools-link {
+    color: $link-color !important;
+  }
 
-  .webkit-html-tag {color: $operator-color !important;}
+  .webkit-html-tag {
+    color: $operator-color !important;
+  }
 
-  .webkit-html-tag-name {color: $tag-name-color !important;}
+  .webkit-html-tag-name {
+    color: $tag-name-color !important;
+  }
 
-  .webkit-html-close-tag-name {color: $tag-name-color !important;}
+  .webkit-html-close-tag-name {
+    color: $tag-name-color !important;
+  }
 
-  .webkit-html-text-node {color: $text-color !important;}
+  .webkit-html-text-node {
+    color: $text-color !important;
+  }
 
-  .webkit-html-css-node {color: $text-color !important;}
+  .webkit-html-css-node {
+    color: $text-color !important;
+  }
 
-  .webkit-html-js-node {color: $text-color !important;}
+  .webkit-html-js-node {
+    color: $text-color !important;
+  }
 
-  .webkit-html-pseudo-element {color: $var-color !important;}
+  .webkit-html-pseudo-element {
+    color: $var-color !important;
+  }
 
-  .webkit-css-selector {color: $tag-name-color !important;}
+  .webkit-css-selector {
+    color: $tag-name-color !important;
+  }
 
-  .webkit-css-at-rule {color: $keyword-color !important;}
+  .webkit-css-at-rule {
+    color: $keyword-color !important;
+  }
 
-  .webkit-css-color {color: $number-color !important;}
+  .webkit-css-color {
+    color: $number-color !important;
+  }
 
-  .webkit-css-comment {color: $comment-color !important;}
+  .webkit-css-comment {
+    color: $comment-color !important;
+  }
 
-  .webkit-css-important {color: $keyword-color !important;}
+  .webkit-css-important {
+    color: $keyword-color !important;
+  }
 
-  .webkit-css-keyword {color: $keyword-color !important;}
+  .webkit-css-keyword {
+    color: $keyword-color !important;
+  }
 
-  .webkit-css-number {color: $number-color !important;}
+  .webkit-css-number {
+    color: $number-color !important;
+  }
 
-  .webkit-css-property {color: $accent2 !important;}
+  .webkit-css-property {
+    color: $accent2 !important;
+  }
 
-  .webkit-css-string {color: $string-color !important;}
+  .webkit-css-string {
+    color: $string-color !important;
+  }
 
-  .webkit-css-url {color: $link-color !important;}
+  .webkit-css-url {
+    color: $link-color !important;
+  }
 }
 
 .-theme-with-dark-background {
@@ -161,6 +205,7 @@ $ignored-color: var(--ignored-color);
 }
 
 // these are the roots
+:not(.platform-mac).-theme-with-dark-background,
 .-theme-with-dark-background {
   ::-webkit-scrollbar {
     width: 10px !important;
@@ -333,11 +378,13 @@ $ignored-color: var(--ignored-color);
 
   .network-waterfall-header,
   .network-log-grid.data-grid th {
-    border-color: $border!important;
+    border-color: $border !important;
+
     &:hover {
       background: $highlight !important;
     }
   }
+
   .network-log-grid.data-grid table.data {
     > tr {
       background-color: $background !important;
@@ -384,6 +431,7 @@ $ignored-color: var(--ignored-color);
   }
 }
 
+:host-context(:not(.platform-mac).-theme-with-dark-background),
 :host-context(.-theme-with-dark-background) {
   ::-webkit-scrollbar {
     width: 10px !important;
@@ -401,6 +449,10 @@ $ignored-color: var(--ignored-color);
 
   ::-webkit-scrollbar-thumb:hover {
     background: $accent1 !important;
+  }
+
+  .sidebar-pane-section-toolbar {
+    background: $button !important;
   }
 
   .styles-section .selector {
@@ -430,6 +482,22 @@ $ignored-color: var(--ignored-color);
   .breakpoint-hit {
     background-color: rgba($darkerBg, 0.5) !important;
     color: $text-color !important;
+  }
+
+  .infobar {
+    color: $text-color !important;
+  }
+
+  .infobar-info {
+    background: $lighterBg !important;
+
+    .info-icon {
+      background: $accent2 !important;
+    }
+
+    .infobar-toggle {
+      color: $accent2 !important;
+    }
   }
 
   /* Searchable View
@@ -564,6 +632,26 @@ $ignored-color: var(--ignored-color);
     color: $primary !important;
   }
 
+  .network-summary-bar {
+    color: $darkerBg !important;
+    border: $border !important;
+  }
+
+  /* Popups
+   ========================================================
+   */
+  .soft-context-menu {
+    background: $second !important;
+  }
+
+  .item-list {
+    background: $second !important;
+  }
+
+  .subtitle {
+    color: $primary !important;
+  }
+
   /* Navigator
   ====================================================
    */
@@ -650,3 +738,4 @@ $ignored-color: var(--ignored-color);
 @import "console";
 @import "cm";
 @import "treeView";
+
