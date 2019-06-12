@@ -9,3 +9,5 @@ material-style.min.css
 
 # Project exclude paths
 /dist/
+/__sapper__/
+/static/

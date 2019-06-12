@@ -1,0 +1,3 @@
+<ul class="palette">
+
+</ul>
