@@ -6,3 +6,6 @@ node_modules
 
 # build
 material-style.min.css
+
+# Project exclude paths
+/dist/
