@@ -16,4 +16,12 @@
 }
 </style>
 
-<select class="theme-options" id="theme-options" data-options="theme in themes"></select>
+<script >
+  import {app} from '../stores';
+</script>
+
+<select class="theme-options" id="theme-options" bind:value={$app.selectedTheme}>
+  {#each $app.themes as theme(theme.name)}
+    <option value={theme}>{theme.name}</option>
+  {/each}
+</select>
