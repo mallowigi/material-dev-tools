@@ -1,10 +1,11 @@
 <script>
+	import { slide } from 'svelte/transition';
   import ThemeSwitcher from '../components/ThemeSwitcher.svelte';
+  import {app} from '../store';
 </script>
 
 <style>
   .alert {
-    display: none;
     position: absolute;
     z-index: 3;
     width: 100%;
@@ -31,7 +32,9 @@
   }
 </style>
 
-<div class="alert">Close and reopen DevTools to apply your changes!</div>
+{#if $app.notifying == true}
+  <div class="alert" transition:slide>Close and reopen DevTools to apply your changes!</div>
+{/if}
 
 <ThemeSwitcher></ThemeSwitcher>
 

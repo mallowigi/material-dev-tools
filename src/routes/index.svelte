@@ -5,8 +5,9 @@
 <script>
 import {onMount} from 'svelte';
 import Panel from '../components/Panel.svelte';
-import * as api from './_api';
-import {app} from '../stores';
+import * as api from '../api';
+import {app} from '../store';
+import {storage} from '../storage';
 
   onMount(async _ => {
     $app.loading = true;
@@ -15,12 +16,15 @@ import {app} from '../stores';
     // Now fetching
     const themes = await api.get('themes.json');
 
-    try {
-      $app.themes = themes;
-    } catch (e) {
-      console.error(e);
-      $app.themes = [];
-    }
+    $app.themes = themes.sort((a,b) => {
+      if (a.name < b.name) { return -1; }
+      if (a.name > b.name) { return 1; }
+      return 0;
+    });
+
+    await $app.fetchSettings();
+
+
     $app.loading = false;
   });
 </script>
@@ -29,6 +33,6 @@ import {app} from '../stores';
   <div class="container">
     <h4>Loading...</h4>
   </div>
-  {:else}
-<Panel></Panel>
+{:else}
+  <Panel></Panel>
 {/if}

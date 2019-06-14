@@ -17,10 +17,10 @@
 </style>
 
 <script >
-  import {app} from '../stores';
+  import {app} from '../store';
 </script>
 
-<select class="theme-options" id="theme-options" bind:value={$app.selectedTheme}>
+<select class="theme-options" id="theme-options" bind:value={$app.currentTheme}>
   {#each $app.themes as theme(theme.name)}
     <option value={theme}>{theme.name}</option>
   {/each}

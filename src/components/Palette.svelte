@@ -1,5 +1,5 @@
 <script>
-    import {app} from '../stores'
+    import {app} from '../store'
 </script>
 
 <style>
@@ -56,9 +56,9 @@
 </style>
 
 <ul class="palette">
-    {#if !$app.selectedTheme}
+    {#if !$app.currentTheme}
     {:else}
-      {#each $app.selectedTheme.colors as color}
+      {#each $app.currentTheme.colors as color}
         <li class="delayed" style="background: {color}"></li>
       {/each}
     {/if}
