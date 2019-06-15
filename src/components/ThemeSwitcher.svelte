@@ -9,7 +9,7 @@
 <div class="container">
     {#if $app.currentTheme}
       <header transition:fade class="title">
-        <h4>Current Theme:</h4>
+        <h4>Current Theme</h4>
         <!-- The selected theme -->
         <h1 id="currentTheme">
           <small>{$app.currentTheme.name}</small>

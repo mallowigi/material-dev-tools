@@ -20,8 +20,9 @@
   import {app} from '../store';
 </script>
 
-<select class="theme-options" id="theme-options" bind:value={$app.currentTheme}>
+<select class="theme-options" id="theme-options"
+        bind:value={$app.currentThemeName}>
   {#each $app.themes as theme(theme.name)}
-    <option value={theme}>{theme.name}</option>
+    <option value={theme.name}>{theme.name}</option>
   {/each}
 </select>

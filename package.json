@@ -1,21 +1,21 @@
 {
   "name": "material-dev-tools",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "Material Theme for Chrome Devtools",
   "main": "devtools.html",
-  "author": "Jonas Augsburger <jonas.augsburger@gmail.com>",
+  "author": "Elior Boukhobza <heliosaian@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-proposal-private-methods": "^7.4.4",
     "compression": "^1.7.1",
     "polka": "^0.5.0",
     "sirv": "^0.4.0"
   },
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "start": "node __sapper__/build",
+    "dev": "sapper dev --build-dir dist/dev",
+    "styles": "gulp debugStyles",
+    "build": "sapper build dist/build",
+    "export": "sapper export dist/export",
+    "start": "node dist/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"
@@ -31,6 +31,7 @@
     "gulp-clean-css": "4.0.0",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.2",
+    "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.0.0",
     "rollup-plugin-babel": "^4.0.2",

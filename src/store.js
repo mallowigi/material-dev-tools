@@ -15,6 +15,12 @@ class App {
      */
     this._currentTheme = null;
     /**
+     * The current theme name
+     * @type {null}
+     * @private
+     */
+    this._currentThemeName = null;
+    /**
      * The current font size
      * @type {?number}
      * @private
@@ -43,6 +49,12 @@ class App {
      */
     this.notifying = false;
 
+    this.defaults = {
+      fontSize: 14,
+      fontFamily: 'Menlo',
+      themeName: 'Default',
+    };
+
     // Import data
     Object.assign(this, data);
   }
@@ -60,14 +72,25 @@ class App {
    * @param {Theme} value
    */
   set currentTheme(value) {
-    this._notify(this._currentTheme, value);
-    this.saveTheme(value);
 
     if (value) {
       // Simulate changing colors
       this._currentTheme = {name: value.name, colors: []};
       setTimeout(() => app.update($app => new App({...$app, _currentTheme: {...value}})), 100);
     }
+  }
+
+  get currentThemeName() {
+    return this._currentThemeName;
+  }
+
+  set currentThemeName(name) {
+    this._notify(this._currentTheme, name);
+    this._currentThemeName = name;
+    this.saveTheme(name);
+
+    // Find and set current theme
+    this.currentTheme = this.getTheme(name);
   }
 
   /**
@@ -119,7 +142,7 @@ class App {
    * Save selected theme
    * @param {string} name
    */
-  saveTheme({name} = {}) {
+  saveTheme(name) {
     storage.set({[DEVTOOLS_THEME]: name}, () => {});
   }
 
@@ -127,7 +150,7 @@ class App {
    * Save selected font family
    * @param {string} family
    */
-  saveFontFamily({family} = {}) {
+  saveFontFamily(family) {
     storage.set({[DEVTOOLS_FONT]: family}, () => {});
   }
 
@@ -135,7 +158,7 @@ class App {
    * Save selected font size
    * @param {number} size
    */
-  saveFontSize({size} = {}) {
+  saveFontSize(size) {
     storage.set({[DEVTOOLS_SIZE]: size}, () => {});
   }
 
@@ -145,9 +168,9 @@ class App {
   fetchSettings() {
     /** Get current theme setting from storage */
     return storage.get(SETTINGS, object => {
-      this.currentTheme = this.getTheme(object[DEVTOOLS_THEME]);
-      this.currentFontFamily = object[DEVTOOLS_FONT];
-      this.currentFontSize = object[DEVTOOLS_SIZE];
+      this.currentThemeName = object[DEVTOOLS_THEME] || this.defaults.themeName;
+      this.currentFontFamily = object[DEVTOOLS_FONT] || this.defaults.fontFamily;
+      this.currentFontSize = object[DEVTOOLS_SIZE] || this.defaults.fontSize;
     });
 
   }
