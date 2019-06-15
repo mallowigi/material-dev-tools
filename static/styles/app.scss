@@ -117,7 +117,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 @for $item from 1 through 20 {
-  .delayed:nth-child(#{$item}) {
-    animation-delay: #{$item/12}s;
+  .anim.anim-delayed:nth-child(#{$item}) {
+    animation-delay: #{$item/12}s !important;
   }
 }

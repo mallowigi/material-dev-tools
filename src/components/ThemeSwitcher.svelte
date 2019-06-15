@@ -14,15 +14,16 @@
         <h1 id="currentTheme">
           <small>{$app.currentTheme.name}</small>
         </h1>
-      </header>
 
-      <!-- Display the theme colors -->
-      <div transition:slide>
-        <Palette></Palette>
-      </div>
+        <!-- Display the theme colors -->
+        <div transition:slide>
+          <Palette></Palette>
+        </div>
+      </header>
     {:else}
       <header>
         <h4>Please select a theme below</h4>
+        <br><br>
       </header>
     {/if}
 

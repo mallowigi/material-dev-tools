@@ -1,7 +1,3 @@
-<svelte:head>
-	<title>Theme Switcher built with Svelte and Sapper</title>
-</svelte:head>
-
 <script>
 import {onMount} from 'svelte';
 import Panel from '../components/Panel.svelte';
@@ -23,7 +19,6 @@ import {storage} from '../storage';
     });
 
     await $app.fetchSettings();
-
 
     $app.loading = false;
   });

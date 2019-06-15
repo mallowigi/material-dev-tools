@@ -1,4 +1,5 @@
 <script>
+import { fade } from 'svelte/transition';
     import {app} from '../store'
 </script>
 
@@ -55,11 +56,10 @@
     }
 </style>
 
-<ul class="palette">
-    {#if !$app.currentTheme}
-    {:else}
-      {#each $app.currentTheme.colors as color}
-        <li class="delayed" style="background: {color}"></li>
-      {/each}
-    {/if}
+{#if $app.currentTheme}
+<ul class="palette" transition:fade>
+  {#each $app.currentTheme.colors as color}
+    <li class="anim anim-delayed" style="background: {color}"></li>
+  {/each}
 </ul>
+{/if}

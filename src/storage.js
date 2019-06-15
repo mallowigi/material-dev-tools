@@ -16,10 +16,16 @@ const fakeStorage = {
   },
 
   async set(settings, fn = () => {}) {
-    let oldItem = await localStorage.getItem(SETTINGS);
-    let newSettings = {...oldItem, settings};
-    await localStorage.setItem(SETTINGS, JSON.stringify(newSettings));
-    fn(settings);
+    let oldItem = await localStorage.getItem(SETTINGS) || '{}';
+    try {
+      const oldSettings = JSON.parse(oldItem);
+      const newSettings = {...oldSettings, ...settings};
+
+      await localStorage.setItem(SETTINGS, JSON.stringify(newSettings));
+      fn(settings);
+    } catch (e) {
+      fn({});
+    }
   },
 };
 
