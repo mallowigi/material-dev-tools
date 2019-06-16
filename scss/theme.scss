@@ -228,6 +228,10 @@ $ignored-color: var(--ignored-color);
     background: $accent1 !important;
   }
 
+  ::-moz-selection {
+    color: $selBg !important;
+  }
+
   .root-view,
   .network-status-pane,
   .timeline-landing-page {
@@ -242,8 +246,10 @@ $ignored-color: var(--ignored-color);
     color: $text-color !important;
   }
 
-  .panel {
+  .panel,
+  .settings-window-main {
     background-color: $background !important;
+    color: $foreground !important;
   }
 
   .panel-sidebar {
@@ -256,6 +262,11 @@ $ignored-color: var(--ignored-color);
 
   .toolbar-item {
     color: $text-color !important;
+  }
+
+  .list-item:hover {
+    background: $selBg !important;
+    color: $selFg !important;
   }
 
   select.toolbar-item[data-keyboard-focus="true"]:focus > * {
@@ -273,6 +284,19 @@ $ignored-color: var(--ignored-color);
 
   .sidebar-separator > span.monospace {
     background-color: $background !important;
+  }
+
+  .chrome-select, .text-button {
+    background: $button !important;
+    border: none !important;
+    color: $foreground !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+  }
+
+  .settings-key {
+    background: $highlight !important;
+    color: $selFg !important;
   }
 
   /* Console
@@ -514,6 +538,10 @@ $ignored-color: var(--ignored-color);
     }
   }
 
+  .search-toolbar-summary {
+    background: $contrast;
+  }
+
   .search-bar {
     background: $background !important;
     border: 0 !important;
@@ -667,7 +695,19 @@ $ignored-color: var(--ignored-color);
   //  background: $foreground !important;
   //}
 
-  // Cbheckboxes
+  .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab {
+    color: $text-color !important;
+  }
+
+  .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab.selected {
+    border-left-color: $accent1 !important;
+  }
+
+  .settings-info-message {
+    background: $second !important;
+  }
+
+  // Checkboxes
   input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
     position: absolute !important; // take it out of document flow
     opacity: 0 !important; // hide it
