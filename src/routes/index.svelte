@@ -13,16 +13,13 @@
 
 
 <script>
-console.log('stat')
 import {onMount} from 'svelte';
 import Panel from '../components/Panel.svelte';
 import * as api from '../api';
 import {app} from '../store';
 import {storage} from '../storage';
 export let themes;
-console.log('abc', themes);
   onMount(async _ => {
-    console.log('kdijd');
     $app.loading = true;
     // Just waiting
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -35,7 +32,6 @@ console.log('abc', themes);
       return 0;
     });
 
-    console.log('uu');
     await $app.fetchSettings();
 
     $app.loading = false;
