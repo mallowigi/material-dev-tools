@@ -11,3 +11,5 @@ material-style.min.css
 /dist/
 /__sapper__/
 /static/
+/public/bundle.*
+/public/styles/sass-cache

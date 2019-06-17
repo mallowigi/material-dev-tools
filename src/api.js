@@ -1,8 +1,5 @@
-/** @private */
-const base = '';
-
 function send({method, path, data, token}) {
-  const fetch = process.browser ? window.fetch : require('node-fetch').default;
+  const fetch = window.fetch;
 
   const opts = {method, headers: {}};
 
@@ -15,7 +12,7 @@ function send({method, path, data, token}) {
     opts.headers['Authorization'] = `Token ${token}`;
   }
 
-  return fetch(`${base}/${path}`, opts)
+  return fetch(`${path}`, opts)
     .then(r => r.text())
     .then(json => {
       try {
