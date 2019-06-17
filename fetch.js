@@ -15,7 +15,8 @@
   }
 
   function init() {
-    const pagePath = '/dist/export/index.html';
+    debugger;
+    const pagePath = 'public/index.html';
 
     panels.create(
       'Material DevTools Settings', //Title

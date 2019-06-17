@@ -12,7 +12,7 @@
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "Get Material",
-    "default_popup": "/dist/export/index.html"
+    "default_popup": "/public/index.html"
   },
   "icons": {
     "16": "icon16.png",
