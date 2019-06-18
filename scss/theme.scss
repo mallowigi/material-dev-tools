@@ -80,8 +80,33 @@ $link-color: var(--link-color);
 $text-color: var(--text-color);
 $ignored-color: var(--ignored-color);
 
+
+.-theme-with-dark-background {
+  --accent-color: #{$accent2} !important;
+  --accent-color-b: #{rgba($accent2, 0.5)} !important;
+  --accent-color-c: #{$accent3} !important;
+  --toolbar-bg-color: #{$darkerBg} !important;
+  --toolbar-hover-bg-color: #{$highlight} !important;
+  --selection-fg-color: #{$selFg} !important;
+  --selection-bg-color: #{$selBg} !important;
+  --selection-inactive-bg-color: #{$darkerBg} !important;
+  --tab-selected-fg-color: #{$selFg} !important;
+  --tab-selected-bg-color: #{$highlight} !important;
+  --drop-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
+  0 2px 4px 2px rgba(0, 0, 0, 0.2),
+  0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
+  --divider-color: #{$border} !important;
+  --focus-ring-active-shadow: 0 0 0 1px #{$accent1} !important;
+  --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
+  --editor-selection-bg-color: #{$selBgAlpha} !important;
+  --editor-selection-inactive-bg-color: #{$excludedAlpha} !important;
+}
+
+/* Syntax Highlighting
+========================================================================== */
 :host-context(.-theme-with-dark-background),
 .-theme-with-dark-background {
+  // Line at caret
   ol li.selected:focus .webkit-html-tag,
   ol li.selected:focus .webkit-html-tag-name,
   ol li.selected:focus .webkit-html-close-tag-name,
@@ -90,12 +115,7 @@ $ignored-color: var(--ignored-color);
   ol li.selected:focus .devtools-link {
     color: $selFg !important;
   }
-}
 
-/* Syntax Highlighting
-========================================================================== */
-:host-context(.-theme-with-dark-background),
-.-theme-with-dark-background {
   .webkit-html-attribute-name {
     color: $attribute-name-color !important;
   }
@@ -185,32 +205,14 @@ $ignored-color: var(--ignored-color);
   }
 }
 
-.-theme-with-dark-background {
-  --accent-color: #{$accent2} !important;
-  --accent-color-b: #{rgba($accent2, 0.5)} !important;
-  --accent-color-c: #{$accent3} !important;
-  --toolbar-bg-color: #{$darkerBg} !important;
-  --toolbar-hover-bg-color: #{$highlight} !important;
-  --selection-fg-color: #{$selFg} !important;
-  --selection-bg-color: #{$selBg} !important;
-  --selection-inactive-bg-color: #{$darkerBg} !important;
-  --tab-selected-fg-color: #{$selFg} !important;
-  --tab-selected-bg-color: #{$highlight} !important;
-  --drop-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
-  0 2px 4px 2px rgba(0, 0, 0, 0.2),
-  0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
-  --divider-color: #{$border} !important;
-  --focus-ring-active-shadow: 0 0 0 1px #{$accent1} !important;
-  --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
-  --editor-selection-bg-color: #{$selBgAlpha} !important;
-  --editor-selection-inactive-bg-color: #{$excludedAlpha} !important;
-}
-
-// these are the roots
 :host-context(:not(.platform-mac).-theme-with-dark-background),
 :host-context(.-theme-with-dark-background),
 :not(.platform-mac).-theme-with-dark-background,
 .-theme-with-dark-background {
+
+  // region Scrollbars
+  /* Scrollbars
+  ========================================================================== */
   ::-webkit-scrollbar {
     width: 10px !important;
     height: 10px !important;
@@ -233,30 +235,41 @@ $ignored-color: var(--ignored-color);
     color: $selBg !important;
   }
 
+  // endregion
+
+  // region Panels
+  /* Background and Foreground color
+  ========================================================================== */
   .root-view,
   .network-status-pane,
-  .timeline-landing-page {
-    background-color: $background !important;
-    color: $text-color !important;
-  }
-
+  .timeline-landing-page,
   body,
   .platform-linux,
-  .platform-mac {
-    background-color: $background !important;
-    color: $text-color !important;
-  }
-
+  .platform-mac,
   .panel,
   .settings-window-main {
     background-color: $background !important;
-    color: $foreground !important;
+    color: $text-color !important;
   }
 
+  // endregion
+
+  // region Sidebars
+  /* Sidebars
+  ========================================================================== */
   .panel-sidebar {
     background-color: $contrast !important;
   }
 
+  .sidebar-separator > span.monospace {
+    background-color: $background !important;
+  }
+
+  // endregion
+
+  // region Toolbars
+  /* Toolbars
+  ========================================================================== */
   .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
     background-color: $background !important;
   }
@@ -283,21 +296,197 @@ $ignored-color: var(--ignored-color);
     border-color: $border !important;
   }
 
-  .sidebar-separator > span.monospace {
-    background-color: $background !important;
-  }
+  // endregion
 
-  .chrome-select, .text-button {
+  // region Components
+  /* Components
+  ========================================================================== */
+
+  // Buttons
+  .text-button {
     background: $button !important;
     border: none !important;
     color: $foreground !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
+
+    &:not(:disabled):focus {
+      box-shadow: $accent1 0px 1px 2px;
+    }
   }
 
+  // Dropdowns
+  .chrome-select {
+    background-color: $button !important;
+    border: none !important;
+    color: $foreground !important;
+    text-transform: uppercase !important;
+    position: relative;
+  }
+
+  // The shortcut keys in settings
   .settings-key {
     background: $highlight !important;
     color: $selFg !important;
+    border: none;
+    box-shadow: $border 0px 1px 0px;
+  }
+
+  /* Radios
+  ========================================================================== */
+  input[type="radio"] {
+    //opacity: 0 !important; // hide it
+    margin-right: 10px !important;
+    filter: none !important;
+    position: relative;
+
+    &:before {
+      position: relative !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+    }
+
+    // Box.
+    &:before {
+      position: relative;
+      content: '' !important;
+      display: inline-block !important;
+      vertical-align: text-top !important;
+      width: 12px !important;
+      height: 12px !important;
+      background: $background !important;
+      border: 2px solid $accent1 !important;
+      border-radius: 50% !important;
+      left: -2px;
+      top: -2px;
+    }
+
+    // Box hover
+    &:hover:before {
+      background: $contrast !important;
+    }
+
+    // Box focus
+    &:focus:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
+    }
+
+
+    // Disabled state label.
+    &:disabled:before {
+      color: #b8b8b8 !important;
+      cursor: auto !important;
+    }
+
+    // Disabled box.
+    &:disabled:before {
+      box-shadow: none !important;
+      background: #ddd !important;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked:before {
+      content: '' !important;
+      position: absolute !important;
+      left: -2px !important;
+      top: -2px !important;
+      background: $background !important;
+      width: 12px !important;
+      height: 12px !important;
+      border: 2px solid $accent1 !important;
+    }
+    &:checked:after {
+      content: '' !important;
+      position: absolute !important;
+      left: 0px !important;
+      top: 0px !important;
+      background: $accent1 !important;
+      width: 12px !important;
+      height: 12px !important;
+      transform: scale(0.6) !important;
+      border-radius: 50% !important;
+    }
+  }
+
+  /* Checkboxes
+ ========================================================================== */
+  input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
+    position: absolute !important; // take it out of document flow
+    opacity: 0 !important; // hide it
+
+    & + label,
+    & ~ .webkit-css-property {
+      position: relative !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+    }
+
+    // Box.
+    & + label:before,
+    & ~ .webkit-css-property:before {
+      position: relative;
+      content: '' !important;
+      margin-right: 10px !important;
+      display: inline-block !important;
+      vertical-align: text-top !important;
+      width: 12px !important;
+      height: 12px !important;
+      background: $background !important;
+      border: 2px solid $accent1 !important;
+      border-radius: 4px !important;
+    }
+
+    // Box hover
+    &:hover + label:before,
+    &:hover ~ .webkit-css-property:before {
+      background: $contrast !important;
+    }
+
+    // Box focus
+    &:focus + label:before,
+    &:focus ~ .webkit-css-property:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    // Box checked
+    &:checked + label:before,
+    &:checked ~ .webkit-css-property:before {
+      background: $accent1 !important;
+      color: $background !important;
+    }
+
+    // Disabled state label.
+    &:disabled + label,
+    &:disabled ~ .webkit-css-property {
+      color: #b8b8b8 !important;
+      cursor: auto !important;
+    }
+
+    // Disabled box.
+    &:disabled + label:before,
+    &:disabled ~ .webkit-css-property:before {
+      box-shadow: none !important;
+      background: #ddd !important;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after,
+    &:checked ~ .webkit-css-property:after {
+      content: '' !important;
+      position: absolute !important;
+      left: 3px !important;
+      top: 8px !important;
+      background: $background !important;
+      width: 2px !important;
+      height: 2px !important;
+      box-shadow: 2px 0 0 $background,
+      4px 0 0 $background,
+      4px -2px 0 $background,
+      4px -4px 0 $background,
+      4px -6px 0 $background,
+      4px -8px 0 $background !important;
+      transform: rotate(45deg) !important;
+    }
   }
 
   /* Console
@@ -313,7 +502,7 @@ $ignored-color: var(--ignored-color);
   /* Inspector
      ========================================================================== */
   input {
-    background-color: $background !important;
+    background-color: $contrast !important;
   }
 
   .editing {
@@ -391,9 +580,9 @@ $ignored-color: var(--ignored-color);
     background-color: $contrast !important;
   }
 
-  input[type="radio"]:checked {
-    filter: hue-rotate(322deg) brightness(105%) contrast(80%) !important;
-  }
+  //input[type="radio"]:checked {
+  //  filter: hue-rotate(322deg) brightness(105%) contrast(80%) !important;
+  //}
 
   .resources-dividers-label-bar {
     background: $contrast !important;
@@ -469,7 +658,7 @@ $ignored-color: var(--ignored-color);
   }
 
   .styles-section:focus {
-    background: $lighterBg!important;
+    background: $lighterBg !important;
   }
 
   .styles-section .selector {
@@ -662,7 +851,7 @@ $ignored-color: var(--ignored-color);
    ========================================================
    */
   .soft-context-menu,
-  .tooltip{
+  .tooltip {
     background: $background !important;
   }
 
@@ -708,86 +897,6 @@ $ignored-color: var(--ignored-color);
     background: $second !important;
   }
 
-  // Checkboxes
-  input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
-    position: absolute !important; // take it out of document flow
-    opacity: 0 !important; // hide it
-
-    & + label,
-    & ~ .webkit-css-property {
-      position: relative !important;
-      cursor: pointer !important;
-      padding: 0 !important;
-    }
-
-    // Box.
-    & + label:before,
-    & ~ .webkit-css-property:before {
-      position: relative;
-      content: '' !important;
-      margin-right: 10px !important;
-      display: inline-block !important;
-      vertical-align: text-top !important;
-      width: 12px !important;
-      height: 12px !important;
-      background: $background !important;
-      border: 2px solid $accent1 !important;
-      border-radius: 4px !important;
-    }
-
-    // Box hover
-    &:hover + label:before,
-    &:hover ~ .webkit-css-property:before {
-      background: $contrast !important;
-    }
-
-    // Box focus
-    &:focus + label:before,
-    &:focus ~ .webkit-css-property:before {
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
-    }
-
-    // Box checked
-    &:checked + label:before,
-    &:checked ~ .webkit-css-property:before {
-      background: $accent1 !important;
-      color: $background !important;
-    }
-
-    // Disabled state label.
-    &:disabled + label,
-    &:disabled ~ .webkit-css-property {
-      color: #b8b8b8 !important;
-      cursor: auto !important;
-    }
-
-    // Disabled box.
-    &:disabled + label:before,
-    &:disabled ~ .webkit-css-property:before {
-      box-shadow: none !important;
-      background: #ddd !important;
-    }
-
-    // Checkmark. Could be replaced with an image
-    &:checked + label:after,
-    &:checked ~ .webkit-css-property:after {
-      content: '' !important;
-      position: absolute !important;
-      left: 3px !important;
-      top: 7px !important;
-      background: $background !important;
-      width: 2px !important;
-      height: 2px !important;
-      box-shadow:
-        2px 0 0 $background,
-        4px 0 0 $background,
-        4px -2px 0 $background,
-        4px -4px 0 $background,
-        4px -6px 0 $background,
-        4px -8px 0 $background !important;
-      transform: rotate(45deg) !important;
-    }
-  }
 
 }
 
