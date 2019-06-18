@@ -8,7 +8,7 @@
   line-height: normal;
   font: inherit;
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--foreground);
   text-transform: none;
   width: 60%;
   margin: 0 auto 2em;
