@@ -15,7 +15,6 @@
   }
 
   function init() {
-    debugger;
     const pagePath = 'public/index.html';
 
     panels.create(

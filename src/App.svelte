@@ -1,5 +1,6 @@
 <script>
 import {onMount} from 'svelte';
+import yaml from 'js-yaml'
 import Panel from './components/Panel.svelte';
 import * as api from './api';
 import {app} from './store';
@@ -10,13 +11,16 @@ import {storage} from './storage';
     // Just waiting
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Now fetching
-    const themes = await api.get('themes.json');
+    const themesYml = await api.get('themes.yml');
+    const allThemes = yaml.load(themesYml);
+    const themes = [...allThemes.material, ...allThemes.other];
 
-    $app.themes = themes.sort((a,b) => {
-      if (a.name < b.name) { return -1; }
-      if (a.name > b.name) { return 1; }
-      return 0;
-    });
+    // $app.themes = themes.sort((a,b) => {
+    //   if (a.name < b.name) { return -1; }
+    //   if (a.name > b.name) { return 1; }
+    //   return 0;
+    // });
+    $app.loadThemes(themes);
 
     await $app.fetchSettings();
 

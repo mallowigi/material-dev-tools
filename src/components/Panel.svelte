@@ -4,62 +4,62 @@
   import {app} from '../store';
   import {styleBuilder} from '../style-builder';
 
-  $: {
-    const currentColor = $app.currentTheme;
-    if (currentColor && currentColor.colors){
-      const [background,
-      second,
-      comments,
-      foreground,
-      vars,
-      links,
-      functions,
-      keywords,
-      tags,
-      strings,
-      operators,
-      accent] = currentColor.colors;
-
-
-      const style = document.createElement('style');
-      style.id = 'inject-style';
-      style.innerHTML = styleBuilder.styles({
-                 background,
-                 foreground,
-                 primary: foreground,
-                 selBg: second,
-                 selFg: "#FFFFFF",
-                 button: second,
-                 disabled: comments,
-                 contrast: background,
-                 second,
-                 border: background,
-                 highlight: second,
-                 tree: second,
-                 notif: background,
-                 accent,
-                 excluded: second,
-                 comments,
-                 vars,
-                 links,
-                 functions,
-                 keywords,
-                 tags,
-                 errors: tags,
-                 strings,
-                 operators,
-                 numbers: strings,
-                 attributes: links,
-
-      });
-
-      const styleElem = document.getElementById('inject-style');
-      if (styleElem) {
-        document.head.removeChild(styleElem);
-      }
-      document.head.appendChild(style);
-    }
-  }
+  // $: {
+  //   const currentColor = $app.currentTheme;
+  //   if (currentColor && currentColor.colors){
+  //     const [background,
+  //     second,
+  //     comments,
+  //     foreground,
+  //     vars,
+  //     links,
+  //     functions,
+  //     keywords,
+  //     tags,
+  //     strings,
+  //     operators,
+  //     accent] = currentColor.colors;
+  //
+  //
+  //     const style = document.createElement('style');
+  //     style.id = 'inject-style';
+  //     style.innerHTML = styleBuilder.styles({
+  //                background,
+  //                foreground,
+  //                primary: foreground,
+  //                selBg: second,
+  //                selFg: '#FFFFFF',
+  //                button: second,
+  //                disabled: comments,
+  //                contrast: background,
+  //                second,
+  //                border: background,
+  //                highlight: second,
+  //                tree: second,
+  //                notif: background,
+  //                accent,
+  //                excluded: second,
+  //                comments,
+  //                vars,
+  //                links,
+  //                functions,
+  //                keywords,
+  //                tags,
+  //                errors: tags,
+  //                strings,
+  //                operators,
+  //                numbers: strings,
+  //                attributes: links,
+  //
+  //     });
+  //
+  //     const styleElem = document.getElementById('inject-style');
+  //     if (styleElem) {
+  //       document.head.removeChild(styleElem);
+  //     }
+  //     document.head.appendChild(style);
+  //   }
+  // }
 
 </script>
 

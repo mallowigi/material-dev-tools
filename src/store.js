@@ -4,7 +4,10 @@ import {DEVTOOLS_FONT, DEVTOOLS_SIZE, DEVTOOLS_THEME, SETTINGS, storage} from '.
 /**
  * @typedef Theme {object}
  * @property {string} name
- * @property {string[]} colors
+ * @property {string} className
+ * @property {string} description
+ * @property {boolean} dark
+ * @property {Theme} colors
  */
 class App {
   constructor(data) {
@@ -75,15 +78,26 @@ class App {
 
     if (value) {
       // Simulate changing colors
-      this._currentTheme = {name: value.name, colors: []};
+      this._currentTheme = {
+        ...value,
+        colors: {},
+      };
       setTimeout(() => app.update($app => new App({...$app, _currentTheme: {...value}})), 100);
     }
   }
 
+  /**
+   * Retrieve the current theme
+   * @returns {null}
+   */
   get currentThemeName() {
     return this._currentThemeName;
   }
 
+  /**
+   * Change the current theme name and current theme
+   * @param name
+   */
   set currentThemeName(name) {
     this._notify(this._currentTheme, name);
     this._currentThemeName = name;
@@ -127,6 +141,29 @@ class App {
     this._notify(this._currentFontFamily, value);
     this._currentFontFamily = value;
     this.saveFontFamily(value);
+  }
+
+  colors(themes) {
+    return Object.keys(themes)
+      .filter(k => themes[k] && themes[k].startsWith && themes[k].startsWith('#'))
+      .map(key => {
+      return {
+        key,
+        value: themes[key],
+      };
+    });
+  }
+
+  loadThemes(themes) {
+    this.themes = themes.map(theme => {
+      return {
+        name: theme.name,
+        className: theme.className,
+        description: theme.description,
+        dark: theme.dark,
+        colors: this.colors(theme),
+      };
+    });
   }
 
   /**
