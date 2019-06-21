@@ -1,5 +1,5 @@
 <script>
-import { fade } from 'svelte/transition';
+    import {fade} from 'svelte/transition';
     import {app} from '../store';
 </script>
 
@@ -28,7 +28,7 @@ import { fade } from 'svelte/transition';
         display: block;
         float: left;
         z-index: 1;
-        flex:1;
+        flex: 1;
         transition: transform 0.25s cubic-bezier(.55, 1.15, 0.1, 1.15);
         animation: zoomIn 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
@@ -48,19 +48,20 @@ import { fade } from 'svelte/transition';
     .palette li:hover {
         z-index: 2;
     }
+
     .palette li:hover:before {
         border-radius: 1%;
         transform: scale3d(1.5, 4, 1);
-        box-shadow: 0 0 0.125rem 0 rgba(0,0,0,0.15);
+        box-shadow: 0 0 0.125rem 0 rgba(0, 0, 0, 0.15);
         transition: transform 0.25s cubic-bezier(.55, 1.15, 0.1, 1.15);
     }
 </style>
 
 {#if $app.currentTheme}
-<ul class="palette" transition:fade>
-  {#each $app.currentTheme.colors as color}
-    <li class="anim anim-delayed" style="background: {color.value}"
-    title="{color.key}"></li>
-  {/each}
-</ul>
+    <ul class="palette" transition:fade>
+      {#each $app.currentTheme.colors as color}
+          <li class="anim anim-delayed" style="background: {color.value}"
+              title="{color.key}"></li>
+      {/each}
+    </ul>
 {/if}

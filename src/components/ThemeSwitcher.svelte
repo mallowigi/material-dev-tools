@@ -3,29 +3,29 @@
     import ThemeSelector from './ThemeSelector.svelte';
     import FontSettings from './FontSettings.svelte';
     import {app} from '../store';
-    import { fade, slide } from 'svelte/transition';
+    import {fade, slide} from 'svelte/transition';
 </script>
 
 <div class="container">
-    {#if $app.currentTheme}
+  {#if $app.currentTheme}
       <header transition:fade class="title">
-        <h4>Current Theme</h4>
+          <h4>Current Theme</h4>
         <!-- The selected theme -->
-        <h1 id="currentTheme">
-          <small>{$app.currentTheme.name}</small>
-        </h1>
+          <h1 id="currentTheme">
+              <small>{$app.currentTheme.name}</small>
+          </h1>
 
         <!-- Display the theme colors -->
-        <div transition:slide>
-          <Palette></Palette>
-        </div>
+          <div transition:slide>
+              <Palette></Palette>
+          </div>
       </header>
-    {:else}
+  {:else}
       <header>
-        <h4>Please select a theme below</h4>
-        <br><br>
+          <h4>Please select a theme below</h4>
+          <br><br>
       </header>
-    {/if}
+  {/if}
 
     <!-- The Theme Selector -->
     <ThemeSelector></ThemeSelector>
