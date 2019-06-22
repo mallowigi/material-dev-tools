@@ -2,64 +2,6 @@
     import {slide} from 'svelte/transition';
     import ThemeSwitcher from '../components/ThemeSwitcher.svelte';
     import {app} from '../store';
-    import {styleBuilder} from '../style-builder';
-
-    $: {
-        const currentColor = $app.currentTheme;
-        if (currentColor && currentColor.colors) {
-            const [background,
-                      second,
-                      comments,
-                      foreground,
-                      vars,
-                      links,
-                      functions,
-                      keywords,
-                      tags,
-                      strings,
-                      operators,
-                      accent] = currentColor.colors;
-
-            const style = document.createElement('style');
-            style.id = 'inject-style';
-            style.innerHTML = styleBuilder.styles({
-                background,
-                foreground,
-                primary: foreground,
-                selBg: second,
-                selFg: '#FFFFFF',
-                button: second,
-                disabled: comments,
-                contrast: background,
-                second,
-                border: background,
-                highlight: second,
-                tree: second,
-                notif: background,
-                accent,
-                excluded: second,
-                comments,
-                vars,
-                links,
-                functions,
-                keywords,
-                tags,
-                errors: tags,
-                strings,
-                operators,
-                numbers: strings,
-                attributes: links,
-
-            });
-
-            const styleElem = document.getElementById('inject-style');
-            if (styleElem) {
-                document.head.removeChild(styleElem);
-            }
-            document.head.appendChild(style);
-        }
-    }
-
 </script>
 
 <style>
@@ -83,6 +25,7 @@
         position: absolute;
         bottom: 2.5%;
         right: 2.5%;
+        text-align: right;
     }
 
     .footer a {
@@ -98,5 +41,6 @@
 <ThemeSwitcher></ThemeSwitcher>
 
 <div class="footer">
-    Mahalo from <a target="_blank" href="https://github.com/micjamking">Mike King</a>
+<small>Material Theme © 2015-2019 <a target="_blank" href="https://www.material-theme.com">Elior Boukhobza & Chris Magnussen</a></small><br>
+<small>Original concept from <a target="_blank" href="https://github.com/micjamking">Mike King</a></small>
 </div>

@@ -75,13 +75,13 @@ class App {
    * @param {Theme} value
    */
   set currentTheme(value) {
-
     if (value) {
       // Simulate changing colors
       this._currentTheme = {
         ...value,
         colors: {},
       };
+
       setTimeout(() => app.update($app => new App({...$app, _currentTheme: {...value}})), 100);
     }
   }
@@ -143,17 +143,6 @@ class App {
     this.saveFontFamily(value);
   }
 
-  colors(themes) {
-    return Object.keys(themes)
-      .filter(k => themes[k] && themes[k].startsWith && themes[k].startsWith('#'))
-      .map(key => {
-      return {
-        key,
-        value: themes[key],
-      };
-    });
-  }
-
   loadThemes(themes) {
     this.themes = themes.map(theme => {
       return {
@@ -161,7 +150,7 @@ class App {
         className: theme.className,
         description: theme.description,
         dark: theme.dark,
-        colors: this.colors(theme),
+        colors: theme
       };
     });
   }

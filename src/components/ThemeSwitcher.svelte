@@ -10,12 +10,12 @@
   {#if $app.currentTheme}
       <header transition:fade class="title">
           <h4>Current Theme</h4>
-        <!-- The selected theme -->
+          <!-- The selected theme -->
           <h1 id="currentTheme">
               <small>{$app.currentTheme.name}</small>
           </h1>
 
-        <!-- Display the theme colors -->
+          <!-- Display the theme colors -->
           <div transition:slide>
               <Palette></Palette>
           </div>

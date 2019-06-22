@@ -17,10 +17,22 @@
 </style>
 
 <script>
+    import {onMount} from 'svelte'
     import {app} from '../store';
+    import {styleBuilder} from '../style-builder';
+
+    function applyTheme() {
+        setTimeout(() => styleBuilder.applyTheme($app.currentTheme), 100);
+    }
+
+    onMount(applyTheme)
+
 </script>
 
-<select class="theme-options" id="theme-options"
+<label for="theme-options">Select a theme</label>
+<select class="theme-options"
+        id="theme-options"
+        on:change="{applyTheme}"
         bind:value={$app.currentThemeName}>
   {#each $app.themes as theme(theme.name)}
       <option value={theme.name}>{theme.name}</option>

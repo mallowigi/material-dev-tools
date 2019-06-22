@@ -1,8 +1,3 @@
-<script>
-    import {fade} from 'svelte/transition';
-    import {app} from '../store';
-</script>
-
 <style>
     .palette {
         height: 2em;
@@ -57,11 +52,22 @@
     }
 </style>
 
+<script>
+    import {fade} from 'svelte/transition';
+    import {app} from '../store';
+
+    function isColor(color) {
+        return color && color.startsWith && color.startsWith('#');
+    }
+</script>
+
 {#if $app.currentTheme}
     <ul class="palette" transition:fade>
-      {#each $app.currentTheme.colors as color}
-          <li class="anim anim-delayed" style="background: {color.value}"
-              title="{color.key}"></li>
+      {#each Object.entries($app.currentTheme.colors) as [key, color]}
+          {#if isColor(color)}
+            <li class="anim anim-delayed" style="background: {color}"
+                title="{key}"></li>
+          {/if}
       {/each}
     </ul>
 {/if}
