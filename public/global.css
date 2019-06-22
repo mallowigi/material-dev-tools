@@ -74,7 +74,10 @@ input {
 	color: var(--string-color);
 }
 
-.parameter,
+.parameter {
+	color: var(--parameters-color);
+}
+
 .number {
 	color: var(--number-color);
 }

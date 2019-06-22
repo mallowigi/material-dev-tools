@@ -38,6 +38,7 @@ export const styleBuilder = {
               operators,
               attributes,
               numbers,
+              parameters,
             } = currentTheme.colors;
 
       // Create a style tag with css variables with colors
@@ -114,6 +115,7 @@ export const styleBuilder = {
    * @param operators
    * @param numbers
    * @param attributes
+   * @param parameters
    * @returns {string}
    */
   styles({
@@ -147,6 +149,7 @@ export const styleBuilder = {
            operators,
            numbers,
            attributes,
+           parameters,
          }) {
     return `
   :root {
@@ -182,6 +185,7 @@ export const styleBuilder = {
   --number-color: ${numbers};
   --link-color: ${links};
   --text-color: ${foreground};
+  --parameters-color: ${parameters};
   }
 `;
   },
