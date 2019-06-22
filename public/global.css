@@ -4,88 +4,89 @@
 *,
 *::before,
 *::after {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	user-select: none;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-	background: var(--background);
-	margin: 0;
-	height: 100%;
-	width: 100%;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	color: var(--foreground);
+    background: var(--background);
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--foreground);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
+    margin: 0 0 0.5em 0;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 h1 {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 a {
-	color: var(--link);
+    color: var(--link-color);
 }
 
 code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
+    font-family: var(--font-family, menlo, inconsolata, monospace);
+    font-size: var(--font-size, calc(1em - 2px));
 }
 
 @media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
+    body {
+        font-size: 16px;
+    }
 }
 
 input {
-	background-color: var(--contrast);
-	color: var(--primary)
+    background-color: var(--contrast);
+    color: var(--primary)
 }
+
 .comment {
-	color: var(--comment-color);
+    color: var(--comment-color);
 }
 
 .keyword {
-	color: var(--keyword-color);
+    color: var(--keyword-color);
 }
 
 .function {
-	color: var(--function-color);
+    color: var(--function-color);
 }
 
 .punctuation {
-	color: var(--operator-color);
+    color: var(--operator-color);
 }
 
 .string,
 .attr-value {
-	color: var(--string-color);
+    color: var(--string-color);
 }
 
 .parameter {
-	color: var(--parameters-color);
+    color: var(--parameters-color);
 }
 
 .number {
-	color: var(--number-color);
+    color: var(--number-color);
 }
 
 .attr-name {
-	color: var(--attribute-name-color);
+    color: var(--attribute-name-color);
 }
 
 .tag {
-	color: var(--tag-name-color);
+    color: var(--tag-name-color);
 }

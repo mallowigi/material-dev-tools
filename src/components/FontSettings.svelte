@@ -1,5 +1,14 @@
 <script>
     import {app} from '../store';
+    import {styleBuilder} from '../style-builder';
+
+    function applyTheme() {
+        setTimeout(() => styleBuilder.applyTheme(
+                $app.currentTheme,
+                $app.currentFontFamily,
+                $app.currentFontSize
+        ), 100);
+    }
 </script>
 
 <style>
@@ -26,12 +35,12 @@
 
 <div class="font-setting font-family">
     <label for="font-family-input">Font Family:
-        <span style="font-family: '{$app.currentFontFamily}'">{$app.currentFontFamily}</span> <small>(press enter to
-            save)</small>
+        <span style="font-family: '{$app.currentFontFamily}'">{$app.currentFontFamily}</span>
     </label>
 
     <input id="font-family-input"
            type="text"
+           on:change="{applyTheme}"
            bind:value="{$app.currentFontFamily}"
            placeholder="e.g. Menlo"/>
 </div>
@@ -45,5 +54,6 @@
     <input id="font-size-input" type="range"
            min="10"
            max="22"
+           on:change="{applyTheme}"
            bind:value="{$app.currentFontSize}"/>
 </div>

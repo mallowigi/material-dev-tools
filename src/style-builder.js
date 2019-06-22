@@ -7,8 +7,10 @@ export const styleBuilder = {
   /**
    * Extract current theme colors and inject a style tag in the body
    * @param currentTheme
+   * @param currentFontFamily
+   * @param currentFontSize
    */
-  applyTheme(currentTheme) {
+  applyTheme(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 14) {
     // Extract colors
     if (currentTheme && currentTheme.colors) {
       const {
@@ -72,7 +74,9 @@ export const styleBuilder = {
         operators,
         numbers,
         attributes,
-
+        parameters,
+        fontFamily: currentFontFamily,
+        fontSize: currentFontSize,
       });
 
       const styleElem = document.getElementById('inject-style');
@@ -116,6 +120,7 @@ export const styleBuilder = {
    * @param numbers
    * @param attributes
    * @param parameters
+   * @param fontFamily
    * @returns {string}
    */
   styles({
@@ -150,6 +155,8 @@ export const styleBuilder = {
            numbers,
            attributes,
            parameters,
+           fontFamily,
+           fontSize,
          }) {
     return `
   :root {
@@ -186,6 +193,9 @@ export const styleBuilder = {
   --link-color: ${links};
   --text-color: ${foreground};
   --parameters-color: ${parameters};
+  
+  --font-family: ${fontFamily};
+  --font-size: ${fontSize}px;
   }
 `;
   },

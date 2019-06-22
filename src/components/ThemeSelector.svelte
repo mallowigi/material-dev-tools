@@ -16,15 +16,19 @@
 </style>
 
 <script>
-    import {onMount} from 'svelte'
+    import {onMount} from 'svelte';
     import {app} from '../store';
     import {styleBuilder} from '../style-builder';
 
     function applyTheme() {
-        setTimeout(() => styleBuilder.applyTheme($app.currentTheme), 100);
+        setTimeout(() => styleBuilder.applyTheme(
+                $app.currentTheme,
+                $app.currentFontFamily,
+                $app.currentFontSize
+        ), 100);
     }
 
-    onMount(applyTheme)
+    onMount(applyTheme);
 
 </script>
 

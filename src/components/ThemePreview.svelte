@@ -1,21 +1,22 @@
 <style>
     .preview {
-        padding:.5em;
+        padding: .5em;
         color: var(--foreground);
+        overflow: auto;
+        line-height: calc(16 / var(--font-size, 14));
     }
-
-
 </style>
 
 <script>
     import Prism from 'prismjs';
-    import * as plugins from 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
+    import * as plugins from 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
+
     Prism.plugins.NormalizeWhitespace.setDefaults({
         'remove-trailing': false,
         'remove-indent': false,
         'left-trim': false,
         'right-trim': true,
-        'remove-initial-line-feed': false
+        'remove-initial-line-feed': false,
     });
     const nw = Prism.plugins.NormalizeWhitespace;
 
