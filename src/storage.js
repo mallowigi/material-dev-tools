@@ -3,6 +3,7 @@ export const DEVTOOLS_THEME = 'devtools-theme';
 export const DEVTOOLS_FONT = 'devtools-font';
 export const DEVTOOLS_SIZE = 'devtools-size';
 
+const chromeStorage = chrome.storage && chrome.storage.sync;
 const fakeStorage = {
 
   async get(property, fn = () => {}) {
@@ -21,6 +22,9 @@ const fakeStorage = {
       const oldSettings = JSON.parse(oldItem);
       const newSettings = {...oldSettings, ...settings};
 
+      if (chromeStorage) {
+        chromeStorage.set({[SETTINGS]: JSON.stringify(newSettings)}, () => {});
+      }
       await localStorage.setItem(SETTINGS, JSON.stringify(newSettings));
       fn(settings);
     } catch (e) {
