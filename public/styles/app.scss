@@ -117,7 +117,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   font-size: 2em;
 }
 
-@for $item from 1 through 20 {
+@for $item from 1 through 30 {
   .anim.anim-delayed:nth-child(#{$item}) {
     animation-delay: #{$item/12}s !important;
   }

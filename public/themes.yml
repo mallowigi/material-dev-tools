@@ -23,6 +23,16 @@ material:
     notif: '#1E272C'
     accent: '#009688'
     excluded: '#2E3C43'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - darker:
     name: Material Darker
@@ -48,6 +58,16 @@ material:
     notif: '#1A1A1A'
     accent: '#FF9800'
     excluded: '#323232'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - lighter:
     name: Material Lighter
@@ -73,6 +93,16 @@ material:
     notif: '#eae8e8'
     accent: '#00BCD4'
     excluded: '#eae8e8'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - palenight:
     name: Material Palenight
@@ -98,6 +128,16 @@ material:
     notif: '#202331'
     accent: '#ab47bc'
     excluded: '#2f2e43'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - deepocean:
     name: Material Deep Ocean
@@ -123,6 +163,16 @@ material:
     notif: '#090B10'
     accent: '#84ffff'
     excluded: '#292D3E'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
 other:
   - monokai:
@@ -149,6 +199,16 @@ other:
     notif: '#363437'
     accent: '#ffd866'
     excluded: '#3a3a3c'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - dracula:
     name: Dracula
@@ -174,6 +234,16 @@ other:
     notif: '#1D2228'
     accent: '#FF79C5'
     excluded: '#34353D'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
 
   - arcdark:
@@ -200,6 +270,16 @@ other:
     notif: '#262a33'
     accent: '#42A5F5'
     excluded: '#474B57'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - onedark:
     name: Atom One Dark
@@ -225,6 +305,16 @@ other:
     notif: '#282C34'
     accent: '#2979ff'
     excluded: '#3c4150'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - onelight:
     name: Atom One Light
@@ -250,6 +340,16 @@ other:
     notif: '#F2F2F2'
     accent: '#2979ff'
     excluded: '#DBDBDC'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - solardark:
     name: Material Solarized Dark
@@ -275,6 +375,16 @@ other:
     notif: '#2E4C52'
     accent: '#d33682'
     excluded: '#083F4D'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - solarlight:
     name: Material Solarized Light
@@ -300,6 +410,16 @@ other:
     notif: '#EDE8D4'
     accent: '#d33682'
     excluded: '#E3DCC9'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'
 
   - github:
     name: GitHub
@@ -325,3 +445,13 @@ other:
     notif: '#DFECFE'
     accent: '#79CB60'
     excluded: '#FDFDFD'
+    comments: '#546e7a'
+    vars: '#eeffff'
+    links: '#80cbc4'
+    functions: '#82aaff'
+    keywords: '#c792ea'
+    tags: '#f07178'
+    strings: '#c3e88d'
+    operators: '#89ddff'
+    attributes: '#ffcb6b'
+    numbers: '#f78c6c'

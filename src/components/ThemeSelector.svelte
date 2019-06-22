@@ -10,7 +10,6 @@
         font-size: 0.875rem;
         color: var(--foreground);
         text-transform: none;
-        width: 60%;
         margin: 0 auto 2em;
         display: block;
     }

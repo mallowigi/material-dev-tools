@@ -4,7 +4,6 @@
 
 <style>
     .font-setting {
-        width: 60%;
         display: block;
         margin: 1.25rem auto 2em;
     }

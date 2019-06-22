@@ -36,6 +36,8 @@ export const styleBuilder = {
               tags,
               strings,
               operators,
+              attributes,
+              numbers,
             } = currentTheme.colors;
 
       // Create a style tag with css variables with colors
@@ -67,8 +69,8 @@ export const styleBuilder = {
         errors: tags,
         strings,
         operators,
-        numbers: strings,
-        attributes: links,
+        numbers,
+        attributes,
 
       });
 

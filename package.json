@@ -9,6 +9,7 @@
     "compression": "^1.7.1",
     "js-yaml": "^3.13.1",
     "polka": "^0.5.0",
+    "prismjs": "^1.16.0",
     "sirv": "^0.4.0",
     "sirv-cli": "^0.4.4"
   },

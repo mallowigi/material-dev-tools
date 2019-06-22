@@ -281,4 +281,44 @@ input[type=range]::-webkit-slider-runnable-track {
   animation-delay: 1.6666666667s !important;
 }
 
+.anim.anim-delayed:nth-child(21) {
+  animation-delay: 1.75s !important;
+}
+
+.anim.anim-delayed:nth-child(22) {
+  animation-delay: 1.8333333333s !important;
+}
+
+.anim.anim-delayed:nth-child(23) {
+  animation-delay: 1.9166666667s !important;
+}
+
+.anim.anim-delayed:nth-child(24) {
+  animation-delay: 2s !important;
+}
+
+.anim.anim-delayed:nth-child(25) {
+  animation-delay: 2.0833333333s !important;
+}
+
+.anim.anim-delayed:nth-child(26) {
+  animation-delay: 2.1666666667s !important;
+}
+
+.anim.anim-delayed:nth-child(27) {
+  animation-delay: 2.25s !important;
+}
+
+.anim.anim-delayed:nth-child(28) {
+  animation-delay: 2.3333333333s !important;
+}
+
+.anim.anim-delayed:nth-child(29) {
+  animation-delay: 2.4166666667s !important;
+}
+
+.anim.anim-delayed:nth-child(30) {
+  animation-delay: 2.5s !important;
+}
+
 /*# sourceMappingURL=app.css.map */

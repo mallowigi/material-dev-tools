@@ -41,10 +41,6 @@ a {
 code {
 	font-family: menlo, inconsolata, monospace;
 	font-size: calc(1em - 2px);
-	color: var(--primary);
-	background-color: var(--second);
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
 }
 
 @media (min-width: 400px) {
@@ -56,4 +52,37 @@ code {
 input {
 	background-color: var(--contrast);
 	color: var(--primary)
+}
+.comment {
+	color: var(--comment-color);
+}
+
+.keyword {
+	color: var(--keyword-color);
+}
+
+.function {
+	color: var(--function-color);
+}
+
+.punctuation {
+	color: var(--operator-color);
+}
+
+.string,
+.attr-value {
+	color: var(--string-color);
+}
+
+.parameter,
+.number {
+	color: var(--number-color);
+}
+
+.attr-name {
+	color: var(--attribute-name-color);
+}
+
+.tag {
+	color: var(--tag-name-color);
 }
