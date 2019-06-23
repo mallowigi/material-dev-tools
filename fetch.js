@@ -2,9 +2,10 @@
            storage,
            panels) {
   const SETTINGS = 'devtools-settings';
-   const DEVTOOLS_THEME = 'devtools-theme';
-   const DEVTOOLS_FONT = 'devtools-font';
-   const DEVTOOLS_SIZE = 'devtools-size';
+  const DEVTOOLS_THEME = 'devtools-theme';
+  const DEVTOOLS_FONT = 'devtools-font';
+  const DEVTOOLS_SIZE = 'devtools-size';
+  const DEVTOOLS_CURRENT = 'devtools-current';
 
   const styleBuilder = {
     /**
@@ -46,10 +47,7 @@
                 parameters,
               } = currentTheme.colors;
 
-        // Create a style tag with css variables with colors
-        const style = document.createElement('style');
-        style.id = 'inject-style';
-        style.innerHTML = this.styles({
+        return this.styles({
           background,
           foreground,
           primary: text,
@@ -81,12 +79,6 @@
           fontFamily: currentFontFamily,
           fontSize: currentFontSize,
         });
-
-        const styleElem = document.getElementById('inject-style');
-        if (styleElem) {
-          document.head.removeChild(styleElem);
-        }
-        document.head.appendChild(style);
       }
     },
 
@@ -212,10 +204,13 @@
       const settings = object[SETTINGS];
       if (settings && settings.startsWith('{')) {
         const json = JSON.parse(settings);
-        const size   = json[DEVTOOLS_SIZE],
-              theme  = json[DEVTOOLS_THEME],
-              family = json[DEVTOOLS_FONT];
-        console.log(size, theme, family)
+        const size    = json[DEVTOOLS_SIZE],
+              theme   = json[DEVTOOLS_THEME],
+              current = json[DEVTOOLS_CURRENT],
+              family  = json[DEVTOOLS_FONT];
+
+        let style = styleBuilder.applyTheme(current, family, size);
+        panels.applyStyleSheet(style);
       }
     });
   }

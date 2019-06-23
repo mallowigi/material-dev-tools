@@ -1,5 +1,5 @@
 import {writable} from 'svelte/store';
-import {DEVTOOLS_FONT, DEVTOOLS_SIZE, DEVTOOLS_THEME, SETTINGS, storage} from './storage';
+import {DEVTOOLS_FONT, DEVTOOLS_SIZE, DEVTOOLS_THEME, SETTINGS, DEVTOOLS_CURRENT, storage} from './storage';
 
 /**
  * @typedef Theme {object}
@@ -81,6 +81,8 @@ class App {
         ...value,
         colors: {},
       };
+
+      this.saveCurrent(value);
 
       setTimeout(() => app.update($app => new App({...$app, _currentTheme: {...value}})), 100);
     }
@@ -186,6 +188,14 @@ class App {
    */
   saveFontSize(size) {
     storage.set({[DEVTOOLS_SIZE]: size}, () => {});
+  }
+
+  /**
+   * Save current theme
+   * @param theme
+   */
+  saveCurrent(theme) {
+    storage.set({[DEVTOOLS_CURRENT]: theme}, () => {});
   }
 
   /**
