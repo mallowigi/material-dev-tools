@@ -204,9 +204,10 @@ class App {
   fetchSettings() {
     /** Get current theme setting from storage */
     return storage.get(SETTINGS, object => {
-      this.currentThemeName = object[DEVTOOLS_THEME] || this.defaults.themeName;
-      this.currentFontFamily = object[DEVTOOLS_FONT] || this.defaults.fontFamily;
-      this.currentFontSize = object[DEVTOOLS_SIZE] || this.defaults.fontSize;
+      this._currentThemeName = object[DEVTOOLS_THEME] || this.defaults.themeName;
+      this._currentFontFamily = object[DEVTOOLS_FONT] || this.defaults.fontFamily;
+      this._currentFontSize = object[DEVTOOLS_SIZE] || this.defaults.fontSize;
+      this.currentTheme = this.getTheme(this._currentThemeName || 'Material Oceanic');
     });
 
   }

@@ -8,7 +8,7 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
-    }
+    }  
 
     .palette::after {
         display: table;

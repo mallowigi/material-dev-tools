@@ -17,8 +17,8 @@ const fakeStorage = {
     }
   },
 
-  async set(settings, fn = () => {}) {
-    let oldItem = await localStorage.getItem(SETTINGS) || '{}';
+  set(settings, fn = () => {}) {
+    let oldItem = localStorage.getItem(SETTINGS) || '{}';
     try {
       const oldSettings = JSON.parse(oldItem);
       const newSettings = {...oldSettings, ...settings};
@@ -26,7 +26,7 @@ const fakeStorage = {
       if (chromeStorage) {
         chromeStorage.set({[SETTINGS]: JSON.stringify(newSettings)}, () => {});
       }
-      await localStorage.setItem(SETTINGS, JSON.stringify(newSettings));
+      localStorage.setItem(SETTINGS, JSON.stringify(newSettings));
       fn(settings);
     } catch (e) {
       fn({});
