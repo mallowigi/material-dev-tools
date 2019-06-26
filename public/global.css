@@ -15,6 +15,7 @@
 html,
 body {
     background: var(--background);
+    transition: all .5s;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -51,42 +52,52 @@ code {
 
 input {
     background-color: var(--contrast);
-    color: var(--primary)
+    color: var(--primary);
+    transition: all .5s;
 }
 
 .comment {
     color: var(--comment-color);
+    transition: color .5s;
 }
 
 .keyword {
     color: var(--keyword-color);
+    transition: color .5s;
 }
 
 .function {
     color: var(--function-color);
+    transition: color .5s;
 }
 
 .punctuation {
     color: var(--operator-color);
+    transition: color .5s;
 }
 
 .string,
 .attr-value {
     color: var(--string-color);
+    transition: color .5s;
 }
 
 .parameter {
     color: var(--parameters-color);
+    transition: color .5s;
 }
 
 .number {
     color: var(--number-color);
+    transition: color .5s;
 }
 
 .attr-name {
     color: var(--attribute-name-color);
+    transition: color .5s;
 }
 
 .tag {
     color: var(--tag-name-color);
+    transition: color .5s;
 }
