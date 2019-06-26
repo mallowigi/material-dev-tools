@@ -196,7 +196,7 @@
     },
   };
 
-  async function themeSetup(panel) {
+  async function themeSetup() {
     const css = await fetch('dist/material-style.css').then(res => res.text());
     panels.applyStyleSheet(css);
 
@@ -216,14 +216,7 @@
   }
 
   function init() {
-    const pagePath = 'public/index.html';
-
-    panels.create(
-      'Material DevTools Settings', //Title
-      null,  // icon
-      pagePath, // panel html
-      themeSetup, // callback
-    );
+    themeSetup();
   }
 
   init();

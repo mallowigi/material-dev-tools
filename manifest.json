@@ -1,7 +1,7 @@
 {
-  "name": "Material DevTools Theme",
+  "name": "Material Theme UI for DevTools",
   "version": "1.0",
-  "description": "A developer tools color theme inspired by the Material Theme UI plugin for IntelliJ IDEA.",
+  "description": "Material Theme UI for DevTools",
   "manifest_version": 2,
   "author": "Elior Boukhobza (mallowigi)",
   "devtools_page": "devtools.html",
