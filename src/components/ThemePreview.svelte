@@ -38,7 +38,7 @@ function foo(p) {
     export let html = Prism.highlight(nw.normalize(htmlCode), Prism.languages.markup, 'html');
 </script>
 
-<pre class="preview">
+<pre class="preview" contenteditable>
     <code class="language-javascript">{@html code}</code>
     <code class="language-html">{@html html}</code>
 </pre>

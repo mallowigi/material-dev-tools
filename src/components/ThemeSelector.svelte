@@ -32,7 +32,7 @@
 
 </script>
 
-<label for="theme-options">Select a theme</label>
+<label for="theme-options">Selected Theme:</label>
 <select class="theme-options"
         id="theme-options"
         on:change="{applyTheme}"

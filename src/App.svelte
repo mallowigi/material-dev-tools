@@ -25,6 +25,8 @@ import {fly} from 'svelte/transition'
 
     await $app.fetchSettings();
 
+    $app.loadDefaults();
+
     $app.loading = false;
   });
 </script>
@@ -35,6 +37,6 @@ import {fly} from 'svelte/transition'
     <h4>Loading...</h4>
   </div>
 {:else}
-  <Panel transition:fly="{{ y: 200, duration: 2000 }}"></Panel>
+  <Panel></Panel>
 {/if}
 </main>

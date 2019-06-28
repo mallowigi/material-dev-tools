@@ -54,12 +54,23 @@ class App {
 
     this.defaults = {
       fontSize: 14,
-      fontFamily: 'Menlo',
-      themeName: 'Default',
+      fontFamily: 'Menlo'
     };
 
     // Import data
     Object.assign(this, data);
+  }
+
+  loadDefaults() {
+    if (!this.currentTheme) {
+      this.currentTheme = this.themes[0];
+    }
+    if (!this.currentFontFamily) {
+      this.currentFontFamily = this.defaults.fontFamily;
+    }
+    if (!this.currentFontSize) {
+      this.currentFontSize = this.defaults.fontSize
+    }
   }
 
   /**
@@ -152,7 +163,7 @@ class App {
         className: theme.className,
         description: theme.description,
         dark: theme.dark,
-        colors: theme
+        colors: theme,
       };
     });
   }

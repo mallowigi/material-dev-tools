@@ -50,6 +50,26 @@ code {
     }
 }
 
+*::-webkit-scrollbar {
+    width: 6px;
+}
+/* Track */
+*::-webkit-scrollbar-track {
+    background: var(--background);
+    border-radius: 10px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: var(--accent1);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--accent1);
+}
+
 input {
     background-color: var(--contrast);
     color: var(--primary);

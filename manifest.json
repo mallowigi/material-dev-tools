@@ -2,9 +2,12 @@
   "name": "Material Theme UI for DevTools",
   "version": "1.0",
   "description": "Material Theme UI for DevTools",
+  "short_name": "Material Theme DevTools",
   "manifest_version": 2,
   "author": "Elior Boukhobza (mallowigi)",
   "devtools_page": "devtools.html",
+  "homepage_url": "https://www.material-theme.com",
+  "options_page": "/public/index.html",
   "permissions": [
     "declarativeContent",
     "storage"
