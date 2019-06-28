@@ -1,0 +1,52 @@
+.tabbed-pane-content.has-no-tabs {
+  background-color: $lighterBg !important;
+}
+
+.tabbed-pane-placeholder {
+  text-shadow: $border 0px 1px 0px;
+}
+
+.tabbed-pane-header {
+  border-bottom-color: $border !important;
+  background-color: var(--toolbar-bg-color);
+}
+
+.tabbed-pane-header-tab {
+  color: $foreground !important;
+}
+
+.tabbed-pane-header-tab:hover,
+.tabbed-pane-shadow .tabbed-pane-header-tab[data-keyboard-focus="true"]:focus {
+  color: $selFg !important;
+  background-color: var(--toolbar-hover-bg-color);
+}
+
+.tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab {
+  color: $text-color !important;
+}
+
+.tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab.selected {
+  border-left-color: $accent1 !important;
+}
+
+.tabbed-pane-header-tab.selected {
+  background-color: var(--tab-selected-bg-color);
+  color: var(--tab-selected-fg-color);
+}
+
+.tabbed-pane-header-tab.dragging {
+  box-shadow: none !important;
+  background-color: $highlight !important;
+}
+
+.tabbed-pane-header-tabs-drop-down-container > .chevron-icon {
+  background-color: $foreground !important;
+}
+
+.tabbed-pane-header-tabs-drop-down-container:hover {
+  background-color: $background !important;
+}
+
+.tabbed-pane-tab-slider {
+  background-color: var(--accent-color);
+}

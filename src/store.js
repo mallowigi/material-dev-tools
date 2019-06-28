@@ -53,7 +53,7 @@ class App {
     this.notifying = false;
 
     this.defaults = {
-      fontSize: 14,
+      fontSize: 11,
       fontFamily: 'Menlo'
     };
 

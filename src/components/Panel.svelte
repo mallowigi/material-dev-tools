@@ -41,6 +41,6 @@
 <ThemeSwitcher></ThemeSwitcher>
 
 <div class="footer">
-<small>Material Theme © 2015-2019 <a target="_blank" href="https://www.material-theme.com">Elior Boukhobza & Chris Magnussen</a></small><br>
+<small>Material Theme © 2015-2019 <a target="_blank" href="https://www.material-theme.com">Elior Boukhobza & Chris Magnussen</a></small> -
 <small>Original concept from <a target="_blank" href="https://github.com/micjamking">Mike King</a></small>
 </div>

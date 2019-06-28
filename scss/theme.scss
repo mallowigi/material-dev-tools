@@ -59,7 +59,7 @@ $highlight: var(--highlight);
 $tree: var(--tree);
 $notif: var(--notif);
 $accent1: var(--accent1);
-$accentAlpha: var(--accentAlpha);
+$accent1Alpha: var(--accentAlpha);
 $excluded: var(--excluded);
 $excludedAlpha: var(--excludedAlpha);
 $accent2: var(--accent2);
@@ -79,12 +79,13 @@ $number-color: var(--number-color);
 $link-color: var(--link-color);
 $text-color: var(--text-color);
 $ignored-color: var(--ignored-color);
-
+$fontFamily: var(--font-family, Menlo, monospace);
+$fontSize: var(--font-size, 11px);
 
 .-theme-with-dark-background {
   --accent-color: #{$accent2} !important;
   --accent-color-b: #{rgba($accent2, 0.5)} !important;
-  --accent-color-c: #{$accent3} !important;
+  --accent-color-c: #{$accent2} !important;
   --toolbar-bg-color: #{$darkerBg} !important;
   --toolbar-hover-bg-color: #{$highlight} !important;
   --selection-fg-color: #{$selFg} !important;
@@ -92,13 +93,13 @@ $ignored-color: var(--ignored-color);
   --selection-inactive-bg-color: #{$darkerBg} !important;
   --tab-selected-fg-color: #{$selFg} !important;
   --tab-selected-bg-color: #{$highlight} !important;
-  --drop-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
+  --drop-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23),
   0 2px 4px 2px rgba(0, 0, 0, 0.2),
   0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
   --divider-color: #{$border} !important;
   --focus-ring-active-shadow: 0 0 0 1px #{$accent1} !important;
   --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
-  --editor-selection-bg-color: #{$selBgAlpha} !important;
+  --editor-selection-bg-color: #{$selBg} !important;
   --editor-selection-inactive-bg-color: #{$excludedAlpha} !important;
 }
 
@@ -106,6 +107,17 @@ $ignored-color: var(--ignored-color);
 ========================================================================== */
 :host-context(.-theme-with-dark-background),
 .-theme-with-dark-background {
+  ::selection {
+    background: $selBgAlpha !important;
+    color: $selFg !important;
+  }
+
+  .monospace,
+  .source-code {
+    font-family: $fontFamily !important;
+    font-size: $fontSize !important;
+  }
+
   // Line at caret
   ol li.selected:focus .webkit-html-tag,
   ol li.selected:focus .webkit-html-tag-name,
@@ -116,6 +128,15 @@ $ignored-color: var(--ignored-color);
     color: $selFg !important;
   }
 
+  .gray-info-message {
+    background: var(--disabled) !important;
+  }
+
+  .close-button .smallicon-cross {
+    filter: brightness(2);
+  }
+
+  //region Code
   .webkit-html-attribute-name {
     color: $attribute-name-color !important;
   }
@@ -203,6 +224,9 @@ $ignored-color: var(--ignored-color);
   .webkit-css-url {
     color: $link-color !important;
   }
+
+  //endregion
+
 }
 
 :host-context(:not(.platform-mac).-theme-with-dark-background),
@@ -223,7 +247,7 @@ $ignored-color: var(--ignored-color);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: $accentAlpha !important;
+    background: $accent1Alpha !important;
     border-radius: 16px !important;
   }
 
@@ -272,6 +296,11 @@ $ignored-color: var(--ignored-color);
   ========================================================================== */
   .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
     background-color: $background !important;
+  }
+  .toolbar-state-on {
+    .toolbar-text {
+      color: $accent1 !important;
+    }
   }
 
   .toolbar-item {
@@ -332,6 +361,13 @@ $ignored-color: var(--ignored-color);
     box-shadow: $border 0px 1px 0px;
   }
 
+  // Search inputs
+  .styles-sidebar-pane-toolbar,
+  .toolbar-input {
+    background-color: $contrast !important;
+    border-bottom: 1px solid $border !important;
+  }
+
   /* Radios
   ========================================================================== */
   input[type="radio"] {
@@ -352,8 +388,8 @@ $ignored-color: var(--ignored-color);
       content: '' !important;
       display: inline-block !important;
       vertical-align: text-top !important;
-      width: 12px !important;
-      height: 12px !important;
+      width: 14px !important;
+      height: 14px !important;
       background: $background !important;
       border: 2px solid $accent1 !important;
       border-radius: 50% !important;
@@ -371,7 +407,6 @@ $ignored-color: var(--ignored-color);
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
     }
 
-
     // Disabled state label.
     &:disabled:before {
       color: #b8b8b8 !important;
@@ -381,7 +416,7 @@ $ignored-color: var(--ignored-color);
     // Disabled box.
     &:disabled:before {
       box-shadow: none !important;
-      background: #ddd !important;
+      background: #dddddd !important;
     }
 
     // Checkmark. Could be replaced with an image
@@ -391,18 +426,19 @@ $ignored-color: var(--ignored-color);
       left: -2px !important;
       top: -2px !important;
       background: $background !important;
-      width: 12px !important;
-      height: 12px !important;
+      width: 14px !important;
+      height: 14px !important;
       border: 2px solid $accent1 !important;
     }
+
     &:checked:after {
       content: '' !important;
       position: absolute !important;
       left: 0px !important;
       top: 0px !important;
       background: $accent1 !important;
-      width: 12px !important;
-      height: 12px !important;
+      width: 14px !important;
+      height: 14px !important;
       transform: scale(0.6) !important;
       border-radius: 50% !important;
     }
@@ -466,7 +502,7 @@ $ignored-color: var(--ignored-color);
     &:disabled + label:before,
     &:disabled ~ .webkit-css-property:before {
       box-shadow: none !important;
-      background: #ddd !important;
+      background: #dddddd !important;
     }
 
     // Checkmark. Could be replaced with an image
@@ -475,7 +511,7 @@ $ignored-color: var(--ignored-color);
       content: '' !important;
       position: absolute !important;
       left: 3px !important;
-      top: 8px !important;
+      top: 7px !important;
       background: $background !important;
       width: 2px !important;
       height: 2px !important;
@@ -489,6 +525,25 @@ $ignored-color: var(--ignored-color);
     }
   }
 
+  input.dt-checkbox-themed {
+    border-top-color: $highlight;
+    border-right-color: $highlight;
+    border-bottom-color: $highlight;
+    border-left-color: $highlight;
+    background-color: $contrast;
+  }
+
+  input.dt-checkbox-themed:checked::after {
+    background-color: $accent1 !important;
+  }
+
+  .dt-checkbox-subtitle {
+    color: $primary !important;
+  }
+
+  // endregion
+
+  // region Console
   /* Console
      ========================================================================== */
   .console-view {
@@ -499,22 +554,16 @@ $ignored-color: var(--ignored-color);
     background-color: $background !important;
   }
 
+  // endregion
+
+  // region Inspector
   /* Inspector
      ========================================================================== */
   input {
     background-color: $contrast !important;
   }
 
-  .editing {
-    box-shadow: var(--drop-shadow) !important;
-    background-color: $background !important;
-  }
-
-  .full-widget-dimmed-banner {
-    color: rgb(136, 136, 136) !important;
-    background-color: $background !important;
-  }
-
+  // endregion
 
   /* View Container
      ========================================================================== */
@@ -528,15 +577,6 @@ $ignored-color: var(--ignored-color);
 
   .sidebar-pane-container .toolbar {
     border-bottom-color: $border;
-  }
-
-  // Search inputs
-  .styles-sidebar-pane-toolbar,
-  .styles-sidebar-pane-filter-box > input,
-  .toolbar-input,
-  .filter-input-field {
-    background-color: $contrast !important;
-    border-bottom: 1px solid $border !important;
   }
 
   /* Filter bar
@@ -557,6 +597,10 @@ $ignored-color: var(--ignored-color);
      ========================================================================== */
   .toolbar-shadow {
     z-index: 12 !important;
+  }
+
+  .toolbar-text {
+    color: $primary !important;
   }
 
   /* Crumbs
@@ -591,7 +635,6 @@ $ignored-color: var(--ignored-color);
   /* Network grid
    ==========================================================================
    */
-
 
   .network-waterfall-header,
   .network-log-grid.data-grid th {
@@ -640,7 +683,6 @@ $ignored-color: var(--ignored-color);
     border: $border !important;
   }
 
-
   .network-dim-cell {
     color: $primary !important;
   }
@@ -655,30 +697,6 @@ $ignored-color: var(--ignored-color);
 
   .sidebar-pane-section-toolbar {
     background: $button !important;
-  }
-
-  .styles-section:focus {
-    background: $lighterBg !important;
-  }
-
-  .styles-section .selector {
-    color: $primary !important;
-  }
-
-  .styles-section.read-only {
-    background: $second !important;
-  }
-
-  .styles-section .simple-selector.selector-matches, .styles-section.keyframe-key {
-    color: $number-color !important;
-  }
-
-  .styles-sidebar-pane-toolbar,
-  .styles-sidebar-pane-filter-box > input,
-  .toolbar-input,
-  .filter-input-field {
-    background-color: $contrast !important;
-    border-bottom: 1px solid $border !important;
   }
 
   input[type="checkbox"]:not(.dt-checkbox-themed) {
@@ -773,16 +791,6 @@ $ignored-color: var(--ignored-color);
     background: $highlight !important;
   }
 
-  /* Tabbed Pane
-   ========================================================================== */
-  .tabbed-pane-content.has-no-tabs {
-    background-color: $lighterBg !important;
-  }
-
-  .tabbed-pane-header {
-    border-bottom-color: $border !important;
-  }
-
   /* Box Model
    ========================================================================== */
   .metrics {
@@ -810,7 +818,6 @@ $ignored-color: var(--ignored-color);
     }
   }
 
-
   .resources-dividers-label-bar {
     background: $contrast !important;
   }
@@ -828,10 +835,18 @@ $ignored-color: var(--ignored-color);
 
   .tree-outline > .parent {
     color: $primary !important;
+    &:hover, &:focus {
+      color: $selFg !important;
+    }
   }
 
   .tree-outline .header-name {
     color: $accent1 !important;
+  }
+
+  ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
+    background-color: $tree !important;
+    color: $selFg !important;
   }
 
   .empty-view {
@@ -850,11 +865,9 @@ $ignored-color: var(--ignored-color);
   /* Popups
    ========================================================
    */
-  .soft-context-menu,
   .tooltip {
     background: $background !important;
   }
-
 
   .item-list {
     background: $second !important;
@@ -885,23 +898,16 @@ $ignored-color: var(--ignored-color);
   //  background: $foreground !important;
   //}
 
-  .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab {
-    color: $text-color !important;
-  }
-
-  .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab.selected {
-    border-left-color: $accent1 !important;
-  }
-
   .settings-info-message {
     background: $second !important;
   }
 
-
 }
-
 
 @import "console";
 @import "cm";
 @import "treeView";
-
+@import "styles";
+@import "tabbedPane";
+@import "profile";
+@import "soft_context_menu";

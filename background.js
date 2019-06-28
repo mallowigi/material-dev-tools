@@ -173,8 +173,6 @@
   --notif: ${notif};
   --accent1: ${accent};
   --excluded: ${excluded};
-  --accent2: ${accent2};
-  --accent3: ${accent3};
 
   --tag-name-color: ${tags};
   --attribute-name-color: ${attributes};
