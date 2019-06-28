@@ -1,6 +1,7 @@
 (function (w,
            storage,
-           panels) {
+           panels,
+           browserAction) {
   const SETTINGS = 'devtools-settings';
   const DEVTOOLS_THEME = 'devtools-theme';
   const DEVTOOLS_FONT = 'devtools-font';
@@ -205,24 +206,22 @@
       if (settings && settings.startsWith('{')) {
         const json = JSON.parse(settings);
         const size    = json[DEVTOOLS_SIZE],
-              theme   = json[DEVTOOLS_THEME],
+              theme   = json[DEVTOOLS_THEME] || 'Material Oceanic',
               current = json[DEVTOOLS_CURRENT],
               family  = json[DEVTOOLS_FONT];
 
         let style = styleBuilder.applyTheme(current, family, size);
         panels.applyStyleSheet(style);
+        browserAction.setIcon({path: `./public/icons/${theme}.svg`}, () => {});
       }
     });
   }
 
-  function init() {
-    themeSetup();
-  }
-
-  init();
+  themeSetup();
 })(
   window,
   chrome.storage.sync,
   chrome.devtools.panels,
+  chrome.browserAction,
 );
 

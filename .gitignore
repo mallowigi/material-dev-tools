@@ -13,3 +13,4 @@ material-style.min.css
 /static/
 /public/bundle.*
 /public/styles/sass-cache
+/public/
