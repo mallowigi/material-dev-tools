@@ -16,7 +16,7 @@
   --second: rgb(49, 69, 73);
   --border: rgb(42, 55, 62);
   --highlight: rgb(66, 91, 103);
-  --tree: rgb(84, 110, 122);
+  --tree: rgba(84, 110, 122, .5);
   --notif: rgb(30, 39, 44);
   --accent1: rgb(0, 150, 136);
   --accentAlpha: rgba(0, 150, 136, .5);
@@ -90,7 +90,7 @@ $fontSize: var(--font-size, 11px);
   --toolbar-hover-bg-color: #{$highlight} !important;
   --selection-fg-color: #{$selFg} !important;
   --selection-bg-color: #{$selBg} !important;
-  --selection-inactive-bg-color: #{$darkerBg} !important;
+  --selection-inactive-bg-color: #{$lighterBg} !important;
   --tab-selected-fg-color: #{$selFg} !important;
   --tab-selected-bg-color: #{$highlight} !important;
   --drop-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23),
@@ -126,11 +126,6 @@ $fontSize: var(--font-size, 11px);
   ol li.selected:focus .webkit-html-attribute-name,
   ol li.selected:focus .devtools-link {
     color: $selFg !important;
-  }
-
-  .gray-info-message {
-    background: $second !important;
-    color: $primary !important;
   }
 
   .close-button .smallicon-cross {
@@ -305,8 +300,17 @@ $fontSize: var(--font-size, 11px);
     }
   }
 
-  .toolbar-item {
+  .toolbar-item.toolbar-button:not(.toolbar-has-dropdown) {
     color: $text-color !important;
+
+    &:hover {
+      background-image: radial-gradient(circle at center, $highlight 60%, rgba(0,0,0,0) 0) !important;
+      opacity: .8;
+
+      > * {
+        color: $selFg !important;
+      }
+    }
   }
 
   .list-item:hover {
@@ -315,10 +319,6 @@ $fontSize: var(--font-size, 11px);
   }
 
   select.toolbar-item[data-keyboard-focus="true"]:focus > * {
-    background-color: $background !important;
-  }
-
-  .toolbar-input {
     background-color: $background !important;
   }
 
@@ -340,19 +340,21 @@ $fontSize: var(--font-size, 11px);
     color: $foreground !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
-
-    &:not(:disabled):focus {
-      box-shadow: $accent1 0px 1px 2px;
-    }
   }
 
-  // Dropdowns
-  .chrome-select {
-    background-color: $button !important;
-    border: none !important;
-    color: $foreground !important;
-    text-transform: uppercase !important;
-    position: relative;
+  .text-button:not(:disabled):focus,
+  .text-button:not(:disabled):hover,
+  .text-button:not(:disabled):active {
+    background-color: $highlight !important;
+    box-shadow: none !important;
+  }
+
+  .text-button:not(:disabled):active {
+    background-color: $highlight !important;
+  }
+
+  .text-button:not(:disabled):focus {
+    box-shadow: $accent1 0px 1px 2px, $accent1 0px 0px 0px 2px;
   }
 
   // The shortcut keys in settings
@@ -361,12 +363,6 @@ $fontSize: var(--font-size, 11px);
     color: $selFg !important;
     border: none;
     box-shadow: $border 0px 1px 0px;
-  }
-
-  // Search inputs
-  .toolbar-input {
-    background-color: $contrast !important;
-    border-bottom: 1px solid $border !important;
   }
 
   /* Radios
@@ -557,15 +553,6 @@ $fontSize: var(--font-size, 11px);
 
   // endregion
 
-  // region Inspector
-  /* Inspector
-     ========================================================================== */
-  input {
-    background-color: $contrast !important;
-  }
-
-  // endregion
-
   // Product Registry
   .product-registry-badge {
     background-color: $accent1 !important;
@@ -609,23 +596,20 @@ $fontSize: var(--font-size, 11px);
     z-index: 12 !important;
   }
 
+  .soft-dropdown {
+    color: $foreground !important;
+  }
+
   .toolbar-text {
     color: $primary !important;
   }
 
   /* Scripts
      ========================================================================== */
-  .scripts-debug-toolbar {
-    background-color: $contrast !important;
-    border-bottom-color: $border !important;
-  }
 
-  .scripts-debug-toolbar-drawer {
-    background-color: $background !important;
-  }
-
-  .navigator-tabbed-pane {
-    background-color: $contrast !important;
+  .selection-fill {
+    opacity: .5 !important;
+    border-left: 2px solid $accent1 !important;
   }
 
   //input[type="radio"]:checked {
@@ -636,33 +620,8 @@ $fontSize: var(--font-size, 11px);
    ==========================================================================
    */
 
-  .data-grid-data-grid-node:nth-child(2n) {
-    background: $second !important;
-
-    td {
-      border-color: $border !important;
-    }
-  }
-
-  .data-grid-data-grid-node:nth-child(2n+1) {
-    background: $excluded !important;
-
-    td {
-      border-color: $border !important;
-    }
-  }
-
-  .toolbar-item {
-    color: $text-color !important;
-  }
-
   input[type="checkbox"]:not(.dt-checkbox-themed) {
     filter: none !important;
-  }
-
-  .breakpoint-hit {
-    background-color: rgba($darkerBg, 0.5) !important;
-    color: $text-color !important;
   }
 
   .infobar {
@@ -678,39 +637,6 @@ $fontSize: var(--font-size, 11px);
 
     .infobar-toggle {
       color: $accent2 !important;
-    }
-  }
-
-  /* Searchable View
-     ========================================================================== */
-  .toolbar-search-control {
-    background-color: $background !important;
-    border-top: 0 !important;
-    border-left: 0 !important;
-    border-right: 0 !important;
-    border-bottom: 1px solid $border !important;
-
-    input {
-      background: none !important;
-    }
-
-    .search-results-matches {
-      color: $primary !important;
-    }
-
-    .toolbar-search-navigation {
-      border-color: $background !important;
-    }
-  }
-
-  .toolbar-search-buttons {
-    .search-action-button {
-      background: $button !important;
-      color: $primary !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      text-transform: uppercase !important;
-      font-weight: bold !important;
     }
   }
 
@@ -750,10 +676,6 @@ $fontSize: var(--font-size, 11px);
    =================================================================
    */
 
-  .toolbar-item {
-    color: $text-color !important;
-  }
-
   .tree-outline > .parent {
     color: $primary !important;
 
@@ -764,6 +686,10 @@ $fontSize: var(--font-size, 11px);
 
   .tree-outline .header-name {
     color: $accent1 !important;
+  }
+
+  .tree-outline li::before {
+    background-color: $selFg !important;
   }
 
   ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
@@ -784,6 +710,12 @@ $fontSize: var(--font-size, 11px);
    */
   .tooltip {
     background: $background !important;
+    color: $foreground !important;
+    border-color: $background !important;
+  }
+
+  .tooltip-shortcut {
+    color: $primary !important;
   }
 
   .item-list {
@@ -802,19 +734,6 @@ $fontSize: var(--font-size, 11px);
     }
   }
 
-  /* Navigator
-  ====================================================
-   */
-  // folders
-  .navigator-nw-folder-tree-item .icon {
-    background: $tree !important;
-  }
-
-  //icons
-  //.navigator-file-tree-item .icon {
-  //  background: $foreground !important;
-  //}
-
   .settings-info-message {
     background: $second !important;
   }
@@ -832,3 +751,8 @@ $fontSize: var(--font-size, 11px);
 @import "breadcrumbs";
 @import "network";
 @import "search";
+@import "sources";
+@import "stackTrace";
+@import "inspector";
+@import "data_grid";
+@import "resources";

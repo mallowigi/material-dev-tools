@@ -9,8 +9,12 @@
     border-color: $border !important;
 
     &:hover {
-      background: $highlight !important;
+      background: $background !important;
     }
+  }
+
+  .network-log-grid.data-grid .data-grid-data-grid-node:hover {
+    background: $selBg !important;
   }
 
   .network-log-grid.data-grid table.data {

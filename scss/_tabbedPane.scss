@@ -23,6 +23,8 @@
 
 .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab {
   color: $text-color !important;
+
+  &.selected { border-bottom: none !important;}
 }
 
 .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab.selected {

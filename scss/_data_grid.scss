@@ -1,0 +1,81 @@
+.data-grid {
+  border: none !important;
+}
+
+.data-grid-data-grid-node:nth-child(2n) {
+  background: $second !important;
+
+  td {
+    border-color: $border !important;
+  }
+}
+
+.data-grid-data-grid-node:nth-child(2n+1) {
+  background: $excluded !important;
+
+  td {
+    border-color: $border !important;
+  }
+}
+
+.striped-data-grid .revealed.data-grid-data-grid-node:nth-child(2n+1),
+.striped-data-grid-starts-with-odd .revealed.data-grid-data-grid-node:nth-child(2n) {
+  background-color: $excluded !important;
+}
+
+.data-grid td,
+.data-grid th {
+  border-left-color: $border !important;
+}
+
+.data-grid th {
+  background-color: var(--toolbar-bg-color);
+  border-bottom-color: $border !important;
+}
+
+.data-grid th.sortable:active::after {
+  background-color: $highlight !important;
+  color: $selFg !important;
+}
+
+.data-grid th.sortable:hover {
+  background-color: $background !important;
+}
+
+.data-grid td.disclosure::before {
+  background-color: $background !important;
+}
+
+.data-grid table.data tr.revealed.selected {
+  background-color: $highlight !important;
+}
+
+.data-grid:focus table.data tr.selected {
+  background-color: var(--selection-bg-color);
+  color: var(--selection-fg-color);
+}
+
+.data-grid:focus tr.selected .devtools-link {
+  color: $link-color !important;
+}
+
+.data-grid:focus tr.parent.selected td.disclosure::before {
+  background-color: var(--selection-fg-color);
+}
+
+.data-grid:focus tr.expanded.selected td.disclosure::before {
+  background-color: var(--selection-fg-color);
+}
+
+.data-grid tr.inactive {
+  color: $disabled !important;
+}
+
+.data-grid tr.dirty {
+  background-color: rgb(92, 0, 0);
+  color: $error-color !important;
+}
+
+.data-grid:focus tr.selected.dirty {
+  background-color: $error-color !important;
+}

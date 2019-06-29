@@ -1,6 +1,7 @@
-:host-context(.-theme-with-dark-background) {
+.-theme-with-dark-background,
+  :host-context(.-theme-with-dark-background) {
   .value.object-value-node:hover {
-    background-color: rgba(38, 103, 199, 0.1) !important;
+    background-color: $tree !important;
   }
 
   .object-value-function-prefix, .object-value-boolean {
@@ -8,7 +9,7 @@
   }
 
   .object-value-function.linkified:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: $link-color !important;
   }
 
   .object-value-number {
@@ -19,20 +20,26 @@
     color: $string-color !important;
   }
 
-  .object-value-string, .object-value-regexp, .object-value-symbol {
+  .object-value-string,
+  .object-value-regexp,
+  .object-value-symbol {
     color: $string-color !important;
   }
 
+  .object-value-string-quote {
+    color: $foreground !important;
+  }
+
   .object-value-node {
-    color: $text-color !important;
+    color: $tag-name-color !important;
   }
 
   .object-value-null, .object-value-undefined {
-    color: rgb(127, 127, 127) !important;
+    color: $number-color !important;
   }
 
   .object-properties-section .object-description {
-    color: rgb(127, 127, 127) !important;
+    color: $attribute-name-color !important;
   }
 
   .name {
@@ -42,9 +49,7 @@
   .object-properties-preview .name {
     color: $text-color !important;
   }
-}
 
-.-theme-with-dark-background {
   .object-value-number,
   .object-value-number.source-code {
     color: $number-color !important;

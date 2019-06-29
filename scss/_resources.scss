@@ -1,0 +1,40 @@
+.resources-toolbar {
+  border-top-color: $border !important;
+  background-color: var(--toolbar-bg-color);
+}
+
+.top-resources-toolbar {
+  border-bottom-color: $border !important;
+  background-color: var(--toolbar-bg-color);
+}
+
+li.selected .base-storage-tree-element-subtitle {
+  color: black;
+}
+
+.base-storage-tree-element-subtitle {
+  color: $primary !important;
+}
+
+.storage-view .storage-table-error {
+  color: $error-color !important;
+}
+
+.database-user-query {
+  border-bottom-color: $border !important;
+}
+
+.database-query-text {
+  color: $string-color !important;
+}
+
+.database-query-result.error {
+  color: $error-color !important;
+}
+
+li.storage-group-list-item:not(:first-child) {
+  border-top: none !important;
+}
+.tree-outline {
+  color: $foreground !important;
+}

@@ -49,6 +49,7 @@
 .styles-sidebar-pane-toolbar,
 .styles-sidebar-pane-filter-box > input,
 .toolbar-input,
+.toolbar-input-prompt,
 input[is="history-input"],
 .filter-input-field {
   background-color: $contrast !important;
@@ -57,7 +58,7 @@ input[is="history-input"],
   box-shadow: none !important;
 
   &:focus {
-    border-color: $accent1 !important;
+    border-bottom-color: $accent1 !important;
   }
 }
 
@@ -146,34 +147,4 @@ input[is="history-input"],
 
 .property-trace-inactive .property-trace-value::before {
   border-bottom-color: $disabled !important;
-}
-
-.blackboxed-message {
-  color: $foreground !important;
-  background-color: $accent1 !important;
-}
-
-.show-more-message {
-  border-top-color: $border !important;
-}
-
-.call-frame-item:not(.async-header) {
-  border-top-color: $background;
-}
-
-.call-frame-item:not(.async-header):hover {
-  background-color: $background;
-}
-
-.call-frame-location {
-  color: $primary !important;
-}
-
-.async-header::before {
-  border-top-color: $second !important;
-}
-
-.async-header .call-frame-item-title {
-  color: $foreground !important;
-  background-color: $background !important;
 }

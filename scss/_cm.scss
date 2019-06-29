@@ -1,95 +1,296 @@
 .-theme-with-dark-background, :host-context(.-theme-with-dark-background) {
-  .cm-js-atom{color:$keyword-color !important;}
-  .cm-js-attribute{color:$var-color !important;}
-  .cm-js-builtin{color:$keyword-color !important;}
-  .cm-js-comment{color:$comment-color !important;}
-  .cm-js-def{color:$var-color !important; font-weight: 200 !important;}
-  .cm-js-keyword{color:$keyword-color !important;}
-  .cm-js-link{color:$link-color !important;}
-  .cm-js-meta{color:$string-color !important;}
-  .cm-js-number{color:$number-color !important;}
-  .cm-js-operator{color:$operator-color !important;}
-  .cm-js-property{color:$var-color !important; font-weight: 100 !important;}
-  .cm-js-string{color:$string-color !important;}
-  .cm-js-string-2{color:$string-color !important;}
-  .cm-js-tag{color:$tag-name-color !important;}
-  .cm-js-variable{color:$var-color !important;}
-  .cm-js-variable-2{color:$var-color !important;}
-  .cm-atom{color:$keyword-color !important;}
-  .cm-comment{color:$comment-color !important;}
-  .cm-variable{color: $var-color !important;}
-  .cm-string{color:$string-color !important;}
-  .cm-keyword{color:$keyword-color !important;}
-  .cm-number{color:$number-color !important;}
-  .cm-operator{color:$operator-color !important;}
-  .cm-css-atom{color: $attribute-name-color !important;}
-  .cm-css-builtin{color:$keyword-color !important;}
-  .cm-css-def{color:$keyword-color !important;}
-  .cm-css-comment{color:$comment-color !important;}
-  .cm-css-meta{color:$accent1 !important;}
-  .cm-css-number{color:$number-color !important;}
-  .cm-css-operator{color:$operator-color !important;}
-  .cm-css-property{color:$attribute-name-color !important;}
-  .cm-css-qualifier{color:$attribute-name-color !important;}
-  .cm-css-string{color:$string-color !important;}
-  .cm-css-string-2{color:$string-color !important;}
-  .cm-css-tag{color:$tag-name-color !important;}
-  .cm-css-variable{color:$function-color !important;}
-  .cm-css-variable-2{color:$function-color !important;}
-  .cm-css-variable-3{color:$var-color !important;}
-  .cm-css-keyword{color:$keyword-color !important;}
-  .cm-xml-comment{color:$comment-color !important;}
-  .cm-xml-error{color:$error-color !important;}
-  .cm-xml-string{color:$string-color !important;}
-  .cm-xml-tag{color:$tag-name-color !important;}
-  .cm-xml-attribute{color:$attribute-name-color !important;}
-  .cm-xml-link{color:$link-color !important;}
+  .cm-js-atom {
+    color: $keyword-color !important;
+  }
 
-  .cm-def{color:$tag-name-color !important;}
-  .cm-header{color:$tag-name-color !important;}
-  .cm-variable-2 {color: $function-color !important;}
-  .cm-variable-3, .cm-type {color:$var-color !important;}
-  .cm-string {color:$string-color !important;}
-  .cm-meta {color:$string-color !important;}
-  .cm-qualifier{color:$attribute-name-color !important;}
-  .cm-builtin{color:$keyword-color !important;}
-  .cm-bracket {color: $operator-color !important;}
-  .cm-tag{color:$tag-name-color !important;}
-  .cm-attribute{color:$attribute-name-color !important;}
-  .cm-hr {color: $comment-color !important;}
-  .cm-link{color:$link-color !important;}
+  .cm-js-attribute {
+    color: $var-color !important;
+  }
 
-  .CodeMirror{color:$operator-color !important; background-color: $background !important;}
-  .CodeMirror-gutter-performance{background-color: $background !important;}
-  .CodeMirror-gutter-coverage{background-color: $background !important;}
-  .CodeMirror-gutters{background-color: $background !important;}
-  .cm-execution-line-tail .cm-inline-breakpoint{background-color: $background !important;}
-  .cm-inline-breakpoint.cm-inline-conditional{background-color: $accent2 !important;}
-  .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler{background-color: $background !important;}
+  .cm-js-builtin {
+    color: $keyword-color !important;
+  }
+
+  .cm-js-comment {
+    color: $comment-color !important;
+  }
+
+  .cm-js-def {
+    color: $var-color !important;
+    font-weight: 200 !important;
+  }
+
+  .cm-js-keyword {
+    color: $keyword-color !important;
+  }
+
+  .cm-js-link {
+    color: $link-color !important;
+  }
+
+  .cm-js-meta {
+    color: $string-color !important;
+  }
+
+  .cm-js-number {
+    color: $number-color !important;
+  }
+
+  .cm-js-operator {
+    color: $operator-color !important;
+  }
+
+  .cm-js-property {
+    color: $var-color !important;
+    font-weight: 100 !important;
+  }
+
+  .cm-js-string {
+    color: $string-color !important;
+  }
+
+  .cm-js-string-2 {
+    color: $string-color !important;
+  }
+
+  .cm-js-tag {
+    color: $tag-name-color !important;
+  }
+
+  .cm-js-variable {
+    color: $var-color !important;
+  }
+
+  .cm-js-variable-2 {
+    color: $var-color !important;
+  }
+
+  .cm-atom {
+    color: $keyword-color !important;
+  }
+
+  .cm-comment {
+    color: $comment-color !important;
+  }
+
+  .cm-variable {
+    color: $var-color !important;
+  }
+
+  .cm-string {
+    color: $string-color !important;
+  }
+
+  .cm-keyword {
+    color: $keyword-color !important;
+  }
+
+  .cm-number {
+    color: $number-color !important;
+  }
+
+  .cm-operator {
+    color: $operator-color !important;
+  }
+
+  .cm-css-atom {
+    color: $attribute-name-color !important;
+  }
+
+  .cm-css-builtin {
+    color: $keyword-color !important;
+  }
+
+  .cm-css-def {
+    color: $keyword-color !important;
+  }
+
+  .cm-css-comment {
+    color: $comment-color !important;
+  }
+
+  .cm-css-meta {
+    color: $accent1 !important;
+  }
+
+  .cm-css-number {
+    color: $number-color !important;
+  }
+
+  .cm-css-operator {
+    color: $operator-color !important;
+  }
+
+  .cm-css-property {
+    color: $attribute-name-color !important;
+  }
+
+  .cm-css-qualifier {
+    color: $attribute-name-color !important;
+  }
+
+  .cm-css-string {
+    color: $string-color !important;
+  }
+
+  .cm-css-string-2 {
+    color: $string-color !important;
+  }
+
+  .cm-css-tag {
+    color: $tag-name-color !important;
+  }
+
+  .cm-css-variable {
+    color: $function-color !important;
+  }
+
+  .cm-css-variable-2 {
+    color: $function-color !important;
+  }
+
+  .cm-css-variable-3 {
+    color: $var-color !important;
+  }
+
+  .cm-css-keyword {
+    color: $keyword-color !important;
+  }
+
+  .cm-xml-comment {
+    color: $comment-color !important;
+  }
+
+  .cm-xml-error {
+    color: $error-color !important;
+  }
+
+  .cm-xml-string {
+    color: $string-color !important;
+  }
+
+  .cm-xml-tag {
+    color: $tag-name-color !important;
+  }
+
+  .cm-xml-attribute {
+    color: $attribute-name-color !important;
+  }
+
+  .cm-xml-link {
+    color: $link-color !important;
+  }
+
+  .cm-def {
+    color: $tag-name-color !important;
+  }
+
+  .cm-header {
+    color: $tag-name-color !important;
+  }
+
+  .cm-variable-2 {
+    color: $function-color !important;
+  }
+
+  .cm-variable-3, .cm-type {
+    color: $var-color !important;
+  }
+
+  .cm-string {
+    color: $string-color !important;
+  }
+
+  .cm-meta {
+    color: $string-color !important;
+  }
+
+  .cm-qualifier {
+    color: $attribute-name-color !important;
+  }
+
+  .cm-builtin {
+    color: $keyword-color !important;
+  }
+
+  .cm-bracket {
+    color: $operator-color !important;
+  }
+
+  .cm-tag {
+    color: $tag-name-color !important;
+  }
+
+  .cm-attribute {
+    color: $attribute-name-color !important;
+  }
+
+  .cm-hr {
+    color: $comment-color !important;
+  }
+
+  .cm-link {
+    color: $link-color !important;
+  }
+
+  .CodeMirror {
+    color: $operator-color !important;
+    background-color: $background !important;
+  }
+
+  .CodeMirror-gutter-performance {
+    background-color: $background !important;
+  }
+
+  .CodeMirror-gutter-coverage {
+    background-color: $background !important;
+  }
+
+  .CodeMirror-gutters {
+    background-color: $background !important;
+  }
+
+  .cm-execution-line-tail .cm-inline-breakpoint {
+    background-color: $background !important;
+  }
+
+  .cm-inline-breakpoint.cm-inline-conditional {
+    background-color: $accent2 !important;
+  }
+
+  .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+    background-color: $background !important;
+  }
 
   .CodeMirror pre {
     background: $background !important;
   }
 
-  .CodeMirror .text-editor-value-decoration{
-    background-color:$comment-color !important;
-    color:$text-color !important;
+  .CodeMirror .text-editor-value-decoration {
+    background-color: $comment-color !important;
+    color: $text-color !important;
+
     * {
-      color:$text-color !important;
+      color: $text-color !important;
     }
   }
+
   .cm-breakpoint:not(.cm-breakpoint-conditional) .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
     filter: hue-rotate(-240deg) !important;
   }
+
   .cm-execution-line {
     background-color: $accent2Alpha !important;;
   }
+
   .cm-execution-line-outline {
     outline: $accent2Alpha !important;
   }
+
   .cm-execution-line-tail {
     background-color: $accent2Alpha !important;;
   }
+
   .cm-line-with-selection .cm-column-with-selection.cm-search-highlight:before {
     background-color: $accent2Alpha !important;
   }
@@ -141,7 +342,6 @@
   //  background-color: #14522b;
   //}
 
-
   //.CodeMirror .source-frame-async-step-in {
   //  outline: 0;
   //  background-color: hsla(100, 46%, 80%, 1);
@@ -166,6 +366,7 @@
   .cm-readonly-highlight {
     background-color: $second !important;
   }
+
   :host-context(.-theme-with-dark-background) .cm-readonly-highlight,
   .-theme-with-dark-background .cm-readonly-highlight {
     background-color: $highlight !important;
@@ -275,7 +476,6 @@
   //  border-right-color: gray;
   //}
 
-
   .CodeMirror .text-editor-line-marker-text span.line-marker-units {
     color: $disabled !important;
   }
@@ -303,7 +503,6 @@
   //.CodeMirror .text-editor-line-with-error:not(.cm-execution-line):not(.cm-readonly-highlight) {
   //  background-color: rgba(255, 0, 0, 0.05);
   //}
-
 
   .cm-trailing-whitespace {
     background-color: $border !important;
@@ -340,4 +539,33 @@
   .CodeMirror-foldgutter-folded::before {
     background-color: $background !important;
   }
+
+  .source-frame-debugger-script {
+    background-color: $highlight !important;
+  }
+
+  .diff-entry-insert .diff-marker {
+    border-left-color: rgb(109, 213, 151);
+  }
+
+  .diff-entry-insert .CodeMirror-gutter-background {
+    background-color: rgba(61, 199, 116, 0.2);
+  }
+
+  .diff-entry-modify .diff-marker {
+    border-left-color: rgb(196, 79, 216);
+  }
+
+  .diff-entry-modify .CodeMirror-gutter-background {
+    background-color: rgba(137, 55, 151, 0.2);
+  }
+
+  .diff-entry-delete .diff-marker {
+    border-left-color: rgb(208, 44, 44);
+  }
+
+  .diff-entry-delete .CodeMirror-gutter-background {
+    border-bottom-color: rgb(208, 44, 44);
+  }
+
 }

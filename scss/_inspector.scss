@@ -1,0 +1,89 @@
+.view-container > .toolbar {
+  border-bottom-color: $background;
+}
+
+.link {
+  color: $link-color !important;
+}
+
+input {
+  background-color: $contrast !important;
+}
+
+.harmony-input:not([type]):not(.error-input):not(:invalid):hover,
+.harmony-input[type="number"]:not(.error-input):not(:invalid):hover,
+.harmony-input[type="text"]:not(.error-input):not(:invalid):hover {
+  box-shadow: none !important;
+}
+
+.harmony-input:not([type]):not(.error-input):not(:invalid):focus,
+.harmony-input[type="number"]:not(.error-input):not(:invalid):focus,
+.harmony-input[type="text"]:not(.error-input):not(:invalid):focus {
+  box-shadow: none !important;
+}
+
+.highlighted-search-result.current-search-result {
+  background-color: $lighterBg !important;
+}
+
+.harmony-input:not([type]).error-input,
+.harmony-input[type="number"].error-input,
+.harmony-input[type="text"].error-input,
+.harmony-input:not([type]):invalid,
+.harmony-input[type="number"]:invalid,
+.harmony-input[type="text"]:invalid {
+  box-shadow: $error-color 0px 0px 0px 1px;
+}
+
+// Dropdowns
+.chrome-select {
+  background-color: $button !important;
+  border: none !important;
+  color: $foreground !important;
+  text-transform: uppercase !important;
+  position: relative;
+}
+
+.chrome-select:enabled:active,
+.chrome-select:enabled:focus,
+.chrome-select:enabled:hover {
+  background-color: $lighterBg !important;
+  box-shadow: $accent1 0px 1px 2px;
+}
+
+.chrome-select:enabled:active {
+  background-color: $highlight !important;
+}
+
+.chrome-select:enabled:focus {
+  box-shadow: $accent1 0px 1px 2px, $accent1Alpha 0px 0px 0px 2px !important;
+}
+
+.chrome-select optgroup,
+.chrome-select option {
+  background-color: $background !important;
+  color: $foreground !important;
+}
+
+.gray-info-message {
+  background: $second !important;
+  color: $primary !important;
+}
+
+.full-widget-dimmed-banner {
+  color: $primary !important;
+  background-color: $lighterBg !important;
+}
+
+.expandable-inline-button {
+  background-color: $button !important;
+  color: $primary !important;
+}
+
+.undisplayable-text {
+  color: $disabled !important;
+}
+
+.expandable-inline-button:hover {
+  background-color: $highlight !important;
+}
