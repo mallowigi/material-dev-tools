@@ -129,7 +129,8 @@ $fontSize: var(--font-size, 11px);
   }
 
   .gray-info-message {
-    background: var(--disabled) !important;
+    background: $second !important;
+    color: $primary !important;
   }
 
   .close-button .smallicon-cross {
@@ -297,6 +298,7 @@ $fontSize: var(--font-size, 11px);
   .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
     background-color: $background !important;
   }
+
   .toolbar-state-on {
     .toolbar-text {
       color: $accent1 !important;
@@ -362,7 +364,6 @@ $fontSize: var(--font-size, 11px);
   }
 
   // Search inputs
-  .styles-sidebar-pane-toolbar,
   .toolbar-input {
     background-color: $contrast !important;
     border-bottom: 1px solid $border !important;
@@ -565,6 +566,15 @@ $fontSize: var(--font-size, 11px);
 
   // endregion
 
+  // Product Registry
+  .product-registry-badge {
+    background-color: $accent1 !important;
+  }
+
+  .product-registry-badge::before {
+    color: $selFg !important;
+  }
+
   /* View Container
      ========================================================================== */
   .expandable-view-title {
@@ -603,12 +613,6 @@ $fontSize: var(--font-size, 11px);
     color: $primary !important;
   }
 
-  /* Crumbs
-   ======================================================================= */
-  #elements-crumbs {
-    background: $darkerBg !important;
-  }
-
   /* Scripts
      ========================================================================== */
   .scripts-debug-toolbar {
@@ -628,32 +632,9 @@ $fontSize: var(--font-size, 11px);
   //  filter: hue-rotate(322deg) brightness(105%) contrast(80%) !important;
   //}
 
-  .resources-dividers-label-bar {
-    background: $contrast !important;
-  }
-
   /* Network grid
    ==========================================================================
    */
-
-  .network-waterfall-header,
-  .network-log-grid.data-grid th {
-    border-color: $border !important;
-
-    &:hover {
-      background: $highlight !important;
-    }
-  }
-
-  .network-log-grid.data-grid table.data {
-    > tr {
-      background-color: $background !important;
-
-      &:nth-child(2) {
-        background-color: $darkerBg !important;
-      }
-    }
-  }
 
   .data-grid-data-grid-node:nth-child(2n) {
     background: $second !important;
@@ -671,32 +652,8 @@ $fontSize: var(--font-size, 11px);
     }
   }
 
-  /* Network
-   =================================================================
-   */
-  .network-item-view {
-    background: $background !important;
-  }
-
-  .network-summary-bar {
-    background: $darkerBg !important;
-    border: $border !important;
-  }
-
-  .network-dim-cell {
-    color: $primary !important;
-  }
-
-  .network-error-row {
-    color: $error-color !important;
-  }
-
   .toolbar-item {
     color: $text-color !important;
-  }
-
-  .sidebar-pane-section-toolbar {
-    background: $button !important;
   }
 
   input[type="checkbox"]:not(.dt-checkbox-themed) {
@@ -746,15 +703,6 @@ $fontSize: var(--font-size, 11px);
     }
   }
 
-  .search-toolbar-summary {
-    background: $contrast;
-  }
-
-  .search-bar {
-    background: $background !important;
-    border: 0 !important;
-  }
-
   .toolbar-search-buttons {
     .search-action-button {
       background: $button !important;
@@ -764,31 +712,6 @@ $fontSize: var(--font-size, 11px);
       text-transform: uppercase !important;
       font-weight: bold !important;
     }
-  }
-
-  /* Crumbs
-    ======================================================================= */
-
-  .crumbs .crumb::after {
-    border-style: solid;
-    border-width: 0.15em 0.15em 0 0;
-    content: '';
-    display: inline-block;
-    height: 0.30em;
-    left: 0.25em;
-    position: relative;
-    top: 0.75em;
-    transform: rotate(45deg);
-    vertical-align: top;
-    width: 0.30em;
-
-    &:last-child {
-      border: none;
-    }
-  }
-
-  .crumb.selected, .crumb:hover {
-    background: $highlight !important;
   }
 
   /* Box Model
@@ -806,6 +729,7 @@ $fontSize: var(--font-size, 11px);
     }
 
     .border {
+      border: $border !important;
       background: $darkerBg !important;
     }
 
@@ -825,9 +749,6 @@ $fontSize: var(--font-size, 11px);
   /* Network
    =================================================================
    */
-  .network-error-row {
-    color: $error-color !important;
-  }
 
   .toolbar-item {
     color: $text-color !important;
@@ -835,6 +756,7 @@ $fontSize: var(--font-size, 11px);
 
   .tree-outline > .parent {
     color: $primary !important;
+
     &:hover, &:focus {
       color: $selFg !important;
     }
@@ -855,11 +777,6 @@ $fontSize: var(--font-size, 11px);
 
   .network-timing-table-header td {
     color: $primary !important;
-  }
-
-  .network-summary-bar {
-    color: $darkerBg !important;
-    border: $border !important;
   }
 
   /* Popups
@@ -904,6 +821,7 @@ $fontSize: var(--font-size, 11px);
 
 }
 
+@import "elements";
 @import "console";
 @import "cm";
 @import "treeView";
@@ -911,3 +829,6 @@ $fontSize: var(--font-size, 11px);
 @import "tabbedPane";
 @import "profile";
 @import "soft_context_menu";
+@import "breadcrumbs";
+@import "network";
+@import "search";

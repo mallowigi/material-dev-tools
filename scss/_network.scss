@@ -1,0 +1,101 @@
+.-theme-with-dark-background, :host-context(.-theme-with-dark-background) {
+  .network-summary-bar {
+    background: $darkerBg !important;
+    border: $border !important;
+  }
+
+  .network-waterfall-header,
+  .network-log-grid.data-grid th {
+    border-color: $border !important;
+
+    &:hover {
+      background: $highlight !important;
+    }
+  }
+
+  .network-log-grid.data-grid table.data {
+    > tr {
+      background-color: $background !important;
+
+      &:nth-child(2) {
+        background-color: $darkerBg !important;
+      }
+    }
+  }
+
+  .network-log-grid.data-grid td {
+    border-color: $border !important;
+  }
+
+  .network-cell-subtitle {
+    color: $foreground !important;
+  }
+
+  .network-error-row,
+  .network-error-row .network-cell-subtitle {
+    color: $error-color !important;
+  }
+
+  .network-log-grid.data-grid:focus tr.selected,
+  .network-log-grid.data-grid:focus tr.selected .network-cell-subtitle,
+  .network-log-grid.data-grid:focus tr.selected .network-dim-cell {
+    color: var(--selection-fg-color) !important;
+  }
+
+  .network-header-subtitle {
+    color: $primary !important;
+  }
+
+  .network-dim-cell {
+    color: $primary !important;
+  }
+
+  .network-frame-divider {
+    background-color: $accent2 !important;
+  }
+
+  .network-waterfall-header:hover {
+    background-color: $darkerBg !important;
+  }
+
+  .panel.network .toolbar {
+    background-color: var(--toolbar-bg-color);
+  }
+
+  .network-details-view {
+    background-color: $lighterBg !important;
+  }
+
+  .network-item-view {
+    background-color: $background !important;
+  }
+
+  .network-item-preview-toolbar {
+    border-top-color: $border !important;
+    background-color: $background !important;
+  }
+
+  .resource-timing-view {
+    color: $foreground !important;
+  }
+
+  #network-overview-container {
+    border-bottom-color: $highlight !important;
+  }
+
+  .network-overview .resources-dividers-label-bar {
+    background: $contrast !important;
+  }
+
+  .network-film-strip {
+    border-bottom-color: $border !important;
+  }
+
+  .open-search-view {
+    background-color: $tree !important;
+  }
+
+  .network-tabbed-pane {
+    background-color: var(--toolbar-bg-color);
+  }
+}

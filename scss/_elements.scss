@@ -1,0 +1,60 @@
+.CodeMirror {
+  background-color: $background !important;
+}
+
+.editing {
+  box-shadow: var(--drop-shadow);
+  background-color: $background !important;
+}
+
+.editing, .editing * {
+  color: $foreground !important;
+}
+
+.elements-gutter-decoration {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+  background-color: $accent1;
+}
+
+.elements-tree-shortcut-title {
+  color: $foreground !important;
+}
+
+.elements-tree-shortcut-link {
+  color: $link-color !important;
+}
+
+.gutter-menu-icon {
+  background-color: $foreground !important;
+}
+
+.font-usage {
+  color: $primary !important;
+}
+
+.title {
+  border-top-color: $border !important;
+  border-right-color: $border !important;
+  border-bottom-color: $border !important;
+  border-left-color: $border !important;
+  background-color: $background !important;
+}
+
+.has-ignorable-error {
+  color: $disabled !important;
+}
+
+[is="ui-icon"].icon-mask {
+  background: $primary;
+}
+
+.smallicon-thick-right-arrow {
+  filter: hue-rotate(330deg) brightness(1.5) !important;
+}
+
+.thread-item + .thread-item {
+  border: none !important;
+}

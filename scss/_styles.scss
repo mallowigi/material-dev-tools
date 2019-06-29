@@ -49,10 +49,16 @@
 .styles-sidebar-pane-toolbar,
 .styles-sidebar-pane-filter-box > input,
 .toolbar-input,
+input[is="history-input"],
 .filter-input-field {
   background-color: $contrast !important;
   border: none !important;
   border-bottom: 2px solid $border !important;
+  box-shadow: none !important;
+
+  &:focus {
+    border-color: $accent1 !important;
+  }
 }
 
 .styles-section-title .media-list {
@@ -88,12 +94,13 @@
   color: $foreground;
 }
 
-.styles-sidebar-pane-toolbar-container {
-  background-color: var(--toolbar-bg-color);
+.styles-sidebar-pane-toolbar {
+  background-color: $contrast !important;
+  border-bottom: 1px solid $border !important;
 }
 
-.styles-sidebar-pane-toolbar {
-  border-bottom-color: $border;
+.styles-sidebar-pane-toolbar-container {
+  background-color: var(--toolbar-bg-color);
 }
 
 .styles-sidebar-pane-filter-box > input {
@@ -113,13 +120,60 @@
 }
 
 .sidebar-separator {
-  background-color: var(--toolbar-bg-color);color: rgb(173, 173, 173);
+  background-color: var(--toolbar-bg-color);
+  color: $border !important;
 }
 
 .sidebar-pane-section-toolbar {
-  background-color: $background !important;
+  background-color: $button !important;
 }
 
 .styles-section[data-keyboard-focus="true"]:focus .sidebar-pane-section-toolbar {
   background-color: $highlight !important;
+}
+
+.goto-source-icon {
+  background-color: $foreground !important;
+}
+
+.goto-source-icon:hover {
+  background-color: $accent1 !important;
+}
+
+.property-trace-selector {
+  color: $primary !important;
+}
+
+.property-trace-inactive .property-trace-value::before {
+  border-bottom-color: $disabled !important;
+}
+
+.blackboxed-message {
+  color: $foreground !important;
+  background-color: $accent1 !important;
+}
+
+.show-more-message {
+  border-top-color: $border !important;
+}
+
+.call-frame-item:not(.async-header) {
+  border-top-color: $background;
+}
+
+.call-frame-item:not(.async-header):hover {
+  background-color: $background;
+}
+
+.call-frame-location {
+  color: $primary !important;
+}
+
+.async-header::before {
+  border-top-color: $second !important;
+}
+
+.async-header .call-frame-item-title {
+  color: $foreground !important;
+  background-color: $background !important;
 }

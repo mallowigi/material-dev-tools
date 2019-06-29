@@ -1,0 +1,15 @@
+.-theme-with-dark-background, :host-context(.-theme-with-dark-background) {
+  .search-bar {
+    background: $background !important;
+    border: 0 !important;
+  }
+
+  .search-toolbar {
+    background-color: var(--toolbar-bg-color);
+  }
+
+  .search-toolbar-summary {
+    background: $contrast !important;
+    border-top-color: $border !important;
+  }
+}

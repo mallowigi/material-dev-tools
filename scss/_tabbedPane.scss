@@ -32,6 +32,7 @@
 .tabbed-pane-header-tab.selected {
   background-color: var(--tab-selected-bg-color);
   color: var(--tab-selected-fg-color);
+  border-bottom: 2px solid $accent1 !important;
 }
 
 .tabbed-pane-header-tab.dragging {
