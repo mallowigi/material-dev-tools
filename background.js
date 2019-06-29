@@ -15,7 +15,7 @@
      * @param currentFontFamily
      * @param currentFontSize
      */
-    applyTheme(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 14) {
+    applyTheme(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 11) {
       // Extract colors
       if (currentTheme && currentTheme.colors) {
         const {

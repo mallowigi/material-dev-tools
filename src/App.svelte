@@ -16,15 +16,11 @@ import {fly} from 'svelte/transition'
     const allThemes = yaml.load(themesYml);
     const themes = [...allThemes.material, ...allThemes.other];
 
-    // $app.themes = themes.sort((a,b) => {
-    //   if (a.name < b.name) { return -1; }
-    //   if (a.name > b.name) { return 1; }
-    //   return 0;
-    // });
+    // Load themes
     $app.loadThemes(themes);
-
+    // Get settings from local storage
     await $app.fetchSettings();
-
+    // Add defaults
     $app.loadDefaults();
 
     $app.loading = false;

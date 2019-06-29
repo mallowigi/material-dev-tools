@@ -182,7 +182,16 @@ class App {
    * @param {string} name
    */
   saveTheme(name) {
-    storage.set({[DEVTOOLS_THEME]: name}, () => {});
+    storage.set({[DEVTOOLS_THEME]: name}, () => {
+      if (chrome && chrome.browserAction) {
+        chrome.browserAction.setIcon({
+          path: `/public/icons/${name}.svg`
+        });
+        chrome.browserAction.setTitle({
+          title: `Material Theme Devtools - ${name}`
+        })
+      }
+    });
   }
 
   /**

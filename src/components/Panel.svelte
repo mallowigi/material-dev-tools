@@ -1,6 +1,7 @@
 <script>
     import {slide} from 'svelte/transition';
-    import ThemeSwitcher from '../components/ThemeSwitcher.svelte';
+    import ThemeSwitcher from './ThemeSwitcher.svelte';
+    import Footer from './Footer.svelte'
     import {app} from '../store';
 </script>
 
@@ -19,19 +20,6 @@
         transition: all 0.25s ease;
         animation: fadeInDown 0.75s cubic-bezier(.55, 0, .1, 1) both 1s;
     }
-
-
-    .footer {
-        position: absolute;
-        bottom: 2.5%;
-        right: 2.5%;
-        text-align: right;
-    }
-
-    .footer a {
-        text-decoration: none;
-        color: var(--primary);
-    }
 </style>
 
 {#if $app.notifying == true}
@@ -40,7 +28,4 @@
 
 <ThemeSwitcher></ThemeSwitcher>
 
-<div class="footer">
-<small>Material Theme © 2015-2019 <a target="_blank" href="https://www.material-theme.com">Elior Boukhobza & Chris Magnussen</a></small> -
-<small>Original concept from <a target="_blank" href="https://github.com/micjamking">Mike King</a></small>
-</div>
+<Footer></Footer>
