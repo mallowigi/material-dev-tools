@@ -467,3 +467,39 @@ other:
     attributes: '#6F42C1'
     numbers: '#005CC5'
     parameters: '#E36209'
+
+  - nightowl:
+    name: Night Owl
+    name2: Night Owl Contrast
+    className: nightowl
+    desc: Night Owl Theme
+    dark: true
+    scheme: Night Owl
+    background: '#011627'
+    foreground: '#b0bec5'
+    text: '#607d8b'
+    selectBg: '#152C3B'
+    selectFg: '#ffffff'
+    selectFg2: '#ffffff'
+    button: '#2e3c43'
+    second: '#011627'
+    disabled: '#2e3c42'
+    contrast: '#001424'
+    table: '#152C3B'
+    misc1: '#2a373e'
+    misc2: '#152C3B'
+    tree: '#152C3B'
+    notif: '#152C3B'
+    accent: '#7e57c2'
+    excluded: '#0B253A'
+    comments: '#637777'
+    vars: '#addb67'
+    links: '#80CBC4'
+    functions: '#82AAFF'
+    keywords: '#c792ea'
+    tags: '#7fdbca'
+    strings: '#ecc48d'
+    operators: '#c792ea'
+    attributes: '#FAD430'
+    numbers: '#f78c6c'
+    parameters: '#d9f5dd'
