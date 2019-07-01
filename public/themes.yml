@@ -503,3 +503,39 @@ other:
     attributes: '#FAD430'
     numbers: '#f78c6c'
     parameters: '#d9f5dd'
+
+  - lightowl:
+    name: Light Owl
+    name2: Light Owl Contrast
+    className: lightowl
+    desc: Light Owl Theme
+    dark: false
+    scheme: Light Owl
+    background: '#FAFAFA'
+    foreground: '#546e7a'
+    text: '#403F53'
+    selectBg: '#999e9e'
+    selectFg: '#403f53'
+    selectFg2: '#333333'
+    button: '#FAFAFA'
+    second: '#f2f5f7'
+    disabled: '#dddddd'
+    contrast: '#FAFAFA'
+    table: '#FAFAFA'
+    misc1: '#efefef'
+    misc2: '#E0E7EA'
+    tree: '#E0E7EA'
+    notif: '#F0F0F0'
+    accent: '#269386'
+    excluded: '#82AAFF'
+    comments: '#637777'
+    vars: '#0C969B'
+    links: '#994cc3'
+    functions: '#4876d6'
+    keywords: '#994cc3'
+    tags: '#994cc3'
+    strings: '#c96765'
+    operators: '#7d818b'
+    attributes: '#4876d6'
+    numbers: '#aa0982'
+    parameters: '#f78c6c'
