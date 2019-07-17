@@ -23,7 +23,7 @@ As a further requirement, Developer Tools experiments must be enabled and custom
 2. enable the _Developer Tools experiments_ flag
 3. in the settings panel of your Developer Tools, toggle the _Allow custom UI themes_ experiment
 
-### Installing
+### Development
 
 Clone this repository:
 
@@ -46,21 +46,43 @@ Gulp task to rebuild from source, first making sure that you have installed the 
 #### NPM
 ```
 npm install
-gulp styles
 ```
 
 ### Yarn
 ```
 yarn install
-gulp styles
 ```
+
+Then run 
+```
+npm run watchStyles
+```
+
+to generate the new CSS file. Refresh the browser and ta-da!
+
+---------
+
+### Building the extension
+
+The extension itself is built with Svelte 3.0. To understand the development with svelte, please refer to the documentation.
+
+Simply run 
+
+```
+npm run dev
+```
+
+to trigger the build process and watch for changes. Now every change you make will be reflected on the browser.
+
+----
 
 ## Built With
 
 * [SASS](https://sass-lang.com/) - CSS preprocessing
 * [Gulp](https://gulpjs.com/) - Automation
+* [Svelte](https://svelte.dev/) - Web Framework
 * [Yarn](https://yarnpkg.com/) - Dependency management
 
 ## Acknowledgments
 
-* The marvelous [Material Theme Plugin](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) for colour inspiration
+Thanks for [Jonas Augsburger](https://chrome.google.com/webstore/detail/material-devtools-theme/pmlofkkoaahmkmmebdkkcljmflocijlo) for the original devtools plugin, and [Mike King](https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi) for the inspiration for the Options Panel!
