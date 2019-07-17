@@ -4,6 +4,8 @@ This is a Chrome extension that applies a different colour theme to the Chrome d
 
 ![Theme Screenshot](https://github.com/mallowigi/material-dev-tools/raw/master/docs/oceanic.png "Material Theme")
 
+
+
 ## Getting Started
 
 The extension can be downloaded via the Google Chrome web store: 
@@ -75,6 +77,31 @@ npm run dev
 to trigger the build process and watch for changes. Now every change you make will be reflected on the browser.
 
 ----
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/material-theme-jetbrains#backer)]
+
+<a href="https://opencollective.com/material-theme-jetbrains#backers" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/backers.svg?width=890"></a>
+
+Check also : http://www.material-theme.com/docs/support-us/
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/material-theme-jetbrains#sponsor)]
+
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/0/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/1/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/2/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/3/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/4/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/5/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/6/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/7/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/8/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/material-theme-jetbrains/sponsor/9/website" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/sponsor/9/avatar.svg"></a>
+
+
+----
 
 ## Built With
 
@@ -86,3 +113,18 @@ to trigger the build process and watch for changes. Now every change you make wi
 ## Acknowledgments
 
 Thanks for [Jonas Augsburger](https://chrome.google.com/webstore/detail/material-devtools-theme/pmlofkkoaahmkmmebdkkcljmflocijlo) for the original devtools plugin, and [Mike King](https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi) for the inspiration for the Options Panel!
+
+-----
+## Other Screenshots
+
+![Options Panel](https://github.com/mallowigi/material-dev-tools/raw/master/docs/popup.png "Options Panel")
+
+![Theme List](https://github.com/mallowigi/material-dev-tools/raw/master/docs/list.png "Theme List")
+
+![Darker Theme](https://github.com/mallowigi/material-dev-tools/raw/master/docs/darker.png "Darker Theme")
+
+![One Dark Theme](https://github.com/mallowigi/material-dev-tools/raw/master/docs/onedark.png "One Dark Theme")
+
+![Github Theme](https://github.com/mallowigi/material-dev-tools/raw/master/docs/github.png "Github Theme")
+
+![Solarized Light Theme](https://github.com/mallowigi/material-dev-tools/raw/master/docs/solarizedlight.png "Options Panel")
