@@ -1,0 +1,16 @@
+.flame-chart-highlight-element {
+  background-color: $tree;
+}
+
+.flame-chart-selected-element {
+  background-color: $highlight;
+}
+
+.chart-cursor-element {
+  background-color: $tree;
+}
+
+.flame-chart-entry-info:not(:empty) {
+  background-color: $background;
+  box-shadow: var(--drop-shadow);
+}

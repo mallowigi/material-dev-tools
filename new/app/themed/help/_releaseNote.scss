@@ -1,0 +1,23 @@
+.release-note-top-section {
+  background-color: $contrast;
+}
+
+.release-note-container li:hover {
+  color: $link-color;
+}
+
+.release-note-container li:not(:hover) .release-note-subtitle {
+  color: $primary;
+}
+
+.release-note-action-container > button {
+  color: $primary;
+}
+
+img {
+  box-shadow: rgba(230, 230, 230, 0.3) 0px 2px 4px;
+}
+
+img:hover {
+  box-shadow: rgba(230, 230, 230, 0.5) 0px 2px 4px;
+}

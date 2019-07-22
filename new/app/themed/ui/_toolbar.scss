@@ -1,0 +1,173 @@
+.toolbar {
+  background-color: $contrast;
+  border-top: 1px solid $borderLight;
+}
+
+.toolbar-item,
+.toolbar-item .devtools-link {
+  color: $foreground;
+}
+
+.toolbar-dropdown-arrow {
+  background-color: $foreground;
+}
+
+.toolbar-text {
+  color: $primary;
+}
+
+.toolbar-button.dark-text .toolbar-dropdown-arrow {
+  background-color: $foreground;
+}
+
+.toolbar-render-as-links * {
+  color: $link-color;
+}
+
+.toolbar-toggled-gray:not(.toolbar-render-as-links) .toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.largeicon-menu):hover {
+  background-color: var(--toolbar-bg-color);
+}
+
+.toolbar-glyph {
+  background-color: $primary;
+}
+
+.toolbar-button.dark-text .toolbar-dropdown-arrow {
+  background-color: $foreground;
+}
+
+.toolbar-button.dark-text .toolbar-text {
+  color: $primary !important;
+}
+
+:not(.toolbar-render-as-links) .toolbar-button:enabled:hover:not(:active) .toolbar-glyph {
+  background-color: $accent2;
+}
+
+:not(.toolbar-render-as-links) .toolbar-button:enabled:hover:not(:active) .toolbar-text {
+  color: $primary;
+}
+
+.toolbar-button.toolbar-state-on .toolbar-glyph,
+.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover:not(:active) {
+  background-color: $accent1;
+}
+
+.toolbar-button.toolbar-state-on .toolbar-text {
+  color: $accent1;
+}
+
+.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
+  background-color: $accent2;
+}
+
+.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-text {
+  color: $selFg;
+}
+
+.toolbar-button.toolbar-state-on:enabled:hover:not(:active) .toolbar-glyph,
+.toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:active:hover {
+  background-color: $accent1;
+}
+
+.toolbar-button.toolbar-state-on:enabled:hover:not(:active) .toolbar-text {
+  color: $accent1;
+}
+
+.toolbar-toggled-gray .toolbar-button.toolbar-state-on {
+  background-color: var(--toolbar-bg-color) !important;
+}
+
+.toolbar-button.toolbar-state-on.toolbar-toggle-with-red-color .toolbar-glyph,
+.toolbar-button.toolbar-state-off.toolbar-default-with-red-color .toolbar-glyph {
+  background-color: $error-color !important;
+}
+
+.toolbar-item.checkbox:hover {
+  color: $foreground;
+}
+
+select.toolbar-item[data-keyboard-focus="true"]:focus {
+  background-color: $active;
+}
+
+select.toolbar-item[data-keyboard-focus="true"]:focus > * {
+  background-color: $background;
+}
+
+.toolbar-input {
+  background-color: $contrast;
+  border: none;
+  //border-bottom: 2px solid $border;
+  box-shadow: none;
+}
+
+.toolbar-input:hover {
+  box-shadow: var(--focus-ring-inactive-shadow);
+}
+
+.toolbar-input.focused,
+.toolbar-input:not(.toolbar-input-empty) {
+  box-shadow: none;
+  border-bottom-color: $accent1;
+}
+
+.toolbar-input-prompt {
+  background-color: $contrast;
+  border: none;
+  border-bottom: 2px solid $border;
+  box-shadow: none;
+
+  &:focus {
+    border-bottom-color: $accent1;
+  }
+}
+
+.toolbar-divider {
+  background-color: $border;
+}
+
+.long-click-glyph {
+  background-color: $primary;
+}
+
+.toolbar-button.emulate-active {
+  background-color: $active;
+}
+
+.toolbar-button[data-keyboard-focus="true"]:focus::after {
+  background-color: $highlight;
+  opacity: 0.5;
+}
+
+.toolbar-shadow.floating {
+  background-color: $background;
+  border-color: $border;
+}
+
+input[is="history-input"]:hover {
+  box-shadow: var(--focus-ring-inactive-shadow);
+}
+
+input[is="history-input"]:focus,
+input[is="history-input"]:not(:placeholder-shown) {
+  box-shadow: none;
+  border-bottom-color: $accent1;
+}
+
+.toolbar-item.warning {
+  background: $notif;
+}
+
+.toolbar-item.toolbar-button:not(.toolbar-has-dropdown) {
+  color: $foreground;
+
+  &:hover {
+    background-image: radial-gradient(circle at center, $highlight 60%, rgba(0,0,0,0) 0) !important;
+    opacity: .8;
+
+    > * {
+      color: $selFg !important;
+    }
+  }
+}

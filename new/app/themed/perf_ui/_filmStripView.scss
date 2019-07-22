@@ -1,0 +1,14 @@
+.film-strip-view .label {
+  color: $primary;
+}
+
+.film-strip-view .frame:hover .thumbnail {
+  border-top-color: $accent2Alpha;
+  border-right-color: $accent2Alpha;
+  border-bottom-color: $accent2Alpha;
+  border-left-color: $accent2Alpha;
+}
+
+.film-strip-view .frame .thumbnail img {
+  box-shadow: rgb(68, 68, 68) 0px 0px 3px;
+}

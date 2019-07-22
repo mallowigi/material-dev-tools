@@ -1,0 +1,32 @@
+.suggest-box {
+  background-color: $background;
+  box-shadow: var(--drop-shadow);
+
+  .query {
+    color: $accent1;
+  }
+}
+
+.suggest-box-content-item {
+  padding: 4px 0 4px 1px;
+}
+
+.suggest-box-content-item.secondary {
+  background-color: $second;
+}
+
+.suggestion-subtitle {
+  color: $primary;
+}
+
+.suggest-box-content-item.selected {
+  background-color: $selBg;
+}
+
+.suggest-box-content-item.selected > span {
+  color: $selFg;
+}
+
+.suggest-box-content-item:hover:not(.selected) {
+  background-color: $tree;
+}

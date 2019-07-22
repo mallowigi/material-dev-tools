@@ -1,0 +1,13 @@
+.expandable-view-title {
+  background-color: $contrast;
+  border-color: $borderLight;
+}
+
+.expandable-view-title.expanded,
+.expandable-view-title:last-child {
+  border-bottom-color: $border;
+}
+
+.expandable-view-title[data-keyboard-focus="true"]:focus {
+  background-color: $highlight;
+}

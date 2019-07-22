@@ -1,0 +1,208 @@
+.monospace,
+.source-code {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+.highlighted-search-result {
+  background-color: $accent1;
+  color: $selFg;
+  outline: 1px solid $accent1;
+}
+
+input {
+  background-color: $contrast;
+  color: $foreground;
+
+  border: none;
+  border-bottom: 2px solid $button;
+
+  &:hover {
+    border-bottom: 2px solid $accent1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 0 !important;
+  transition: opacity .4s ease;
+}
+
+*:hover ::-webkit-scrollbar {
+  opacity: 1 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: $background !important;
+  -webkit-box-shadow: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent1Alpha !important;
+  border-radius: 16px !important;
+  -webkit-box-shadow: none !important;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: $accent1 !important;
+}
+
+::-moz-selection {
+  color: $selBg !important;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: $background !important;
+}
+
+[is=ui-icon].icon-mask {
+  background-color: $primary;
+}
+
+:host-context(.force-white-icons) [is=ui-icon].spritesheet-smallicons,
+.force-white-icons [is=ui-icon].spritesheet-smallicons,
+[is=ui-icon].force-white-icons.spritesheet-smallicons,
+-theme-preserve {
+  background: $selFg !important;
+}
+
+:host-context(.force-white-icons) [is=ui-icon].spritesheet-largeicons,
+.force-white-icons [is=ui-icon].spritesheet-largeicons,
+[is=ui-icon].force-white-icons.spritesheet-largeicons,
+-theme-preserve {
+  background: $selFg !important;
+}
+
+:host-context(.force-white-icons) [is=ui-icon].spritesheet-mediumicon,
+.force-white-icons [is=ui-icon].spritesheet-mediumicons,
+[is=ui-icon].force-white-icons.spritesheet-mediumicons,
+-theme-preserve {
+  background: $selFg !important;
+}
+
+.thread-item.selected {
+  &::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: $accent1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.spritesheet-smallicons.smallicon-thick-right-arrow {
+  display: none;
+}
+
+*::selection {
+  background-color: $selBgAlpha;
+}
+
+
+input[type="radio"]:focus {
+  outline-color: $accent1;
+}
+
+.view-container > .toolbar {
+  border-bottom-color: $background;
+}
+
+.link {
+  color: $link-color;
+}
+
+input {
+  background-color: $contrast;
+}
+
+.harmony-input:not([type]):not(.error-input):not(:invalid):hover,
+.harmony-input[type="number"]:not(.error-input):not(:invalid):hover,
+.harmony-input[type="text"]:not(.error-input):not(:invalid):hover {
+  box-shadow: none;
+}
+
+.harmony-input:not([type]):not(.error-input):not(:invalid):focus,
+.harmony-input[type="number"]:not(.error-input):not(:invalid):focus,
+.harmony-input[type="text"]:not(.error-input):not(:invalid):focus {
+  box-shadow: none;
+}
+
+.highlighted-search-result.current-search-result {
+  background-color: $lighterBg;
+}
+
+.harmony-input:not([type]).error-input,
+.harmony-input[type="number"].error-input,
+.harmony-input[type="text"].error-input,
+.harmony-input:not([type]):invalid,
+.harmony-input[type="number"]:invalid,
+.harmony-input[type="text"]:invalid {
+  box-shadow: $error-color 0px 0px 0px 1px;
+}
+
+.chrome-select {
+  border: none;
+  color: $foreground;
+  background-color: $button;
+  text-transform: uppercase !important;
+  position: relative;
+}
+
+.chrome-select:enabled:active,
+.chrome-select:enabled:focus,
+.chrome-select:enabled:hover {
+  background-color: $lighterBg;
+  box-shadow: $highlight 0px 1px 2px;
+}
+
+.chrome-select:enabled:active {
+  background-color: $highlight;
+}
+
+.chrome-select:enabled:focus {
+  box-shadow: $highlight 0px 1px 2px, $highlight 0px 0px 0px 2px;
+}
+
+.chrome-select optgroup,
+.chrome-select option {
+  background-color: $background;
+  color: $foreground;
+}
+
+.gray-info-message {
+  background: $second;
+  color: $primary;
+}
+
+.full-widget-dimmed-banner {
+  color: $primary;
+  background-color: $lighterBg;
+}
+
+.expandable-inline-button {
+  background-color: $button;
+  color: $primary;
+}
+
+.undisplayable-text {
+  color: $disabled;
+}
+
+.expandable-inline-button:hover {
+  background-color: $highlight;
+}
+
+::selection {
+  background: $selBgAlpha;
+  color: $selFg;
+}
+
+button.link[data-keyboard-focus="true"]:focus {
+  background-color: $highlight;
+}

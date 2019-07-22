@@ -1,0 +1,41 @@
+.text-button {
+  background: $button;
+  border: none;
+  color: $foreground;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text-button:not(:disabled):focus,
+.text-button:not(:disabled):hover,
+.text-button:not(:disabled):active {
+  background-color: $active;
+  box-shadow: none;
+}
+
+.text-button:not(:disabled):active {
+  background-color: $highlight;
+}
+
+.text-button:not(:disabled):focus {
+  box-shadow: $highlight 0px 1px 2px, $highlight 0px 0px 0px 2px;
+}
+
+.text-button.primary-button {
+  background: $accent1;
+  color: $foreground;
+}
+
+[type="button"].text-button.primary-button:not(:disabled):focus,
+[type="button"].text-button.primary-button:not(:disabled):hover,
+[type="button"].text-button.primary-button:not(:disabled):active {
+  background-color: $accent1;
+  color: $selFg;
+}
+
+[type="button"].text-button:not(.primary-button):not(:disabled):focus,
+[type="button"].text-button:not(.primary-button):not(:disabled):hover,
+[type="button"].text-button:not(.primary-button):not(:disabled):active {
+  background-color: $highlight;
+  color: $selFg;
+}

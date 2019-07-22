@@ -1,0 +1,29 @@
+body {
+  background-color: $background;
+  color: $foreground;
+  font-family: $uiFontFamily, '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.platform-linux {
+  background-color: $background;
+  color: $foreground;
+  font-family: $uiFontFamily, Ubuntu, Arial, sans-serif;
+}
+
+.platform-mac {
+  background-color: $background;
+  color: $foreground;
+  font-family: $uiFontFamily, '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.platform-windows {
+  font-family: $uiFontFamily, 'Segoe UI', Tahoma, sans-serif;
+}
+
+.panel {
+  background-color: $background;
+}
+
+.panel-sidebar {
+  background-color: $contrast;
+}

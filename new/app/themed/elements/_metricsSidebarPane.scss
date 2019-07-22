@@ -1,0 +1,39 @@
+.metrics {
+  color: $foreground;
+}
+
+.metrics .label,
+.metrics div,
+.metrics span {
+  color: $foreground;
+}
+
+.metrics div:hover {
+  color: $selFg;
+  border-color: $foreground !important;
+}
+
+.metrics .position {
+  background: $contrast !important;
+  border-color: $disabled;
+}
+
+.metrics .margin {
+  background: $background !important;
+  border-color: $disabled;
+}
+
+.metrics .border {
+  border-color: $disabled;
+  background: $second !important;
+}
+
+.metrics .padding {
+  background: $active !important;
+  border-color: $disabled;
+}
+
+.metrics .content {
+  background: $highlight !important;
+  border-color: $disabled;
+}

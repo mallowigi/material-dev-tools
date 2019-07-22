@@ -1,0 +1,15 @@
+progress::-webkit-progress-bar {
+  background: $highlight !important;
+}
+
+progress::-webkit-progress-value {
+  background: $accent1 !important;
+}
+
+.progress-indicator-shadow-container .title {
+  color: $foreground;
+}
+
+.progress-indicator-shadow-stop-button {
+  background-color: $error-color !important;
+}

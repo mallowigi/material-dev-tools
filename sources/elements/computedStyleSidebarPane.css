@@ -1,0 +1,41 @@
+.computed-properties {
+    -webkit-user-select: text;
+    flex-shrink: 0;
+}
+
+.styles-sidebar-pane-toolbar {
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.styles-sidebar-pane-filter-box {
+    flex: auto;
+    display: flex;
+}
+
+.styles-sidebar-pane-filter-box > input {
+    outline: none !important;
+    border: none;
+    width: 100%;
+    background: white;
+    padding-left: 4px;
+    margin: 3px;
+}
+
+.styles-sidebar-pane-filter-box > input:focus,
+.styles-sidebar-pane-filter-box > input:not(:placeholder-shown) {
+    box-shadow: var(--focus-ring-active-shadow);
+}
+
+/*Theme*/
+.styles-sidebar-pane-toolbar {
+    border-bottom-color: rgb(44, 44, 44);
+}
+
+.styles-sidebar-pane-filter-box > input {
+    background-color: rgb(36, 36, 36);
+}
+
+.styles-sidebar-pane-filter-box > input:focus, .styles-sidebar-pane-filter-box > input:not(:placeholder-shown) {
+    box-shadow: var(--focus-ring-active-shadow);
+}

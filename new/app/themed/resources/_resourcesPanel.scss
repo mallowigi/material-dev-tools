@@ -1,0 +1,38 @@
+.resources-toolbar {
+  border-top-color: $borderLight;
+  background-color: $contrast;
+}
+
+.top-resources-toolbar {
+  border-bottom-color: $borderLight;
+  background-color: $contrast;
+}
+
+.storage-view .storage-table-error {
+  color: $error-color;
+}
+
+.database-user-query {
+  border-bottom-color: $border;
+}
+
+.database-query-text {
+  color: $string-color;
+}
+
+.database-query-result.error {
+  color: $error-color;
+}
+
+.resources-sidebar {
+  background: $contrast;
+  color: $foreground;
+}
+
+li.selected .base-storage-tree-element-subtitle {
+  color: $selFg;
+}
+
+.base-storage-tree-element-subtitle {
+  color: $primary;
+}

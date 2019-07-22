@@ -1,0 +1,25 @@
+.goto-source-icon {
+  background-color: $foreground;
+}
+
+.goto-source-icon:hover {
+  background-color: $accent1;
+}
+
+.property-trace-selector {
+  color: $primary;
+}
+
+.property-trace-inactive .property-trace-value::before {
+  border-bottom-color: $foreground;
+}
+
+.tree-outline-disclosure {
+  .tree-outline li.odd-row {
+    background-color: $contrast;
+  }
+
+  .property-value .property-value-text {
+    color: $number-color;
+  }
+}

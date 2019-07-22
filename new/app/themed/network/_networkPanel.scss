@@ -1,0 +1,48 @@
+.panel.network .toolbar {
+  background-color: $contrast;
+}
+
+.network-details-view {
+  background-color: $second;
+
+  .devtools-link {
+    color: $link-color;
+  }
+}
+
+.network-item-view {
+  background-color: $background;
+}
+
+.network-item-preview-toolbar {
+  border-top-color: $border;
+  background-color: $background;
+}
+
+.resource-timing-view {
+  color: $foreground;
+}
+
+#network-overview-container {
+  border-bottom-color: $highlight;
+}
+
+.network-overview .resources-dividers-label-bar {
+  background: $contrast;
+}
+
+.network-film-strip {
+  border-bottom-color: $border;
+}
+
+.network-tabbed-pane {
+  background-color: $contrast
+}
+
+.network-settings-pane {
+  background-color: $contrast;
+}
+
+.open-search-view {
+  background-color: $tree;
+}

@@ -1,0 +1,5 @@
+div{color:black;}
+div.verbose{background-color:rgb(0, 0, 255);}
+div.info{background-color:rgb(66, 89, 127);}
+div.warning{background-color:rgb(255, 187, 23);}
+div.error{background-color:rgb(220, 39, 39);}

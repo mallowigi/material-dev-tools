@@ -188,8 +188,8 @@
   --text-color: ${foreground};
   --parameters-color: ${parameters};
   
-  --font-family: ${fontFamily};
-  --font-size: ${fontSize}px;
+  --font-family: ${fontFamily}, Menlo, Consolas, "Fira Code", monospace;
+  --font-size: ${fontSize || 10}px;
   }
 `;
     },

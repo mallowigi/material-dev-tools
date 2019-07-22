@@ -1,0 +1,32 @@
+.heap-snapshot-view td.object-column .objects-count {
+  color: $number-color;
+}
+
+.heap-snapshot-view tr:not(.selected) .object-value-id {
+  color: $primary;
+}
+
+.heap-snapshot-view .heap-snapshot-view-resizer {
+  background-color: $background;
+  border-bottom-color: $border;
+}
+
+.heap-snapshot-view tr:not(.selected) td.object-column span.heap-object-tag {
+  color: $tag-name-color;
+}
+
+.heap-snapshot-view td.object-column span.grayed {
+  color: $disabled;
+}
+
+#heap-recording-overview-container {
+  border-bottom-color: $borderLight;
+}
+
+.heap-allocation-stack .stack-frame {
+  border-bottom-color: $border;
+}
+
+.heap-allocation-stack .stack-frame .devtools-link {
+  color: $link-color;
+}

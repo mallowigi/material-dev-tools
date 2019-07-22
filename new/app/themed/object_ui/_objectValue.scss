@@ -1,0 +1,66 @@
+.value.object-value-node:hover {
+  background-color: $tree;
+}
+
+.object-value-function-prefix,
+.object-value-boolean {
+  color: $keyword-color !important;
+}
+
+.object-value-function.linkified:hover {
+  background-color: $tree;
+}
+
+.object-value-bigint {
+  color: $number-color !important;
+}
+
+.object-value-string,
+.object-value-regexp,
+.object-value-symbol {
+  color: $string-color !important;
+}
+
+.object-value-string-quote {
+  color: $foreground !important;
+}
+
+.object-value-node {
+  color: $tag-name-color !important;
+}
+
+.object-value-null,
+.object-value-undefined {
+  color: $operator-color !important;
+}
+
+.object-properties-section .object-description {
+  color: $attribute-name-color;
+}
+
+.object-value-number,
+.object-value-number.source-code {
+  color: $number-color !important;
+}
+
+.name {
+  color: $var-color;
+}
+
+.object-properties-preview .name {
+  color: $text-color;
+}
+
+.object-value-string,
+.object-value-string.source-code,
+.object-value-string-quote {
+  color: $string-color !important;
+}
+
+.name.source-code {
+  color: $var-color;
+}
+
+#console-prompt .console-prompt-icon {
+  filter: hue-rotate(-40deg);
+}

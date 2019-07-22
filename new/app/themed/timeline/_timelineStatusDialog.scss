@@ -1,0 +1,16 @@
+.timeline-status-dialog {
+  background-color: $background;
+  box-shadow: var(--drop-shadow);
+}
+
+.status-dialog-line .label {
+  color: $primary;
+}
+
+.timeline-status-dialog .progress .indicator-container {
+  background-color: $background;
+}
+
+.timeline-status-dialog .progress .indicator {
+  background-color: $accent1;
+}

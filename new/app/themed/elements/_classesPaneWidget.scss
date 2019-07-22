@@ -1,0 +1,14 @@
+.styles-element-classes-pane {
+  background-color: $contrast;
+  border-bottom-color: $borderLight;
+}
+
+.styles-element-classes-pane .new-class-input {
+  border:none;
+  border-bottom: 2px solid $button;
+  background-color: $contrast;
+
+  &:focus {
+    border-bottom-color: $accent1;
+  }
+}

@@ -1,0 +1,48 @@
+#sources-panel-sources-view .sources-toolbar {
+  background-color: $contrast;
+}
+
+@keyframes source-frame-value-update-highlight-animation {
+  from {
+    background-color: inherit;
+    color: inherit;
+  }
+  10% {
+    background-color: $accent1;
+    color: white;
+  }
+  to {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+@keyframes source-line-modification-background-fadeout {
+  from {
+    background-color: rgba($accent1, 0.5);
+  }
+  50% {
+    background-color: rgba($accent1, 0.5);
+  }
+  90% {
+    background-color: rgba($accent1, 0);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes source-line-modification-foreground-fadeout {
+  from {
+    color: $selFg;
+  }
+  50% {
+    color: $selFg;
+  }
+  90% {
+    color: initial;
+  }
+  to {
+    color: initial;
+  }
+}

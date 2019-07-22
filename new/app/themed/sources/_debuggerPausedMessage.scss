@@ -1,0 +1,14 @@
+.paused-status {
+  border-top-color: $border;
+  background-color: $accent1;
+  color: $selFg;
+}
+
+.paused-status.error-reason {
+  background-color: rgb(79, 0, 0);
+  color: $selFg;
+}
+
+.paused-status.error-reason .status-sub {
+  color: $error-color;
+}

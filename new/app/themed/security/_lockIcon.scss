@@ -1,0 +1,47 @@
+.lock-icon, .security-property {
+  background-color: $second;
+}
+
+.lock-icon-secure {
+  background-color: $string-color;
+}
+
+.lock-icon-unknown, .lock-icon-neutral {
+  background-color: $foreground;
+}
+
+.lock-icon-insecure {
+  background-color: $error-color;
+}
+
+.security-property-secure {
+  background-color: $string-color;
+}
+
+.security-property-neutral {
+  background-color: $error-color;
+}
+
+.security-property-insecure {
+  background-color: $error-color;
+}
+
+.security-property-info {
+  background-color: $foreground;
+}
+
+.security-property-unknown {
+  background-color: $foreground;
+}
+
+.url-scheme-secure {
+  color: $string-color;
+}
+
+.url-scheme-neutral, .url-scheme-insecure {
+  color: $error-color;
+}
+
+.url-scheme-separator {
+  color: $borderLight;
+}

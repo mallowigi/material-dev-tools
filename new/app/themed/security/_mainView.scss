@@ -1,0 +1,51 @@
+.security-main-view {
+  background-color: $contrast
+}
+
+.security-summary:not(.security-summary-secure) .lock-icon-secure,
+.security-summary:not(.security-summary-neutral) .lock-icon-neutral,
+.security-summary:not(.security-summary-insecure) .lock-icon-insecure {
+  background-color: $second;
+}
+
+.triangle-pointer {
+  background-color: $background;
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.security-summary-text {
+  background-color: $background;
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.security-summary-secure .triangle-pointer,
+.security-summary-secure .security-summary-text,
+.security-explanation-title-secure {
+  color: $string-color;
+}
+
+.security-summary-insecure .triangle-pointer,
+.security-summary-insecure .security-summary-text,
+.security-explanation-title-neutral,
+.security-explanation-title-insecure {
+  color: $error-color;
+}
+
+.security-explanations-main {
+  background-color: $background;
+  border-bottom-color: $border;
+}
+
+.security-explanation {
+  color: $primary;
+}
+
+.security-explanation-title {
+  color: $foreground;
+}

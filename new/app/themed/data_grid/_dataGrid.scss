@@ -1,0 +1,101 @@
+.data-grid {
+  border: none;
+}
+
+.striped-data-grid .revealed.data-grid-data-grid-node:nth-child(2n+1),
+.striped-data-grid-starts-with-odd .revealed.data-grid-data-grid-node:nth-child(2n) {
+  background-color: $contrast;
+}
+
+.data-grid td, .data-grid th {
+  border-left-color: $borderLight;
+  height: auto;
+  padding: 8px 4px;
+}
+
+.data-grid th {
+  background-color: $contrast;
+  border-bottom-color: $borderLight;
+
+  > div {
+    font-weight: bold;
+  }
+}
+
+.data-grid th.sortable:active::after {
+  background-color: $highlight;
+  color: $selFg;
+  opacity: 0.5;
+}
+
+.data-grid th.sortable:hover {
+  background-color: $highlight;
+}
+
+.data-grid td.disclosure::before {
+  background-color: $background;
+}
+
+.data-grid-data-grid-node:nth-child(2n) {
+  background: $background !important;
+
+  td {
+    border-color: $borderLight;
+  }
+}
+
+.data-grid-data-grid-node:nth-child(2n+1) {
+  background: $contrast !important;
+
+  td {
+    border-color: $borderLight;
+  }
+}
+
+.data-grid-data-grid-node:hover {
+  background: $highlight !important;
+  color: $selFg;
+}
+
+
+.data-grid table.data tr.revealed.selected {
+  background-color: $active;
+}
+
+.data-grid:focus table.data tr.selected {
+  background-color: $selBg;
+  color:$selFg;
+}
+
+.data-grid:focus tr.selected .devtools-link {
+  color: $link-color;
+}
+
+.data-grid:focus tr.parent.selected td.disclosure::before {
+  background-color: $selFg;
+}
+
+.data-grid:focus tr.expanded.selected td.disclosure::before {
+  background-color: $selFg;
+}
+
+.data-grid tr.inactive {
+  color: $disabled;
+}
+
+.data-grid tr.dirty {
+  background-color: rgb(92, 0, 0);
+  color: $error-color;
+}
+
+.data-grid:focus tr.selected.dirty {
+  background-color: $error-color;
+}
+
+.data-grid .header-container {
+  height: 36px;
+}
+
+.data-grid .data-container {
+  top: 36px;
+}

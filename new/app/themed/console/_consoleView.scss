@@ -1,0 +1,121 @@
+.console-view {
+  background-color: $background;
+  --error-text-color: $error-color;
+}
+
+.console-view-wrapper {
+  background-color: $lighterBg;
+}
+
+.console-settings-pane {
+  background: $contrast;
+  border-bottom: $borderLight;
+}
+
+.console-prompt-editor-container {
+  background: $contrast;
+  border-bottom: 2px solid $borderLight;
+}
+
+.console-prompt-editor-container:focus {
+  border-bottom: 2px solid $accent1;
+}
+
+.console-timestamp {
+  color: $attribute-name-color;
+}
+
+.console-info {
+  color: $primary;
+}
+
+.expand-group-icon {
+  background-color: $foreground;
+}
+
+.console-message-wrapper:last-of-type {
+  border-bottom-color: $border;
+}
+
+.console-message-repeat-count .expand-group-icon {
+  background-color: $background;
+}
+
+.console-message-wrapper:focus,
+.console-message-wrapper:focus:last-of-type {
+  border-top-color: $accent1 !important;
+  border-bottom-color: $accent1 !important;
+  background-color: $active !important;
+}
+
+.console-message-wrapper.console-error-level:focus,
+.console-message-wrapper.console-error-level:focus:last-of-type {
+  --error-text-color: $error-color;
+}
+
+.console-message-wrapper .nesting-level-marker {
+  border-right-color: $foreground;
+}
+
+.console-message-wrapper .nesting-level-marker::before {
+  border-bottom-color: $foreground;
+}
+
+.console-warning-level .console-message-text {
+  color: $attribute-name-color;
+}
+
+.console-error-level .console-message-text,
+.console-error-level .console-view-object-properties-section {
+  color: var(--error-text-color) !important;
+}
+
+.console-system-type.console-info-level {
+  color: $link-color;
+}
+
+#console-messages .link,
+#console-messages .devtools-link {
+  color: $link-color;
+}
+
+#console-messages .link:hover,
+#console-messages .devtools-link:hover {
+  color: $selFg;
+}
+
+.console-group-messages .section > .header .title {
+  color: $foreground;
+}
+
+.console-group-messages .section .properties li .info {
+  color: $attribute-name-color;
+}
+
+.console-object {
+  color: $primary;
+}
+
+.console-object-preview .name {
+  color: $number-color;
+}
+
+.console-message-text .object-value-string,
+.console-message-text .object-value-regexp,
+.console-message-text .object-value-symbol {
+  color: $string-color;
+}
+
+.console-message-badge {
+  color: $var-color;
+}
+
+.object-state-note {
+  background: $accent1;
+  color: $selFg;
+}
+
+.info-note {
+  background-color: $accent1;
+  color: $selFg;
+}

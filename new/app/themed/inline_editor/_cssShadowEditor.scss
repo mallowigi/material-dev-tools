@@ -1,0 +1,56 @@
+.widget {
+  background-color: $background !important;
+  //box-shadow: var(--drop-shadow);
+}
+
+.shadow-editor-2D-slider {
+  border-top-color: $borderLight;
+  border-right-color: $borderLight;
+  border-bottom-color: $borderLight;
+  border-left-color: $borderLight;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $selBg;
+  }
+}
+
+.shadow-editor-button-left,
+.shadow-editor-button-right {
+  border-top-color: $borderLight;
+  border-right-color: $borderLight;
+  border-bottom-color: $borderLight;
+  border-left-color: $borderLight;
+  background-color: $button;
+  color: $foreground;
+}
+
+.shadow-editor-button-left:hover,
+.shadow-editor-button-right:hover {
+  box-shadow: $active 0px 1px 1px;
+}
+
+.shadow-editor-button-left:focus,
+.shadow-editor-button-right:focus {
+  background-color: $highlight;
+}
+
+.shadow-editor-text-input {
+  box-shadow: var(--focus-ring-inactive-shadow);
+}
+
+.shadow-editor-button-left.enabled,
+.shadow-editor-button-right.enabled, -theme-preserve {
+  background-color: $accent1;
+  color: $selFg;
+}
+
+.shadow-editor-button-left.enabled:focus,
+.shadow-editor-button-right.enabled:focus, -theme-preserve  {
+  background-color: $accent1;
+}

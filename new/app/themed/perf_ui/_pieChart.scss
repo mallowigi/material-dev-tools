@@ -1,0 +1,19 @@
+.pie-chart-total {
+  background-color: $background;
+}
+
+.pie-chart-swatch {
+  border-top-color: $borderLight;
+  border-right-color: $borderLight;
+  border-bottom-color: $borderLight;
+  border-left-color: $borderLight;
+}
+
+.pie-chart-legend {
+  color: $foreground;
+}
+
+.pie-chart-size,
+.pie-chart-total {
+  color: $number-color;
+}

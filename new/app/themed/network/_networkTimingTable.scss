@@ -1,0 +1,71 @@
+.network-timing-table-header td {
+  color: $primary;
+}
+
+.network-timing-table td.caution {
+  color: $number-color;
+}
+
+.network-timing-table hr.break {
+  background-image: linear-gradient(to right, $second, $borderLight, $second);
+}
+
+.network-timing-bar-title {
+  color: $primary;
+}
+
+.network-timing-bar.queueing,
+.network-timing-bar.total {
+  border-top-color: $foreground;
+  border-right-color: $foreground;
+  border-bottom-color: $foreground;
+  border-left-color: $foreground;
+}
+
+.network-timing-bar.blocking {
+  background-color: $highlight;
+}
+
+.network-timing-bar.proxy {
+  background-color: $attribute-name-color;
+}
+
+.network-timing-bar.dns {
+  background-color: $function-color;
+}
+
+.network-timing-bar.connecting,
+.network-timing-bar.serviceworker,
+.network-timing-bar.serviceworker-preparation {
+  background-color: $number-color;
+}
+
+.network-timing-bar.ssl {
+  background-color: $keyword-color;
+}
+
+.network-timing-bar.sending {
+  background-color: $foreground;
+}
+
+.network-timing-bar.waiting {
+  background-color: $string-color;
+}
+
+.network-timing-bar.receiving,
+.network-timing-bar.receiving-push {
+  background-color: $link-color;
+}
+
+.network-timing-bar.push {
+  background-color: $operator-color;
+}
+
+.network-timing-bar.server-timing {
+  background-color: $var-color;
+}
+
+.timeline-landing-page {
+  background-color: $background;
+  color: $foreground;
+}

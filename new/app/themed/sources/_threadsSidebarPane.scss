@@ -1,0 +1,11 @@
+.thread-item + .thread-item {
+  border: none;
+}
+
+.thread-item:hover {
+  background-color: $tree;
+}
+
+.thread-item-paused-state {
+  color: $disabled;
+}

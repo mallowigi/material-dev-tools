@@ -1,0 +1,247 @@
+.CodeMirror-gutter-performance {
+  background-color: $background;
+}
+
+.CodeMirror-gutter-memory {
+  background-color: $background;
+}
+
+.CodeMirror-gutter-coverage {
+  background-color: $background;
+}
+
+.CodeMirror .source-frame-eval-expression {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+  background-color: $highlight;
+}
+
+.CodeMirror .source-frame-continue-to-location {
+  outline: 0;
+  border: 1px solid transparent;
+  border-left-width: 0;
+  border-right-width: 0;
+  background-color: $highlight;
+}
+
+.CodeMirror .source-frame-continue-to-location:hover {
+  border: 1px solid $accent1;
+  background-color: $accent1;
+}
+
+.CodeMirror .source-frame-async-step-in {
+  background-color: $highlight;
+}
+
+.source-frame-async-step-in-hovered .source-frame-async-step-in {
+  outline: 0;
+  border: 1px solid transparent;
+  border-left-width: 0;
+  border-right-width: 0;
+  background-color: $highlight;
+}
+
+.CodeMirror-gutters {
+  background-color: $background;
+}
+
+.CodeMirror-linenumber {
+  color: $primary;
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    background-color: $accent1Alpha;
+  }
+  to {
+    background-color: $background;
+  }
+}
+
+@-webkit-keyframes fadeout-dark {
+  from {
+    background-color: $accent1Alpha;
+  }
+  to {
+    background-color: $background
+  }
+}
+
+@-webkit-keyframes fadeout-execution-line {
+  from {background-color: $selBg; }
+  to { background-color: $second; }
+}
+@-webkit-keyframes fadeout-execution-line-dark {
+  from {background-color: $selBg; }
+  to { background-color: $second; }
+}
+
+
+.cm-readonly-highlight {
+  background-color: $second;
+}
+
+.cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber, -theme-preserve {
+  color: $selFg;
+}
+
+.cm-line-without-source-mapping .CodeMirror-linenumber {
+  color: $primary;
+}
+
+.cm-execution-line-tail + .CodeMirror-widget {
+  background-color: $tree;
+}
+
+.source-frame-eval-expression + .CodeMirror-widget {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+  background-color: $highlight;
+}
+
+.cm-inline-breakpoint.cm-execution-line-tail {
+  background-color: $tree;
+}
+
+.cm-execution-line-tail .cm-inline-breakpoint {
+  background-color: $background;
+}
+
+.cm-inline-breakpoint.cm-inline-conditional {
+  background-color: $accent2;
+}
+
+div.CodeMirror:focus-within span.CodeMirror-matchingbracket {
+  background-color: transparent;
+  border-bottom-color: $accent2;
+}
+
+div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
+  background-color: rgba(255, 0, 0, 0.07);
+  border-bottom-color: rgba(255, 0, 0, 0.5);
+}
+
+.cm-whitespace::before {
+  color: $comment-color;
+}
+
+.cm-tab::before {
+  border-bottom-color: $comment-color;
+}
+
+.cm-execution-line {
+  background-color: $selBgAlpha;
+}
+
+.cm-execution-line-outline {
+  outline: 1px solid $accent1;
+}
+
+.cm-execution-line-tail {
+  background-color: $accent2Alpha;
+}
+
+.cm-execution-line .CodeMirror-linenumber::after {
+  border-right: 1px solid $accent1;
+}
+
+.cm-token-highlight::before {
+  border-top-color: $highlight;
+  border-right-color: $highlight;
+  border-bottom-color: $highlight;
+  border-left-color: $highlight;
+}
+
+.cm-search-highlight::before {
+  border-top-color: $accent1;
+  border-bottom-color: $accent1;
+}
+
+.cm-search-highlight-full::before {
+  border: 1px solid $accent1;
+  border-radius: 3px;
+}
+
+.cm-search-highlight-start::before {
+  border-left-color: $accent1;
+  border-left-width: 1px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-left-style: solid;
+}
+
+.cm-search-highlight-end::before {
+  border-right-width: 1px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-right-style: solid;
+  border-right-color: $accent1;
+}
+
+.cm-line-with-selection .cm-column-with-selection.cm-search-highlight::before {
+  background-color: $accent2Alpha;
+}
+
+.cm-line-with-selection .cm-search-highlight {
+  color: $selFg;
+}
+
+.CodeMirror .text-editor-line-marker-text span.line-marker-units {
+  color: $disabled;
+}
+
+.CodeMirror .text-editor-coverage-unused-marker {
+  background-color: $tag-name-color;
+}
+
+.CodeMirror .text-editor-coverage-used-marker {
+  background-color: $string-color;
+}
+
+.CodeMirror .text-editor-value-decoration {
+  background-color: $excluded;
+  color: $primary;
+}
+
+.CodeMirror .text-editor-line-with-warning:not(.cm-execution-line):not(.cm-readonly-highlight) {
+  background-color: rgba(255, 244, 14, 0.1);
+}
+
+.CodeMirror .text-editor-line-with-error:not(.cm-execution-line):not(.cm-readonly-highlight) {
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.cm-trailing-whitespace {
+  background-color: $border;
+}
+
+.CodeMirror .auto-complete-text {
+  color: $accent1;
+}
+
+.CodeMirror .placeholder-text {
+  color: $disabled;
+}
+
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid $accent1;
+}
+
+.CodeMirror-foldmarker::before {
+  content: '\2026';
+  color: $primary;
+}
+
+.CodeMirror-foldgutter-open::before,
+.CodeMirror-foldgutter-folded::before {
+  background-color: $second;
+}
+
+.selection-fill {
+  opacity: .5;
+  border-left: 2px solid $accent1;
+}
