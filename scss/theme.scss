@@ -692,6 +692,10 @@ $fontSize: var(--font-size, 11px);
     background-color: $selFg !important;
   }
 
+  .tree-outline li:not(.parent)::before {
+    background-color: transparent !important;
+  }
+
   ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
     background-color: $tree !important;
     color: $selFg !important;
