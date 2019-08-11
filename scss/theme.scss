@@ -149,10 +149,6 @@ $fontSize: var(--font-size, 11px);
     color: $operator-color !important;
   }
 
-  .devtools-link {
-    color: $link-color !important;
-  }
-
   .webkit-html-tag {
     color: $operator-color !important;
   }
@@ -536,19 +532,6 @@ $fontSize: var(--font-size, 11px);
 
   .dt-checkbox-subtitle {
     color: $primary !important;
-  }
-
-  // endregion
-
-  // region Console
-  /* Console
-     ========================================================================== */
-  .console-view {
-    background-color: $background !important;
-  }
-
-  .console-message-repeat-count .expand-group-icon {
-    background-color: $background !important;
   }
 
   // endregion

@@ -1,5 +1,18 @@
 .-theme-with-dark-background,
-  :host-context(.-theme-with-dark-background) {
+:host-context(.-theme-with-dark-background) {
+  .console-pin:not(:last-child) {
+    border-bottom-color: $border;
+  }
+
+  .console-pin-name:focus-within {
+    background-color: $highlight;
+    box-shadow: $accent1 inset;
+  }
+
+  .tree-outline li:hover:not(.selected) .selection {
+    background-color: $tree;
+  }
+
   .value.object-value-node:hover {
     background-color: $tree !important;
   }
@@ -68,4 +81,80 @@
   #console-prompt .console-prompt-icon {
     filter: hue-rotate(-40deg) !important;
   }
+
+  .console-view {
+    background-color: $background !important;
+  }
+
+  .console-message-repeat-count .expand-group-icon {
+    background-color: $background !important;
+  }
+
+  .console-view-wrapper {
+    background-color: $lighterBg;
+  }
+
+  .console-timestamp {
+    color: $attribute-name-color;
+  }
+
+  .console-info {
+    color: $text-color;
+  }
+
+  .expand-group-icon {
+    background-color: $foreground;
+  }
+
+  .console-message-repeat-count .expand-group-icon {
+    background-color: $background;
+  }
+
+  .console-message-wrapper:focus, .console-message-wrapper:focus:last-of-type {
+    border-top-color: $accent1 !important;
+    border-bottom-color: $accent1 !important;
+    background-color: $tree !important;
+  }
+
+  .console-message-wrapper .nesting-level-marker {
+    border-right-color: $foreground;
+  }
+
+  .console-message-wrapper .nesting-level-marker::before {
+    border-bottom-color: $foreground;
+  }
+
+  .console-system-type.console-info-level {
+    color: $link-color;
+  }
+
+  #console-messages .link, #console-messages .devtools-link {
+    color: $link-color;
+  }
+
+  #console-messages .link:hover, #console-messages .devtools-link:hover {
+    color: $selFg;
+  }
+
+  .console-group-messages .section > .header .title {
+    color: $foreground;
+  }
+
+  .console-group-messages .section .properties li .info {
+    color: $attribute-name-color;
+  }
+
+  .console-object-preview .name {
+    color: $number-color;
+  }
+
+  .object-state-note {
+    color: $foreground;
+  }
+
+  .info-note {
+    background-color: $function-color;
+  }
+
+
 }
