@@ -2,29 +2,30 @@
    Dark Theme
    ========================================================================== */
 :root {
-  --background: rgb(38, 50, 56);
-  --darkerBg: rgb(33, 44, 49);
-  --lighterBg: rgb(50, 66, 74);
-  --foreground: rgb(176, 190, 197);
-  --primary: rgb(96, 125, 139);
-  --selBg: rgb(84, 110, 122);
+  --background: #263238;
+  --darkerBg: #212c31;
+  --lighterBg: #32424a;
+  --foreground: #b0bec5;
+  --primary: #607d8b;
+  --selBg: #546e7a;
   --selBgAlpha: rgba(84, 110, 122, 0.5);
-  --selFg: rgb(255, 255, 255);
-  --button: rgb(46, 60, 67);
-  --disabled: rgb(65, 89, 103);
-  --contrast: rgb(30, 39, 44);
-  --second: rgb(49, 69, 73);
-  --border: rgb(42, 55, 62);
-  --highlight: rgb(66, 91, 103);
-  --tree: rgba(84, 110, 122, .5);
-  --notif: rgb(30, 39, 44);
-  --accent1: rgb(0, 150, 136);
+  --selFg: #ffffff;
+  --button: #2e3c43;
+  --second: #32424A;
+  --disabled: #415967;
+  --contrast: #1e272c;
+  --active: #314549;
+  --border: #2a373e;
+  --highlight: #425b67;
+  --tree: #546e7a70;
+  --notif: #1e272c;
+  --accent1: #009688;
   --accentAlpha: rgba(0, 150, 136, .5);
-  --excluded: rgb(46, 60, 67);
+  --excluded: #2e3c43;
   --excludedAlpha: rgba(46, 60, 67, .3);
-  --accent2: rgb(128, 203, 207);
+  --accent2: #80cbcf;
   --accent2Alpha: rgba(128, 203, 207, .5);
-  --accent3: rgb(255, 64, 129);
+  --accent3: #ff4081;
 
   --tag-name-color: #f07178;
   --attribute-name-color: #ffcb6b;
@@ -54,6 +55,7 @@ $button: var(--button);
 $disabled: var(--disabled);
 $contrast: var(--contrast);
 $second: var(--second);
+$active: var(--active);
 $border: var(--border);
 $highlight: var(--highlight);
 $tree: var(--tree);

@@ -100,6 +100,7 @@ export const styleBuilder = {
    * @param second
    * @param darkerBg
    * @param lighterBg
+   * @param table
    * @param border
    * @param highlight
    * @param tree
@@ -121,6 +122,7 @@ export const styleBuilder = {
    * @param attributes
    * @param parameters
    * @param fontFamily
+   * @param fontSize
    * @returns {string}
    */
   styles({
@@ -135,6 +137,7 @@ export const styleBuilder = {
            second,
            darkerBg = contrast,
            lighterBg = second,
+           table,
            border,
            highlight,
            tree,
@@ -171,6 +174,7 @@ export const styleBuilder = {
   --disabled: ${disabled};
   --contrast: ${contrast};
   --second: ${second};
+  --active: ${table};
   --border: ${border};
   --highlight: ${highlight};
   --tree: ${tree};
