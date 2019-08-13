@@ -1,0 +1,13 @@
+.color-swatch-inner {
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.color-swatch-inner:hover {
+  border-top-color: $borderLight;
+  border-right-color: $borderLight;
+  border-bottom-color: $borderLight;
+  border-left-color: $borderLight;
+}
