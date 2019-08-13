@@ -1,0 +1,13 @@
+.console-pin:not(:last-child) {
+  border-bottom-color: $border;
+}
+
+.console-pin.error-level:not(:focus-within) {
+  background-color: var(--error-background-color);
+  color: var(--error-text-color);
+}
+
+.console-pin-name:focus-within {
+  background-color: $highlight;
+  box-shadow: $accent1 inset;
+}

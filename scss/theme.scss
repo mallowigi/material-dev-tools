@@ -625,34 +625,6 @@ $fontSize: var(--font-size, 11px);
     }
   }
 
-  /* Box Model
-   ========================================================================== */
-  .metrics {
-    color: $text-color !important;
-
-    .position {
-      background: $contrast !important;
-      border-color: $border !important;
-    }
-
-    .margin {
-      background: $background !important;
-    }
-
-    .border {
-      border: $border !important;
-      background: $darkerBg !important;
-    }
-
-    .padding {
-      background: $contrast !important;
-    }
-
-    .content {
-      background: $highlight !important;
-    }
-  }
-
   .resources-dividers-label-bar {
     background: $contrast !important;
   }

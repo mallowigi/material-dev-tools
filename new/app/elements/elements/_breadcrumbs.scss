@@ -1,0 +1,11 @@
+.crumb.selected, .crumb:hover {
+  background: $highlight;
+}
+
+.crumb:not(.selected) .node-label-name {
+  color: $tag-name-color;
+}
+
+.crumb:not(.selected) .node-label-class {
+  color: $attribute-name-color;
+}

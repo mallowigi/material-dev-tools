@@ -83,8 +83,7 @@ $fontFamily: var(--font-family, Menlo, monospace);
 $fontSize: var(--font-size, 11px);
 
 html,
-.-theme-with-dark-background,
-:host-context(.-theme-with-dark-background) {
+:host {
   --accent-color: #{$accent1} !important;
   --accent-color-b: #{$accent1Alpha} !important;
   --accent-color-c: #{$accent2} !important;
@@ -103,4 +102,8 @@ html,
   --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
   --editor-selection-bg-color: #{$selBg} !important;
   --editor-selection-inactive-bg-color: #{$excludedAlpha} !important;
+  --message-border-color: #{$border} !important;
+
+  @import "app/index";
 }
+

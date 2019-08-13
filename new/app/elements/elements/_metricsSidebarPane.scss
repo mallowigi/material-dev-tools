@@ -1,0 +1,26 @@
+.metrics {
+  color: $foreground;
+}
+
+.metrics .position {
+  background: $contrast;
+  border-color: $border;
+}
+
+.metrics .margin {
+  background: $background;
+}
+
+.metrics .border {
+  border: $border;
+  background: $darkerBg;
+}
+
+.metrics .padding {
+  background: $contrast;
+
+}
+
+.metrics .content {
+  background: $highlight;
+}

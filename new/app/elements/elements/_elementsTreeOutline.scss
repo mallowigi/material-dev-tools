@@ -1,0 +1,95 @@
+.elements-disclosure li.parent::before {
+  background-color: $selBg;
+}
+
+.elements-disclosure li.hovered:not(.selected) .selection {
+  background-color: $selBgAlpha;
+}
+
+.elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) .selection {
+  background-color: var(--editor-selection-inactive-bg-color);
+}
+
+.elements-disclosure .elements-tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus="true"] .highlight > * {
+  box-shadow: 0px 0px 0px 2px $selBgAlpha;
+}
+
+.elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
+  background-color: $selBg;
+}
+
+.elements-tree-outline ol.shadow-root-depth-4 {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.elements-tree-outline ol.shadow-root-depth-3 {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.elements-tree-outline ol.shadow-root-depth-2 {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.elements-tree-outline ol.shadow-root-depth-1 {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.elements-tree-editor {
+  box-shadow: var(--drop-shadow);
+  margin-right: 4px !important;
+}
+
+.elements-disclosure li.in-clipboard .highlight {
+  outline: 1px dotted $primary;
+}
+
+.editing {
+  box-shadow: var(--drop-shadow);
+  background-color: $background;
+}
+
+.editing, .editing * {
+  color: $foreground;
+}
+
+.elements-gutter-decoration {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+  background-color: $accent1;
+}
+
+.elements-tree-shortcut-title {
+  color: $primary;
+}
+
+.elements-tree-shortcut-link {
+  color: $link-color;
+}
+
+.gutter-menu-icon {
+  background-color: $foreground;
+}
+
+li.hovered:not(.always-parent) + ol.children:not(.shadow-root) {
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.elements-tree-outline ol.shadow-root {
+  //border-top-color: $borderLight;
+  //border-right-color: $borderLight;
+  //border-bottom-color: $borderLight;
+  //border-left-color: $borderLight;
+  border: none !important;
+}
+
+li.selected:not(.always-parent) + ol.children {
+  border-top-color: $borderLight !important;
+  border-right-color: $borderLight !important;
+  border-bottom-color: $borderLight !important;
+  border-left-color: $borderLight !important;
+}

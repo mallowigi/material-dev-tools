@@ -1,0 +1,94 @@
+.styles-section.read-only {
+  background: $second;
+}
+
+.styles-section[data-keyboard-focus="true"]:focus {
+  background-color: $contrast;
+  border: none;
+  border-bottom: 2px solid $accent1;
+}
+
+.styles-section.read-only[data-keyboard-focus="true"]:focus {
+  background-color: $background;
+}
+
+.styles-section .simple-selector.filter-match {
+  background-color: $second;
+}
+
+.styles-section-title .media-list {
+  color: $primary;
+}
+
+.styles-section-title .media-list.media-matches .media.editable-media {
+  color: $primary;
+}
+
+.styles-section-title .media .subtitle {
+  color: $primary;
+}
+
+.styles-section-subtitle {
+  color: $primary;
+}
+
+.sidebar-pane-open-brace,
+.sidebar-pane-closing-brace {
+  color: $foreground;
+}
+
+.styles-section .styles-section-subtitle .devtools-link {
+  color: $link-color;
+}
+
+.styles-section .selector {
+  color: $primary;
+}
+
+.styles-section .simple-selector.selector-matches,
+.styles-section.keyframe-key {
+  color: $foreground;
+}
+
+.styles-sidebar-pane-toolbar-container {
+  background-color: var(--toolbar-bg-color);
+}
+
+.styles-sidebar-pane-toolbar {
+  border: none;
+  border-bottom: 2px solid $border;
+  box-shadow: none;
+
+  &:focus {
+    border-bottom-color: $accent1;
+  }
+}
+
+.styles-sidebar-pane-filter-box > input {
+  border: none;
+  border-bottom: 2px solid $border;
+  box-shadow: none;
+
+  &:focus {
+    border-bottom-color: $accent1;
+    box-shadow: none;
+  }
+}
+
+.styles-sidebar-pane-filter-box > input:focus,
+.styles-sidebar-pane-filter-box > input:not(:placeholder-shown) {
+  box-shadow: var(--focus-ring-active-shadow);
+}
+
+.sidebar-separator {
+  background-color: var(--toolbar-bg-color);
+  color: $border;
+}
+
+.sidebar-pane-section-toolbar {
+  background-color: $button;
+}
+
+.styles-section[data-keyboard-focus="true"]:focus .sidebar-pane-section-toolbar {
+  background-color: $highlight;
+}

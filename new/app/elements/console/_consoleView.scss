@@ -1,0 +1,96 @@
+.console-view {
+  background-color: $background;
+}
+
+.console-view-wrapper {
+  background-color: $lighterBg;
+}
+
+.console-timestamp {
+  color: $attribute-name-color;
+}
+
+.console-info {
+  color: $primary;
+}
+
+.expand-group-icon {
+  background-color: $foreground;
+}
+
+.console-message-wrapper:last-of-type {
+  border-bottom-color: $border;
+}
+
+.console-message-repeat-count .expand-group-icon {
+  background-color: $background;
+}
+
+.console-message-wrapper:focus,
+.console-message-wrapper:focus:last-of-type {
+  border-top-color: $accent1;
+  border-bottom-color: $accent1;
+  background-color: $active;
+}
+
+.console-message-wrapper .nesting-level-marker {
+  border-right-color: $foreground;
+}
+
+.console-message-wrapper .nesting-level-marker::before {
+  border-bottom-color: $foreground;
+}
+
+.console-error-level {
+  background-color: rgb(79, 0, 0);
+}
+
+.console-warning-level {
+  background-color: rgb(84, 71, 0);
+}
+
+.console-warning-level .console-message-text {
+  color: $attribute-name-color;
+}
+
+.console-error-level .console-message-text,
+.console-error-level .console-view-object-properties-section {
+  color: var(--error-text-color) !important;
+}
+
+.console-system-type.console-info-level {
+  color: $link-color;
+}
+
+.console-message.console-warning-level {
+  background-color: rgb(87, 73, 0);
+}
+
+#console-messages .link, #console-messages .devtools-link {
+  color: $link-color;
+}
+
+#console-messages .link:hover,
+#console-messages .devtools-link:hover {
+  color: $selFg;
+}
+
+.console-group-messages .section > .header .title {
+  color: $foreground;
+}
+
+.console-group-messages .section .properties li .info {
+  color: $attribute-name-color;
+}
+
+.console-object-preview .name {
+  color: $number-color;
+}
+
+.object-state-note {
+  color: $foreground;
+}
+
+.info-note {
+  background-color: $function-color;
+}

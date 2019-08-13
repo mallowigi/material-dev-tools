@@ -1,0 +1,11 @@
+.tree-outline li.filter-match {
+  background-color: $tree;
+}
+
+.tree-outline li.overloaded.filter-match {
+  background-color: $selBgAlpha;
+}
+
+.has-ignorable-error {
+  color: $disabled !important;
+}

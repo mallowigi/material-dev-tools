@@ -1,0 +1,22 @@
+.CodeMirror {
+  color: $operator-color;
+  background-color: $background;
+}
+
+.CodeMirror-selected {
+  background-color: $selBgAlpha;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+  background-color: $selBg;
+}
+
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+  background-color: $selBgAlpha;
+}
+
+.cm-searching {
+  background-color: $excluded;
+}
