@@ -1,0 +1,8 @@
+.object-properties-section {
+  color: $second !important;
+}
+
+.tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus="true"] ::slotted(*),
+.tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus="true"] .name-and-value {
+  box-shadow: 0px 0px 0px 2px var(--focus-bg-color);
+}

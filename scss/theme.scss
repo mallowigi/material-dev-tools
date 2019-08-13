@@ -538,15 +538,6 @@ $fontSize: var(--font-size, 11px);
 
   // endregion
 
-  // Product Registry
-  .product-registry-badge {
-    background-color: $accent1 !important;
-  }
-
-  .product-registry-badge::before {
-    color: $selFg !important;
-  }
-
   /* View Container
      ========================================================================== */
   .expandable-view-title {

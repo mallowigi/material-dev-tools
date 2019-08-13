@@ -1,56 +1,6 @@
 .-theme-with-dark-background,
 :host-context(.-theme-with-dark-background) {
 
-  .value.object-value-node:hover {
-    background-color: $tree !important;
-  }
-
-  .object-value-function-prefix, .object-value-boolean {
-    color: $keyword-color !important;
-  }
-
-  .object-value-function.linkified:hover {
-    background-color: $link-color !important;
-  }
-
-  .object-value-number {
-    color: $number-color !important;
-  }
-
-  .object-value-bigint {
-    color: $string-color !important;
-  }
-
-  .object-value-string,
-  .object-value-regexp,
-  .object-value-symbol {
-    color: $string-color !important;
-  }
-
-  .object-value-string-quote {
-    color: $foreground !important;
-  }
-
-  .object-value-node {
-    color: $tag-name-color !important;
-  }
-
-  .object-value-null, .object-value-undefined {
-    color: $number-color !important;
-  }
-
-  .object-properties-section .object-description {
-    color: $attribute-name-color !important;
-  }
-
-  .name {
-    color: $var-color !important;
-  }
-
-  .object-properties-preview .name {
-    color: $text-color !important;
-  }
-
   .object-value-number,
   .object-value-number.source-code {
     color: $number-color !important;

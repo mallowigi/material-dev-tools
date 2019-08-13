@@ -1,0 +1,47 @@
+.value.object-value-node:hover {
+  background-color: $tree;
+}
+
+.object-value-function-prefix, .object-value-boolean {
+  color: $keyword-color;
+}
+
+.object-value-function.linkified:hover {
+  background-color: $link-color;
+}
+
+.object-value-number {
+  color: $number-color;
+}
+
+.object-value-bigint {
+  color: $number-color;
+}
+
+.object-value-string, .object-value-regexp, .object-value-symbol {
+  color: $string-color;
+}
+
+.object-value-string-quote {
+  color: $foreground;
+}
+
+.object-value-node {
+  color: $tag-name-color;
+}
+
+.object-value-null, .object-value-undefined {
+  color: $number-color;
+}
+
+.object-properties-section .object-description {
+  color: $attribute-name-color;
+}
+
+.name {
+  color: $var-color;
+}
+
+.object-properties-preview .name {
+  color: $text-color;
+}

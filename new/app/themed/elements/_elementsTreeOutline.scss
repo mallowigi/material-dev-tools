@@ -1,9 +1,9 @@
 .elements-disclosure li.parent::before {
-  background-color: $selBg;
+  background-color: $highlight;
 }
 
 .elements-disclosure li.hovered:not(.selected) .selection {
-  background-color: $selBgAlpha;
+  background-color: $active;
 }
 
 .elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) .selection {
@@ -11,11 +11,11 @@
 }
 
 .elements-disclosure .elements-tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus="true"] .highlight > * {
-  box-shadow: 0px 0px 0px 2px $selBgAlpha;
+  box-shadow: 0px 0px 0px 2px $tree;
 }
 
 .elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
-  background-color: $selBg;
+  background-color: $tree;
 }
 
 .elements-tree-outline ol.shadow-root-depth-4 {
