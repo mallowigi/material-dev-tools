@@ -55,29 +55,26 @@
 }
 
 .styles-sidebar-pane-toolbar {
-  border: none;
+  background-color: $contrast;
   border-bottom: 2px solid $border;
   box-shadow: none;
+}
 
-  &:focus {
-    border-bottom-color: $accent1;
-  }
+.styles-sidebar-pane-toolbar:focus {
+  border-bottom-color: $accent1;
 }
 
 .styles-sidebar-pane-filter-box > input {
+  background-color: $contrast;
   border: none;
-  border-bottom: 2px solid $border;
+  border-bottom: 2px solid $borderLight;
   box-shadow: none;
-
-  &:focus {
-    border-bottom-color: $accent1;
-    box-shadow: none;
-  }
 }
 
 .styles-sidebar-pane-filter-box > input:focus,
 .styles-sidebar-pane-filter-box > input:not(:placeholder-shown) {
-  box-shadow: var(--focus-ring-active-shadow);
+  border-bottom-color: $accent1;
+  box-shadow: none;
 }
 
 .sidebar-separator {

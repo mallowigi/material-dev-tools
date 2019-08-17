@@ -109,16 +109,6 @@ $fontSize: var(--font-size, 11px);
 ========================================================================== */
 :host-context(.-theme-with-dark-background),
 .-theme-with-dark-background {
-  ::selection {
-    background: $selBgAlpha !important;
-    color: $selFg !important;
-  }
-
-  .monospace,
-  .source-code {
-    font-family: $fontFamily !important;
-    font-size: $fontSize !important;
-  }
 
   // Line at caret
   ol li.selected:focus .webkit-html-tag,
@@ -134,49 +124,8 @@ $fontSize: var(--font-size, 11px);
     filter: brightness(2);
   }
 
-  //region Code
-  .webkit-html-attribute-name {
-    color: $attribute-name-color !important;
-  }
-
-  .webkit-html-attribute-value {
-    color: $string-color !important;
-  }
-
-  .webkit-html-comment {
-    color: $comment-color !important;
-  }
-
-  .webkit-html-doctype {
-    color: $operator-color !important;
-  }
-
-  .webkit-html-tag {
-    color: $operator-color !important;
-  }
-
-  .webkit-html-tag-name {
-    color: $tag-name-color !important;
-  }
-
   .webkit-html-close-tag-name {
     color: $tag-name-color !important;
-  }
-
-  .webkit-html-text-node {
-    color: $text-color !important;
-  }
-
-  .webkit-html-css-node {
-    color: $text-color !important;
-  }
-
-  .webkit-html-js-node {
-    color: $text-color !important;
-  }
-
-  .webkit-html-pseudo-element {
-    color: $var-color !important;
   }
 
   .webkit-css-selector {
@@ -227,33 +176,6 @@ $fontSize: var(--font-size, 11px);
 :host-context(.-theme-with-dark-background),
 :not(.platform-mac).-theme-with-dark-background,
 .-theme-with-dark-background {
-
-  // region Scrollbars
-  /* Scrollbars
-  ========================================================================== */
-  ::-webkit-scrollbar {
-    width: 10px !important;
-    height: 10px !important;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: $background !important;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: $accent1Alpha !important;
-    border-radius: 16px !important;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: $accent1 !important;
-  }
-
-  ::-moz-selection {
-    color: $selBg !important;
-  }
-
-  // endregion
 
   // region Panels
   /* Background and Foreground color

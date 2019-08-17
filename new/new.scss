@@ -85,12 +85,13 @@ $fontSize: var(--font-size, 11px);
 html,
 :host {
   --accent-color: #{$accent1} !important;
-  --accent-color-b: #{$accent1Alpha} !important;
-  --accent-color-c: #{$accent2} !important;
+  --accent-fg-color: #{$accent1} !important;
+  --accent-color-hover: #{$accent1Alpha} !important;
   --toolbar-bg-color: #{$darkerBg} !important;
   --toolbar-hover-bg-color: #{$highlight} !important;
   --selection-fg-color: #{$selFg} !important;
   --selection-bg-color: #{$selBg} !important;
+  --selection-inactive-fg-color: #{$foreground} !important;
   --selection-inactive-bg-color: #{$lighterBg} !important;
   --tab-selected-fg-color: #{$selFg} !important;
   --tab-selected-bg-color: #{$highlight} !important;
@@ -98,11 +99,12 @@ html,
   0 2px 4px 2px rgba(0, 0, 0, 0.2),
   0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
   --divider-color: #{$border} !important;
+  --divider-border: 1px solid #{$borderLight} !important;
   --focus-bg-color: #{$active} !important;
   --focus-ring-active-shadow: 0 0 0 1px #{$accent1} !important;
-  --focus-ring-inactive-shadow: 0 0 0 1px #{$border} !important;
+  --focus-ring-inactive-shadow: 0 0 0 1px #{$borderLight} !important;
   --editor-selection-bg-color: #{$selBg} !important;
-  --editor-selection-inactive-bg-color: #{$excludedAlpha} !important;
+  --editor-selection-inactive-bg-color: #{$selBgAlpha} !important;
   --message-border-color: #{$border} !important;
 
   @import "app/index";

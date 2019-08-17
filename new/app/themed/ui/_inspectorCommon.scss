@@ -1,14 +1,82 @@
+.monospace,
+.source-code {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+.highlighted-search-result {
+  background-color: $accent1;
+  color: $selFg;
+  outline: 1px solid $accent1;
+}
+
+input {
+  background-color: $contrast;
+  color: $foreground;
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: $background !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent1Alpha !important;
+  border-radius: 16px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $accent1 !important;
+}
+
+::-moz-selection {
+  color: $selBg !important;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: $background !important;
+}
+
+[is=ui-icon].icon-mask {
+  background-color: $primary;
+}
+
+:host-context(.force-white-icons) [is=ui-icon].spritesheet-smallicons,
+.force-white-icons [is=ui-icon].spritesheet-smallicons,
+[is=ui-icon].force-white-icons.spritesheet-smallicons,
+-theme-preserve {
+  background: $selFg !important;
+}
+
+:host-context(.force-white-icons) [is=ui-icon].spritesheet-largeicons,
+.force-white-icons [is=ui-icon].spritesheet-largeicons,
+[is=ui-icon].force-white-icons.spritesheet-largeicons,
+-theme-preserve {
+  background: $selFg !important;
+}
+
+:host-context(.force-white-icons) [is=ui-icon].spritesheet-mediumicon,
+.force-white-icons [is=ui-icon].spritesheet-mediumicons,
+[is=ui-icon].force-white-icons.spritesheet-mediumicons,
+-theme-preserve {
+  background: $selFg !important;
+}
+
+*::selection {
+  background-color: $selBgAlpha;
+}
+
+
 input[type="radio"]:focus {
   outline-color: $accent1;
 }
 
 .view-container > .toolbar {
   border-bottom-color: $background;
-}
-
-.highlighted-search-result {
-  background-color: $accent2;
-  outline-color: $accent2;
 }
 
 .link {

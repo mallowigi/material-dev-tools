@@ -1,3 +1,12 @@
+input.dt-checkbox-themed {
+  border: 1px solid $borderLight;
+  background-color: $contrast;
+}
+
+input.dt-checkbox-themed:checked:after {
+  background-color: $accent1;
+}
+
 input:focus {
   outline-color: $accent1;
 }

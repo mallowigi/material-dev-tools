@@ -1,0 +1,312 @@
+.cm-js-keyword {
+  color: $keyword-color !important;
+}
+
+.cm-js-attribute {
+  color: $var-color !important;
+}
+
+.cm-js-number {
+  color: $number-color !important;
+}
+
+.cm-js-builtin {
+  color: $keyword-color !important;
+}
+
+.cm-js-link {
+  color: $link-color !important;
+}
+
+.cm-js-property {
+  color: $var-color !important;
+  font-weight: 100 !important;
+}
+
+.cm-js-tag {
+  color: $tag-name-color !important;
+}
+
+.cm-js-variable {
+  color: $var-color !important;
+}
+
+.cm-js-comment {
+  color: $comment-color !important;
+}
+
+.cm-js-string {
+  color: $string-color !important;
+}
+
+.cm-js-string-2 {
+  color: $string-color !important;
+}
+
+.cm-js-atom {
+  color: $keyword-color !important;
+}
+
+.cm-js-def {
+  color: $var-color !important;
+  font-weight: 200 !important;
+}
+
+.cm-js-operator {
+  color: $operator-color !important;
+}
+
+.cm-js-meta {
+  color: $string-color !important;
+}
+
+.cm-js-variable-2 {
+  color: $var-color !important;
+}
+
+.cm-css-keyword {
+  color: $keyword-color !important;
+}
+
+.cm-css-number {
+  color: $number-color !important;
+}
+
+.cm-css-comment {
+  color: $comment-color !important;
+}
+
+.cm-css-def {
+  color: $keyword-color !important;
+}
+
+.cm-css-meta {
+  color: $accent1 !important;
+}
+
+.cm-css-atom {
+  color: $attribute-name-color !important;
+}
+
+.cm-css-string {
+  color: $string-color !important;
+}
+
+.cm-css-string-2 {
+  color: $string-color !important;
+}
+
+.cm-css-link {
+  color: $link-color;
+}
+
+.cm-css-variable {
+  color: $function-color !important;
+}
+
+.cm-css-variable-2 {
+  color: $function-color !important;
+}
+
+.cm-css-property, .webkit-css-property {
+  color: $attribute-name-color !important;
+}
+
+.cm-xml-meta {
+  color: $comment-color !important;
+}
+
+.cm-xml-comment {
+  color: $comment-color !important;
+}
+
+.cm-xml-string {
+  color: $string-color !important;
+}
+
+.cm-xml-tag {
+  color: $tag-name-color !important;
+}
+
+.cm-xml-attribute {
+  color: $attribute-name-color !important;
+}
+
+.cm-xml-link {
+  color: $link-color !important;
+}
+
+:root {
+  --dom-tag-name-color: $tag-name-color;
+  --dom-attribute-name-color: $attribute-name-color;
+}
+
+.webkit-html-comment {
+  color: $comment-color !important;
+}
+
+.webkit-html-tag {
+  color: $operator-color !important;
+}
+
+.webkit-html-tag-name, .webkit-html-close-tag-name {
+  color: $tag-name-color !important;
+}
+
+.webkit-html-pseudo-element {
+  color: $var-color !important;
+}
+
+.webkit-html-js-node,
+.webkit-html-css-node {
+  color: $text-color !important;
+}
+
+.webkit-html-text-node {
+  color: $text-color !important;
+}
+
+.webkit-html-entity-value {
+  color: $attribute-name-color !important;
+}
+
+.webkit-html-doctype {
+  color: $operator-color !important;
+}
+
+.webkit-html-attribute-name {
+  color: $attribute-name-color !important;
+}
+
+.webkit-html-attribute-value {
+  color: $string-color !important;
+}
+
+.devtools-link {
+  color: $link-color;
+}
+
+/* Default CodeMirror Theme */
+.cm-negative {
+  color: #dd4444;
+}
+
+.cm-positive {
+  color: #229922;
+}
+
+.cm-link {
+  color: $link-color !important;
+}
+
+.cm-invalidchar {
+  color: $error-color !important;
+}
+
+.cm-header {
+  color: $tag-name-color !important;
+}
+
+.cm-quote {
+  color: $string-color !important;
+}
+
+.cm-keyword {
+  color: $keyword-color !important;
+}
+
+.cm-atom {
+  color: $keyword-color !important;
+}
+
+.cm-variable {
+  color: $var-color !important;
+}
+
+.cm-number {
+  color: $number-color !important;
+}
+
+.cm-def {
+  color: $tag-name-color !important;
+}
+
+.cm-variable-2 {
+  color: $function-color !important;
+}
+
+.cm-variable-3, .cm-type {
+  color: $var-color !important;
+}
+
+.cm-comment {
+  color: $comment-color !important;
+}
+
+.cm-string {
+  color: $string-color !important;
+}
+
+.cm-string-2 {
+  color: $string-color !important;
+}
+
+.cm-meta {
+  color: $string-color !important;
+}
+
+.cm-qualifier {
+  color: $attribute-name-color !important;
+}
+
+.cm-builtin {
+  color: $keyword-color !important;
+}
+
+.cm-bracket {
+  color: $operator-color !important;
+}
+
+.cm-tag {
+  color: $tag-name-color !important;
+}
+
+.cm-attribute {
+  color: $attribute-name-color !important;
+}
+
+.cm-hr {
+  color: $comment-color !important;
+}
+
+.cm-error {
+  color: $error-color;
+}
+
+.cm-operator {
+  color: $operator-color !important;
+}
+
+.cm-css-builtin {
+  color: $keyword-color !important;
+}
+
+.cm-css-operator {
+  color: $operator-color !important;
+}
+
+.cm-css-qualifier {
+  color: $attribute-name-color !important;
+}
+
+.cm-css-tag {
+  color: $tag-name-color !important;
+}
+
+.cm-css-variable-3 {
+  color: $var-color !important;
+}
+
+.cm-xml-error {
+  color: $error-color !important;
+}

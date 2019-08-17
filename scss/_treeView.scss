@@ -1,12 +1,4 @@
 .-theme-with-dark-background {
-  .elements-disclosure li.selected .selected-hint:before {
-    opacity: 0.6 !important;
-    color: var(--selection-inactive-fg-color) !important;
-  }
-
-  .elements-disclosure li.selected:focus .selected-hint:before {
-    color: $selBg !important;
-  }
 
   .elements-disclosure li.selected .selection {
     display: block !important;
@@ -21,19 +13,6 @@
     background-color: $selFg !important;
   }
 
-  .elements-disclosure ol li.selected:focus * {
-    color: inherit !important;
-  }
-
-  .elements-tree-outline ol.shadow-root-deep {
-    background-color: transparent !important;
-  }
-
-  .elements-disclosure li.elements-drag-over .selection {
-    display: block !important;
-    margin-top: -2px !important;
-    border-top: 2px solid $selBg !important;
-  }
 
 
 
