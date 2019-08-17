@@ -1,0 +1,19 @@
+div {
+  color: $foreground;
+}
+
+div.verbose {
+  background-color: $function-color;
+}
+
+div.info {
+  background-color: $text-color;
+}
+
+div.warning {
+  background-color: $attribute-name-color;
+}
+
+div.error {
+  background-color: $tag-name-color;
+}

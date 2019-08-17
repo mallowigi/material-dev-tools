@@ -1,0 +1,80 @@
+/* Checkboxes
+========================================================================== */
+input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
+  position: absolute !important; // take it out of document flow
+  opacity: 0 !important; // hide it
+
+  & + label,
+  & ~ .webkit-css-property {
+    position: relative !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+  }
+
+  // Box.
+  & + label:before,
+  & ~ .webkit-css-property:before {
+    position: relative;
+    content: '' !important;
+    margin-right: 10px !important;
+    display: inline-block !important;
+    vertical-align: text-top !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: $background !important;
+    border: 2px solid $accent1 !important;
+    border-radius: 4px !important;
+  }
+
+  // Box hover
+  &:hover + label:before,
+  &:hover ~ .webkit-css-property:before {
+    background: $contrast !important;
+  }
+
+  // Box focus
+  &:focus + label:before,
+  &:focus ~ .webkit-css-property:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  // Box checked
+  &:checked + label:before,
+  &:checked ~ .webkit-css-property:before {
+    background: $accent1 !important;
+    color: $background !important;
+  }
+
+  // Disabled state label.
+  &:disabled + label,
+  &:disabled ~ .webkit-css-property {
+    color: #b8b8b8 !important;
+    cursor: auto !important;
+  }
+
+  // Disabled box.
+  &:disabled + label:before,
+  &:disabled ~ .webkit-css-property:before {
+    box-shadow: none !important;
+    background: #dddddd !important;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after,
+  &:checked ~ .webkit-css-property:after {
+    content: '' !important;
+    position: absolute !important;
+    left: 3px !important;
+    top: 7px !important;
+    background: $background !important;
+    width: 2px !important;
+    height: 2px !important;
+    box-shadow: 2px 0 0 $background,
+    4px 0 0 $background,
+    4px -2px 0 $background,
+    4px -4px 0 $background,
+    4px -6px 0 $background,
+    4px -8px 0 $background !important;
+    transform: rotate(45deg) !important;
+  }
+}

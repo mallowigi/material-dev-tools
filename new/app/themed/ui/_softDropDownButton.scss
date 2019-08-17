@@ -1,0 +1,3 @@
+button.soft-dropdown[data-keyboard-focus="true"]:focus::before {
+  background-color: $active;
+}

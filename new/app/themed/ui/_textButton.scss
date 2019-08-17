@@ -1,0 +1,22 @@
+.text-button {
+  background: $button;
+  border: none;
+  color: $foreground;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text-button:not(:disabled):focus,
+.text-button:not(:disabled):hover,
+.text-button:not(:disabled):active {
+  background-color: $active;
+  box-shadow: none;
+}
+
+.text-button:not(:disabled):active {
+  background-color: $highlight;
+}
+
+.text-button:not(:disabled):focus {
+  box-shadow: $accent1 0px 1px 2px, $accent1Alpha 0px 0px 0px 2px;
+}

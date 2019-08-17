@@ -258,13 +258,8 @@ $fontSize: var(--font-size, 11px);
   // region Panels
   /* Background and Foreground color
   ========================================================================== */
-  .root-view,
   .network-status-pane,
   .timeline-landing-page,
-  body,
-  .platform-linux,
-  .platform-mac,
-  .panel,
   .settings-window-main {
     background-color: $background !important;
     color: $text-color !important;
@@ -275,10 +270,6 @@ $fontSize: var(--font-size, 11px);
   // region Sidebars
   /* Sidebars
   ========================================================================== */
-  .panel-sidebar {
-    background-color: $contrast !important;
-  }
-
   .sidebar-separator > span.monospace {
     background-color: $background !important;
   }
@@ -288,9 +279,6 @@ $fontSize: var(--font-size, 11px);
   // region Toolbars
   /* Toolbars
   ========================================================================== */
-  .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
-    background-color: $background !important;
-  }
 
   .toolbar-state-on {
     .toolbar-text {
@@ -316,44 +304,11 @@ $fontSize: var(--font-size, 11px);
     color: $selFg !important;
   }
 
-  select.toolbar-item[data-keyboard-focus="true"]:focus > * {
-    background-color: $background !important;
-  }
-
-  .toolbar-shadow.floating {
-    background-color: $background !important;
-    border-color: $border !important;
-  }
-
   // endregion
 
   // region Components
   /* Components
   ========================================================================== */
-
-  // Buttons
-  .text-button {
-    background: $button !important;
-    border: none !important;
-    color: $foreground !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-  }
-
-  .text-button:not(:disabled):focus,
-  .text-button:not(:disabled):hover,
-  .text-button:not(:disabled):active {
-    background-color: $highlight !important;
-    box-shadow: none !important;
-  }
-
-  .text-button:not(:disabled):active {
-    background-color: $highlight !important;
-  }
-
-  .text-button:not(:disabled):focus {
-    box-shadow: $accent1 0px 1px 2px, $accent1 0px 0px 0px 2px;
-  }
 
   // The shortcut keys in settings
   .settings-key {
@@ -362,181 +317,6 @@ $fontSize: var(--font-size, 11px);
     border: none;
     box-shadow: $border 0px 1px 0px;
   }
-
-  /* Radios
-  ========================================================================== */
-  input[type="radio"] {
-    //opacity: 0 !important; // hide it
-    margin-right: 10px !important;
-    filter: none !important;
-    position: relative;
-
-    &:before {
-      position: relative !important;
-      cursor: pointer !important;
-      padding: 0 !important;
-    }
-
-    // Box.
-    &:before {
-      position: relative;
-      content: '' !important;
-      display: inline-block !important;
-      vertical-align: text-top !important;
-      width: 14px !important;
-      height: 14px !important;
-      background: $background !important;
-      border: 2px solid $accent1 !important;
-      border-radius: 50% !important;
-      left: -2px;
-      top: -2px;
-    }
-
-    // Box hover
-    &:hover:before {
-      background: $contrast !important;
-    }
-
-    // Box focus
-    &:focus:before {
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
-    }
-
-    // Disabled state label.
-    &:disabled:before {
-      color: #b8b8b8 !important;
-      cursor: auto !important;
-    }
-
-    // Disabled box.
-    &:disabled:before {
-      box-shadow: none !important;
-      background: #dddddd !important;
-    }
-
-    // Checkmark. Could be replaced with an image
-    &:checked:before {
-      content: '' !important;
-      position: absolute !important;
-      left: -2px !important;
-      top: -2px !important;
-      background: $background !important;
-      width: 14px !important;
-      height: 14px !important;
-      border: 2px solid $accent1 !important;
-    }
-
-    &:checked:after {
-      content: '' !important;
-      position: absolute !important;
-      left: 0px !important;
-      top: 0px !important;
-      background: $accent1 !important;
-      width: 14px !important;
-      height: 14px !important;
-      transform: scale(0.6) !important;
-      border-radius: 50% !important;
-    }
-  }
-
-  /* Checkboxes
- ========================================================================== */
-  input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
-    position: absolute !important; // take it out of document flow
-    opacity: 0 !important; // hide it
-
-    & + label,
-    & ~ .webkit-css-property {
-      position: relative !important;
-      cursor: pointer !important;
-      padding: 0 !important;
-    }
-
-    // Box.
-    & + label:before,
-    & ~ .webkit-css-property:before {
-      position: relative;
-      content: '' !important;
-      margin-right: 10px !important;
-      display: inline-block !important;
-      vertical-align: text-top !important;
-      width: 12px !important;
-      height: 12px !important;
-      background: $background !important;
-      border: 2px solid $accent1 !important;
-      border-radius: 4px !important;
-    }
-
-    // Box hover
-    &:hover + label:before,
-    &:hover ~ .webkit-css-property:before {
-      background: $contrast !important;
-    }
-
-    // Box focus
-    &:focus + label:before,
-    &:focus ~ .webkit-css-property:before {
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
-    }
-
-    // Box checked
-    &:checked + label:before,
-    &:checked ~ .webkit-css-property:before {
-      background: $accent1 !important;
-      color: $background !important;
-    }
-
-    // Disabled state label.
-    &:disabled + label,
-    &:disabled ~ .webkit-css-property {
-      color: #b8b8b8 !important;
-      cursor: auto !important;
-    }
-
-    // Disabled box.
-    &:disabled + label:before,
-    &:disabled ~ .webkit-css-property:before {
-      box-shadow: none !important;
-      background: #dddddd !important;
-    }
-
-    // Checkmark. Could be replaced with an image
-    &:checked + label:after,
-    &:checked ~ .webkit-css-property:after {
-      content: '' !important;
-      position: absolute !important;
-      left: 3px !important;
-      top: 7px !important;
-      background: $background !important;
-      width: 2px !important;
-      height: 2px !important;
-      box-shadow: 2px 0 0 $background,
-      4px 0 0 $background,
-      4px -2px 0 $background,
-      4px -4px 0 $background,
-      4px -6px 0 $background,
-      4px -8px 0 $background !important;
-      transform: rotate(45deg) !important;
-    }
-  }
-
-  input.dt-checkbox-themed {
-    border-top-color: $highlight;
-    border-right-color: $highlight;
-    border-bottom-color: $highlight;
-    border-left-color: $highlight;
-    background-color: $contrast;
-  }
-
-  input.dt-checkbox-themed:checked::after {
-    background-color: $accent1 !important;
-  }
-
-  .dt-checkbox-subtitle {
-    color: $primary !important;
-  }
-
-  // endregion
 
   /* View Container
      ========================================================================== */
@@ -559,13 +339,6 @@ $fontSize: var(--font-size, 11px);
     color: $selFg !important;
   }
 
-  /* Text Prompt
-     ========================================================================== */
-  .text-prompt-editing {
-    box-shadow: var(--drop-shadow) !important;
-    background-color: $background !important;
-  }
-
   /* Sources
      ========================================================================== */
   .toolbar-shadow {
@@ -574,10 +347,6 @@ $fontSize: var(--font-size, 11px);
 
   .soft-dropdown {
     color: $foreground !important;
-  }
-
-  .toolbar-text {
-    color: $primary !important;
   }
 
   /* Scripts
@@ -636,17 +405,8 @@ $fontSize: var(--font-size, 11px);
     color: $accent1 !important;
   }
 
-  .tree-outline li::before {
-    background-color: $selFg !important;
-  }
-
   .tree-outline li:not(.parent)::before {
     background-color: transparent !important;
-  }
-
-  ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
-    background-color: $tree !important;
-    color: $selFg !important;
   }
 
   .empty-view {
@@ -654,19 +414,6 @@ $fontSize: var(--font-size, 11px);
   }
 
   .network-timing-table-header td {
-    color: $primary !important;
-  }
-
-  /* Popups
-   ========================================================
-   */
-  .tooltip {
-    background: $background !important;
-    color: $foreground !important;
-    border-color: $background !important;
-  }
-
-  .tooltip-shortcut {
     color: $primary !important;
   }
 

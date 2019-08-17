@@ -1,0 +1,33 @@
+.search-bar {
+  background: $background;
+  border: 0;
+}
+
+.toolbar-search-navigation {
+  border-color: $background;
+}
+
+.toolbar-search-control {
+  background-color: $contrast;
+}
+
+.toolbar-search-control,
+.toolbar-replace-control {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid $border;
+  background-color: $contrast;
+}
+
+.toolbar-search-navigation.toolbar-search-navigation-prev {
+  border-left-color: $second;
+}
+
+.toolbar-search-navigation.toolbar-search-navigation-next {
+  border-left-color: $second;
+}
+
+.search-results-matches {
+  color: $primary;
+}

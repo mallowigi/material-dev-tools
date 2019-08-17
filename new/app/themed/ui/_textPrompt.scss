@@ -1,0 +1,16 @@
+.text-prompt-editing {
+  box-shadow: var(--drop-shadow);
+  background-color: $background;
+}
+
+.text-prompt-editing > .text-prompt {
+  color: $foreground !important;
+}
+
+.text-prompt > .auto-complete-text {
+  color: $accent1 !important;
+}
+
+.text-prompt[data-placeholder]:empty::before {
+  color: $disabled;
+}

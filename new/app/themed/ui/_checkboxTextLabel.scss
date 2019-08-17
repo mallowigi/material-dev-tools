@@ -1,0 +1,19 @@
+input:focus {
+  outline-color: $accent1;
+}
+
+input.dt-checkbox-themed {
+  border-top-color: $highlight;
+  border-right-color: $highlight;
+  border-bottom-color: $highlight;
+  border-left-color: $highlight;
+  background-color: $contrast;
+}
+
+input.dt-checkbox-themed:checked::after {
+  background-color: $accent1 !important;
+}
+
+.dt-checkbox-subtitle {
+  color: $primary !important;
+}

@@ -1,0 +1,22 @@
+body {
+  background-color: $background;
+  color: $foreground;
+}
+
+.platform-linux {
+  background-color: $background;
+  color: $foreground;
+}
+
+.platform-mac {
+  background-color: $background;
+  color: $foreground;
+}
+
+.panel {
+  background-color: $background;
+}
+
+.panel-sidebar {
+  background-color: $contrast;
+}

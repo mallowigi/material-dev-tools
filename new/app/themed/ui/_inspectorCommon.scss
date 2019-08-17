@@ -1,0 +1,106 @@
+input[type="radio"]:focus {
+  outline-color: $accent1;
+}
+
+.view-container > .toolbar {
+  border-bottom-color: $background;
+}
+
+.highlighted-search-result {
+  background-color: $accent2;
+  outline-color: $accent2;
+}
+
+.link {
+  color: $link-color;
+}
+
+input {
+  background-color: $contrast;
+}
+
+.harmony-input:not([type]):not(.error-input):not(:invalid):hover,
+.harmony-input[type="number"]:not(.error-input):not(:invalid):hover,
+.harmony-input[type="text"]:not(.error-input):not(:invalid):hover {
+  box-shadow: none;
+}
+
+.harmony-input:not([type]):not(.error-input):not(:invalid):focus,
+.harmony-input[type="number"]:not(.error-input):not(:invalid):focus,
+.harmony-input[type="text"]:not(.error-input):not(:invalid):focus {
+  box-shadow: none;
+}
+
+.highlighted-search-result.current-search-result {
+  background-color: $lighterBg;
+}
+
+.harmony-input:not([type]).error-input,
+.harmony-input[type="number"].error-input,
+.harmony-input[type="text"].error-input,
+.harmony-input:not([type]):invalid,
+.harmony-input[type="number"]:invalid,
+.harmony-input[type="text"]:invalid {
+  box-shadow: $error-color 0px 0px 0px 1px;
+}
+
+.chrome-select {
+  border: none;
+  color: $foreground;
+  background-color: $button;
+  text-transform: uppercase !important;
+  position: relative;
+}
+
+.chrome-select:enabled:active,
+.chrome-select:enabled:focus,
+.chrome-select:enabled:hover {
+  background-color: $lighterBg;
+  box-shadow: $accent1 0px 1px 2px;
+}
+
+.chrome-select:enabled:active {
+  background-color: $highlight;
+}
+
+.chrome-select:enabled:focus {
+  box-shadow: $accent1 0px 1px 2px, $accent1Alpha 0px 0px 0px 2px;
+}
+
+.chrome-select optgroup,
+.chrome-select option {
+  background-color: $background;
+  color: $foreground;
+}
+
+.gray-info-message {
+  background: $second;
+  color: $primary;
+}
+
+.full-widget-dimmed-banner {
+  color: $primary;
+  background-color: $lighterBg;
+}
+
+.expandable-inline-button {
+  background-color: $button;
+  color: $primary;
+}
+
+.undisplayable-text {
+  color: $disabled;
+}
+
+.expandable-inline-button:hover {
+  background-color: $highlight;
+}
+
+::selection {
+  background: $selBgAlpha;
+  color: $selFg;
+}
+
+button.link[data-keyboard-focus="true"]:focus {
+  background-color: $highlight;
+}

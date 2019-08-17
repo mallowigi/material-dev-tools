@@ -1,0 +1,36 @@
+.tree-outline:not(.hide-selection-when-blurred) li.hovered:not(.selected) .selection {
+  background-color: $active;
+}
+
+.tree-outline:not(.hide-selection-when-blurred) li.selected {
+  color: $foreground;
+}
+
+.tree-outline:not(.hide-selection-when-blurred) li.selected .selection {
+  background-color: $tree;
+  color: $selFg;
+}
+
+.tree-outline:not(.hide-selection-when-blurred) li.in-clipboard .highlight {
+  outline-color: $highlight;
+}
+
+.tree-outline:not(.hide-selection-when-blurred) li.elements-drag-over .selection {
+  border-top-color: $selBg;
+}
+
+ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
+  background-color: $selBg;
+}
+
+ol.tree-outline:not(.hide-selection-when-blurred) li.parent.selected:focus::before {
+  background-color: $selFg;
+}
+
+ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
+  color: $selFg;
+}
+
+.tree-outline li::before {
+  background-color: $selFg;
+}

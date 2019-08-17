@@ -1,0 +1,75 @@
+/* Radios
+ ========================================================================== */
+input[type="radio"] {
+  //opacity: 0 !important; // hide it
+  margin-right: 10px !important;
+  filter: none !important;
+  position: relative;
+
+  &:before {
+    position: relative !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+  }
+
+  // Box.
+  &:before {
+    position: relative;
+    content: '' !important;
+    display: inline-block !important;
+    vertical-align: text-top !important;
+    width: 14px !important;
+    height: 14px !important;
+    background: $background !important;
+    border: 2px solid $accent1 !important;
+    border-radius: 50% !important;
+    left: -2px;
+    top: -2px;
+  }
+
+  // Box hover
+  &:hover:before {
+    background: $contrast !important;
+  }
+
+  // Box focus
+  &:focus:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  // Disabled state label.
+  &:disabled:before {
+    color: #b8b8b8 !important;
+    cursor: auto !important;
+  }
+
+  // Disabled box.
+  &:disabled:before {
+    box-shadow: none !important;
+    background: #dddddd !important;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked:before {
+    content: '' !important;
+    position: absolute !important;
+    left: -2px !important;
+    top: -2px !important;
+    background: $background !important;
+    width: 14px !important;
+    height: 14px !important;
+    border: 2px solid $accent1 !important;
+  }
+
+  &:checked:after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0px !important;
+    top: 0px !important;
+    background: $accent1 !important;
+    width: 14px !important;
+    height: 14px !important;
+    transform: scale(0.6) !important;
+    border-radius: 50% !important;
+  }
+}
