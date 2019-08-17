@@ -32,5 +32,5 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 }
 
 .tree-outline li::before {
-  background-color: $selFg;
+  background-color: $foreground;
 }

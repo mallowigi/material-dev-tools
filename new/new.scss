@@ -8,7 +8,7 @@
   --selBgAlpha: #546e7a70;
   --selFg: #ffffff;
   --button: #2e3c43;
-  --second: #32424A;
+  --second: #32424a;
   --disabled: #415967;
   --contrast: #1e272c;
   --active: #314549;
@@ -83,7 +83,9 @@ $fontFamily: var(--font-family, Menlo, monospace);
 $fontSize: var(--font-size, 11px);
 
 html,
-:host {
+:host,
+.-theme-with-dark-background,
+:host-context(.-theme-with-dark-background) {
   --accent-color: #{$accent1} !important;
   --accent-fg-color: #{$accent1} !important;
   --accent-color-hover: #{$accent1Alpha} !important;

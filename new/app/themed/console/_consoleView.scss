@@ -1,9 +1,24 @@
 .console-view {
   background-color: $background;
+  --error-text-color: $error-color;
 }
 
 .console-view-wrapper {
   background-color: $lighterBg;
+}
+
+.console-settings-pane {
+  background: $contrast;
+  border-bottom: $borderLight;
+}
+
+.console-prompt-editor-container {
+  background: $contrast;
+  border-bottom: 2px solid $borderLight;
+}
+
+.console-prompt-editor-container:focus {
+  border-bottom: 2px solid $accent1;
 }
 
 .console-timestamp {
@@ -28,9 +43,14 @@
 
 .console-message-wrapper:focus,
 .console-message-wrapper:focus:last-of-type {
-  border-top-color: $accent1;
-  border-bottom-color: $accent1;
-  background-color: $active;
+  border-top-color: $accent1 !important;
+  border-bottom-color: $accent1 !important;
+  background-color: $active !important;
+}
+
+.console-message-wrapper.console-error-level:focus,
+.console-message-wrapper.console-error-level:focus:last-of-type {
+  --error-text-color: $error-color;
 }
 
 .console-message-wrapper .nesting-level-marker {
@@ -39,14 +59,6 @@
 
 .console-message-wrapper .nesting-level-marker::before {
   border-bottom-color: $foreground;
-}
-
-.console-error-level {
-  background-color: rgb(79, 0, 0);
-}
-
-.console-warning-level {
-  background-color: rgb(84, 71, 0);
 }
 
 .console-warning-level .console-message-text {
@@ -62,11 +74,8 @@
   color: $link-color;
 }
 
-.console-message.console-warning-level {
-  background-color: rgb(87, 73, 0);
-}
-
-#console-messages .link, #console-messages .devtools-link {
+#console-messages .link,
+#console-messages .devtools-link {
   color: $link-color;
 }
 
@@ -83,14 +92,30 @@
   color: $attribute-name-color;
 }
 
+.console-object {
+  color: $primary;
+}
+
 .console-object-preview .name {
   color: $number-color;
 }
 
+.console-message-text .object-value-string,
+.console-message-text .object-value-regexp,
+.console-message-text .object-value-symbol {
+  color: $string-color;
+}
+
+.console-message-badge {
+  color: $var-color;
+}
+
 .object-state-note {
-  color: $foreground;
+  background: $accent1;
+  color: $selFg;
 }
 
 .info-note {
-  background-color: $function-color;
+  background-color: $accent1;
+  color: $selFg;
 }
