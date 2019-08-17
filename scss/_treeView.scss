@@ -5,15 +5,6 @@
     background-color: var(--selection-inactive-bg-color) !important;
   }
 
-  .elements-disclosure ol li.selected:focus {
-    color: $selFg !important;
-  }
-
-  .elements-disclosure ol li.parent.selected:focus::before {
-    background-color: $selFg !important;
-  }
-
-
 
 
 }

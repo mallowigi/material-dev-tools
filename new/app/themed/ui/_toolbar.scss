@@ -24,7 +24,7 @@
 }
 
 .toolbar-glyph {
-  background-color: $background;
+  background-color: $primary;
 }
 
 .toolbar-button.dark-text .toolbar-text {
@@ -32,7 +32,7 @@
 }
 
 :not(.toolbar-render-as-links) .toolbar-button:enabled:hover:not(:active) .toolbar-glyph {
-  background-color: $background;
+  background-color: $accent2;
 }
 
 :not(.toolbar-render-as-links) .toolbar-button:enabled:hover:not(:active) .toolbar-text {
@@ -49,7 +49,7 @@
 }
 
 .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-glyph {
-  background-color: $background;
+  background-color: $accent2;
 }
 
 .toolbar-blue-on-hover .toolbar-button:not(.toolbar-state-on):enabled:hover .toolbar-text {

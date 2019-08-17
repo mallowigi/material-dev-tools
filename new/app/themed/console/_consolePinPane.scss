@@ -1,10 +1,38 @@
+.console-pins {
+  background: $background;
+  --error-background-color: $background;
+  --error-border-color: $background;
+  --error-text-color: $error-color;
+}
+
+.console-pins:not(:empty) {
+  border-bottom: 1px solid $borderLight;
+}
+
+.console-delete-pin {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 2px solid $button;
+  background: -webkit-image-set(url(Images/smallIcons.png) 1x, url(Images/smallIcons_2x.png) 2x) -19px 71px, $button;
+}
+
+.console-delete-pin:hover {
+  border: 2px solid $accent1Alpha;
+  background: -webkit-image-set(url(Images/smallIcons.png) 1x, url(Images/smallIcons_2x.png) 2x) -19px 71px, $accent1Alpha;
+}
+
 .console-pin:not(:last-child) {
   border-bottom-color: $border;
 }
 
 .console-pin.error-level:not(:focus-within) {
   background-color: var(--error-background-color);
-  color: var(--error-text-color);
+  color: $error-color;
 }
 
 .console-pin-name:focus-within {

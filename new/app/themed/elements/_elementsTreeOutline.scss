@@ -14,6 +14,10 @@
   background-color: transparent;
 }
 
+.elements-disclosure li.selected:focus {
+  color: $selFg;
+}
+
 .elements-disclosure li.elements-drag-over .selection {
   display: block;
   margin-top: -2px;
@@ -58,8 +62,12 @@
   -webkit-animation: dom-update-highlight-animation-dark 1.4s 1 cubic-bezier(0, 0, 0.2, 1);
 }
 
+.elements-disclosure ol li.parent.selected:focus::before {
+  background-color: $selFg;
+}
+
 .elements-disclosure li.parent::before {
-  background-color: $highlight;
+  background-color: $foreground;
 }
 
 .elements-disclosure li.hovered:not(.selected) .selection {
