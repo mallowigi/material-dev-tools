@@ -1,0 +1,15 @@
+.shadow-split-widget.vbox > .shadow-split-widget-sidebar:not(.maximized) {
+  border-top: 1px solid $borderLight;
+}
+
+.shadow-split-widget.vbox > .shadow-split-widget-sidebar:first-child:not(.maximized) {
+  border-bottom: 1px solid $borderLight;
+}
+
+.shadow-split-widget.hbox > .shadow-split-widget-sidebar:not(.maximized) {
+  border-left: 1px solid $borderLight;
+}
+
+.shadow-split-widget.hbox > .shadow-split-widget-sidebar:first-child:not(.maximized) {
+  border-right: 1px solid $borderLight;
+}

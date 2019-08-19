@@ -1,99 +1,99 @@
 .cm-js-keyword {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-js-attribute {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .cm-js-number {
-  color: $number-color !important;
+  color: $number-color;
 }
 
 .cm-js-builtin {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-js-link {
-  color: $link-color !important;
+  color: $link-color;
 }
 
 .cm-js-property {
-  color: $var-color !important;
-  font-weight: 100 !important;
+  color: $var-color;
+  font-weight: 100;
 }
 
 .cm-js-tag {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .cm-js-variable {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .cm-js-comment {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-js-string {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-js-string-2 {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-js-atom {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-js-def {
-  color: $var-color !important;
-  font-weight: 200 !important;
+  color: $var-color;
+  font-weight: 200;
 }
 
 .cm-js-operator {
-  color: $operator-color !important;
+  color: $operator-color;
 }
 
 .cm-js-meta {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-js-variable-2 {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .cm-css-keyword {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-css-number {
-  color: $number-color !important;
+  color: $number-color;
 }
 
 .cm-css-comment {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-css-def {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-css-meta {
-  color: $accent1 !important;
+  color: $accent1;
 }
 
 .cm-css-atom {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .cm-css-string {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-css-string-2 {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-css-link {
@@ -101,39 +101,39 @@
 }
 
 .cm-css-variable {
-  color: $function-color !important;
+  color: $function-color;
 }
 
 .cm-css-variable-2 {
-  color: $function-color !important;
+  color: $function-color;
 }
 
 .cm-css-property, .webkit-css-property {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .cm-xml-meta {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-xml-comment {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-xml-string {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-xml-tag {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .cm-xml-attribute {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .cm-xml-link {
-  color: $link-color !important;
+  color: $link-color;
 }
 
 :root {
@@ -142,44 +142,44 @@
 }
 
 .webkit-html-comment {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .webkit-html-tag {
-  color: $operator-color !important;
+  color: $operator-color;
 }
 
 .webkit-html-tag-name, .webkit-html-close-tag-name {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .webkit-html-pseudo-element {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .webkit-html-js-node,
 .webkit-html-css-node {
-  color: $text-color !important;
+  color: $text-color;
 }
 
 .webkit-html-text-node {
-  color: $text-color !important;
+  color: $text-color;
 }
 
 .webkit-html-entity-value {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .webkit-html-doctype {
-  color: $operator-color !important;
+  color: $operator-color;
 }
 
 .webkit-html-attribute-name {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .webkit-html-attribute-value {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .devtools-link {
@@ -196,87 +196,87 @@
 }
 
 .cm-link {
-  color: $link-color !important;
+  color: $link-color;
 }
 
 .cm-invalidchar {
-  color: $error-color !important;
+  color: $error-color;
 }
 
 .cm-header {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .cm-quote {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-keyword {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-atom {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-variable {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .cm-number {
-  color: $number-color !important;
+  color: $number-color;
 }
 
 .cm-def {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .cm-variable-2 {
-  color: $function-color !important;
+  color: $function-color;
 }
 
 .cm-variable-3, .cm-type {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .cm-comment {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-string {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-string-2 {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-meta {
-  color: $string-color !important;
+  color: $string-color;
 }
 
 .cm-qualifier {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .cm-builtin {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-bracket {
-  color: $operator-color !important;
+  color: $operator-color;
 }
 
 .cm-tag {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .cm-attribute {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .cm-hr {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-error {
@@ -284,29 +284,29 @@
 }
 
 .cm-operator {
-  color: $operator-color !important;
+  color: $operator-color;
 }
 
 .cm-css-builtin {
-  color: $keyword-color !important;
+  color: $keyword-color;
 }
 
 .cm-css-operator {
-  color: $operator-color !important;
+  color: $operator-color;
 }
 
 .cm-css-qualifier {
-  color: $attribute-name-color !important;
+  color: $attribute-name-color;
 }
 
 .cm-css-tag {
-  color: $tag-name-color !important;
+  color: $tag-name-color;
 }
 
 .cm-css-variable-3 {
-  color: $var-color !important;
+  color: $var-color;
 }
 
 .cm-xml-error {
-  color: $error-color !important;
+  color: $error-color;
 }

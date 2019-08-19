@@ -1,9 +1,9 @@
 .tree-outline li.filter-match {
-  background-color: $tree;
+  background-color: $accent1Alpha !important;
 }
 
 .tree-outline li.overloaded.filter-match {
-  background-color: $selBgAlpha;
+  background-color: $accent1Alpha !important;
 }
 
 .has-ignorable-error {

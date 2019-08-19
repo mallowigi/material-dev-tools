@@ -71,7 +71,7 @@
 
 .toolbar-button.toolbar-state-on.toolbar-toggle-with-red-color .toolbar-glyph,
 .toolbar-button.toolbar-state-off.toolbar-default-with-red-color .toolbar-glyph {
-  background-color: rgb(255, 39, 39) !important;
+  background-color: $error-color !important;
 }
 
 .toolbar-item.checkbox:hover {
@@ -134,6 +134,15 @@ input[is="history-input"]:not(:placeholder-shown) {
   border-bottom-color: $accent1;
 }
 
-.toolbar-item.warning {
-  background-color: rgb(84, 0, 0);
+.toolbar-item.toolbar-button:not(.toolbar-has-dropdown) {
+  color: $foreground;
+
+  &:hover {
+    background-image: radial-gradient(circle at center, $highlight 60%, rgba(0,0,0,0) 0) !important;
+    opacity: .8;
+
+    > * {
+      color: $selFg !important;
+    }
+  }
 }

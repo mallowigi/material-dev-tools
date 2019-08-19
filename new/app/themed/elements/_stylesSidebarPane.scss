@@ -3,17 +3,21 @@
 }
 
 .styles-section[data-keyboard-focus="true"]:focus {
-  background-color: $contrast;
+  background-color: $active;
   border: none;
   border-bottom: 2px solid $accent1;
 }
 
 .styles-section.read-only[data-keyboard-focus="true"]:focus {
-  background-color: $background;
+  background-color: $active;
 }
 
 .styles-section .simple-selector.filter-match {
-  background-color: $second;
+  background-color: $accent1Alpha;
+}
+
+.styles-section-title {
+  font-weight: 500;
 }
 
 .styles-section-title .media-list {
@@ -34,7 +38,7 @@
 
 .sidebar-pane-open-brace,
 .sidebar-pane-closing-brace {
-  color: $foreground;
+  color: $operator-color;
 }
 
 .styles-section .styles-section-subtitle .devtools-link {
@@ -47,11 +51,11 @@
 
 .styles-section .simple-selector.selector-matches,
 .styles-section.keyframe-key {
-  color: $foreground;
+  color: $number-color;
 }
 
 .styles-sidebar-pane-toolbar-container {
-  background-color: var(--toolbar-bg-color);
+  background-color: $contrast;
 }
 
 .styles-sidebar-pane-toolbar {
@@ -78,8 +82,10 @@
 }
 
 .sidebar-separator {
-  background-color: var(--toolbar-bg-color);
-  color: $border;
+  background-color: $contrast;
+  color: $foreground;
+  border-color: $borderLight;
+  font-family: $fontFamily;
 }
 
 .sidebar-pane-section-toolbar {

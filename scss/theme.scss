@@ -120,10 +120,6 @@ $fontSize: var(--font-size, 11px);
     color: $selFg !important;
   }
 
-  .close-button .smallicon-cross {
-    filter: brightness(2);
-  }
-
   .webkit-html-close-tag-name {
     color: $tag-name-color !important;
   }
@@ -189,15 +185,6 @@ $fontSize: var(--font-size, 11px);
 
   // endregion
 
-  // region Sidebars
-  /* Sidebars
-  ========================================================================== */
-  .sidebar-separator > span.monospace {
-    background-color: $background !important;
-  }
-
-  // endregion
-
   // region Toolbars
   /* Toolbars
   ========================================================================== */
@@ -205,19 +192,6 @@ $fontSize: var(--font-size, 11px);
   .toolbar-state-on {
     .toolbar-text {
       color: $accent1 !important;
-    }
-  }
-
-  .toolbar-item.toolbar-button:not(.toolbar-has-dropdown) {
-    color: $text-color !important;
-
-    &:hover {
-      background-image: radial-gradient(circle at center, $highlight 60%, rgba(0,0,0,0) 0) !important;
-      opacity: .8;
-
-      > * {
-        color: $selFg !important;
-      }
     }
   }
 
@@ -286,10 +260,6 @@ $fontSize: var(--font-size, 11px);
   /* Network grid
    ==========================================================================
    */
-
-  input[type="checkbox"]:not(.dt-checkbox-themed) {
-    filter: none !important;
-  }
 
   .infobar {
     color: $text-color !important;

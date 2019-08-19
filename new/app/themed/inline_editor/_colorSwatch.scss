@@ -1,8 +1,12 @@
+.color-swatch {
+  background: transparent;
+}
 .color-swatch-inner {
   border-top-color: $border;
   border-right-color: $border;
   border-bottom-color: $border;
   border-left-color: $border;
+  border-radius: 50%;
 }
 
 .color-swatch-inner:hover {

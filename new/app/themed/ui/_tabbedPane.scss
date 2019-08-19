@@ -8,7 +8,7 @@
 
 .tabbed-pane-header {
   border-bottom-color: $border;
-  background-color: var(--toolbar-bg-color);
+  background-color: $contrast;
 }
 
 .tabbed-pane-header-tab {
@@ -18,7 +18,26 @@
 .tabbed-pane-header-tab:hover,
 .tabbed-pane-shadow .tabbed-pane-header-tab[data-keyboard-focus="true"]:focus {
   color: $selFg;
-  background-color: var(--toolbar-hover-bg-color);
+  background-color: $active;
+}
+
+.close-button .smallicon-cross {
+  filter: brightness(2);
+  cursor: pointer;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 2px solid var(--button);
+  background: -webkit-image-set(url(Images/smallIcons.png) 1x, url(Images/smallIcons_2x.png) 2x) -19px 70px, var(--button);
+}
+
+.close-button .mediumicon-gray-cross-hover,
+.close-button .mediumicon-gray-cross-active {
+  filter: brightness(2);
+  cursor: pointer;
+  border-radius: 50%;
+  box-sizing: content-box;
+  //border: 2px solid $accent1Alpha;
+  background: -webkit-image-set(url(Images/smallIcons.png) 1x, url(Images/smallIcons_2x.png) 2x) -16px 74px, $accent1Alpha;
 }
 
 .tabbed-pane-header-tab.selected {
@@ -50,5 +69,5 @@
 }
 
 .tabbed-pane-tab-slider {
-  background-color: var(--accent-color);
+  background-color: $accent1;
 }
