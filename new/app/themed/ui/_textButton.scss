@@ -20,3 +20,16 @@
 .text-button:not(:disabled):focus {
   box-shadow: $accent1 0px 1px 2px, $accent1Alpha 0px 0px 0px 2px;
 }
+
+.text-button.primary-button,
+-theme-preserve {
+  background: $accent1;
+  color: $foreground;
+}
+
+.text-button.primary-button:not(:disabled):focus,
+.text-button.primary-button:not(:disabled):hover,
+.text-button.primary-button:not(:disabled):active, -theme-preserve {
+  background-color: $accent1;
+  color: $selFg;
+}

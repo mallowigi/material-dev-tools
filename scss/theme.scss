@@ -189,12 +189,6 @@ $fontSize: var(--font-size, 11px);
   /* Toolbars
   ========================================================================== */
 
-  .toolbar-state-on {
-    .toolbar-text {
-      color: $accent1 !important;
-    }
-  }
-
   .list-item:hover {
     background: $selBg !important;
     color: $selFg !important;
@@ -233,16 +227,6 @@ $fontSize: var(--font-size, 11px);
   .filter-bitset-filter span.selected {
     background: $accent1 !important;
     color: $selFg !important;
-  }
-
-  /* Sources
-     ========================================================================== */
-  .toolbar-shadow {
-    z-index: 12 !important;
-  }
-
-  .soft-dropdown {
-    color: $foreground !important;
   }
 
   /* Scripts
@@ -284,22 +268,6 @@ $fontSize: var(--font-size, 11px);
   /* Network
    =================================================================
    */
-
-  .tree-outline > .parent {
-    color: $primary !important;
-
-    &:hover, &:focus {
-      color: $selFg !important;
-    }
-  }
-
-  .tree-outline .header-name {
-    color: $accent1 !important;
-  }
-
-  .tree-outline li:not(.parent)::before {
-    background-color: transparent !important;
-  }
 
   .empty-view {
     color: $disabled !important;

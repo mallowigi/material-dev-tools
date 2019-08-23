@@ -1,3 +1,18 @@
+button.soft-dropdown {
+  background: $background;
+  color: $foreground;
+
+  .title {
+    background: $background;
+    border-color: $borderLight;
+  }
+
+}
+
+button.soft-dropdown[disabled] {
+  color: $disabled;
+}
+
 button.soft-dropdown[data-keyboard-focus="true"]:focus::before {
   background-color: $active;
 }

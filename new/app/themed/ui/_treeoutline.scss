@@ -1,3 +1,7 @@
+.tree-outline {
+  color: $foreground;
+}
+
 .tree-outline:not(.hide-selection-when-blurred) li.hovered:not(.selected) .selection {
   background-color: $active;
 }
@@ -33,4 +37,16 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 
 .tree-outline li::before {
   background-color: $foreground;
+}
+
+.tree-outline > .parent {
+  color: $primary;
+
+  &:hover, &:focus {
+    color: $selFg;
+  }
+}
+
+.tree-outline .header-name {
+  color: $accent1;
 }
