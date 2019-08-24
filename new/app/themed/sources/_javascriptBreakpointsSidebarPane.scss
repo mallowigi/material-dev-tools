@@ -1,0 +1,16 @@
+.breakpoint-entry {
+  border-top-color: $borderLight;
+}
+
+:not(.breakpoints-list-deactivated) > .breakpoint-entry:hover {
+  background-color: $highlight;
+}
+
+.breakpoints-list-deactivated {
+  background-color: $highlight;
+}
+
+.breakpoint-hit {
+  background-color: $tree;
+  color: $foreground;
+}

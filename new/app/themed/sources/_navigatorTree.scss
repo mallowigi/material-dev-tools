@@ -1,0 +1,33 @@
+.navigator-file-tree-item .icon {
+  background-image: linear-gradient(45deg, $foreground, $foreground);
+}
+
+.tree-outline li:hover:not(.selected) .selection {
+  background-color: $tree;
+}
+
+.navigator-folder-tree-item .icon {
+  background-image: linear-gradient(45deg, $primary, $primary);
+}
+
+.navigator-sm-folder-tree-item .icon,
+.navigator-fs-tree-item .icon,
+.navigator-fs-folder-tree-item .icon {
+  background-image: linear-gradient(45deg, $number-color, $number-color);
+}
+
+.navigator-nw-folder-tree-item .icon {
+  background-image: linear-gradient(45deg, $primary, $primary);
+}
+
+.navigator-sm-script-tree-item .icon, .navigator-script-tree-item .icon, .navigator-snippet-tree-item .icon {
+  background-image: linear-gradient(45deg, $attribute-name-color, $attribute-name-color);
+}
+
+.navigator-sm-stylesheet-tree-item .icon, .navigator-stylesheet-tree-item .icon {
+  background-image: linear-gradient(45deg, $link-color, $link-color);
+}
+
+.navigator-image-tree-item .icon, .navigator-font-tree-item .icon {
+  background-image: linear-gradient(45deg, $string-color, $string-color);
+}

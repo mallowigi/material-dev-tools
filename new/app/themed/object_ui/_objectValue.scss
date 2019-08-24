@@ -2,12 +2,13 @@
   background-color: $tree;
 }
 
-.object-value-function-prefix, .object-value-boolean {
+.object-value-function-prefix,
+.object-value-boolean {
   color: $keyword-color;
 }
 
 .object-value-function.linkified:hover {
-  background-color: $link-color;
+  background-color: $tree;
 }
 
 .object-value-number {
@@ -18,7 +19,9 @@
   color: $number-color;
 }
 
-.object-value-string, .object-value-regexp, .object-value-symbol {
+.object-value-string,
+.object-value-regexp,
+.object-value-symbol {
   color: $string-color;
 }
 
@@ -30,12 +33,18 @@
   color: $tag-name-color;
 }
 
-.object-value-null, .object-value-undefined {
+.object-value-null,
+.object-value-undefined {
   color: $number-color;
 }
 
 .object-properties-section .object-description {
   color: $attribute-name-color;
+}
+
+.object-value-number,
+.object-value-number.source-code {
+  color: $number-color;
 }
 
 .name {
@@ -44,4 +53,18 @@
 
 .object-properties-preview .name {
   color: $text-color;
+}
+
+.object-value-string,
+.object-value-string.source-code,
+.object-value-string-quote {
+  color: $string-color;
+}
+
+.name.source-code {
+  color: $var-color;
+}
+
+#console-prompt .console-prompt-icon {
+  filter: hue-rotate(-40deg);
 }

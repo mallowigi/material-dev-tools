@@ -208,16 +208,6 @@ $fontSize: var(--font-size, 11px);
     box-shadow: $border 0px 1px 0px;
   }
 
-  /* View Container
-     ========================================================================== */
-  .expandable-view-title {
-    background-color: $contrast;
-  }
-
-  .expandable-view-title.expanded, .expandable-view-title:last-child {
-    border-bottom-color: $disabled !important;
-  }
-
   .sidebar-pane-container .toolbar {
     border-bottom-color: $border;
   }

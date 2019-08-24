@@ -1,0 +1,33 @@
+.blackboxed-message {
+  color: $link-color;
+  background-color: $selBg;
+}
+
+.blackboxed-message > .link {
+  color: $link-color;
+}
+
+.show-more-message {
+  border-top-color: $border;
+}
+
+.call-frame-item:not(.async-header) {
+  border-top-color: $background;
+}
+
+.call-frame-item:not(.async-header):hover {
+  background-color: $selBg;
+}
+
+.call-frame-location {
+  color: $primary;
+}
+
+.async-header::before {
+  border-top-color: $second;
+}
+
+.async-header .call-frame-item-title {
+  color: $foreground;
+  background-color: $background;
+}

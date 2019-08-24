@@ -51,10 +51,6 @@
   color: $primary !important;
 }
 
-.pretty-printed .CodeMirror-linenumber {
-  color: var(--accent-color);
-}
-
 .cm-readonly-highlight {
   background-color: $second !important;
 }
@@ -199,21 +195,8 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
   color: $disabled;
 }
 
-.CodeMirror-scrollbar-filler,
-.CodeMirror-gutter-filler {
-  background-color: $background !important;
-}
-
-.CodeMirror-cursor {
-  border-left: 2px solid $accent1 !important;
-}
-
 .CodeMirror div.CodeMirror-secondarycursor {
   border-left: 1px solid $accent1 !important;
-}
-
-.pretty-printed .CodeMirror-linenumber {
-  color: var(--accent-color);
 }
 
 .CodeMirror-foldmarker::before {
@@ -224,12 +207,4 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 .CodeMirror-foldgutter-open::before,
 .CodeMirror-foldgutter-folded::before {
   background-color: $background !important;
-}
-
-.CodeMirror .CodeMirror-selected {
-  background-color: $tree;
-}
-
-.CodeMirror-focused .CodeMirror-selected {
-  background-color: $tree;
 }

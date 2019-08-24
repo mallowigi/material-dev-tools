@@ -1,7 +1,1 @@
-.product-registry-badge {
-  background-color: $accent1;
-}
-
-.product-registry-badge::before {
-  color: $selFg;
-}
+@import "badge";
