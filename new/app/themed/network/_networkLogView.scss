@@ -1,0 +1,77 @@
+.network-summary-bar {
+  background: $darkerBg;
+  border: $border;
+}
+
+.network-log-grid.data-grid td {
+  border-left-color: $border;
+}
+
+.network-log-grid.data-grid .data-grid-data-grid-node:hover {
+  background: $highlight;
+}
+
+
+.network-waterfall-header,
+.network-log-grid.data-grid th {
+  border-color: $border;
+
+  &:hover {
+    background: $background;
+  }
+}
+
+.network-waterfall-header,
+.network-log-grid.data-grid .header-container {
+  background-color: $contrast;
+}
+
+.network-cell-subtitle {
+  color: $foreground;
+}
+
+.network-error-row,
+.network-error-row .network-cell-subtitle {
+  color: $error-color;
+}
+
+.network-log-grid.data-grid:focus tr.selected,
+.network-log-grid.data-grid:focus tr.selected .network-cell-subtitle,
+.network-log-grid.data-grid:focus tr.selected .network-dim-cell {
+  color: $selFg !important;
+}
+
+.network-header-subtitle {
+  color: $primary;
+}
+
+.network-dim-cell {
+  color: $primary;
+}
+
+.network-frame-divider {
+  background-color: $accent2;
+}
+
+.network-status-pane {
+  color: $foreground;
+  background-color: $background;
+}
+
+.network-waterfall-header:hover {
+  background-color: $darkerBg;
+}
+
+.network-log-grid.data-grid td {
+  border-color: $border;
+}
+
+.network-log-grid.data-grid table.data {
+  > tr {
+    background-color: $background;
+
+    &:nth-child(2) {
+      background-color: $contrast;
+    }
+  }
+}
