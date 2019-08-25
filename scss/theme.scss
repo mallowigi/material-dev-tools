@@ -211,12 +211,6 @@ $fontSize: var(--font-size, 11px);
     border-bottom-color: $border;
   }
 
-  /* Filter bar
-     ========================================================================== */
-  .filter-bitset-filter span.selected {
-    background: $accent1 !important;
-    color: $selFg !important;
-  }
 
   /* Scripts
      ========================================================================== */

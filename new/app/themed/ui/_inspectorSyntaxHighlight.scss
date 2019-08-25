@@ -182,7 +182,8 @@
   color: $string-color;
 }
 
-.devtools-link {
+.devtools-link,
+x-link.devtools-link {
   color: $link-color;
 }
 

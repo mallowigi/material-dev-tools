@@ -4,6 +4,8 @@
 
 .tree-outline:not(.hide-selection-when-blurred) li.hovered:not(.selected) .selection {
   background-color: $active;
+
+  @include indicator;
 }
 
 .tree-outline:not(.hide-selection-when-blurred) li.selected {
@@ -13,6 +15,8 @@
 .tree-outline:not(.hide-selection-when-blurred) li.selected .selection {
   background-color: $tree;
   color: $selFg;
+
+  @include indicator; // not working
 }
 
 .tree-outline:not(.hide-selection-when-blurred) li.in-clipboard .highlight {
@@ -23,8 +27,14 @@
   border-top-color: $selBg;
 }
 
+ol.tree-outline:not(.hide-selection-when-blurred) li.selected .selection {
+  @include indicator;
+}
+
 ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
   background-color: $selBg;
+
+  @include indicator;
 }
 
 ol.tree-outline:not(.hide-selection-when-blurred) li.parent.selected:focus::before {
@@ -37,6 +47,16 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 
 .tree-outline li::before {
   background-color: $foreground;
+  -webkit-mask-image: url(Images/smallIcons_2x.png);
+  -webkit-mask-position: 32px 100px;
+  -webkit-mask-size: 120px;
+}
+
+.tree-outline li.parent.expanded::before {
+  background-color: $foreground;
+  -webkit-mask-image: url(Images/smallIcons_2x.png);
+  -webkit-mask-position: -88px 0;
+  -webkit-mask-size: 120px;
 }
 
 .tree-outline > .parent {

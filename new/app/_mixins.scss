@@ -1,0 +1,12 @@
+@mixin indicator {
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    background: $accent1;
+  }
+}

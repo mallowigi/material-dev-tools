@@ -67,7 +67,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
     content: '' !important;
     position: absolute !important;
     left: 3px !important;
-    top: 7px !important;
+    top: 5px !important;
     background: $background !important;
     width: 2px !important;
     height: 2px !important;
@@ -78,5 +78,13 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
     4px -6px 0 $background,
     4px -8px 0 $background !important;
     transform: rotate(45deg) !important;
+  }
+}
+
+
+.dt-checkbox-text {
+  overflow: visible;
+  &::before {
+    margin-top: -2px;
   }
 }
