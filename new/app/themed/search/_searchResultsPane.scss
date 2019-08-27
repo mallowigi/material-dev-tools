@@ -1,0 +1,40 @@
+li.search-result:hover {
+  background-color: $highlight;
+}
+
+li.search-result .search-result-file-name {
+  color: $link-color;
+}
+
+li.search-result .search-result-matches-count {
+  color: $accent1;
+}
+
+li.show-more-matches {
+  color: $link-color;
+}
+
+li.search-match .search-match-line-number {
+  color: $primary;
+}
+
+li.search-match:hover {
+  background-color: $highlight;
+}
+
+li.search-match .search-match-content .highlighted-match {
+  background-color: $accent1 !important;
+  color: $selFg;
+}
+
+li.search-match .search-match-content {
+  color: $foreground;
+}
+
+.search-result-qualifier {
+  color: $primary;
+}
+
+.search-result-dash {
+  color: $primary;
+}
