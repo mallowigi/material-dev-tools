@@ -1,13 +1,13 @@
 .CodeMirror-gutter-performance {
-  background-color: $background !important;
+  background-color: $background;
 }
 
 .CodeMirror-gutter-memory {
-  background-color: $background !important;
+  background-color: $background;
 }
 
 .CodeMirror-gutter-coverage {
-  background-color: $background !important;
+  background-color: $background;
 }
 
 .CodeMirror .source-frame-eval-expression {
@@ -15,7 +15,7 @@
   border-right-color: $accent1;
   border-bottom-color: $accent1;
   border-left-color: $accent1;
-  background-color: $highlight !important;
+  background-color: $highlight;
 }
 
 .CodeMirror .source-frame-continue-to-location {
@@ -44,19 +44,51 @@
 }
 
 .CodeMirror-gutters {
-  background-color: $background !important;
+  background-color: $background;
 }
 
 .CodeMirror-linenumber {
-  color: $primary !important;
+  color: $primary;
 }
 
+@-webkit-keyframes fadeout {
+  from {
+    background-color: $accent1Alpha;
+  }
+  to {
+    background-color: $background;
+  }
+}
+
+@-webkit-keyframes fadeout-dark {
+  from {
+    background-color: $accent1Alpha;
+  }
+  to {
+    background-color: $background
+  }
+}
+
+@-webkit-keyframes fadeout-execution-line {
+  from {background-color: $selBg; }
+  to { background-color: $second; }
+}
+@-webkit-keyframes fadeout-execution-line-dark {
+  from {background-color: $selBg; }
+  to { background-color: $second; }
+}
+
+
 .cm-readonly-highlight {
-  background-color: $second !important;
+  background-color: $second;
+}
+
+.cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber, -theme-preserve {
+  color: $selFg;
 }
 
 .cm-line-without-source-mapping .CodeMirror-linenumber {
-  color: $comment-color !important;
+  color: $primary;
 }
 
 .cm-execution-line-tail + .CodeMirror-widget {
@@ -80,7 +112,7 @@
 }
 
 .cm-inline-breakpoint.cm-inline-conditional {
-  background-color: $accent2 !important;
+  background-color: $accent2;
 }
 
 div.CodeMirror:focus-within span.CodeMirror-matchingbracket {
@@ -94,7 +126,7 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 }
 
 .cm-whitespace::before {
-  color: $comment-color !important;
+  color: $comment-color;
 }
 
 .cm-tab::before {
@@ -102,15 +134,15 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 }
 
 .cm-execution-line {
-  background-color: $selBgAlpha !important;
+  background-color: $selBgAlpha;
 }
 
 .cm-execution-line-outline {
-  outline: 1px solid $accent1 !important;
+  outline: 1px solid $accent1;
 }
 
 .cm-execution-line-tail {
-  background-color: $accent2Alpha !important;
+  background-color: $accent2Alpha;
 }
 
 .cm-execution-line .CodeMirror-linenumber::after {
@@ -151,28 +183,28 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 }
 
 .cm-line-with-selection .cm-column-with-selection.cm-search-highlight::before {
-  background-color: $accent2Alpha !important;
+  background-color: $accent2Alpha;
+}
+
+.cm-line-with-selection .cm-search-highlight {
+  color: $selFg;
 }
 
 .CodeMirror .text-editor-line-marker-text span.line-marker-units {
-  color: $disabled !important;
+  color: $disabled;
 }
 
 .CodeMirror .text-editor-coverage-unused-marker {
-  text-align: right;
-  padding-right: 2px;
   background-color: $tag-name-color;
 }
 
 .CodeMirror .text-editor-coverage-used-marker {
-  text-align: right;
-  padding-right: 2px;
   background-color: $string-color;
 }
 
 .CodeMirror .text-editor-value-decoration {
-  background-color: $excluded !important;
-  color: $primary !important;
+  background-color: $excluded;
+  color: $primary;
 }
 
 .CodeMirror .text-editor-line-with-warning:not(.cm-execution-line):not(.cm-readonly-highlight) {
@@ -184,11 +216,11 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 }
 
 .cm-trailing-whitespace {
-  background-color: $border !important;
+  background-color: $border;
 }
 
 .CodeMirror .auto-complete-text {
-  color: $accent1 !important;
+  color: $accent1;
 }
 
 .CodeMirror .placeholder-text {
@@ -196,7 +228,7 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 }
 
 .CodeMirror div.CodeMirror-secondarycursor {
-  border-left: 1px solid $accent1 !important;
+  border-left: 1px solid $accent1;
 }
 
 .CodeMirror-foldmarker::before {
@@ -206,5 +238,5 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 
 .CodeMirror-foldgutter-open::before,
 .CodeMirror-foldgutter-folded::before {
-  background-color: $background !important;
+  background-color: $second;
 }

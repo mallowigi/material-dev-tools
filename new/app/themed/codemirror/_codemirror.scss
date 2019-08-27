@@ -17,9 +17,9 @@
   background-color: $background;
 }
 
-.CodeMirror pre {
-  background: $background;
-}
+//.CodeMirror pre {
+//  background: $background;
+//}
 
 .CodeMirror-cursor {
   border-left: 2px solid $accent1;
@@ -29,12 +29,13 @@
   color: $primary;
 }
 
+.CodeMirror .CodeMirror-selected,
 .CodeMirror-selected {
-  background-color: $tree;
+  background: $tree !important;
 }
 
 .CodeMirror-focused .CodeMirror-selected {
-  background-color: $tree;
+  background: $tree !important;
 }
 
 .cm-searching {
@@ -42,7 +43,7 @@
 }
 
 span.CodeMirror-selectedtext {
-  background: $selBgAlpha;
+  background: $tree;
 }
 
 .cm-breakpoint:not(.cm-breakpoint-conditional) .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
@@ -79,4 +80,15 @@ span.CodeMirror-selectedtext {
 
 .diff-entry-delete .CodeMirror-gutter-background {
   border-bottom-color: rgb(208, 44, 44);
+}
+
+.CodeMirror-readonly .CodeMirror-cursor {
+  display: block;
+}
+
+.CodeMirror .CodeMirror-line::selection,
+.CodeMirror .CodeMirror-line > span::selection,
+.CodeMirror .CodeMirror-line > span > span::selection {
+  background: $selBg;
+  color: $selFg;
 }
