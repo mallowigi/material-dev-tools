@@ -7,6 +7,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
   opacity: 0 !important; // hide it
 
   & + label,
+  & + .devices-list-title,
   & ~ .webkit-css-property {
     position: relative !important;
     cursor: pointer !important;
@@ -15,6 +16,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
 
   // Box.
   & + label:before,
+  & + .devices-list-title:before,
   & ~ .webkit-css-property:before {
     position: relative;
     content: '' !important;
@@ -30,18 +32,21 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
 
   // Box hover
   &:hover + label:before,
+  &:hover + .devices-list-title:before,
   &:hover ~ .webkit-css-property:before {
     background: $contrast !important;
   }
 
   // Box focus
   &:focus + label:before,
+  &:focus + .devices-list-title:before,
   &:focus ~ .webkit-css-property:before {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12) !important;
   }
 
   // Box checked
   &:checked + label:before,
+  &:checked + .devices-list-title:before,
   &:checked ~ .webkit-css-property:before {
     background: $accent1 !important;
     color: $background !important;
@@ -49,6 +54,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
 
   // Disabled state label.
   &:disabled + label,
+  &:disabled + .devices-list-title:before,
   &:disabled ~ .webkit-css-property {
     color: #b8b8b8 !important;
     cursor: auto !important;
@@ -56,6 +62,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
 
   // Disabled box.
   &:disabled + label:before,
+  &:disabled + .devices-list-title:before,
   &:disabled ~ .webkit-css-property:before {
     box-shadow: none !important;
     background: #dddddd !important;
@@ -63,6 +70,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
 
   // Checkmark. Could be replaced with an image
   &:checked + label:after,
+  &:checked + .devices-list-title:after,
   &:checked ~ .webkit-css-property:after {
     content: '' !important;
     position: absolute !important;
@@ -82,7 +90,8 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
 }
 
 
-.dt-checkbox-text {
+.dt-checkbox-text,
+.devices-list-title {
   overflow: visible;
   &::before {
     margin-top: -2px;

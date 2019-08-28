@@ -13,6 +13,13 @@
 input {
   background-color: $contrast;
   color: $foreground;
+
+  border: none;
+  border-bottom: 2px solid $button;
+
+  &:hover {
+    border-bottom: 2px solid $accent1;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -141,7 +148,7 @@ input {
 .chrome-select:enabled:focus,
 .chrome-select:enabled:hover {
   background-color: $lighterBg;
-  box-shadow: $accent1 0px 1px 2px;
+  box-shadow: $highlight 0px 1px 2px;
 }
 
 .chrome-select:enabled:active {
@@ -149,7 +156,7 @@ input {
 }
 
 .chrome-select:enabled:focus {
-  box-shadow: $accent1 0px 1px 2px, $accent1Alpha 0px 0px 0px 2px;
+  box-shadow: $highlight 0px 1px 2px, $highlight 0px 0px 0px 2px;
 }
 
 .chrome-select optgroup,

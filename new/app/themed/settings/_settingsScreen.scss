@@ -1,0 +1,49 @@
+.settings-window-main {
+  padding: 0;
+  color: $foreground;
+  background-color: $background;
+  border: none;
+
+  .view-container {
+    padding: 0 1em;
+  }
+}
+
+.settings-content {
+  padding-left: 1em;
+}
+
+.settings-footnote {
+  border-top-color: $borderLight;
+}
+
+.settings-key {
+  background: $highlight;
+  color: $selFg;
+  border: none;
+  box-shadow: $border 0px 1px 0px;
+}
+
+.settings-experiments-warning-subsection-warning {
+  color: $error-color;
+}
+
+.settings-window-title {
+  color: $foreground;
+}
+
+.settings-tab-container header {
+  border-bottom-color: $borderLight;
+}
+
+.settings-tab .settings-section-title {
+  color: $primary;
+}
+
+.settings-tab .settings-block label:hover {
+  color: $primary;
+}
+
+.settings-experiment-hidden [is="dt-checkbox"] {
+  background-color: $background;
+}

@@ -1,20 +1,3 @@
-.styles-element-classes-pane {
-  background-color: var(--toolbar-bg-color) !important;
-  border-bottom-color: $border !important;
-}
-
-.styles-element-classes-pane .new-class-input {
-  border-top: none !important;
-  border-right: none !important;
-  border-bottom: 2px solid $second !important;
-  border-left: none !important;
-  background-color: $contrast !important;
-
-  &:focus {
-    border-bottom-color: $accent1 !important;
-  }
-}
-
 .styles-section:focus {
   background: $lighterBg !important;
 }

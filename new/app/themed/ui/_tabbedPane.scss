@@ -1,3 +1,12 @@
+.tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header {
+  background: $contrast;
+  padding-top: 1em;
+
+  .toolbar {
+    border-top: 0;
+  }
+}
+
 .tabbed-pane-content.has-no-tabs {
   background-color: $lighterBg;
 }
@@ -42,8 +51,8 @@
 }
 
 .tabbed-pane-header-tab.selected {
-  background-color: var(--tab-selected-bg-color);
-  color: var(--tab-selected-fg-color);
+  background-color: $highlight;
+  color: $selFg;
   border-bottom: 2px solid $accent1;
 }
 
@@ -67,6 +76,7 @@
 .tabbed-pane-shadow.vertical-tab-layout .tabbed-pane-header-tab.selected {
   border-left-color: $accent1;
   border-bottom: none;
+  color: $selFg;
 }
 
 .tabbed-pane-tab-slider {

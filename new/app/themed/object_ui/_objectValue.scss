@@ -4,7 +4,7 @@
 
 .object-value-function-prefix,
 .object-value-boolean {
-  color: $keyword-color;
+  color: $keyword-color !important;
 }
 
 .object-value-function.linkified:hover {

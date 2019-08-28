@@ -19,6 +19,7 @@
 .data-grid th.sortable:active::after {
   background-color: $highlight;
   color: $selFg;
+  opacity: 0.5;
 }
 
 .data-grid th.sortable:hover {

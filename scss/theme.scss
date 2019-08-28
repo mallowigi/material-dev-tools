@@ -176,8 +176,7 @@ $fontSize: var(--font-size, 11px);
   // region Panels
   /* Background and Foreground color
   ========================================================================== */
-  .timeline-landing-page,
-  .settings-window-main {
+  .timeline-landing-page{
     background-color: $background !important;
     color: $text-color !important;
   }
@@ -199,14 +198,6 @@ $fontSize: var(--font-size, 11px);
   /* Components
   ========================================================================== */
 
-  // The shortcut keys in settings
-  .settings-key {
-    background: $highlight !important;
-    color: $selFg !important;
-    border: none;
-    box-shadow: $border 0px 1px 0px;
-  }
-
   .sidebar-pane-container .toolbar {
     border-bottom-color: $border;
   }
@@ -219,10 +210,6 @@ $fontSize: var(--font-size, 11px);
     opacity: .5 !important;
     border-left: 2px solid $accent1 !important;
   }
-
-  //input[type="radio"]:checked {
-  //  filter: hue-rotate(322deg) brightness(105%) contrast(80%) !important;
-  //}
 
   /* Network grid
    ==========================================================================
@@ -244,10 +231,6 @@ $fontSize: var(--font-size, 11px);
     }
   }
 
-  .resources-dividers-label-bar {
-    background: $contrast !important;
-  }
-
   /* Network
    =================================================================
    */
@@ -256,24 +239,12 @@ $fontSize: var(--font-size, 11px);
     color: $disabled !important;
   }
 
-  .network-timing-table-header td {
-    color: $primary !important;
-  }
-
   .item-list {
     background: $second !important;
   }
 
   .subtitle {
     color: $primary !important;
-  }
-
-  .suggest-box {
-    background: $background !important;
-
-    .query {
-      color: $accent1 !important;
-    }
   }
 
   .settings-info-message {

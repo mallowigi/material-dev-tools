@@ -1,0 +1,23 @@
+.overview-grid-window-selector {
+  background-color: $accent1Alpha;
+}
+
+.overview-grid-window-resizer {
+  background-color: $second;
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.overview-grid-cursor-position {
+  background-color: $accent1;
+}
+
+.window-curtain-left, .window-curtain-right {
+  background-color: $contrast;
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}

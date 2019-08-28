@@ -1,0 +1,38 @@
+.soft-context-menu {
+  border: none;
+  background-color: $background;
+  box-shadow: var(--drop-shadow);
+
+  border-radius: 4px;
+  --context-menu-hover-bg: $highlight;
+  --context-menu-hover-color: $selFg;
+  --context-menu-seperator-color: $borderLight;
+}
+
+.soft-context-menu-disabled {
+  color: $disabled;
+}
+
+.soft-context-menu-item-mouse-over {
+  background-color: $highlight !important;
+  color: $selFg !important;
+}
+
+.soft-context-menu-item-mouse-over .soft-context-menu-item-checkmark {
+  color: $foreground;
+}
+
+.soft-context-menu-shortcut {
+  color: $primary
+}
+
+.soft-context-menu-item-mouse-over .checkmark,
+.force-white-icons .checkmark,
+.checkmark {
+  color: $foreground !important;
+  filter: none !important;
+  background: $selFg !important;
+  -webkit-mask-image: -webkit-image-set(url(Images/smallIcons.png) 1x, url(Images/smallIcons_2x.png) 2x);
+  -webkit-mask-position: var(--spritesheet-position);
+}
+
