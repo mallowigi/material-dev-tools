@@ -1,0 +1,42 @@
+.ax-breadcrumbs .ax-node::before {
+  background-color: $foreground;
+  &:hover {
+    background-color: $accent1;
+  }
+}
+
+.ax-breadcrumbs .ax-node.preselected:not(.inspected) .selection,
+.ax-breadcrumbs .ax-node.hovered:not(.inspected) .selection {
+  background-color: $tree;
+}
+
+.ax-breadcrumbs .ax-node.preselected:not(.inspected):focus .selection {
+  border-top-color: $tree;
+  border-right-color: $tree;
+  border-bottom-color: $tree;
+  border-left-color: $tree;
+}
+
+.ax-breadcrumbs .ax-node.inspected .selection {
+  background-color: $highlight;
+}
+
+.ax-breadcrumbs .ax-node.inspected:focus .selection {
+  background-color: $selBg;
+}
+
+.ax-breadcrumbs .ax-node.parent.inspected:focus::before {
+  background-color: $highlight;
+}
+
+.ax-breadcrumbs .ax-node.inspected:focus {
+  color: $selFg;
+}
+
+.ax-breadcrumbs .ax-readable-string {
+  color: $string-color;
+}
+
+.ax-breadcrumbs .ax-internal-role {
+  color: $number-color;
+}

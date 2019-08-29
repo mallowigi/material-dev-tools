@@ -1,3 +1,5 @@
+@import "accessibility/index";
+@import "browser_debugger/index";
 @import "codemirror/index";
 @import "colorpicker/index";
 @import "console/index";
@@ -10,6 +12,7 @@
 @import "product_registry/index";
 @import "search/index";
 @import "settings/index";
+@import "source_frame/index";
 @import "sources/index";
 @import "text_editor/index";
 @import "ui/index";

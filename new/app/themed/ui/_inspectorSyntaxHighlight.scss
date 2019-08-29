@@ -85,7 +85,7 @@
 }
 
 .cm-css-atom {
-  color: $attribute-name-color;
+  color: $keyword-color;
 }
 
 .cm-css-string {
@@ -167,7 +167,7 @@
 }
 
 .webkit-html-entity-value {
-  color: $attribute-name-color;
+  color: $var-color;
 }
 
 .webkit-html-doctype {
@@ -297,7 +297,7 @@ x-link.devtools-link {
 }
 
 .cm-css-qualifier {
-  color: $attribute-name-color;
+  color: $operator-color;
 }
 
 .cm-css-tag {

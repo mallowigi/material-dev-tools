@@ -1,0 +1,25 @@
+.websocket-frame-view .data-grid tr.selected {
+  background-color: $selBg;
+}
+
+.websocket-frame-view .data-grid td,
+.websocket-frame-view .data-grid th {
+  border-left-color: $borderLight;
+}
+
+.websocket-frame-view-row-send td:first-child::before {
+  color: $string-color;
+}
+
+.websocket-frame-view-row-receive td:first-child::before {
+  color: $number-color;
+}
+
+.data-grid:focus .websocket-frame-view-row-send.selected td:first-child::before,
+.data-grid:focus .websocket-frame-view-row-receive.selected td:first-child::before {
+  color: $disabled;
+}
+
+.websocket-frame-view-row-error {
+  color: $error-color;
+}

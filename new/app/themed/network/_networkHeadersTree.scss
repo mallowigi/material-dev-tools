@@ -1,0 +1,31 @@
+.tree-outline > ol {
+  border-bottom-color: $borderLight;
+}
+
+.tree-outline li .status-from-cache {
+  color: $primary;
+}
+
+.tree-outline li.expanded .header-toggle {
+  color: $link-color;
+}
+
+.tree-outline li .header-toggle:hover {
+  color: $selFg;
+}
+
+.tree-outline .header-name {
+  color: $foreground;
+}
+
+.tree-outline .empty-request-header {
+  color: $disabled;
+}
+
+.header-highlight {
+  background-color: $accent1;
+}
+
+.header-decode-error {
+  color: $error-color;
+}

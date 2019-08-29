@@ -16,51 +16,51 @@
 
 .network-timing-bar.queueing,
 .network-timing-bar.total {
-  border-top-color: $active;
-  border-right-color: $active;
-  border-bottom-color: $active;
-  border-left-color: $active;
+  border-top-color: $foreground;
+  border-right-color: $foreground;
+  border-bottom-color: $foreground;
+  border-left-color: $foreground;
 }
 
-.network-timing-bar.blocking, -theme-preserve {
-  background-color: $button;
+.network-timing-bar.blocking {
+  background-color: $highlight;
 }
 
-.network-timing-bar.proxy, -theme-preserve {
+.network-timing-bar.proxy {
   background-color: $attribute-name-color;
 }
 
-.network-timing-bar.dns, -theme-preserve {
+.network-timing-bar.dns {
   background-color: $function-color;
 }
 
 .network-timing-bar.connecting,
 .network-timing-bar.serviceworker,
-.network-timing-bar.serviceworker-preparation, -theme-preserve {
+.network-timing-bar.serviceworker-preparation {
   background-color: $number-color;
 }
 
-.network-timing-bar.ssl, -theme-preserve {
+.network-timing-bar.ssl {
   background-color: $keyword-color;
 }
 
-.network-timing-bar.sending, -theme-preserve {
+.network-timing-bar.sending {
   background-color: $foreground;
 }
 
-.network-timing-bar.waiting, -theme-preserve {
+.network-timing-bar.waiting {
   background-color: $string-color;
 }
 
-.network-timing-bar.receiving, -theme-preserve,
-.network-timing-bar.receiving-push, -theme-preserve {
+.network-timing-bar.receiving,
+.network-timing-bar.receiving-push {
   background-color: $link-color;
 }
 
-.network-timing-bar.push, -theme-preserve {
+.network-timing-bar.push {
   background-color: $operator-color;
 }
 
-.network-timing-bar.server-timing, -theme-preserve {
+.network-timing-bar.server-timing {
   background-color: $var-color;
 }

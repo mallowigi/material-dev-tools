@@ -11,31 +11,27 @@
   background-color: $tree;
 }
 
-.object-value-number {
-  color: $number-color;
-}
-
 .object-value-bigint {
-  color: $number-color;
+  color: $number-color !important;
 }
 
 .object-value-string,
 .object-value-regexp,
 .object-value-symbol {
-  color: $string-color;
+  color: $string-color !important;
 }
 
 .object-value-string-quote {
-  color: $foreground;
+  color: $foreground !important;
 }
 
 .object-value-node {
-  color: $tag-name-color;
+  color: $tag-name-color !important;
 }
 
 .object-value-null,
 .object-value-undefined {
-  color: $number-color;
+  color: $operator-color !important;
 }
 
 .object-properties-section .object-description {
@@ -44,7 +40,7 @@
 
 .object-value-number,
 .object-value-number.source-code {
-  color: $number-color;
+  color: $number-color !important;
 }
 
 .name {
@@ -58,7 +54,7 @@
 .object-value-string,
 .object-value-string.source-code,
 .object-value-string-quote {
-  color: $string-color;
+  color: $string-color !important;
 }
 
 .name.source-code {

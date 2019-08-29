@@ -1,0 +1,8 @@
+.breakpoint-list .breakpoint-entry:hover {
+  background-color: $second;
+}
+
+.breakpoint-hit {
+  background-color: $tree;
+  color: $foreground;
+}
