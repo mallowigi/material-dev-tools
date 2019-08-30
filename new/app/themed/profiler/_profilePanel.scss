@@ -1,0 +1,86 @@
+.profiles-toolbar {
+  background-color: $contrast;
+  border-bottom-color: $borderLight;
+}
+
+.profile-node-file {
+  color: $primary;
+}
+
+.profile-view .data-grid tr.selected .profile-node-file {
+  color: $selFg;
+}
+
+.profile-view .data-grid:focus tr.selected .profile-node-file {
+  color: $selFg;
+}
+
+.profile-view .data-grid table.data {
+  background-color: $background;
+}
+
+.profile-view .data-grid tr:not(.selected) .highlight {
+  background-color: $highlight;
+}
+
+.profile-view .data-grid tr:hover td:not(.bottom-filler-td) {
+  background-color: $contrast;
+}
+
+.profile-view .data-grid span.percent-column {
+  color: $operator-color;
+}
+
+#cpu-profile-flame-chart-overview-container {
+  border-bottom-color: $borderLight;
+}
+
+.profile-launcher-view-content p {
+  color: $primary;
+}
+
+.profile-launcher-target-list {
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.profile-launcher-view-content button.running {
+  color: $error-color;
+}
+
+.profile-launcher-view-content button.running:hover {
+  color: $error-color;
+}
+
+.profile-launcher-view-content button.running:not(.toolbar-item) {
+  color: $error-color;
+}
+
+.profile-isolate-item:hover {
+  background-color: $tree;
+}
+
+.profile-isolate-item.selected {
+  border-top-color: $tree;
+  border-right-color: $tree;
+  border-bottom-color: $tree;
+  border-left-color: $tree;
+  background-color: $highlight;
+
+  @include indicator-right
+}
+
+.profile-isolate-item-trend {
+  color: $accent1;
+}
+
+.profile-isolate-item-trend.increasing {
+  color: $string-color;
+}
+
+.profile-canvas-decoration {
+  color: $error-color;
+}
+

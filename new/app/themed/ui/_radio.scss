@@ -73,3 +73,23 @@ input[type="radio"] {
     border-radius: 50% !important;
   }
 }
+
+::slotted(input.dt-radio-button) {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+  background-image: linear-gradient($background, $background);
+}
+
+::slotted(input.dt-radio-button:active:not(:disabled)) {
+  background-image: linear-gradient($accent1, $accent1);
+}
+
+::slotted(input.dt-radio-button:checked) {
+  background-image: url("Images/radioDot.png"), linear-gradient($background, $background);
+}
+
+::slotted(input.dt-radio-button:checked:active) {
+  background-image: url("Images/radioDot.png"), linear-gradient($accent1, $accent1);
+}

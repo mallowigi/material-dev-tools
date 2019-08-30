@@ -1,0 +1,28 @@
+.profiles-sidebar-tree-box {
+  background: $contrast;
+}
+
+.tree-outline li.profiles-tree-section {
+  color: $primary;
+  text-shadow: rgba(0, 0, 0, 0.75) 0px 1px 0px;
+}
+
+li.wait .icon::before {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+}
+
+li.wait.selected .icon::before {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+}
+
+li[role="treeitem"] .title {
+  background: transparent;
+  color: $primary;
+  text-transform: uppercase;
+}

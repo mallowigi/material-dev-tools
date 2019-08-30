@@ -17,7 +17,7 @@
 }
 
 .database-query-text {
-  color: $function-color;
+  color: $string-color;
 }
 
 .database-query-result.error {
@@ -27,4 +27,12 @@
 .resources-sidebar {
   background: $contrast;
   color: $foreground;
+}
+
+li.selected .base-storage-tree-element-subtitle {
+  color: $selFg;
+}
+
+.base-storage-tree-element-subtitle {
+  color: $primary;
 }

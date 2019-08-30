@@ -1,0 +1,39 @@
+.profile-launcher-view-content p {
+  color: $foreground;
+}
+
+.profile-launcher-view-content button.running {
+  color: $error-color;
+}
+
+.profile-launcher-view-content button.running:hover {
+  color: $error-color;
+}
+
+body.inactive .profile-launcher-view-content button.running:not(.toolbar-item) {
+  color: rgb(125, 35, 35);
+}
+
+.profile-launcher-target-list {
+  border: none;
+}
+
+.profile-launcher-target-list .profile-memory-usage-item:hover {
+  background-color: $tree;
+}
+
+.profile-memory-usage-item.selected {
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+  background-color: $second;
+}
+
+.profile-memory-usage-item-trend {
+  color: $string-color;
+}
+
+.profile-memory-usage-item-trend.increasing {
+  color: $tag-name-color;
+}
