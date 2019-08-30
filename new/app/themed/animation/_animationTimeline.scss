@@ -1,0 +1,127 @@
+.animation-node-row {
+  border-bottom-color: $border;
+}
+
+.animation-node-description {
+  border-bottom-color: $borderLight;
+  background-color: $background;
+}
+
+circle.animation-keyframe-point {
+  fill: $foreground;
+}
+
+.animation-name {
+  color: $foreground;
+}
+
+.animation-timeline-toolbar-container {
+  background-color: $contrast;
+}
+
+.animation-timeline-header {
+  border-bottom-color: $borderLight;
+}
+
+.animation-timeline-header::after {
+  background-color: $background;
+  border-right-color: $border
+}
+
+.animation-timeline-buffer,
+.animation-timeline-buffer-hint {
+  border-bottom-color: $border;
+}
+
+.animation-time-overlay {
+  background-color: white;
+}
+
+.animation-scrubber {
+  border-left-color: $accent1;
+}
+
+.animation-scrubber-line {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5px, $accent1 5px, $accent1 6px, rgba(255, 255, 255, 0) 6px);
+}
+
+.animation-scrubber-head {
+  background-color: $accent1;
+}
+
+rect.animation-timeline-grid-line {
+  fill: $accent2;
+}
+
+text.animation-timeline-grid-label {
+  fill: $foreground;
+}
+
+.animation-node-row.animation-node-selected {
+  background-color: $tree;
+}
+
+.animation-node-selected > .animation-node-description {
+  background-color: $selBg;
+}
+
+.animation-buffer-preview {
+  background-color: var(--toolbar-bg-color);
+}
+
+.animation-buffer-preview-animation {
+  background-color: $second;
+  border-right-color: $borderLight;
+}
+
+.animation-buffer-preview:not(.selected):hover {
+  background-color: $highlight;
+}
+
+.animation-buffer-preview.selected {
+  background-color: $selBg;
+}
+
+.animation-paused {
+  background-color: rgba($highlight, 0.5);
+}
+
+.animation-paused::before,
+.animation-paused::after {
+  background-color: $background;
+  border-top-color: $border;
+  border-right-color: $border;
+  border-bottom-color: $border;
+  border-left-color: $border;
+}
+
+.animation-buffer-preview.selected > svg > line {
+  stroke: $selFg !important;
+}
+
+.animation-playback-rate-button {
+  background-color: $background;
+  border-top-color: $button;
+  border-right-color: $button;
+  border-bottom-color: $button;
+  border-left-color: $button;
+  color: $primary;
+}
+
+.animation-playback-rate-button:not(.selected):hover {
+  background-color: $highlight;
+}
+
+.animation-playback-rate-button.selected {
+  color: $selFg;
+  background-color: $accent1;
+}
+
+.animation-playback-rate-button.selected:first-child {
+  color: $selFg;
+  background-color: $accent1;
+}
+
+.animation-remove-button:hover {
+  background-color: $highlight;
+}

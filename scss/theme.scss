@@ -240,20 +240,3 @@ $fontSize: var(--font-size, 11px);
   }
 
 }
-
-@import "elements";
-@import "console";
-@import "cm";
-@import "treeView";
-@import "styles";
-@import "tabbedPane";
-@import "profile";
-@import "soft_context_menu";
-@import "breadcrumbs";
-@import "network";
-@import "search";
-@import "sources";
-@import "stackTrace";
-@import "inspector";
-@import "data_grid";
-@import "resources";

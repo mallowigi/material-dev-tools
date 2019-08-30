@@ -98,7 +98,7 @@ select.toolbar-item[data-keyboard-focus="true"]:focus > * {
 .toolbar-input {
   background-color: $contrast;
   border: none;
-  border-bottom: 2px solid $border;
+  //border-bottom: 2px solid $border;
   box-shadow: none;
 }
 
@@ -137,6 +137,7 @@ select.toolbar-item[data-keyboard-focus="true"]:focus > * {
 
 .toolbar-button[data-keyboard-focus="true"]:focus::after {
   background-color: $highlight;
+  opacity: 0.5;
 }
 
 .toolbar-shadow.floating {
