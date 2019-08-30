@@ -11,13 +11,19 @@
 }
 
 .property-trace-inactive .property-trace-value::before {
-  border-bottom-color: $disabled;
+  border-bottom-color: $foreground;
 }
 
-.tree-outline li.odd-row {
-  background-color: $contrast;
-}
+.tree-outline-disclosure {
+  .tree-outline li.odd-row {
+    background-color: $contrast;
+  }
 
-.tree-outline li:hover {
-  background-color: $tree;
+  .tree-outline li:hover {
+    background-color: $tree;
+  }
+
+  .property-value .property-value-text {
+    color: $number-color;
+  }
 }

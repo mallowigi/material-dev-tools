@@ -45,6 +45,10 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
   color: $selFg;
 }
 
+.tree-outline li.selected .selection {
+  display: block;
+}
+
 //.tree-outline li::before {
 //  background-color: $foreground;
 //  -webkit-mask-image: url(Images/smallIcons_2x.png);

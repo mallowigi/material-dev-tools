@@ -1,0 +1,11 @@
+.watch-expressions .name {
+  color: $operator-color;
+}
+
+.watch-expression-error {
+  color: $error-color;
+}
+
+.watch-expression-header:hover {
+  background-color: $tree;
+}

@@ -2,6 +2,10 @@
   color: $tag-name-color;
 }
 
+.node-label-id {
+  color: $function-color;
+}
+
 .node-label-class,
 .node-label-pseudo {
   color: $attribute-name-color;

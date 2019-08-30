@@ -1,0 +1,58 @@
+.filtered-list-widget-prompt-element {
+  background: $contrast;
+}
+
+.filtered-list-widget-input {
+  border-bottom: 2px solid $button;
+  &:focus {
+    border-bottom-color: $accent1;
+  }
+}
+
+.filtered-list-widget-progress {
+  background-color: $active;
+}
+
+.filtered-list-widget-progress-bar {
+  background-color: $accent1;
+}
+
+.filtered-list-widget > div.container {
+  background-color: $background;
+}
+
+.filtered-list-widget {
+
+  .filtered-list-widget-item {
+    color: $foreground;
+  }
+
+  .filtered-list-widget-item.selected {
+    background-color: $highlight;
+  }
+
+  .filtered-list-widget-item span.highlight {
+    color: $accent1;
+  }
+
+  .filtered-list-widget-item .filtered-list-widget-subtitle {
+    color: $primary;
+  }
+
+  .filtered-list-widget-item.two-rows {
+    border-bottom-color: $background;
+  }
+
+  .tag {
+    color: $tag-name-color;
+  }
+
+  .filtered-list-widget-item .tag .highlight {
+    color: $accent2;
+  }
+
+  .not-found-text {
+    color: $disabled;
+    background-color: $background;
+  }
+}

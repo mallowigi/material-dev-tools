@@ -110,15 +110,7 @@ $fontSize: var(--font-size, 11px);
 :host-context(.-theme-with-dark-background),
 .-theme-with-dark-background {
 
-  // Line at caret
-  ol li.selected:focus .webkit-html-tag,
-  ol li.selected:focus .webkit-html-tag-name,
-  ol li.selected:focus .webkit-html-close-tag-name,
-  ol li.selected:focus .webkit-html-attribute-value,
-  ol li.selected:focus .webkit-html-attribute-name,
-  ol li.selected:focus .devtools-link {
-    color: $selFg !important;
-  }
+
 
   .webkit-html-close-tag-name {
     color: $tag-name-color !important;
