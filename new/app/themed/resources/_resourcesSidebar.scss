@@ -1,0 +1,31 @@
+li.storage-group-list-item:not(:first-child) {
+  border-top-color: $border;
+}
+
+span.navigator-file-tree-item {
+  background-image: linear-gradient(45deg, $foreground, $foreground);
+}
+
+span.navigator-folder-tree-item {
+  background-image: linear-gradient(45deg, $primary, $primary);
+}
+
+span.navigator-frame-tree-item {
+  background-color: $primary;
+}
+
+span.navigator-script-tree-item {
+  background-image: linear-gradient(45deg, $attribute-name-color, $attribute-name-color);
+}
+
+span.navigator-stylesheet-tree-item {
+  background-image: linear-gradient(45deg, $link-color, $link-color);
+}
+
+span.navigator-image-tree-item, .navigator-font-tree-item {
+  background-image: linear-gradient(45deg, $string-color, $string-color);
+}
+
+span.resource-tree-item {
+  background-image: linear-gradient(45deg, $primary, $primary);
+}

@@ -1,0 +1,58 @@
+.service-worker-version-stack-bar {
+  border-left-color: $borderLight;
+}
+
+.service-worker-active-circle,
+.service-worker-redundant-circle,
+.service-worker-waiting-circle,
+.service-worker-installing-circle {
+  border-top-color: $foreground;
+  border-right-color: $foreground;
+  border-bottom-color: $foreground;
+  border-left-color: $foreground;
+}
+
+.service-worker-active-circle {
+  background-color: $string-color;
+}
+
+.service-worker-waiting-circle {
+  background-color: $number-color;
+}
+
+.service-worker-installing-circle {
+  background-color: $background;
+}
+
+.service-worker-redundant-circle {
+  background-color: $contrast;
+}
+
+.service-worker-subtitle {
+  color: $var-color;
+}
+
+.service-worker-notification-editor {
+  border: none;
+}
+
+.service-worker-list {
+  background-color: $second;
+}
+
+.service-worker-has-current .service-workers-other-origin {
+  border-top-color: $border;
+}
+
+.service-worker-filter {
+  background-color: $background;
+  border-bottom-color: $border;
+}
+
+.service-worker-filter[data-keyboard-focus="true"]:focus {
+  background-color: $contrast;
+}
+
+.service-worker-filter-label::before {
+  background-color: $foreground
+}

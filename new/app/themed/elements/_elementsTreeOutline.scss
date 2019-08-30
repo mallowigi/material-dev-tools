@@ -77,7 +77,7 @@
 .elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) .selection {
   background-color: var(--editor-selection-inactive-bg-color);
 
-  @include indicator;
+  @include indicator-right;
 }
 
 .elements-disclosure .elements-tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus="true"] .highlight > * {
@@ -87,7 +87,7 @@
 .elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
   background-color: $tree;
 
-  @include indicator;
+  @include indicator-right;
 }
 
 .elements-tree-outline ol.shadow-root-depth-4 {

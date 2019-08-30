@@ -1,16 +1,23 @@
 body {
   background-color: $background;
   color: $foreground;
+  font-family: Roboto, '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande', sans-serif;
 }
 
 .platform-linux {
   background-color: $background;
   color: $foreground;
+  font-family: Roboto, Ubuntu, Arial, sans-serif;
 }
 
 .platform-mac {
   background-color: $background;
   color: $foreground;
+  font-family: Roboto, '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.platform-windows {
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
 
 .panel {

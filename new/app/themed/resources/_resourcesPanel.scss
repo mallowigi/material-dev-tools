@@ -1,0 +1,30 @@
+.resources-toolbar {
+  border-top-color: $borderLight;
+  background-color: $contrast;
+}
+
+.top-resources-toolbar {
+  border-bottom-color: $borderLight;
+  background-color: $contrast;
+}
+
+.storage-view .storage-table-error {
+  color: $error-color;
+}
+
+.database-user-query {
+  border-bottom-color: $border;
+}
+
+.database-query-text {
+  color: $function-color;
+}
+
+.database-query-result.error {
+  color: $error-color;
+}
+
+.resources-sidebar {
+  background: $contrast;
+  color: $foreground;
+}

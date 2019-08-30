@@ -9,11 +9,17 @@
 
 .data-grid td, .data-grid th {
   border-left-color: $borderLight;
+  height: auto;
+  padding: 8px 4px;
 }
 
 .data-grid th {
   background-color: $contrast;
-  border-bottom-color: $border;
+  border-bottom-color: $borderLight;
+
+  > div {
+    font-weight: bold;
+  }
 }
 
 .data-grid th.sortable:active::after {
@@ -84,4 +90,12 @@
 
 .data-grid:focus tr.selected.dirty {
   background-color: $error-color;
+}
+
+.data-grid .header-container {
+  height: 36px;
+}
+
+.data-grid .data-container {
+  top: 36px;
 }
