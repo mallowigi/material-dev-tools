@@ -107,101 +107,11 @@ $fontSize: var(--font-size, 11px);
 
 /* Syntax Highlighting
 ========================================================================== */
-:host-context(.-theme-with-dark-background),
-.-theme-with-dark-background {
-
-
-
-  .webkit-html-close-tag-name {
-    color: $tag-name-color !important;
-  }
-
-  .webkit-css-selector {
-    color: $tag-name-color !important;
-  }
-
-  .webkit-css-at-rule {
-    color: $keyword-color !important;
-  }
-
-  .webkit-css-color {
-    color: $number-color !important;
-  }
-
-  .webkit-css-comment {
-    color: $comment-color !important;
-  }
-
-  .webkit-css-important {
-    color: $keyword-color !important;
-  }
-
-  .webkit-css-keyword {
-    color: $keyword-color !important;
-  }
-
-  .webkit-css-number {
-    color: $number-color !important;
-  }
-
-  .webkit-css-property {
-    color: $accent2 !important;
-  }
-
-  .webkit-css-string {
-    color: $string-color !important;
-  }
-
-  .webkit-css-url {
-    color: $link-color !important;
-  }
-
-  //endregion
-
-}
 
 :host-context(:not(.platform-mac).-theme-with-dark-background),
 :host-context(.-theme-with-dark-background),
 :not(.platform-mac).-theme-with-dark-background,
 .-theme-with-dark-background {
-
-  // region Panels
-  /* Background and Foreground color
-  ========================================================================== */
-  .timeline-landing-page{
-    background-color: $background !important;
-    color: $text-color !important;
-  }
-
-  // endregion
-
-  // region Toolbars
-  /* Toolbars
-  ========================================================================== */
-
-  .list-item:hover {
-    background: $selBg !important;
-    color: $selFg !important;
-  }
-
-  // endregion
-
-  // region Components
-  /* Components
-  ========================================================================== */
-
-  .sidebar-pane-container .toolbar {
-    border-bottom-color: $border;
-  }
-
-
-  /* Scripts
-     ========================================================================== */
-
-  .selection-fill {
-    opacity: .5 !important;
-    border-left: 2px solid $accent1 !important;
-  }
 
   /* Network grid
    ==========================================================================
@@ -233,10 +143,6 @@ $fontSize: var(--font-size, 11px);
 
   .subtitle {
     color: $primary !important;
-  }
-
-  .settings-info-message {
-    background: $second !important;
   }
 
 }

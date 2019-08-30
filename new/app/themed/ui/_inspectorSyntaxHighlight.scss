@@ -153,6 +153,48 @@
   color: $tag-name-color;
 }
 
+.webkit-css-selector {
+  color: $tag-name-color;
+}
+
+.webkit-css-at-rule {
+  color: $keyword-color;
+}
+
+.webkit-css-color {
+  color: $operator-color;
+}
+
+.webkit-css-comment {
+  color: $comment-color;
+}
+
+
+.webkit-css-important {
+  color: $number-color ;
+}
+
+.webkit-css-keyword {
+  color: $keyword-color ;
+}
+
+.webkit-css-number {
+  color: $number-color ;
+}
+
+.webkit-css-property {
+  color: $var-color;
+}
+
+.webkit-css-string {
+  color: $string-color;
+}
+
+.webkit-css-url {
+  color: $link-color;
+}
+
+
 .webkit-html-pseudo-element {
   color: $var-color;
 }

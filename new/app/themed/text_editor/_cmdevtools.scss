@@ -240,3 +240,8 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 .CodeMirror-foldgutter-folded::before {
   background-color: $second;
 }
+
+.selection-fill {
+  opacity: .5;
+  border-left: 2px solid $accent1;
+}

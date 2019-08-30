@@ -25,16 +25,26 @@ input {
 ::-webkit-scrollbar {
   width: 10px !important;
   height: 10px !important;
+  opacity: 0 !important;
+  transition: opacity .4s ease;
+}
+
+*:hover ::-webkit-scrollbar {
+  opacity: 1 !important;
 }
 
 ::-webkit-scrollbar-track {
   background: $background !important;
+  -webkit-box-shadow: none !important;
 }
 
 ::-webkit-scrollbar-thumb {
   background: $accent1Alpha !important;
   border-radius: 16px !important;
+  -webkit-box-shadow: none !important;
 }
+
+
 
 ::-webkit-scrollbar-thumb:hover {
   background: $accent1 !important;
