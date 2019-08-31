@@ -1,0 +1,15 @@
+.infobar {
+  color: $foreground;
+}
+
+.infobar-info {
+  background: $second;
+
+  .info-icon {
+    background: $accent1;
+  }
+
+  .infobar-toggle {
+    color: $accent1;
+  }
+}

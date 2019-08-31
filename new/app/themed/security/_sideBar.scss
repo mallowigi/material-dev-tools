@@ -1,0 +1,17 @@
+.tree-outline li.selected:focus .lock-icon,
+.tree-outline .security-sidebar-tree-item.selected:focus .icon {
+  background-color: $selFg;
+}
+
+.tree-outline .security-main-view-sidebar-tree-item {
+  border-bottom-color: $borderLight
+}
+
+.tree-outline li.security-sidebar-origins {
+  color: $primary;
+  text-shadow: var(--drop-shadow);
+}
+
+.security-main-view-reload-message .tree-element-title {
+  color: $primary;
+}

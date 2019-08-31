@@ -1,0 +1,272 @@
+.lh-vars,
+.lh-vars.dark {
+  --text-font-family: #{$uiFontFamily}, Roboto, Helvetica, Arial, sans-serif;
+  --monospace-font-family: #{$fontFamily}, 'Roboto Mono', 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
+  --body-background-color: #{$background};
+  --body-text-color: #{$foreground};
+  --subheader-color: #{$primary};
+  --header-bg-color: #{$second};
+  --secondary-text-color: #{$primary};
+  --accent-color: #{$accent1};
+  --informative-color: #{$accent1};
+  --medium-75-gray: #{$selFg};
+  --medium-50-gray: #{$disabled};
+  --medium-100-gray: #{$primary};
+  --warning-color: #{$error-color};
+  --report-secondary-border-color: #{$borderLight};
+  --metric-timeline-rule-color: #{$foreground};
+  --display-value-gray: #{$disabled};
+  --report-header-color: #{$contrast};
+  --lh-score-highlight-bg: #{$highlight};
+  --highlighter-bg: #{$highlight};
+
+  --lh-table-header-bg: #{$background};
+  --lh-table-higlight-bg: #{$active};
+
+  --color-black-100: #{$contrast};
+  --color-black-200: #{$contrast};
+  --color-black-400: #{$background};
+  --color-black-500: #{$background};
+  --color-black-600: #{$second};
+  --color-black-800: #{$active};
+  --color-black-900: #{$highlight};
+  --off-black: #{$contrast};
+  --color-black: #{$background};
+  --color-blue: #{$function-color};
+  --color-green-700: #{$string-color};
+  --color-green: #{$string-color};
+  --color-orange-700: #{$tag-name-color};
+  --color-orange: #{$number-color};
+  --color-red-700: #{$error-color};
+  --color-red: #{$error-color};
+  --color-white: #{$var-color};
+  --color-blue-200: #{$operator-color};
+  --color-blue-900: #{$function-color};
+  --color-cyan-500: #{$operator-color};
+  --color-teal-600: #{$comment-color};
+
+  --color-hover: #{$tree};
+  --color-metric-toggle-lines: #{$button};
+
+  --topbar-bg: #{$contrast};
+  --plugin-badge-bg: #{$accent1};
+}
+
+.lh-root {
+  color: $foreground;
+}
+
+.lh-root :focus {
+  outline-color: $accent1;
+}
+
+.lh-root summary:focus {
+  box-shadow: $accent1Alpha 0px 0px 0px 1px;
+}
+
+.lh-scorescale {
+  border-color: $borderLight;
+}
+
+.lh-audit-group a,
+.lh-category-header__description a,
+.lh-audit__description a,
+.lh-footer a {
+  color: $link-color;
+}
+
+.lh-node__snippet {
+  color: $comment-color;
+}
+
+.lh-audit--pass .lh-audit__display-text {
+  color: $string-color;
+}
+
+.lh-audit--average .lh-audit__display-text {
+  color: $attribute-name-color;
+}
+
+.lh-audit--fail .lh-audit__display-text {
+  color: $error-color;
+}
+
+.lh-audit--manual .lh-audit__display-text,
+.lh-audit--notapplicable .lh-audit__display-text {
+  color: $primary;
+}
+
+.lh-audit--informative .lh-audit__display-text {
+  color: $function-color;
+}
+
+.lh-audit__description,
+.lh-audit__stackpack {
+  color: $primary;
+}
+
+.lh-audit__header:hover {
+  background-color: $tree;
+}
+
+.lh-metrics__disclaimer {
+  color: $primary;
+}
+
+.lh-metric__description {
+  color: $primary;
+}
+
+.lh-metrics-toggle__label {
+  background-color: $second;
+}
+
+.lh-metrics-toggle__input:focus + label {
+  outline-color: $accent1;
+}
+
+.lh-metrics-toggle__input:not(:checked) + label .lh-metrics-toggle__icon--less,
+.lh-metrics-toggle__input:checked + label .lh-metrics-toggle__icon--more {
+  background-color: $button;
+}
+
+.lh-metrics-toggle__lines {
+  fill: $button;
+}
+
+.lh-metrics-toggle__label {
+  background-color: $contrast;
+}
+
+.lh-metric--pass .lh-metric__value {
+  color: $string-color;
+}
+
+.lh-metric--average .lh-metric__value {
+  color: $attribute-name-color;
+}
+
+.lh-metric--fail .lh-metric__value {
+  color: $error-color;
+}
+
+.lh-metric--error .lh-metric__value,
+.lh-metric--error .lh-metric__description {
+  color: $error-color;
+}
+
+.lh-load-opportunity__header .lh-load-opportunity__col {
+  color: $primary;
+}
+
+.lh-audit--error .lh-audit__display-text {
+  color: $error-color;
+}
+
+.lh-audit-group--budgets .lh-table tbody tr td:nth-child(4),
+.lh-audit-group--budgets .lh-table tbody tr td:nth-child(5) {
+  color: $tag-name-color;
+}
+
+.lh-audit-group__itemcount {
+  color: $accent1;
+}
+
+.lh-audit-group__header span.lh-audit-group__itemcount {
+  color: $foreground;
+}
+
+.lh-audit-group__header span.lh-audit-group__description {
+  color: $primary;
+}
+
+.lh-audit--fail .lh-audit-explanation {
+  color: $error-color;
+}
+
+.lh-warnings {
+  color: $attribute-name-color;
+}
+
+.lh-warnings--toplevel {
+  color: $foreground;
+  background: $second;
+}
+
+.lh-gauge__wrapper--pass {
+  color: $string-color;
+  fill: $string-color;
+  stroke: $string-color;
+}
+
+.lh-gauge__wrapper--average {
+  color: $attribute-name-color;
+  fill: $attribute-name-color;
+  stroke: $attribute-name-color;
+}
+
+.lh-gauge__wrapper--fail {
+  color: $error-color;
+  fill: $error-color;
+  stroke: $error-color;
+}
+
+.lh-gauge-base {
+  stroke: var(--circle-background);
+}
+
+.lh-gauge-arc {
+  stroke: var(--circle-color);
+}
+
+.lh-gauge__wrapper--plugin .lh-gauge__svg-wrapper::before {
+  background-color: $accent1;
+  box-shadow: rgba($second, 0.2) 0px 0px 4px;
+}
+
+.lh-gauge__label {
+  color: $foreground;
+}
+
+.lh-scorescale-range--pass::before {
+  background-color: $string-color;
+}
+
+.lh-scorescale-range--average::before {
+  background-color: $attribute-name-color;
+}
+
+.lh-scorescale-range--fail::before {
+  background-color: $error-color;
+}
+
+#lh-log {
+  background-color: $second;
+  color: $foreground;
+  box-shadow: rgba($second, 0.26) 0px 2px 5px 0px;
+}
+
+.lh-table thead th {
+  color: $foreground;
+  font-weight: bold;
+}
+
+.lh-table tbody tr:nth-child(2n+1) {
+  background-color: $highlight;
+}
+
+.lh-chevron__line {
+  stroke: $primary;
+}
+
+.tooltip {
+  background-color: $background;
+}
+
+.tooltip-boundary:hover {
+  background-color: $second;
+}
+
+.tooltip::before {
+  border-bottom-color: $background;
+}

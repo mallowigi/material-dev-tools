@@ -1,0 +1,156 @@
+.timeline-toolbar-container > .toolbar {
+  background-color: $contrast;
+}
+
+.timeline-settings-pane {
+  background-color: $contrast;
+}
+
+#timeline-overview-panel {
+  border-bottom-color: rgb(70, 70, 70);
+}
+
+#timeline-overview-grid {
+  background-color: $background;
+}
+
+.timeline.panel .status-pane-container.tinted {
+  background-color: rgb(58, 58, 58);
+}
+
+#timeline-overview-panel .overview-strip .timeline-overview-strip-title {
+  color: $foreground;
+  background-color: $background;
+}
+
+#timeline-overview-framerate::before,
+#timeline-overview-network::before,
+#timeline-overview-cpu-activity::before {
+  border-bottom-color: $border;
+}
+
+.memory-graph-label {
+  color: $primary;
+  background-color: $background;
+}
+
+#memory-graphs-container .timeline-memory-header {
+  background-color: $second;
+  border-bottom-color: $borderLight;
+}
+
+#counter-values-bar {
+  border-top-color: $borderLight;
+}
+
+.timeline-details-title {
+  border-bottom-color: $borderLight;
+}
+
+.timeline-details-view {
+  color: $foreground;
+}
+
+.timeline-details-view-body {
+  background-color: $contrast;
+}
+
+.timeline-details-view-block {
+  background-color: $background;
+}
+
+.timeline-details-chip-title > div {
+  border: none;
+}
+
+.timeline-details-view-row-title:not(:empty) {
+  color: $primary;
+}
+
+.timeline-details-warning {
+  background-color: $error-color;
+}
+
+.timeline-details-warning .timeline-details-view-row-title {
+  color: $error-color;
+}
+
+.timeline-flamechart-resizer {
+  background-color: $contrast;
+  border: none;
+}
+
+.timeline-layers-view > div:last-child,
+.timeline-layers-view-properties > div:last-child {
+  background-color: $second;
+}
+
+.timeline-layers-view-properties td {
+  border-top-color: $borderLight;
+  border-right-color: $borderLight;
+  border-bottom-color: $borderLight;
+  border-left-color: $borderLight;
+}
+
+.timeline-paint-profiler-log-split > div:last-child {
+  background-color: $second;
+}
+
+.timeline-filmstrip-preview > img {
+  border-top-color: $button;
+  border-right-color: $button;
+  border-bottom-color: $button;
+  border-left-color: $button;
+}
+
+.timeline-tree-view .toolbar {
+  background-color: $contrast;
+}
+
+.timeline-tree-view .data-grid table.data {
+  background-color: $background;
+}
+
+.timeline-tree-view .data-grid tr:not(.selected) .highlight {
+  background-color: $tree;
+}
+
+.timeline-tree-view .data-grid tr:hover td:not(.bottom-filler-td) {
+  background-color: $tree;
+}
+
+.timeline-tree-view .data-grid span.percent-column {
+  color: $operator-color;
+}
+
+.timeline-tree-view .data-grid .name-container .activity-icon {
+  border: none;
+}
+
+.timeline-tree-view .data-grid .name-container .activity-warning::after {
+  color: $foreground;
+}
+
+.timeline-tree-view .data-grid tr.selected .name-container .activity-warning::after {
+  color: $selFg;
+}
+
+.timeline-tree-view .data-grid .background-bar {
+  background-color: $notif;
+  border-bottom-color: $border;
+}
+
+.timeline-tree-view .data-grid .selected .background-bar {
+  background-color: $active;
+  border-bottom-color: $borderLight;
+}
+
+.timeline-stack-view-header {
+  background-color: $contrast;
+  color: $foreground;
+}
+
+.timeline-landing-page {
+  background-color: $background;
+  color: $primary;
+}

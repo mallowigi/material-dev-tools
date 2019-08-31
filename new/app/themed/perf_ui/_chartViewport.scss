@@ -1,0 +1,11 @@
+.chart-viewport-v-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: $accent1 !important;
+}
+
+.chart-viewport-selection-overlay {
+  background-color: $second;
+  border-top-color: $accent1;
+  border-right-color: $accent1;
+  border-bottom-color: $accent1;
+  border-left-color: $accent1;
+}
