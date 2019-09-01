@@ -196,7 +196,7 @@
   };
 
   async function themeSetup() {
-    const css = await fetch('dist/material-style.css').then(res => res.text());
+    const css = await fetch('dist/material-style.min.css').then(res => res.text());
     panels.applyStyleSheet(css);
 
     storage.get(SETTINGS, object => {

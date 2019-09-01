@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
 :root {
   --background: #263238;
@@ -85,8 +85,6 @@ $uiFontFamily: var(--ui-font-family, Roboto, sans-serif);
 $fontFamily: var(--font-family, Menlo, monospace);
 $fontSize: var(--font-size, 11px);
 
-html,
-:host,
 .-theme-with-dark-background,
 :host-context(.-theme-with-dark-background) {
   --accent-color: #{$accent1} !important;
