@@ -8,7 +8,7 @@
 }
 
 .network-log-grid.data-grid .data-grid-data-grid-node:hover {
-  background: $highlight;
+  background: $tree;
 }
 
 
@@ -74,4 +74,9 @@
       background-color: $contrast;
     }
   }
+}
+
+.network-log-grid.data-grid.small .icon,
+.network-log-grid.data-grid .icon {
+  box-shadow: none;
 }
