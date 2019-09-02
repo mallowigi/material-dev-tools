@@ -1,46 +1,46 @@
 //@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
-//:root {
-//  --background: #263238;
-//  --darkerBg: #212c31;
-//  --lighterBg: #32424a;
-//  --foreground: #b0bec5;
-//  --primary: #607d8b;
-//  --selBg: #546e7a;
-//  --selBgAlpha: #546e7a70;
-//  --selFg: #ffffff;
-//  --button: #2e3c43;
-//  --second: #32424a;
-//  --disabled: #415967;
-//  --contrast: #1e272c;
-//  --active: #314549;
-//  --border: #2a373e;
-//  --highlight: #425b67;
-//  --tree: #546e7a70;
-//  --notif: #1e272c;
-//  --accent1: #009688;
-//  --accentAlpha: #00968870;
-//  --excluded: #2e3c43;
-//  --excludedAlpha: #2e3c4340;
-//  --accent2: #80cbc4;
-//  --accent2Alpha: #80cbc480;
-//  --accent3: #ff4081;
-//
-//  --tag-name-color: #f07178;
-//  --attribute-name-color: #ffcb6b;
-//  --comment-color: #546e7a;
-//  --keyword-color: #c792ea;
-//  --error-color: #ff5370;
-//  --var-color: #eeffff;
-//  --operator-color: #89ddff;
-//  --function-color: #82aaff;
-//  --string-color: #c3e88d;
-//  --number-color: #f78c6c;
-//  --link-color: #80cbc4;
-//  --text-color: #c3cee3;
-//  --ignored-color: #ab79c7;
-//  --parameters-color: #f78c6c;
-//}
+:root {
+  --background: #263238;
+  --darkerBg: #212c31;
+  --lighterBg: #32424a;
+  --foreground: #b0bec5;
+  --primary: #607d8b;
+  --selBg: #546e7a;
+  --selBgAlpha: #546e7a70;
+  --selFg: #ffffff;
+  --button: #2e3c43;
+  --second: #32424a;
+  --disabled: #415967;
+  --contrast: #1e272c;
+  --active: #314549;
+  --border: #2a373e;
+  --highlight: #425b67;
+  --tree: #546e7a70;
+  --notif: #1e272c;
+  --accent1: #009688;
+  --accentAlpha: #00968870;
+  --excluded: #2e3c43;
+  --excludedAlpha: #2e3c4340;
+  --accent2: #80cbc4;
+  --accent2Alpha: #80cbc480;
+  --accent3: #ff4081;
+
+  --tag-name-color: #f07178;
+  --attribute-name-color: #ffcb6b;
+  --comment-color: #546e7a;
+  --keyword-color: #c792ea;
+  --error-color: #ff5370;
+  --var-color: #eeffff;
+  --operator-color: #89ddff;
+  --function-color: #82aaff;
+  --string-color: #c3e88d;
+  --number-color: #f78c6c;
+  --link-color: #80cbc4;
+  --text-color: #c3cee3;
+  --ignored-color: #ab79c7;
+  --parameters-color: #f78c6c;
+}
 
 $background: var(--background);
 $darkerBg: var(--darkerBg);

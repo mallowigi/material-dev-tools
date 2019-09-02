@@ -212,14 +212,15 @@
 
         // Apply theme
         let css;
-        if (!current) {
-          css = await fetch('dist/default.css').then(res => res.text());
-        } else if (current.dark) {
+        if (current.dark) {
           css = await fetch('dist/dark.css').then(res => res.text());
         } else {
           css = await fetch('dist/light.css').then(res => res.text());
         }
         // Apply def style
+        panels.applyStyleSheet(css);
+      } else {
+        css = await fetch('dist/default.css').then(res => res.text());
         panels.applyStyleSheet(css);
       }
     });
