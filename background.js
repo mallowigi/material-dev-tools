@@ -15,7 +15,7 @@
      * @param currentFontFamily
      * @param currentFontSize
      */
-    applyTheme(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 11) {
+    generateThemeVars(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 11) {
       // Extract colors
       if (currentTheme && currentTheme.colors) {
         const {
@@ -196,10 +196,7 @@
   };
 
   async function themeSetup() {
-    const css = await fetch('dist/material-style.min.css').then(res => res.text());
-    panels.applyStyleSheet(css);
-
-    storage.get(SETTINGS, object => {
+    storage.get(SETTINGS, async object => {
       const settings = object[SETTINGS];
       if (settings && settings.startsWith('{')) {
         const json = JSON.parse(settings);
@@ -208,9 +205,22 @@
               current = json[DEVTOOLS_CURRENT],
               family  = json[DEVTOOLS_FONT];
 
-        let style = styleBuilder.applyTheme(current, family, size);
+        let style = styleBuilder.generateThemeVars(current, family, size);
+
         panels.applyStyleSheet(style);
-        browserAction.setIcon({path: `./public/icons/${theme}.svg`}, () => {});
+        browserAction.setIcon({ path: `./public/icons/${theme}.svg` }, () => {});
+
+        // Apply theme
+        let css;
+        if (!current) {
+          css = await fetch('dist/default.css').then(res => res.text());
+        } else if (current.dark) {
+          css = await fetch('dist/dark.css').then(res => res.text());
+        } else {
+          css = await fetch('dist/light.css').then(res => res.text());
+        }
+        // Apply def style
+        panels.applyStyleSheet(css);
       }
     });
   }

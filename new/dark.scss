@@ -1,0 +1,71 @@
+$background: var(--background);
+$darkerBg: var(--darkerBg);
+$lighterBg: var(--lighterBg);
+$foreground: var(--foreground);
+$primary: var(--primary);
+$selBg: var(--selBg);
+$selBgAlpha: var(--selBgAlpha);
+$selFg: var(--selFg);
+$button: var(--button);
+$disabled: var(--disabled);
+$contrast: var(--contrast);
+$second: var(--second);
+$active: var(--active);
+$border: var(--border);
+$borderLight: var(--active);
+$highlight: var(--highlight);
+$tree: var(--tree);
+$notif: var(--notif);
+$excluded: var(--excluded);
+$excludedAlpha: var(--excludedAlpha);
+$accent1: var(--accent1);
+$accent1Alpha: var(--accentAlpha);
+$accent2: var(--accent2);
+$accent2Alpha: var(--accent2Alpha);
+$accent3: var(--accent3);
+
+$tag-name-color: var(--tag-name-color);
+$attribute-name-color: var(--attribute-name-color);
+$comment-color: var(--comment-color);
+$keyword-color: var(--keyword-color);
+$var-color: var(--var-color);
+$error-color: var(--error-color);
+$operator-color: var(--operator-color);
+$function-color: var(--function-color);
+$string-color: var(--string-color);
+$number-color: var(--number-color);
+$link-color: var(--link-color);
+$text-color: var(--text-color);
+$ignored-color: var(--ignored-color);
+$uiFontFamily: var(--ui-font-family, Roboto, sans-serif);
+$fontFamily: var(--font-family, Menlo, monospace);
+$fontSize: var(--font-size, 11px);
+
+.-theme-with-dark-background,
+:host-context(.-theme-with-dark-background) {
+  --accent-color: #{$accent1} !important;
+  --accent-fg-color: #{$accent1} !important;
+  --accent-color-hover: #{$accent1Alpha} !important;
+  --toolbar-bg-color: #{$darkerBg} !important;
+  --toolbar-hover-bg-color: #{$highlight} !important;
+  --selection-fg-color: #{$selFg} !important;
+  --selection-bg-color: #{$selBg} !important;
+  --selection-inactive-fg-color: #{$foreground} !important;
+  --selection-inactive-bg-color: #{$lighterBg} !important;
+  --tab-selected-fg-color: #{$selFg} !important;
+  --tab-selected-bg-color: #{$highlight} !important;
+  --drop-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23),
+  0 2px 4px 2px rgba(0, 0, 0, 0.2),
+  0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
+  --divider-color: #{$border} !important;
+  --divider-border: 1px solid #{$borderLight} !important;
+  --focus-bg-color: #{$active} !important;
+  --focus-ring-active-shadow: 0 0 0 1px #{$accent1} !important;
+  --focus-ring-inactive-shadow: 0 0 0 1px #{$borderLight} !important;
+  --editor-selection-bg-color: #{$selBg} !important;
+  --editor-selection-inactive-bg-color: #{$selBgAlpha} !important;
+  --message-border-color: #{$border} !important;
+
+  @import "app/index";
+}
+
