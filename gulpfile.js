@@ -41,7 +41,7 @@ gulp.task('copy', () => {
 });
 
 gulp.task('zip', () => {
-  return gulp.src('release')
+  return gulp.src('release/**/*')
     .pipe(zip('release.zip'))
     .pipe(gulp.dest('.'));
 });
