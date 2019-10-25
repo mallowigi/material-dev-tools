@@ -7,6 +7,7 @@
   const DEVTOOLS_FONT = 'devtools-font';
   const DEVTOOLS_SIZE = 'devtools-size';
   const DEVTOOLS_CURRENT = 'devtools-current';
+  const DEVTOOLS_ACCENT_COLOR = 'devtools-accent-color';
 
   const styleBuilder = {
     /**
@@ -14,8 +15,12 @@
      * @param currentTheme
      * @param currentFontFamily
      * @param currentFontSize
+     * @param accentColor
      */
-    generateThemeVars(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 11) {
+    generateThemeVars(currentTheme,
+                      currentFontFamily = 'Menlo',
+                      currentFontSize   = 11,
+                      accentColor       = null) {
       // Extract colors
       if (currentTheme && currentTheme.colors) {
         const {
@@ -79,6 +84,7 @@
           parameters,
           fontFamily: currentFontFamily,
           fontSize: currentFontSize,
+          accentColor: accentColor,
         });
       }
     },
@@ -117,6 +123,8 @@
      * @param attributes
      * @param parameters
      * @param fontFamily
+     * @param fontSize
+     * @param accentColor
      * @returns {string}
      */
     styles({
@@ -153,6 +161,7 @@
              parameters,
              fontFamily,
              fontSize,
+             accentColor,
            }) {
       return `
   :root {
@@ -171,7 +180,7 @@
   --highlight: ${highlight};
   --tree: ${tree};
   --notif: ${notif};
-  --accent1: ${accent};
+  --accent1: ${accentColor || accent};
   --excluded: ${excluded};
 
   --tag-name-color: ${tags};
@@ -203,12 +212,13 @@
         const size    = json[DEVTOOLS_SIZE],
               theme   = json[DEVTOOLS_THEME] || 'Material Oceanic',
               current = json[DEVTOOLS_CURRENT],
-              family  = json[DEVTOOLS_FONT];
+              family  = json[DEVTOOLS_FONT],
+              accent  = json[DEVTOOLS_ACCENT_COLOR];
 
-        let style = styleBuilder.generateThemeVars(current, family, size);
+        let style = styleBuilder.generateThemeVars(current, family, size, accent);
 
         panels.applyStyleSheet(style);
-        browserAction.setIcon({ path: `./public/icons/${theme}.svg` }, () => {});
+        browserAction.setIcon({path: `./public/icons/${theme}.svg`}, () => {});
 
         // Apply theme
         let css;

@@ -16,7 +16,7 @@
 <style>
     .font-setting {
         display: block;
-        margin: 1.25rem auto 2em;
+        margin: 1rem auto;
     }
 
     .font-setting label {

@@ -1,14 +1,14 @@
 <style>
     .palette {
         height: 2em;
-        margin-bottom: 2em;
+        margin-bottom: .5em;
         font-size: 1em;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
         align-items: center;
-    }  
+    }
 
     .palette::after {
         display: table;

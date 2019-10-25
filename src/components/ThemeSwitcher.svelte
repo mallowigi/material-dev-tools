@@ -44,6 +44,10 @@
 </div>
 
 <style>
+    .container h1 {
+        margin: 0;
+    }
+
     grid {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -59,5 +63,6 @@
         background: var(--contrast);
         border: var(--highlight) 1px solid;
         border-radius: 20px;
+        max-height: 300px;
     }
 </style>
