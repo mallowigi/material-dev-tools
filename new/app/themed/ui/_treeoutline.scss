@@ -51,7 +51,7 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 
 .tree-outline li.parent::before {
   background-color: $foreground;
-  -webkit-mask-image: url(Images/smallIcons_2x.png);
+  -webkit-mask-image: url(Images/smallIcons.svg);
   -webkit-mask-position: 32px 100px;
   -webkit-mask-size: 120px;
 
@@ -62,7 +62,7 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 
 .tree-outline li.parent.expanded::before {
   background-color: $foreground;
-  -webkit-mask-image: url(Images/smallIcons_2x.png);
+  -webkit-mask-image: url(Images/smallIcons.svg);
   -webkit-mask-position: -88px 0;
   -webkit-mask-size: 120px;
 

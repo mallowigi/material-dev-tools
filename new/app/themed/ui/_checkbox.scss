@@ -65,7 +65,7 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
   &:disabled + .devices-list-title:before,
   &:disabled ~ .webkit-css-property:before {
     box-shadow: none !important;
-    background: #dddddd !important;
+    opacity: 0.6;
   }
 
   // Checkmark. Could be replaced with an image

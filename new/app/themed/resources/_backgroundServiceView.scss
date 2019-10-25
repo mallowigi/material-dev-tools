@@ -1,0 +1,20 @@
+.background-service-toolbar {
+  background-color: $contrast;
+}
+
+.background-service-preview {
+  background-color: $background;
+  color: $foreground;
+}
+
+.background-service-shortcut {
+  color: $primary;
+}
+
+.background-service-metadata-name {
+  color: $primary;
+}
+
+.background-service-empty-value {
+  color: $disabled;
+}
