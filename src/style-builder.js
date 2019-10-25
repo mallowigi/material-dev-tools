@@ -17,7 +17,6 @@ export const styleBuilder = {
                currentFontSize = 14,
                accentColor = null,
              } = {}) {
-    console.log(accentColor);
     // Extract colors
     if (currentTheme && currentTheme.colors) {
       const {

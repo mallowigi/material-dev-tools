@@ -11,6 +11,11 @@
                 accentColor: $app.currentAccentColor,
             }), 100);
     }
+
+    function resetAccent() {
+        $app.resetAccent();
+        applyTheme();
+    }
 </script>
 
 <style>
@@ -40,8 +45,30 @@
         border-radius: 10px;
     }
 
-    .accent-color-input {
+    .font-setting .accent-color-input {
         border: none;
+        display: inline-block;
+    }
+
+    .accent-reset-button {
+        background: var(--button);
+        color: var(--primary);
+        border-radius: 0;
+        padding: .5em;
+        text-transform: uppercase;
+        border: 0;
+        transition: all .3s;
+        outline: none;
+    }
+
+    .accent-reset-button:hover {
+        background: var(--highlight);
+        color: var(--selection-fg-color);
+    }
+
+    .accent-color-wrapper {
+        display: flex;
+        justify-content: space-between;
     }
 
     input[type="color"] {
@@ -94,8 +121,12 @@
         </mark>
     </label>
 
-    <input type="color"
-        class="accent-color-input"
-        on:change={applyTheme}
-        bind:value={$app.currentAccentColor} />
+    <div class="accent-color-wrapper">
+        <input type="color"
+            class="accent-color-input"
+            on:change={applyTheme}
+            bind:value={$app.currentAccentColor} />
+
+        <button class="accent-reset-button" on:click={resetAccent}>Reset</button>
+    </div>
 </div>

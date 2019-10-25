@@ -69,7 +69,7 @@ class App {
 
     this.defaults = {
       fontSize: 11,
-      fontFamily: 'Menlo'
+      fontFamily: 'Menlo',
     };
 
     // Import data
@@ -84,7 +84,7 @@ class App {
       this.currentFontFamily = this.defaults.fontFamily;
     }
     if (!this.currentFontSize) {
-      this.currentFontSize = this.defaults.fontSize
+      this.currentFontSize = this.defaults.fontSize;
     }
   }
 
@@ -219,11 +219,11 @@ class App {
     storage.set({[DEVTOOLS_THEME]: name}, () => {
       if (chrome && chrome.browserAction) {
         chrome.browserAction.setIcon({
-          path: `/public/icons/${name}.svg`
+          path: `/public/icons/${name}.svg`,
         });
         chrome.browserAction.setTitle({
-          title: `Material Theme Devtools - ${name}`
-        })
+          title: `Material Theme Devtools - ${name}`,
+        });
       }
     });
   }
@@ -273,6 +273,13 @@ class App {
       this.currentTheme = this.getTheme(this._currentThemeName || 'Material Oceanic');
     });
 
+  }
+
+  /**
+   * Reset accent color
+   */
+  resetAccent() {
+    this.currentAccentColor = null;
   }
 
   /**

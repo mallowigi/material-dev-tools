@@ -36,7 +36,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('copy', () => {
-  return gulp.src(['*.*', '!release.zip', 'dist/*.min.css', 'public/**/*'], {allowEmpty: true})
+  return gulp.src(['*.*', '!release.zip', 'dist/*.css', 'public/**/*'], {allowEmpty: true})
     .pipe(copy('release'));
 });
 
