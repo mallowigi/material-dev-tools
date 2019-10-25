@@ -17,15 +17,16 @@
 
 <script>
     import {onMount} from 'svelte';
-    import {app} from '../store';
+    import {app} from '../$app';
     import {styleBuilder} from '../style-builder';
 
     function applyTheme() {
-        setTimeout(() => styleBuilder.applyTheme(
-                $app.currentTheme,
-                $app.currentFontFamily,
-                $app.currentFontSize
-        ), 100);
+        setTimeout(() => styleBuilder.applyTheme({
+            currentTheme: $app.currentTheme,
+            currentFontFamily: $app.currentFontFamily,
+            currentFontSize: $app.currentFontSize,
+            currentAccentColor: $app.currentAccentColor,
+        }), 100);
     }
 
     onMount(applyTheme);
@@ -34,10 +35,10 @@
 
 <label for="theme-options">Selected Theme:</label>
 <select class="theme-options"
-        id="theme-options"
-        on:change="{applyTheme}"
-        bind:value={$app.currentThemeName}>
-  {#each $app.themes as theme(theme.name)}
-      <option value={theme.name}>{theme.name}</option>
-  {/each}
+    id="theme-options"
+    on:change="{applyTheme}"
+    bind:value={$app.currentThemeName}>
+    {#each $app.themes as theme(theme.name)}
+        <option value={theme.name}>{theme.name}</option>
+    {/each}
 </select>

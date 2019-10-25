@@ -3,6 +3,7 @@ export const DEVTOOLS_THEME = 'devtools-theme';
 export const DEVTOOLS_FONT = 'devtools-font';
 export const DEVTOOLS_SIZE = 'devtools-size';
 export const DEVTOOLS_CURRENT = 'devtools-current';
+export const DEVTOOLS_ACCENT_COLOR = 'devtools-accent-color';
 
 const chromeStorage = chrome.storage && chrome.storage.sync;
 const fakeStorage = {

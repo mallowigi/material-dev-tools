@@ -1,5 +1,13 @@
 import {writable} from 'svelte/store';
-import {DEVTOOLS_FONT, DEVTOOLS_SIZE, DEVTOOLS_THEME, SETTINGS, DEVTOOLS_CURRENT, storage} from './storage';
+import {
+  DEVTOOLS_ACCENT_COLOR,
+  DEVTOOLS_CURRENT,
+  DEVTOOLS_FONT,
+  DEVTOOLS_SIZE,
+  DEVTOOLS_THEME,
+  SETTINGS,
+  storage,
+} from './storage';
 
 /**
  * @typedef Theme {object}
@@ -35,6 +43,13 @@ class App {
      * @private
      */
     this._currentFontFamily = null;
+    /**
+     * The custom accent color
+     *
+     * @type {?string}
+     * @private
+     */
+    this._currentAccentColor = null;
 
     /**
      * List of available themes
@@ -156,6 +171,24 @@ class App {
     this.saveFontFamily(value);
   }
 
+  /**
+   * Returns the current font family
+   * @returns {?string}
+   */
+  get currentAccentColor() {
+    return this._currentAccentColor;
+  }
+
+  /**
+   * Sets the current font family
+   * @param {string} value
+   */
+  set currentAccentColor(value) {
+    this._notify(this._currentAccentColor, value);
+    this._currentAccentColor = value;
+    this.saveAccentColor(value);
+  }
+
   loadThemes(themes) {
     this.themes = themes.map(theme => {
       return {
@@ -164,6 +197,7 @@ class App {
         description: theme.description,
         dark: theme.dark,
         colors: theme,
+        accent: theme.accent,
       };
     });
   }
@@ -219,6 +253,14 @@ class App {
   }
 
   /**
+   * Save current theme
+   * @param color {string}
+   */
+  saveAccentColor(color) {
+    storage.set({[DEVTOOLS_ACCENT_COLOR]: color}, () => {});
+  }
+
+  /**
    * Fetch settings
    */
   fetchSettings() {
@@ -227,6 +269,7 @@ class App {
       this._currentThemeName = object[DEVTOOLS_THEME] || this.defaults.themeName;
       this._currentFontFamily = object[DEVTOOLS_FONT] || this.defaults.fontFamily;
       this._currentFontSize = object[DEVTOOLS_SIZE] || this.defaults.fontSize;
+      this._currentAccentColor = object[DEVTOOLS_ACCENT_COLOR] || null;
       this.currentTheme = this.getTheme(this._currentThemeName || 'Material Oceanic');
     });
 

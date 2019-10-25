@@ -1,13 +1,15 @@
 <script>
-    import {app} from '../store';
+    import {app} from '../$app';
     import {styleBuilder} from '../style-builder';
 
     function applyTheme() {
         setTimeout(() => styleBuilder.applyTheme(
-                $app.currentTheme,
-                $app.currentFontFamily,
-                $app.currentFontSize
-        ), 100);
+            {
+                currentTheme: $app.currentTheme,
+                currentFontFamily: $app.currentFontFamily,
+                currentFontSize: $app.currentFontSize,
+                accentColor: $app.currentAccentColor,
+            }), 100);
     }
 </script>
 
@@ -31,6 +33,33 @@
     .font-family input {
         font-size: 0.875rem;
     }
+
+    .color-preview {
+        padding: 3px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .accent-color-input {
+        border: none;
+    }
+
+    input[type="color"] {
+        -webkit-appearance: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    input[type="color"]::-webkit-color-swatch {
+        border-color: var(--border);
+        border-radius: 50%;
+    }
 </style>
 
 <div class="font-setting font-family">
@@ -39,10 +68,10 @@
     </label>
 
     <input id="font-family-input"
-           type="text"
-           on:change="{applyTheme}"
-           bind:value="{$app.currentFontFamily}"
-           placeholder="e.g. Menlo"/>
+        type="text"
+        on:change="{applyTheme}"
+        bind:value="{$app.currentFontFamily}"
+        placeholder="e.g. Menlo" />
 </div>
 
 <div class="font-setting font-size">
@@ -52,8 +81,21 @@
     </label>
 
     <input id="font-size-input" type="range"
-           min="10"
-           max="22"
-           on:change="{applyTheme}"
-           bind:value="{$app.currentFontSize}"/>
+        min="10"
+        max="22"
+        on:change="{applyTheme}"
+        bind:value="{$app.currentFontSize}" />
+</div>
+
+<div class="font-setting accent-color">
+    <label for="accent-color">Accent Color:
+        <mark class="color-preview" style="background-color: {$app.currentAccentColor || $app.currentTheme.accent}">
+            {$app.currentAccentColor || 'Default'}
+        </mark>
+    </label>
+
+    <input type="color"
+        class="accent-color-input"
+        on:change={applyTheme}
+        bind:value={$app.currentAccentColor} />
 </div>

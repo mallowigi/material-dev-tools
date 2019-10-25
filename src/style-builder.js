@@ -9,8 +9,15 @@ export const styleBuilder = {
    * @param currentTheme
    * @param currentFontFamily
    * @param currentFontSize
+   * @param accentColor
    */
-  applyTheme(currentTheme, currentFontFamily = 'Menlo', currentFontSize = 14) {
+  applyTheme({
+               currentTheme,
+               currentFontFamily = 'Menlo',
+               currentFontSize = 14,
+               accentColor = null,
+             } = {}) {
+    console.log(accentColor);
     // Extract colors
     if (currentTheme && currentTheme.colors) {
       const {
@@ -77,6 +84,7 @@ export const styleBuilder = {
         parameters,
         fontFamily: currentFontFamily,
         fontSize: currentFontSize,
+        accentColor,
       });
 
       const styleElem = document.getElementById('inject-style');
@@ -123,6 +131,7 @@ export const styleBuilder = {
    * @param parameters
    * @param fontFamily
    * @param fontSize
+   * @param accentColor
    * @returns {string}
    */
   styles({
@@ -160,6 +169,7 @@ export const styleBuilder = {
            parameters,
            fontFamily,
            fontSize,
+           accentColor,
          }) {
     return `
   :root {
@@ -179,7 +189,7 @@ export const styleBuilder = {
   --highlight: ${highlight};
   --tree: ${tree};
   --notif: ${notif};
-  --accent1: ${accent};
+  --accent1: ${accentColor || accent};
   --excluded: ${excluded};
   --accent2: ${accent2};
   --accent3: ${accent3};

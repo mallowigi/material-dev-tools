@@ -54,7 +54,7 @@
 
 <script>
     import {fade} from 'svelte/transition';
-    import {app} from '../store';
+    import {app} from '../$app';
 
     function isColor(color) {
         return color && color.startsWith && color.startsWith('#');

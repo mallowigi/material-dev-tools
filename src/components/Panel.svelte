@@ -1,8 +1,8 @@
 <script>
     import {slide} from 'svelte/transition';
     import ThemeSwitcher from './ThemeSwitcher.svelte';
-    import Footer from './Footer.svelte'
-    import {app} from '../store';
+    import Footer from './Footer.svelte';
+    import {app} from '../$app';
 </script>
 
 <style>

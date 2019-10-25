@@ -3,12 +3,12 @@
     import ThemeSelector from './ThemeSelector.svelte';
     import ThemePreview from './ThemePreview.svelte';
     import FontSettings from './FontSettings.svelte';
-    import {app} from '../store';
+    import {app} from '../$app';
     import {fade, slide} from 'svelte/transition';
 </script>
 
 <div class="container">
-  {#if $app.currentTheme}
+    {#if $app.currentTheme}
       <header transition:fade class="title">
           <h4>Material Theme UI for DevTools</h4>
           <!-- The selected theme -->

@@ -2,7 +2,8 @@
     .preview {
         padding: .5em;
         color: var(--foreground);
-        overflow: auto;
+        overflow: hidden;
+        outline: none;
         line-height: calc(16 / var(--font-size, 14));
     }
 </style>
