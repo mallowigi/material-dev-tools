@@ -156,12 +156,8 @@
 }
 
 @-webkit-keyframes network-row-highlight-fadeout {
-    from {
-        background-color: rgba(255, 255, 120, 1);
-    }
-    to {
-        background-color: rgba(255, 255, 120, 0);
-    }
+    from {background-color: rgba(255, 255, 120, 1); }
+    to { background-color: rgba(255, 255, 120, 0); }
 }
 
 .network-header-subtitle {
@@ -214,7 +210,6 @@
 .network-log-grid.data-grid.small .icon.media {
     content: url(Images/resourcePlainIconSmall.png); /* FIXME: media icon */
 }
-
 .network-log-grid.data-grid .icon.texttrack {
     content: url(Images/resourcePlainIcon.png); /* FIXME: vtt icon */
 }
@@ -282,7 +277,7 @@
 }
 
 #network-container:not(.brief-mode) .data-container {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .network-log-grid.data-grid .resources-dividers {
@@ -362,56 +357,4 @@
 
 .network-frame-group-badge {
     margin-right: 4px;
-}
-
-/*Theme*/
-.network-summary-bar {
-    background-color: rgb(44, 44, 44);
-    border-top-color: rgb(61, 61, 61);
-}
-
-.network-log-grid.data-grid td {
-    border-left-color: rgb(51, 51, 51);
-}
-
-.network-waterfall-header, .network-log-grid.data-grid th {
-    border-bottom-color: rgb(61, 61, 61);
-    border-left-color: rgb(61, 61, 61);
-}
-
-.network-waterfall-header, .network-log-grid.data-grid .header-container {
-    background-color: var(--toolbar-bg-color);
-}
-
-.network-cell-subtitle {
-    color: rgb(127, 127, 127);
-}
-
-.network-error-row, .network-error-row .network-cell-subtitle {
-    color: rgb(255, 25, 25);
-}
-
-.network-log-grid.data-grid:focus tr.selected, .network-log-grid.data-grid:focus tr.selected .network-cell-subtitle, .network-log-grid.data-grid:focus tr.selected .network-dim-cell {
-    color: var(--selection-fg-color) !important;
-}
-
-.network-header-subtitle {
-    color: rgb(127, 127, 127);
-}
-
-.network-dim-cell {
-    color: rgb(127, 127, 127);
-}
-
-.network-frame-divider {
-    background-color: rgb(182, 134, 3);
-}
-
-.network-status-pane {
-    color: rgb(136, 136, 136);
-    background-color: rgb(36, 36, 36);
-}
-
-.network-waterfall-header:hover {
-    background-color: rgba(229, 229, 229, 0.1);
 }

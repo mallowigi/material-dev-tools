@@ -80,3 +80,12 @@
 .network-log-grid.data-grid .icon {
   box-shadow: none;
 }
+
+@-webkit-keyframes network-row-highlight-fadeout {
+  from {
+    background-color: $selBg;
+  }
+  to {
+    background-color: $background;
+  }
+}
