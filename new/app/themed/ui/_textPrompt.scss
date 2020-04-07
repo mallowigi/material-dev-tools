@@ -1,3 +1,13 @@
+.being-edited.editing,
+.editing {
+  background-color: $selBg;
+  color: $foreground;
+
+  * {
+    color: $foreground;
+  }
+}
+
 .text-prompt-editing {
   box-shadow: var(--drop-shadow);
   background-color: $background;

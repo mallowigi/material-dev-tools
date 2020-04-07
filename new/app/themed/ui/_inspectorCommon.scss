@@ -101,7 +101,7 @@ input {
 }
 
 *::selection {
-  background-color: $selBgAlpha;
+  background-color: $selBg;
 }
 
 
@@ -199,7 +199,7 @@ input {
 }
 
 ::selection {
-  background: $selBgAlpha;
+  background-color: $selBg;
   color: $selFg;
 }
 

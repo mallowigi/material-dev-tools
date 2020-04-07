@@ -1,7 +1,7 @@
 .lh-vars,
 .lh-vars.dark {
-  --text-font-family: #{$uiFontFamily}, Roboto, Helvetica, Arial, sans-serif;
-  --monospace-font-family: #{$fontFamily}, 'Roboto Mono', 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
+  --font-family-sans: #{$uiFontFamily}, Roboto, Helvetica, Arial, sans-serif;
+  --font-family-monospace: #{$fontFamily}, 'Roboto Mono', 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
   --body-background-color: #{$background};
   --body-text-color: #{$foreground};
   --subheader-color: #{$primary};

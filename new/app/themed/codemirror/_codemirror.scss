@@ -9,7 +9,7 @@
 .CodeMirror-line::-moz-selection,
 .CodeMirror-line > span::-moz-selection,
 .CodeMirror-line > span > span::-moz-selection {
-  background-color: $selBgAlpha;
+  background-color: $selBg;
 }
 
 .CodeMirror-scrollbar-filler,
@@ -17,9 +17,10 @@
   background-color: $background;
 }
 
-//.CodeMirror pre {
-//  background: $background;
-//}
+.CodeMirror pre {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
 
 .CodeMirror-cursor {
   border-left: 2px solid $accent1;
