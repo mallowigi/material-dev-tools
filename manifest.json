@@ -9,7 +9,6 @@
   "homepage_url": "https://www.material-theme.com",
   "options_page": "/public/index.html",
   "permissions": [
-    "declarativeContent",
     "storage"
   ],
   "browser_action": {
