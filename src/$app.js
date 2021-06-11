@@ -1,13 +1,5 @@
 import {writable} from 'svelte/store';
-import {
-  DEVTOOLS_ACCENT_COLOR,
-  DEVTOOLS_CURRENT,
-  DEVTOOLS_FONT,
-  DEVTOOLS_SIZE,
-  DEVTOOLS_THEME,
-  SETTINGS,
-  storage,
-} from './storage';
+import {DEVTOOLS_ACCENT_COLOR, DEVTOOLS_CURRENT, DEVTOOLS_FONT, DEVTOOLS_SIZE, DEVTOOLS_THEME, SETTINGS, storage} from './storage';
 
 /**
  * @typedef Theme {object}
@@ -110,7 +102,7 @@ class App {
 
       this.saveCurrent(value);
 
-      setTimeout(() => app.update($app => new App({...$app, _currentTheme: {...value}})), 100);
+      app.update($app => new App({...$app, _currentTheme: {...value}}));
     }
   }
 

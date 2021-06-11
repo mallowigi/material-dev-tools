@@ -53,7 +53,7 @@ export const styleBuilder = {
       style.innerHTML = this.styles({
         background,
         foreground,
-        primary: text,
+        text,
         selectBg,
         selectFg,
         button,
@@ -61,8 +61,8 @@ export const styleBuilder = {
         contrast,
         second,
         table,
-        border: border,
-        highlight: hl,
+        border,
+        hl,
         tree,
         notif,
         accent,
@@ -134,23 +134,19 @@ export const styleBuilder = {
   styles({
            background,
            foreground,
-           primary,
+           text,
            selectBg,
            selectFg,
            button,
            disabled,
            contrast,
            second,
-           darkerBg = contrast,
-           lighterBg = second,
            table,
            border,
-           highlight,
+           hl,
            tree,
            notif,
            accent,
-           accent2 = accent,
-           accent3 = accent,
            excluded,
            comments,
            vars,
@@ -172,7 +168,7 @@ export const styleBuilder = {
   :root {
   --bg: ${background};
   --fg: ${foreground};
-  --text: ${primary};
+  --text: ${text};
   --selBg: ${selectBg};
   --selFg: ${selectFg};
   --button: ${button};
@@ -181,13 +177,11 @@ export const styleBuilder = {
   --second: ${second};
   --active: ${table};
   --border: ${border};
-  --hl: ${highlight};
+  --hl: ${hl};
   --tree: ${tree};
   --notif: ${notif};
   --accent: ${accentColor || accent};
   --excluded: ${excluded};
-  --accent2: ${accent2};
-  --accent3: ${accent3};
 
   --tags: ${tags};
   --attributes: ${attributes};
