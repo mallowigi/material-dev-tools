@@ -4,120 +4,121 @@
 *,
 *::before,
 *::after {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    background: var(--background);
-    transition: all .5s;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--foreground);
+  background: var(--bg);
+  transition: all .5s;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fg);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 0.5em 0;
-    font-weight: 400;
-    line-height: 1.2;
+  margin: 0 0 0.5em 0;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 h1 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 a {
-    color: var(--link-color);
+  color: var(--links);
 }
 
 code {
-    font-family: var(--font-family, menlo, inconsolata, monospace);
-    font-size: var(--font-size, calc(1em - 2px));
+  font-family: var(--font-family, menlo, inconsolata, monospace);
+  font-size: var(--font-size, calc(1em - 2px));
 }
 
 @media (min-width: 400px) {
-    body {
-        font-size: 16px;
-    }
+  body {
+    font-size: 16px;
+  }
 }
 
 *::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
+
 /* Track */
 *::-webkit-scrollbar-track {
-    background: var(--background);
-    border-radius: 10px;
+  background: var(--bg);
+  border-radius: 10px;
 }
 
 /* Handle */
 *::-webkit-scrollbar-thumb {
-    background: var(--accent1);
-    border-radius: 10px;
+  background: var(--accent);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
-    background: var(--accent1);
+  background: var(--accent);
 }
 
 input {
-    background-color: var(--contrast);
-    color: var(--primary);
-    transition: all .5s;
+  background-color: var(--contrast);
+  color: var(--text);
+  transition: all .5s;
 }
 
 .comment {
-    color: var(--comment-color);
-    transition: color .5s;
+  color: var(--comments);
+  transition: color .5s;
 }
 
 .keyword {
-    color: var(--keyword-color);
-    transition: color .5s;
+  color: var(--keywords);
+  transition: color .5s;
 }
 
 .function {
-    color: var(--function-color);
-    transition: color .5s;
+  color: var(--functions);
+  transition: color .5s;
 }
 
 .punctuation {
-    color: var(--operator-color);
-    transition: color .5s;
+  color: var(--operators);
+  transition: color .5s;
 }
 
 .string,
 .attr-value {
-    color: var(--string-color);
-    transition: color .5s;
+  color: var(--strings);
+  transition: color .5s;
 }
 
 .parameter {
-    color: var(--parameters-color);
-    transition: color .5s;
+  color: var(--parameters);
+  transition: color .5s;
 }
 
 .number {
-    color: var(--number-color);
-    transition: color .5s;
+  color: var(--numbers);
+  transition: color .5s;
 }
 
 .attr-name {
-    color: var(--attribute-name-color);
-    transition: color .5s;
+  color: var(--attributes);
+  transition: color .5s;
 }
 
 .tag {
-    color: var(--tag-name-color);
-    transition: color .5s;
+  color: var(--tags);
+  transition: color .5s;
 }

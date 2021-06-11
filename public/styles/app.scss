@@ -21,7 +21,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 input[type='text'] {
-  border: 0.0625rem solid var(--highlight);
+  border: 0.0625rem solid var(--hl);
   background: var(--contrast);
 }
 
@@ -41,8 +41,8 @@ input[type='range'] {
 input[type='range']::-webkit-slider-thumb {
   width: 1rem;
   height: 1rem;
-  border: 0.1875rem solid var(--accent1);
-  background-color: var(--accent1);
+  border: 0.1875rem solid var(--accent);
+  background-color: var(--accent);
   box-shadow: 0 0 0 0.1875rem var(--border);
   border-radius: 100%;
   margin-top: -0.5rem;
@@ -53,7 +53,7 @@ input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
   height: 0.125rem;
   cursor: pointer;
-  background: var(--highlight);
+  background: var(--hl);
   border-radius: 0.25rem;
 }
 

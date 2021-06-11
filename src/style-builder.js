@@ -1,5 +1,3 @@
-import {attr} from 'svelte/internal';
-
 /**
  * Service to build the styles
  */
@@ -30,8 +28,8 @@ export const styleBuilder = {
               contrast,
               second,
               table,
-              misc1,
-              misc2,
+              border,
+              hl,
               tree,
               notif,
               accent,
@@ -63,8 +61,8 @@ export const styleBuilder = {
         contrast,
         second,
         table,
-        border: misc1,
-        highlight: misc2,
+        border: border,
+        highlight: hl,
         tree,
         notif,
         accent,
@@ -172,11 +170,9 @@ export const styleBuilder = {
          }) {
     return `
   :root {
-  --background: ${background};
-  --darkerBg: ${darkerBg};
-  --lighterBg: ${lighterBg};
-  --foreground: ${foreground};
-  --primary: ${primary};
+  --bg: ${background};
+  --fg: ${foreground};
+  --text: ${primary};
   --selBg: ${selectBg};
   --selFg: ${selectFg};
   --button: ${button};
@@ -185,27 +181,26 @@ export const styleBuilder = {
   --second: ${second};
   --active: ${table};
   --border: ${border};
-  --highlight: ${highlight};
+  --hl: ${highlight};
   --tree: ${tree};
   --notif: ${notif};
-  --accent1: ${accentColor || accent};
+  --accent: ${accentColor || accent};
   --excluded: ${excluded};
   --accent2: ${accent2};
   --accent3: ${accent3};
 
-  --tag-name-color: ${tags};
-  --attribute-name-color: ${attributes};
-  --comment-color: ${comments};
-  --keyword-color: ${keywords};
-  --error-color: ${errors};
-  --var-color: ${vars};
-  --operator-color: ${operators};
-  --function-color: ${functions};
-  --string-color: ${strings};
-  --number-color: ${numbers};
-  --link-color: ${links};
-  --text-color: ${foreground};
-  --parameters-color: ${parameters};
+  --tags: ${tags};
+  --attributes: ${attributes};
+  --comments: ${comments};
+  --keywords: ${keywords};
+  --errors: ${errors};
+  --vars: ${vars};
+  --operators: ${operators};
+  --functions: ${functions};
+  --strings: ${strings};
+  --numbers: ${numbers};
+  --links: ${links};
+  --parameters: ${parameters};
   
   --font-family: ${fontFamily}, Menlo, Consolas, "Fira Code", monospace;
   --font-size: ${fontSize || 10}px;

@@ -45,7 +45,7 @@
   .container h4 {
     font-weight: normal;
     font-style: normal;
-    color: var(--foreground);
+    color: var(--fg);
     text-rendering: optimizeLegibility;
     margin-top: 0.2rem;
     margin-bottom: 0.5rem;

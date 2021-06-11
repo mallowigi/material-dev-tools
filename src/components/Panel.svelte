@@ -13,7 +13,7 @@
     min-width: 24rem;
     height: 2.5rem;
     padding: 0.625rem 0;
-    background-color: var(--accent1);
+    background-color: var(--accent);
     color: var(--selFg);
     text-align: center;
     font-size: 0.875rem;

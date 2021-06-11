@@ -63,6 +63,7 @@ body.platform-linux .console-view-wrapper ::shadow .tabbed-pane-header-tab-title
     transform: none;
   }
 }
+
 @keyframes fadeInDownShort {
   0% {
     opacity: 0;
@@ -76,6 +77,7 @@ body.platform-linux .console-view-wrapper ::shadow .tabbed-pane-header-tab-title
     transform: none;
   }
 }
+
 @keyframes zoomIn {
   0% {
     opacity: 0;
@@ -89,6 +91,7 @@ body.platform-linux .console-view-wrapper ::shadow .tabbed-pane-header-tab-title
     transform: none;
   }
 }
+
 select,
 input[type=text],
 input[type=range],
@@ -101,6 +104,7 @@ input[type=range]::-webkit-slider-thumb {
   padding: 0.5rem;
   margin: 0;
 }
+
 select:focus,
 input[type=text]:focus,
 input[type=range]:focus,
@@ -110,7 +114,7 @@ input[type=range]::-webkit-slider-thumb:focus {
 }
 
 input[type=text] {
-  border: 0.0625rem solid var(--highlight);
+  border: 0.0625rem solid var(--hl);
   background: var(--contrast);
 }
 
@@ -120,6 +124,7 @@ input[type=range] {
   font: inherit;
   transition: all 0.15s ease;
 }
+
 input[type=range]:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.075);
 }
@@ -127,8 +132,8 @@ input[type=range]:focus::-webkit-slider-thumb {
 input[type=range]::-webkit-slider-thumb {
   width: 1rem;
   height: 1rem;
-  border: 0.1875rem solid var(--accent1);
-  background-color: var(--accent1);
+  border: 0.1875rem solid var(--accent);
+  background-color: var(--accent);
   box-shadow: 0 0 0 0.1875rem var(--border);
   border-radius: 100%;
   margin-top: -0.5rem;
@@ -139,7 +144,7 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 0.125rem;
   cursor: pointer;
-  background: var(--highlight);
+  background: var(--hl);
   border-radius: 0.25rem;
 }
 
@@ -164,11 +169,12 @@ input[type=range]::-webkit-slider-runnable-track {
     font-size: 6em;
   }
 }
+
 .container h1,
 .container h4 {
   font-weight: normal;
   font-style: normal;
-  color: var(--foreground);
+  color: var(--fg);
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -177,7 +183,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .container small {
   font-size: 60%;
-  color: var(--primary);
+  color: var(--text);
   line-height: 0;
   font-weight: 300;
   letter-spacing: 0.05em;

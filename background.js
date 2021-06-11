@@ -34,8 +34,8 @@
                 contrast,
                 second,
                 table,
-                misc1,
-                misc2,
+                border,
+                hl,
                 tree,
                 notif,
                 accent,
@@ -64,8 +64,8 @@
           contrast,
           second,
           table,
-          border: misc1,
-          highlight: misc2,
+          border: border,
+          highlight: hl,
           tree,
           notif,
           accent,
@@ -165,11 +165,11 @@
            }) {
       return `
   :root {
-  --background: ${background};
-  --darkerBg: ${darkerBg};
-  --lighterBg: ${lighterBg};
-  --foreground: ${foreground};
-  --primary: ${primary};
+  --bg: ${background};
+  --contrast: ${darkerBg};
+  --second: ${lighterBg};
+  --fg: ${foreground};
+  --text: ${primary};
   --selBg: ${selectBg};
   --selFg: ${selectFg};
   --button: ${button};
@@ -177,25 +177,25 @@
   --contrast: ${contrast};
   --second: ${second};
   --border: ${border};
-  --highlight: ${highlight};
+  --hl: ${highlight};
   --tree: ${tree};
   --notif: ${notif};
-  --accent1: ${accentColor || accent};
+  --accent: ${accentColor || accent};
   --excluded: ${excluded};
 
-  --tag-name-color: ${tags};
-  --attribute-name-color: ${attributes};
-  --comment-color: ${comments};
-  --keyword-color: ${keywords};
-  --error-color: ${errors};
-  --var-color: ${vars};
-  --operator-color: ${operators};
-  --function-color: ${functions};
-  --string-color: ${strings};
-  --number-color: ${numbers};
-  --link-color: ${links};
-  --text-color: ${foreground};
-  --parameters-color: ${parameters};
+  --tags: ${tags};
+  --attributes: ${attributes};
+  --comments: ${comments};
+  --keywords: ${keywords};
+  --errors: ${errors};
+  --vars: ${vars};
+  --operators: ${operators};
+  --functions: ${functions};
+  --strings: ${strings};
+  --numbers: ${numbers};
+  --links: ${links};
+  --fg: ${foreground};
+  --parameters: ${parameters};
   
   --font-family: ${fontFamily}, Menlo, Consolas, "Fira Code", monospace;
   --font-size: ${fontSize || 10}px;
@@ -224,12 +224,14 @@
         let css;
         if (current.dark) {
           css = await fetch('dist/dark.css').then(res => res.text());
-        } else {
+        }
+        else {
           css = await fetch('dist/light.css').then(res => res.text());
         }
         // Apply def style
         panels.applyStyleSheet(css);
-      } else {
+      }
+      else {
         css = await fetch('dist/default.css').then(res => res.text());
         panels.applyStyleSheet(css);
       }
