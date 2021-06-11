@@ -115,7 +115,7 @@
 </div>
 
 <div class="font-setting accent-color">
-    <label for="accent-color">Accent Color:
+    <label>Accent Color:
         <mark class="color-preview" style="background-color: {$app.currentAccentColor || $app.currentTheme.accent}">
             {$app.currentAccentColor || 'Default'}
         </mark>
@@ -127,6 +127,6 @@
                on:change={applyTheme}
                bind:value={$app.currentAccentColor} />
 
-        <button class="accent-reset-button" on:click={resetAccent}>Reset</button>
+        <button class="accent-reset-button" on:click={resetAccent}>Reset to default</button>
     </div>
 </div>
