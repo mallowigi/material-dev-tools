@@ -1,8 +1,8 @@
-$background: var(--background);
-$darkerBg: var(--darkerBg);
-$lighterBg: var(--lighterBg);
-$foreground: var(--foreground);
-$primary: var(--primary);
+$background: var(--bg);
+$darkerBg: var(--contrast);
+$lighterBg: var(--second);
+$foreground: var(--fg);
+$primary: var(--text);
 $selBg: var(--selBg);
 $selBgAlpha: var(--selBgAlpha);
 $selFg: var(--selFg);
@@ -13,28 +13,28 @@ $second: var(--second);
 $active: var(--active);
 $border: var(--border);
 $borderLight: var(--active);
-$highlight: var(--highlight);
+$highlight: var(--hl);
 $tree: var(--tree);
 $notif: var(--notif);
 $excluded: var(--excluded);
 $excludedAlpha: var(--excludedAlpha);
-$accent1: var(--accent1);
+$accent1: var(--accent);
 $accent1Alpha: var(--accentAlpha);
 $accent2: var(--accent2);
 $accent2Alpha: var(--accent2Alpha);
 $accent3: var(--accent3);
 
-$tag-name-color: var(--tag-name-color);
-$attribute-name-color: var(--attribute-name-color);
-$comment-color: var(--comment-color);
-$keyword-color: var(--keyword-color);
-$var-color: var(--var-color);
-$error-color: var(--error-color);
-$operator-color: var(--operator-color);
-$function-color: var(--function-color);
-$string-color: var(--string-color);
-$number-color: var(--number-color);
-$link-color: var(--link-color);
+$tag-name-color: var(--tags);
+$attribute-name-color: var(--attributes);
+$comment-color: var(--comments);
+$keyword-color: var(--keywords);
+$var-color: var(--vars);
+$error-color: var(--errors);
+$operator-color: var(--operators);
+$function-color: var(--functions);
+$string-color: var(--strings);
+$number-color: var(--numbers);
+$link-color: var(--links);
 $text-color: var(--text-color);
 $ignored-color: var(--ignored-color);
 $uiFontFamily: var(--ui-font-family, Roboto, sans-serif);
@@ -42,7 +42,7 @@ $fontFamily: var(--font-family, Menlo, monospace);
 $fontSize: var(--font-size, 11px);
 
 :host,
-html{
+html {
   --accent-color: #{$accent1} !important;
   --accent-fg-color: #{$accent1} !important;
   --accent-color-hover: #{$accent1Alpha} !important;
@@ -66,6 +66,6 @@ html{
   --editor-selection-inactive-bg-color: #{$selBgAlpha} !important;
   --message-border-color: #{$border} !important;
 
-  @import "app/index";
+  @import 'app/index';
 }
 

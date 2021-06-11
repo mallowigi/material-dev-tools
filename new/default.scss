@@ -1,11 +1,11 @@
 //@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
 :root {
-  --background: #263238;
+  --bg: #263238;
   --darkerBg: #212c31;
   --lighterBg: #32424a;
-  --foreground: #b0bec5;
-  --primary: #607d8b;
+  --fg: #b0bec5;
+  --text: #607d8b;
   --selBg: #546e7a;
   --selBgAlpha: #546e7a70;
   --selFg: #ffffff;
@@ -15,10 +15,10 @@
   --contrast: #1e272c;
   --active: #314549;
   --border: #2a373e;
-  --highlight: #425b67;
+  --hl: #425b67;
   --tree: #546e7a70;
   --notif: #1e272c;
-  --accent1: #009688;
+  --accent: #009688;
   --accentAlpha: #00968870;
   --excluded: #2e3c43;
   --excludedAlpha: #2e3c4340;
@@ -26,27 +26,27 @@
   --accent2Alpha: #80cbc480;
   --accent3: #ff4081;
 
-  --tag-name-color: #f07178;
-  --attribute-name-color: #ffcb6b;
-  --comment-color: #546e7a;
-  --keyword-color: #c792ea;
-  --error-color: #ff5370;
-  --var-color: #eeffff;
-  --operator-color: #89ddff;
-  --function-color: #82aaff;
-  --string-color: #c3e88d;
-  --number-color: #f78c6c;
-  --link-color: #80cbc4;
+  --tags: #f07178;
+  --attributes: #ffcb6b;
+  --comments: #546e7a;
+  --keywords: #c792ea;
+  --errors: #ff5370;
+  --vars: #eeffff;
+  --operators: #89ddff;
+  --functions: #82aaff;
+  --strings: #c3e88d;
+  --numbers: #f78c6c;
+  --links: #80cbc4;
   --text-color: #c3cee3;
   --ignored-color: #ab79c7;
-  --parameters-color: #f78c6c;
+  --parameters: #f78c6c;
 }
 
-$background: var(--background);
+$background: var(--bg);
 $darkerBg: var(--darkerBg);
 $lighterBg: var(--lighterBg);
-$foreground: var(--foreground);
-$primary: var(--primary);
+$foreground: var(--fg);
+$primary: var(--text);
 $selBg: var(--selBg);
 $selBgAlpha: var(--selBgAlpha);
 $selFg: var(--selFg);
@@ -57,28 +57,28 @@ $second: var(--second);
 $active: var(--active);
 $border: var(--border);
 $borderLight: var(--active);
-$highlight: var(--highlight);
+$highlight: var(--hl);
 $tree: var(--tree);
 $notif: var(--notif);
 $excluded: var(--excluded);
 $excludedAlpha: var(--excludedAlpha);
-$accent1: var(--accent1);
+$accent1: var(--accent);
 $accent1Alpha: var(--accentAlpha);
 $accent2: var(--accent2);
 $accent2Alpha: var(--accent2Alpha);
 $accent3: var(--accent3);
 
-$tag-name-color: var(--tag-name-color);
-$attribute-name-color: var(--attribute-name-color);
-$comment-color: var(--comment-color);
-$keyword-color: var(--keyword-color);
-$var-color: var(--var-color);
-$error-color: var(--error-color);
-$operator-color: var(--operator-color);
-$function-color: var(--function-color);
-$string-color: var(--string-color);
-$number-color: var(--number-color);
-$link-color: var(--link-color);
+$tag-name-color: var(--tags);
+$attribute-name-color: var(--attributes);
+$comment-color: var(--comments);
+$keyword-color: var(--keywords);
+$var-color: var(--vars);
+$error-color: var(--errors);
+$operator-color: var(--operators);
+$function-color: var(--functions);
+$string-color: var(--strings);
+$number-color: var(--numbers);
+$link-color: var(--links);
 $text-color: var(--text-color);
 $ignored-color: var(--ignored-color);
 $uiFontFamily: var(--ui-font-family, Roboto, sans-serif);
@@ -112,6 +112,6 @@ html,
   --editor-selection-inactive-bg-color: #{$selBgAlpha} !important;
   --message-border-color: #{$border} !important;
 
-  @import "app/index";
+  @import 'app/index';
 }
 
