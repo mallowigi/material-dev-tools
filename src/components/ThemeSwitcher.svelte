@@ -42,6 +42,66 @@
 </div>
 
 <style>
+
+  .loading {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 40rem;
+    min-width: 24rem;
+  }
+
+  @media (min-width: 480px) {
+    .loading .title {
+      padding: 0.625rem 0;
+    }
+
+    .loading h1 {
+      font-size: 6em;
+    }
+  }
+
+  .loading h1,
+  .loading h4 {
+    font-weight: normal;
+    font-style: normal;
+    color: var(--fg);
+    text-rendering: optimizeLegibility;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .loading small {
+    font-size: 60%;
+    color: var(--text);
+    line-height: 0;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  .loading h1 {
+    font-size: 4em;
+    font-weight: lighter;
+    line-height: 1;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.025em;
+    animation: fadeInDownShort 0.5s cubic-bezier(0.55, 0, 0.1, 1) both 0.5s;
+    pointer-events: none;
+  }
+
+  .loading h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 2em;
+  }
+
   .loading h1 {
     margin: 0;
   }

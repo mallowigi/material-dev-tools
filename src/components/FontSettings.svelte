@@ -122,12 +122,19 @@
     </label>
 
     <div class="accent-color-wrapper">
-        <input type="color"
-               id="color"
-               class="accent-color-input"
-               on:blur={applyTheme}
-               bind:value={$app.currentAccentColor} />
-
+        {#if $app.currentAccentColor == null}
+            <input type="color"
+                   id="color"
+                   class="accent-color-input"
+                   on:blur={applyTheme}
+                   bind:value={$app.currentTheme.accent} />
+        {:else}
+            <input type="color"
+                   id="color"
+                   class="accent-color-input"
+                   on:blur={applyTheme}
+                   bind:value={$app.currentAccentColor} />
+        {/if}
         <button class="accent-reset-button" on:click={resetAccent}>Reset to default</button>
     </div>
 </div>

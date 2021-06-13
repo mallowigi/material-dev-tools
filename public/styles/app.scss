@@ -7,6 +7,18 @@
   --fg: #b0bec5;
 }
 
+.loading {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 40rem;
+  min-width: 24rem;
+}
+
 select,
 input[type='text'],
 input[type='range'],
@@ -62,7 +74,7 @@ input[type='range']::-webkit-slider-runnable-track {
   border-radius: 0.25rem;
 }
 
-@for $item from 1 through 30 {
+@for $item from 1 through 40 {
   .anim.anim-delayed:nth-child(#{$item}) {
     animation-delay: #{$item/12}s !important;
   }

@@ -20,6 +20,7 @@
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
     "styles": "gulp debugStyles",
+    "app": "gulp app",
     "watchStyles": "gulp watchStyles",
     "release": "gulp release"
   },

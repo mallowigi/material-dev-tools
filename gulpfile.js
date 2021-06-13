@@ -9,34 +9,46 @@ const clean = require('gulp-clean');
 const paths = {
   styles: {
     src: 'new/**/*.scss',
+    public: 'public/styles/app.scss',
+    appCss: 'public/styles/',
     dest: 'dist',
   },
 };
 
+gulp.task('app', () => {
+  return gulp.src(paths.styles.public)
+    .pipe(sass())
+    .pipe(gulp.dest(paths.styles.appCss));
+});
+
 gulp.task('styles', () => {
-    return gulp.src(paths.styles.src)
-        .pipe(sass())
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.styles.dest));
+  return gulp.src(paths.styles.src)
+    .pipe(sass())
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(paths.styles.dest));
 });
 
 gulp.task('debugStyles', () => {
-    return gulp.src(paths.styles.src)
-        .pipe(sass())
-        .pipe(gulp.dest(paths.styles.dest));
+  return gulp.src(paths.styles.src)
+    .pipe(sass())
+    .pipe(gulp.dest(paths.styles.dest));
 });
 
 gulp.task('watchStyles', () => {
-    gulp.watch(paths.styles.src, gulp.parallel('styles'));
+  gulp.watch(paths.styles.src, gulp.parallel('styles'));
 });
 
 gulp.task('clean', () => {
-  return gulp.src(['release', 'dist'], {read: false, allowEmpty: true})
+  return gulp.src(['release',
+    'dist'], {read: false, allowEmpty: true})
     .pipe(clean());
 });
 
 gulp.task('copy', () => {
-  return gulp.src(['*.*', '!release.zip', 'dist/*.css', 'public/**/*'], {allowEmpty: true})
+  return gulp.src(['*.*',
+    '!release.zip',
+    'dist/*.css',
+    'public/**/*'], {allowEmpty: true})
     .pipe(copy('release'));
 });
 
