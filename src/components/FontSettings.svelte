@@ -3,13 +3,13 @@
   import {styleBuilder} from '../style-builder';
 
   function applyTheme() {
-    setTimeout(() => styleBuilder.applyTheme(
+    styleBuilder.applyTheme(
       {
         currentTheme: $app.currentTheme,
         currentFontFamily: $app.currentFontFamily,
         currentFontSize: $app.currentFontSize,
         accentColor: $app.currentAccentColor,
-      }), 100);
+      });
   }
 
   function resetAccent() {
@@ -96,7 +96,7 @@
 
     <input id="font-family-input"
            type="text"
-           on:change="{applyTheme}"
+           on:blur="{applyTheme}"
            bind:value="{$app.currentFontFamily}"
            placeholder="e.g. Menlo" />
 </div>
@@ -110,21 +110,22 @@
     <input id="font-size-input" type="range"
            min="10"
            max="22"
-           on:change="{applyTheme}"
+           on:blur="{applyTheme}"
            bind:value="{$app.currentFontSize}" />
 </div>
 
 <div class="font-setting accent-color">
-    <label>Accent Color:
-        <mark class="color-preview" style="background-color: {$app.currentAccentColor || $app.currentTheme.accent}">
+    <label for="color">Accent Color:
+        <mark class="color-preview" style="background-color: {$app.currentAccentColor || $app.currentTheme?.accent}">
             {$app.currentAccentColor || 'Default'}
         </mark>
     </label>
 
     <div class="accent-color-wrapper">
         <input type="color"
+               id="color"
                class="accent-color-input"
-               on:change={applyTheme}
+               on:blur={applyTheme}
                bind:value={$app.currentAccentColor} />
 
         <button class="accent-reset-button" on:click={resetAccent}>Reset to default</button>

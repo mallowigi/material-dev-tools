@@ -32,9 +32,11 @@
 </style>
 
 <script>
-  import {fly} from 'svelte/transition';
+  import {app} from '../$app';
 </script>
 
-<div class="loading" transition:fly="{{ y: 200, duration: 2000 }}">
-    <h4>Loading...</h4>
+<div class="loading">
+    {#if $app.loading}
+        <h4>Loading...</h4>
+    {/if}
 </div>

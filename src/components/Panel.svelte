@@ -1,8 +1,8 @@
 <script>
-  import {slide} from 'svelte/transition';
-  import ThemeSwitcher from './ThemeSwitcher.svelte';
   import Footer from './Footer.svelte';
   import {app} from '../$app';
+  import {blur} from 'svelte/transition';
+  import ThemeSwitcher from './ThemeSwitcher.svelte';
 </script>
 
 <style>
@@ -20,12 +20,24 @@
     transition: all 0.25s ease;
     animation: fadeInDown 0.75s cubic-bezier(.55, 0, .1, 1) both 1s;
   }
+
+  .container {
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: [content] 100% [footer] 32px;
+    grid-template-areas:
+        "content"
+        "footer";
+  }
 </style>
 
 {#if $app.notifying == true}
-    <div class="alert" transition:slide>Close and reopen DevTools to apply your changes!</div>
+    <div class="alert" transition:blur="{{amount: 10}}">Close and reopen DevTools to apply your changes!</div>
 {/if}
 
-<ThemeSwitcher></ThemeSwitcher>
+<div class="container">
+    <ThemeSwitcher></ThemeSwitcher>
 
-<Footer></Footer>
+    <Footer></Footer>
+</div>

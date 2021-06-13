@@ -1,4 +1,8 @@
 <style>
+  .theme-selector {
+    grid-area: content;
+  }
+
   .theme-options {
     border-radius: 0.125rem;
     border: 0.0625rem solid var(--hl);
@@ -33,12 +37,14 @@
 
 </script>
 
-<label for="theme-options">Selected Theme:</label>
-<select class="theme-options"
-        id="theme-options"
-        on:change="{applyTheme}"
-        bind:value={$app.currentThemeName}>
-    {#each $app.themes as theme(theme.name)}
-        <option value={theme.name}>{theme.name}</option>
-    {/each}
-</select>
+<div class="theme-selector">
+    <label for="theme-options">Selected Theme:</label>
+    <select class="theme-options"
+            id="theme-options"
+            on:blur="{applyTheme}"
+            bind:value={$app.currentThemeName}>
+        {#each $app.themes as theme(theme.name)}
+            <option value={theme.name}>{theme.name}</option>
+        {/each}
+    </select>
+</div>

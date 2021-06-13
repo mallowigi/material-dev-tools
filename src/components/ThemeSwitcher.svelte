@@ -7,7 +7,7 @@
   import {fade, slide} from 'svelte/transition';
 </script>
 
-<div class="container">
+<div class="loading">
     {#if $app.currentTheme}
         <header transition:fade class="title">
             <h4>Material Theme UI for DevTools</h4>
@@ -30,10 +30,8 @@
 
     <grid>
         <div class="first-col">
-            <!-- The Theme Selector -->
             <ThemeSelector></ThemeSelector>
 
-            <!-- The font settings -->
             <FontSettings></FontSettings>
         </div>
 
@@ -44,7 +42,7 @@
 </div>
 
 <style>
-  .container h1 {
+  .loading h1 {
     margin: 0;
   }
 
@@ -64,5 +62,6 @@
     border: var(--hl) 1px solid;
     border-radius: 20px;
     max-height: 300px;
+    overflow: auto;
   }
 </style>

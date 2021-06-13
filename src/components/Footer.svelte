@@ -1,8 +1,6 @@
 <style>
   .footer {
-    position: absolute;
-    bottom: 2.5%;
-    right: 2.5%;
+    grid-area: footer;
     text-align: right;
   }
 
