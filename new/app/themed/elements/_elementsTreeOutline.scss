@@ -1,3 +1,8 @@
+.CodeMirror-code span,
+.elements-disclosure span {
+  font-size: $fontSize;
+}
+
 .elements-disclosure li.selected:focus .selected-hint:before {
   color: $selBg !important;
 }
@@ -80,7 +85,7 @@
   @include indicator-right;
 }
 
-.elements-disclosure .elements-tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus="true"] .highlight > * {
+.elements-disclosure .elements-tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus='true'] .highlight > * {
   box-shadow: 0px 0px 0px 2px $tree;
 }
 

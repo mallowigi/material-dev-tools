@@ -2,13 +2,13 @@
   background: $second;
 }
 
-.styles-section[data-keyboard-focus="true"]:focus {
+.styles-section[data-keyboard-focus='true']:focus {
   background-color: $active;
   border: none;
   border-bottom: 2px solid $accent1;
 }
 
-.styles-section.read-only[data-keyboard-focus="true"]:focus {
+.styles-section.read-only[data-keyboard-focus='true']:focus {
   background-color: $active;
 }
 
@@ -34,6 +34,7 @@
 
 .styles-section-subtitle {
   color: $primary;
+  height: auto;
 }
 
 .sidebar-pane-open-brace,
@@ -92,6 +93,6 @@
   background-color: $button;
 }
 
-.styles-section[data-keyboard-focus="true"]:focus .sidebar-pane-section-toolbar {
+.styles-section[data-keyboard-focus='true']:focus .sidebar-pane-section-toolbar {
   background-color: $highlight;
 }
