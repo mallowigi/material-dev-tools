@@ -4,7 +4,7 @@
   import Panel from './components/Panel.svelte';
   import * as api from './api';
   import {app} from './$app';
-  import {fly} from 'svelte/transition';
+  import Loading from './components/Loading.svelte';
 
   onMount(async _ => {
     $app.loading = true;
@@ -29,43 +29,10 @@
   });
 </script>
 
-<style>
-  .container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 40rem;
-    min-width: 24rem;
-  }
-
-  .container h4 {
-    font-weight: normal;
-    font-style: normal;
-    color: var(--fg);
-    text-rendering: optimizeLegibility;
-    margin-top: 0.2rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-  }
-
-  .container h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1;
-    font-size: 2em;
-  }
-
-</style>
 
 <main style="width: 100vw;height: 100vh;position: relative;">
     {#if $app.loading}
-        <div class="container" transition:fly="{{ y: 200, duration: 2000 }}">
-            <h4>Loading...</h4>
-        </div>
+        <Loading></Loading>
     {:else}
         <Panel></Panel>
     {/if}

@@ -1,3 +1,8 @@
+:root {
+  --bg: #263238;
+  --fg: #b0bec5;
+}
+
 :host-context(.platform-mac) .monospace,
 :host-context(.platform-mac) .source-code,
 body.platform-mac .monospace,
@@ -148,7 +153,7 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 0.25rem;
 }
 
-.container {
+.loading {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -161,17 +166,17 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 @media (min-width: 480px) {
-  .container .title {
+  .loading .title {
     padding: 0.625rem 0;
   }
 
-  .container h1 {
+  .loading h1 {
     font-size: 6em;
   }
 }
 
-.container h1,
-.container h4 {
+.loading h1,
+.loading h4 {
   font-weight: normal;
   font-style: normal;
   color: var(--fg);
@@ -181,7 +186,7 @@ input[type=range]::-webkit-slider-runnable-track {
   line-height: 1.4;
 }
 
-.container small {
+.loading small {
   font-size: 60%;
   color: var(--text);
   line-height: 0;
@@ -189,7 +194,7 @@ input[type=range]::-webkit-slider-runnable-track {
   letter-spacing: 0.05em;
 }
 
-.container h1 {
+.loading h1 {
   font-size: 4em;
   font-weight: lighter;
   line-height: 1;
@@ -200,7 +205,7 @@ input[type=range]::-webkit-slider-runnable-track {
   pointer-events: none;
 }
 
-.container h4 {
+.loading h4 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1;

@@ -2,6 +2,11 @@
 @import 'base/typography';
 @import 'base/animations';
 
+:root {
+  --bg: #263238;
+  --fg: #b0bec5;
+}
+
 select,
 input[type='text'],
 input[type='range'],
