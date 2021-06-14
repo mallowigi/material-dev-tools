@@ -1,4 +1,21 @@
 .widget {
-  //background-color: $background;
+  background-color: $background;
   //box-shadow: var(--drop-shadow);
+}
+
+.dt-range-input::-webkit-slider-thumb, .-theme-preserve {
+  background: $accent1;
+}
+
+.dt-range-input::-webkit-slider-runnable-track {
+  background-color: $highlight;
+}
+
+.dt-range-input:focus::-webkit-slider-thumb,
+.-theme-preserve {
+  box-shadow: none;
+}
+
+.dt-range-input:disabled::-webkit-slider-thumb {
+  background-color: $disabled;
 }

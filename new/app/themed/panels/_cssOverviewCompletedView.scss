@@ -1,0 +1,66 @@
+.overview-completed-view .font-family:nth-child(2n+1) {
+  background: $bg;
+}
+
+.data .nodeId-column {
+  align-items: center;
+  display: flex;
+  height: 20px;
+}
+
+.block-title {
+  color: $fg;
+}
+
+.overview-completed-view .font-info button .details,
+.overview-completed-view .media-queries button .details,
+.overview-completed-view .unused-declarations button .details {
+  color: $accent2;
+}
+
+.overview-completed-view .font-info button:hover .details,
+.overview-completed-view .font-info button:focus .details,
+.overview-completed-view .media-queries button:hover .details,
+.overview-completed-view .media-queries button:focus .details,
+.overview-completed-view .unused-declarations button:hover .details,
+.overview-completed-view .unused-declarations button:focus .details {
+  color: $selFg;
+}
+
+.overview-completed-view .font-info button .bar,
+.overview-completed-view .media-queries button .bar,
+.overview-completed-view .unused-declarations button .bar {
+  background: $accent2;
+}
+
+.overview-completed-view .font-info button:hover .bar,
+.overview-completed-view .font-info button:focus .bar,
+.overview-completed-view .media-queries button:hover .bar,
+.overview-completed-view .media-queries button:focus .bar,
+.overview-completed-view .unused-declarations button:hover .bar,
+.overview-completed-view .unused-declarations button:focus .bar {
+  background-color: $accent2;
+  box-shadow: none;
+  color: $bg;
+}
+
+[is='ui-icon'].smallicon-checkmark-square {
+  background-color: $strings;
+}
+
+[is='ui-icon'].smallicon-no {
+  background-color: $errors;
+}
+
+.show-element {
+  background-color: $second;
+}
+
+.show-element:focus,
+.show-element:hover {
+  background-color: $hl;
+}
+
+.results-section {
+  border-color: $borderLight;
+}

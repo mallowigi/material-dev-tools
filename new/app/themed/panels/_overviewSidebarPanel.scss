@@ -1,0 +1,29 @@
+.overview-sidebar-panel {
+  overflow: auto;
+  display: flex;
+  background: $contrast;
+}
+
+.overview-sidebar-panel-item {
+  height: 30px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $fg;
+}
+
+.overview-sidebar-panel-item:hover,
+.overview-sidebar-panel-item:focus {
+  background: $highlight;
+  color: $selFg;
+}
+
+.overview-sidebar-panel-item.selected {
+  background: $selBg;
+  color: $selFg2;
+}
+
+.overview-toolbar {
+  border-bottom: 1px solid $borderLight;
+}

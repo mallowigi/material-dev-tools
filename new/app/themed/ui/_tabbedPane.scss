@@ -15,7 +15,6 @@
   text-shadow: $border 0px 1px 0px;
 }
 
-
 .tabbed-pane-header {
   border-bottom-color: $border;
   background-color: $contrast;
@@ -26,7 +25,7 @@
 }
 
 .tabbed-pane-header-tab:hover,
-.tabbed-pane-shadow .tabbed-pane-header-tab[data-keyboard-focus="true"]:focus {
+.tabbed-pane-shadow .tabbed-pane-header-tab[data-keyboard-focus='true']:focus {
   color: $selFg;
   background-color: $active;
 }
@@ -81,4 +80,8 @@
 
 .tabbed-pane-tab-slider {
   background-color: $accent1;
+}
+
+.tabbed-pane-header-tab-title {
+  text-overflow: clip;
 }

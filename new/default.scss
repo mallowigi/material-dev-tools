@@ -9,6 +9,7 @@
   --selBg: #546e7a;
   --selBgAlpha: #546e7a70;
   --selFg: #ffffff;
+  --selFg2: #111111;
   --button: #2e3c43;
   --second: #32424a;
   --disabled: #415967;
@@ -53,6 +54,7 @@ $text: var(--text);
 $selBg: var(--selBg);
 $selBgAlpha: var(--selBgAlpha);
 $selFg: var(--selFg);
+$selFg2: var(--selFg2);
 $button: var(--button);
 $disabled: var(--disabled);
 $contrast: var(--contrast);
@@ -115,9 +117,7 @@ html,
   --selection-inactive-bg-color: #{$lighterBg} !important;
   --tab-selected-fg-color: #{$selFg} !important;
   --tab-selected-bg-color: #{$highlight} !important;
-  --drop-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23),
-  0 2px 4px 2px rgba(0, 0, 0, 0.2),
-  0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
+  --drop-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23), 0 2px 4px 2px rgba(0, 0, 0, 0.2), 0 2px 6px 2px rgba(0, 0, 0, 0.1) !important;
   --divider-color: #{$border} !important;
   --divider-border: 1px solid #{$borderLight} !important;
   --focus-bg-color: #{$active} !important;
@@ -133,4 +133,3 @@ html,
 
   @import 'app/index';
 }
-

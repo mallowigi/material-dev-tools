@@ -1,13 +1,15 @@
-(function (w,
-           storage,
-           panels,
-           browserAction) {
+(function(w,
+          storage,
+          panels,
+          browserAction) {
   const SETTINGS = 'devtools-settings';
   const DEVTOOLS_THEME = 'devtools-theme';
   const DEVTOOLS_FONT = 'devtools-font';
   const DEVTOOLS_SIZE = 'devtools-size';
   const DEVTOOLS_CURRENT = 'devtools-current';
   const DEVTOOLS_ACCENT_COLOR = 'devtools-accent-color';
+
+  let css;
 
   const styleBuilder = {
     /**
@@ -50,7 +52,7 @@
                 operators,
                 attributes,
                 numbers,
-                parameters,
+                parameters
               } = currentTheme.colors;
 
         return this.styles({
@@ -84,7 +86,7 @@
           parameters,
           fontFamily: currentFontFamily,
           fontSize: currentFontSize,
-          accentColor: accentColor,
+          accentColor: accentColor
         });
       }
     },
@@ -163,7 +165,7 @@
              parameters,
              fontFamily,
              fontSize,
-             accentColor,
+             accentColor
            }) {
       return `
   :root {
@@ -203,7 +205,7 @@
   --font-size: ${fontSize || 10}px;
   }
 `;
-    },
+    }
   };
 
   async function themeSetup() {
@@ -220,10 +222,9 @@
         let style = styleBuilder.generateThemeVars(current, family, size, accent);
 
         panels.applyStyleSheet(style);
-        browserAction.setIcon({path: `./public/icons/${theme}.svg`}, () => {});
+        browserAction.setIcon({ path: `./public/icons/${theme}.svg` }, () => {});
 
         // Apply theme
-        let css;
         if (current.dark) {
           css = await fetch('dist/dark.css').then(res => res.text());
         }
@@ -241,10 +242,15 @@
   }
 
   themeSetup();
+  // setInterval(() => {
+  //   themeSetup();
+  // }, 10000);
+  //
+  panels.setOpenResourceHandler(() => panels.applyStyleSheet(css));
 })(
   window,
   chrome.storage.sync,
   chrome.devtools.panels,
-  chrome.browserAction,
+  chrome.browserAction
 );
 
