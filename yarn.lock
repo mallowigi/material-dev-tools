@@ -28,6 +28,11 @@
     "chalk" "^2.0.0"
     "js-tokens" "^4.0.0"
 
+"@github/mini-throttle@^2.1.0":
+  "integrity" "sha512-iEeR2OdVCPkdIPUszL8gJnKNu4MR8ANh7y0u/LPyaatYezgaWxUZEzhFntloqQq+HE6MZkFy+cl+xzCNuljOdw=="
+  "resolved" "https://registry.npmjs.org/@github/mini-throttle/-/mini-throttle-2.1.0.tgz"
+  "version" "2.1.0"
+
 "@polka/url@^0.5.0":
   "integrity" "sha512-oZLYFEAzUKyi3SKnXvj32ZCEGH6RDnao7COuCVhDydMS9NrCSVXhM79VaKyP5+Zc33m0QXEd2DN3UkU7OsHcfw=="
   "resolved" "https://registry.npmjs.org/@polka/url/-/url-0.5.0.tgz"
@@ -1549,7 +1554,7 @@
     "vinyl" "^2.1.0"
     "yazl" "^2.5.1"
 
-"gulp@^4.0.0", "gulp@4.0.2":
+"gulp@^4.0.0", "gulp@>=4", "gulp@4.0.2":
   "integrity" "sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA=="
   "resolved" "https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz"
   "version" "4.0.2"
@@ -2337,6 +2342,11 @@
   "integrity" "sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA=="
   "resolved" "https://registry.npmjs.org/mime/-/mime-2.4.4.tgz"
   "version" "2.4.4"
+
+"mini-throttle@^0.0.4":
+  "integrity" "sha1-42YyDzN1GA87MepUbW7ZMUdLvhs="
+  "resolved" "https://registry.npmjs.org/mini-throttle/-/mini-throttle-0.0.4.tgz"
+  "version" "0.0.4"
 
 "minimatch@^3.0.4", "minimatch@~3.0.2":
   "integrity" "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA=="
@@ -3250,7 +3260,7 @@
   dependencies:
     "estree-walker" "^0.6.1"
 
-"rollup@2.51.2":
+"rollup@^1.20.0||^2.0.0", "rollup@^2.0.0", "rollup@^2.38.3", "rollup@^2.42.0", "rollup@>=2.0.0", "rollup@2.51.2":
   "integrity" "sha512-ReV2eGEadA7hmXSzjxdDKs10neqH2QURf2RxJ6ayAlq93ugy6qIvXMmbc5cWMGCDh1h5T4thuWO1e2VNbMq8FA=="
   "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.51.2.tgz"
   "version" "2.51.2"
@@ -3684,7 +3694,7 @@
   dependencies:
     "has-flag" "^4.0.0"
 
-"svelte@3.38.2":
+"svelte@>=3.5.0", "svelte@3.38.2":
   "integrity" "sha512-q5Dq0/QHh4BLJyEVWGe7Cej5NWs040LWjMbicBGZ+3qpFWJ1YObRmUDZKbbovddLC9WW7THTj3kYbTOFmU9fbg=="
   "resolved" "https://registry.npmjs.org/svelte/-/svelte-3.38.2.tgz"
   "version" "3.38.2"

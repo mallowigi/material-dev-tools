@@ -6,6 +6,7 @@
   "author": "Elior Boukhobza <heliosaian@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@github/mini-throttle": "^2.1.0",
     "compression": "1.7.4",
     "js-yaml": "4.1.0",
     "polka": "0.5.2",

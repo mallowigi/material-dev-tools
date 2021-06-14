@@ -41,7 +41,7 @@
     <label for="theme-options">Selected Theme:</label>
     <select class="theme-options"
             id="theme-options"
-            on:blur="{applyTheme}"
+            on:change="{applyTheme}"
             bind:value={$app.currentThemeName}>
         {#each $app.themes as theme(theme.name)}
             <option value={theme.name}>{theme.name}</option>

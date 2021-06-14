@@ -1,6 +1,7 @@
 <script>
   import {app} from '../$app';
   import {styleBuilder} from '../style-builder';
+  import {debounce} from '@github/mini-throttle';
 
   function applyTheme() {
     styleBuilder.applyTheme(
@@ -11,6 +12,8 @@
         accentColor: $app.currentAccentColor,
       });
   }
+
+  const debouncedApply = debounce(applyTheme, 300);
 
   function resetAccent() {
     $app.resetAccent();
@@ -96,7 +99,7 @@
 
     <input id="font-family-input"
            type="text"
-           on:blur="{applyTheme}"
+           on:change="{debouncedApply}"
            bind:value="{$app.currentFontFamily}"
            placeholder="e.g. Menlo" />
 </div>
@@ -110,7 +113,7 @@
     <input id="font-size-input" type="range"
            min="10"
            max="22"
-           on:blur="{applyTheme}"
+           on:change="{debouncedApply}"
            bind:value="{$app.currentFontSize}" />
 </div>
 
@@ -126,13 +129,13 @@
             <input type="color"
                    id="color"
                    class="accent-color-input"
-                   on:blur={applyTheme}
-                   bind:value={$app.currentTheme.accent} />
+                   on:change={debouncedApply}
+                   bind:value={$app.currentAccentColor} />
         {:else}
             <input type="color"
                    id="color"
                    class="accent-color-input"
-                   on:blur={applyTheme}
+                   on:change={debouncedApply}
                    bind:value={$app.currentAccentColor} />
         {/if}
         <button class="accent-reset-button" on:click={resetAccent}>Reset to default</button>
