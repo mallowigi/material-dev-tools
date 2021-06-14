@@ -15,6 +15,10 @@
 .console-prompt-editor-container {
   background: $contrast;
   border-bottom: 2px solid $borderLight;
+
+  .widget {
+    background: $contrast;
+  }
 }
 
 .console-prompt-editor-container:focus {
