@@ -133,12 +133,14 @@
              primary,
              selectBg,
              selectFg,
+             selectFg2,
              button,
              disabled,
              contrast,
              second,
              darkerBg = contrast,
              lighterBg = second,
+             table,
              border,
              highlight,
              tree,
@@ -166,16 +168,16 @@
       return `
   :root {
   --bg: ${background};
-  --contrast: ${darkerBg};
-  --second: ${lighterBg};
   --fg: ${foreground};
   --text: ${primary};
   --selBg: ${selectBg};
   --selFg: ${selectFg};
+  --selFg2: ${selectFg2};
   --button: ${button};
   --disabled: ${disabled};
   --contrast: ${contrast};
   --second: ${second};
+  --active: ${table};
   --border: ${border};
   --hl: ${highlight};
   --tree: ${tree};
@@ -194,9 +196,9 @@
   --strings: ${strings};
   --numbers: ${numbers};
   --links: ${links};
-  --fg: ${foreground};
   --parameters: ${parameters};
   
+  --ui-font-family: Roboto, Helvetica Neue, Arial, sans-serif;
   --font-family: ${fontFamily}, Menlo, Consolas, "Fira Code", monospace;
   --font-size: ${fontSize || 10}px;
   }

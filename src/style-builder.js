@@ -137,6 +137,7 @@ export const styleBuilder = {
            text,
            selectBg,
            selectFg,
+           selectFg2,
            button,
            disabled,
            contrast,
@@ -171,6 +172,7 @@ export const styleBuilder = {
   --text: ${text};
   --selBg: ${selectBg};
   --selFg: ${selectFg};
+  --selFg2: ${selectFg2};
   --button: ${button};
   --disabled: ${disabled};
   --contrast: ${contrast};
@@ -196,6 +198,7 @@ export const styleBuilder = {
   --links: ${links};
   --parameters: ${parameters};
   
+  --ui-font-family: Roboto, Helvetica Neue, Arial, sans-serif;
   --font-family: ${fontFamily}, Menlo, Consolas, "Fira Code", monospace;
   --font-size: ${fontSize || 10}px;
   }

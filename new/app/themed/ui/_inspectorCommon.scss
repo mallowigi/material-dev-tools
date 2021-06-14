@@ -44,8 +44,6 @@ input {
   -webkit-box-shadow: none !important;
 }
 
-
-
 ::-webkit-scrollbar-thumb:hover {
   background: $accent1 !important;
 }
@@ -104,8 +102,7 @@ input {
   background-color: $selBg;
 }
 
-
-input[type="radio"]:focus {
+input[type='radio']:focus {
   outline-color: $accent1;
 }
 
@@ -122,14 +119,14 @@ input {
 }
 
 .harmony-input:not([type]):not(.error-input):not(:invalid):hover,
-.harmony-input[type="number"]:not(.error-input):not(:invalid):hover,
-.harmony-input[type="text"]:not(.error-input):not(:invalid):hover {
+.harmony-input[type='number']:not(.error-input):not(:invalid):hover,
+.harmony-input[type='text']:not(.error-input):not(:invalid):hover {
   box-shadow: none;
 }
 
 .harmony-input:not([type]):not(.error-input):not(:invalid):focus,
-.harmony-input[type="number"]:not(.error-input):not(:invalid):focus,
-.harmony-input[type="text"]:not(.error-input):not(:invalid):focus {
+.harmony-input[type='number']:not(.error-input):not(:invalid):focus,
+.harmony-input[type='text']:not(.error-input):not(:invalid):focus {
   box-shadow: none;
 }
 
@@ -138,11 +135,11 @@ input {
 }
 
 .harmony-input:not([type]).error-input,
-.harmony-input[type="number"].error-input,
-.harmony-input[type="text"].error-input,
+.harmony-input[type='number'].error-input,
+.harmony-input[type='text'].error-input,
 .harmony-input:not([type]):invalid,
-.harmony-input[type="number"]:invalid,
-.harmony-input[type="text"]:invalid {
+.harmony-input[type='number']:invalid,
+.harmony-input[type='text']:invalid {
   box-shadow: $error-color 0px 0px 0px 1px;
 }
 
@@ -203,6 +200,20 @@ input {
   color: $selFg;
 }
 
-button.link[data-keyboard-focus="true"]:focus {
+button.link[data-keyboard-focus='true']:focus {
   background-color: $highlight;
+}
+
+button {
+  background: $button;
+  color: $foreground;
+  font-family: $uiFontFamily;
+  cursor: pointer;
+  border-color: $button;
+  border-style: solid;
+
+  &:hover {
+    background: $hl;
+    color: $selFg;
+  }
 }
