@@ -25,7 +25,7 @@ circle.animation-keyframe-point {
 
 .animation-timeline-header::after {
   background-color: $background;
-  border-right-color: $border
+  border-right-color: $border;
 }
 
 .animation-timeline-buffer,
@@ -34,7 +34,7 @@ circle.animation-keyframe-point {
 }
 
 .animation-time-overlay {
-  background-color: white;
+  background-color: $bg;
 }
 
 .animation-scrubber {
@@ -42,7 +42,13 @@ circle.animation-keyframe-point {
 }
 
 .animation-scrubber-line {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5px, $accent1 5px, $accent1 6px, rgba(255, 255, 255, 0) 6px);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 5px,
+    $accent1 5px,
+    $accent1 6px,
+    rgba(255, 255, 255, 0) 6px
+  );
 }
 
 .animation-scrubber-head {

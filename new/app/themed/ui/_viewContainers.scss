@@ -8,6 +8,6 @@
   border-bottom-color: $border;
 }
 
-.expandable-view-title[data-keyboard-focus="true"]:focus {
+.expandable-view-title[data-keyboard-focus='true']:focus {
   background-color: $highlight;
 }

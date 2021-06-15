@@ -6,7 +6,7 @@
   background-color: $tree;
 }
 
-.perfmon-indicator[data-keyboard-focus="true"]:focus {
+.perfmon-indicator[data-keyboard-focus='true']:focus {
   background-color: $active;
 }
 

@@ -49,10 +49,10 @@
   border-bottom-color: $border;
 }
 
-.service-worker-filter[data-keyboard-focus="true"]:focus {
+.service-worker-filter[data-keyboard-focus='true']:focus {
   background-color: $contrast;
 }
 
 .service-worker-filter-label::before {
-  background-color: $foreground
+  background-color: $foreground;
 }

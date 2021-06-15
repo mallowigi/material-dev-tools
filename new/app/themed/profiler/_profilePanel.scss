@@ -69,7 +69,7 @@
   border-left-color: $tree;
   background-color: $highlight;
 
-  @include indicator-right
+  @include indicator-right;
 }
 
 .profile-isolate-item-trend {
@@ -83,4 +83,3 @@
 .profile-canvas-decoration {
   color: $error-color;
 }
-

@@ -21,7 +21,7 @@
   background: $highlight;
   color: $selFg;
   border: none;
-  box-shadow: $border 0px 1px 0px;
+  box-shadow: $border 0 1px 0;
 }
 
 .settings-experiments-warning-subsection-warning {
@@ -44,6 +44,6 @@
   color: $primary;
 }
 
-.settings-experiment-hidden [is="dt-checkbox"] {
+.settings-experiment-hidden [is='dt-checkbox'] {
   background-color: $background;
 }

@@ -108,7 +108,8 @@
   color: $function-color;
 }
 
-.cm-css-property, .webkit-css-property {
+.cm-css-property,
+.webkit-css-property {
   color: $attribute-name-color;
 }
 
@@ -149,7 +150,8 @@
   color: $operator-color;
 }
 
-.webkit-html-tag-name, .webkit-html-close-tag-name {
+.webkit-html-tag-name,
+.webkit-html-close-tag-name {
   color: $tag-name-color;
 }
 
@@ -169,17 +171,16 @@
   color: $comment-color;
 }
 
-
 .webkit-css-important {
-  color: $number-color ;
+  color: $number-color;
 }
 
 .webkit-css-keyword {
-  color: $keyword-color ;
+  color: $keyword-color;
 }
 
 .webkit-css-number {
-  color: $number-color ;
+  color: $number-color;
 }
 
 .webkit-css-property {
@@ -193,7 +194,6 @@
 .webkit-css-url {
   color: $link-color;
 }
-
 
 .webkit-html-pseudo-element {
   color: $var-color;
@@ -231,11 +231,11 @@ x-link.devtools-link {
 
 /* Default CodeMirror Theme */
 .cm-negative {
-  color: #dd4444;
+  color: #d44;
 }
 
 .cm-positive {
-  color: #229922;
+  color: #292;
 }
 
 .cm-link {
@@ -278,7 +278,8 @@ x-link.devtools-link {
   color: $function-color;
 }
 
-.cm-variable-3, .cm-type {
+.cm-variable-3,
+.cm-type {
   color: $var-color;
 }
 

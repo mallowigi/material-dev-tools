@@ -6,15 +6,14 @@ button.soft-dropdown {
     background: $background;
     border-color: $borderLight;
   }
-
 }
 
 button.soft-dropdown[disabled] {
   color: $disabled;
 }
 
-button.soft-dropdown[data-keyboard-focus="true"]:focus::before {
+button.soft-dropdown[data-keyboard-focus='true']:focus::before {
   background-color: $active;
   color: $accent1;
-  opacity: .5;
+  opacity: 0.5;
 }

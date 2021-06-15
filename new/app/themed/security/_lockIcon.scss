@@ -1,4 +1,5 @@
-.lock-icon, .security-property {
+.lock-icon,
+.security-property {
   background-color: $second;
 }
 
@@ -6,7 +7,8 @@
   background-color: $string-color;
 }
 
-.lock-icon-unknown, .lock-icon-neutral {
+.lock-icon-unknown,
+.lock-icon-neutral {
   background-color: $foreground;
 }
 
@@ -38,7 +40,8 @@
   color: $string-color;
 }
 
-.url-scheme-neutral, .url-scheme-insecure {
+.url-scheme-neutral,
+.url-scheme-insecure {
   color: $error-color;
 }
 

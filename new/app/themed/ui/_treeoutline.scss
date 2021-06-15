@@ -63,7 +63,7 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 .tree-outline li.parent.expanded::before {
   background-color: $foreground;
   -webkit-mask-image: url(Images/smallIcons.svg);
-  -webkit-mask-position: 50px 0px;
+  -webkit-mask-position: 50px 0;
   -webkit-mask-size: 130px;
 
   &:hover {
@@ -74,7 +74,8 @@ ol.tree-outline:not(.hide-selection-when-blurred) li.selected:focus {
 .tree-outline > .parent {
   color: $primary;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $selFg;
   }
 }

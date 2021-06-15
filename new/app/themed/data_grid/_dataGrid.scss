@@ -2,15 +2,14 @@
   border: none;
 }
 
-.striped-data-grid .revealed.data-grid-data-grid-node:nth-child(2n+1),
+.striped-data-grid .revealed.data-grid-data-grid-node:nth-child(2n + 1),
 .striped-data-grid-starts-with-odd .revealed.data-grid-data-grid-node:nth-child(2n) {
   background-color: $contrast;
 }
 
-.data-grid td, .data-grid th {
+.data-grid td,
+.data-grid th {
   border-left-color: $borderLight;
-  //height: auto;
-  //padding: 8px 4px;
 }
 
 .data-grid th {
@@ -44,7 +43,7 @@
   }
 }
 
-.data-grid-data-grid-node:nth-child(2n+1) {
+.data-grid-data-grid-node:nth-child(2n + 1) {
   background: $contrast !important;
 
   td {
@@ -57,14 +56,13 @@
   color: $selFg;
 }
 
-
 .data-grid table.data tr.revealed.selected {
   background-color: $active;
 }
 
 .data-grid:focus table.data tr.selected {
   background-color: $selBg;
-  color:$selFg;
+  color: $selFg;
 }
 
 .data-grid:focus tr.selected .devtools-link {

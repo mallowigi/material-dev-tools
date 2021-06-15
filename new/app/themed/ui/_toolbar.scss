@@ -24,7 +24,8 @@
   color: $link-color;
 }
 
-.toolbar-toggled-gray:not(.toolbar-render-as-links) .toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.largeicon-menu):hover {
+.toolbar-toggled-gray:not(.toolbar-render-as-links)
+  .toolbar-button:not(.toolbar-has-glyph):not(.toolbar-has-dropdown):not(.largeicon-menu):hover {
   background-color: $contrast;
   border-color: $contrast;
 }
@@ -167,7 +168,7 @@ input[is='history-input']:not(:placeholder-shown) {
 
   &:hover {
     background-image: radial-gradient(circle at center, $highlight 60%, rgba(0, 0, 0, 0) 0) !important;
-    opacity: .8;
+    opacity: 0.8;
     color: $selFg !important;
 
     > * {

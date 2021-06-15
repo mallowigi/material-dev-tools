@@ -26,7 +26,7 @@ input {
   width: 10px !important;
   height: 10px !important;
   opacity: 0 !important;
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
 
 *:hover ::-webkit-scrollbar {
@@ -56,27 +56,27 @@ input {
   background-color: $background !important;
 }
 
-[is=ui-icon].icon-mask {
+[is='ui-icon'].icon-mask {
   background-color: $primary;
 }
 
-:host-context(.force-white-icons) [is=ui-icon].spritesheet-smallicons,
-.force-white-icons [is=ui-icon].spritesheet-smallicons,
-[is=ui-icon].force-white-icons.spritesheet-smallicons,
+:host-context(.force-white-icons) [is='ui-icon'].spritesheet-smallicons,
+.force-white-icons [is='ui-icon'].spritesheet-smallicons,
+[is='ui-icon'].force-white-icons.spritesheet-smallicons,
 -theme-preserve {
   background: $selFg !important;
 }
 
-:host-context(.force-white-icons) [is=ui-icon].spritesheet-largeicons,
-.force-white-icons [is=ui-icon].spritesheet-largeicons,
-[is=ui-icon].force-white-icons.spritesheet-largeicons,
+:host-context(.force-white-icons) [is='ui-icon'].spritesheet-largeicons,
+.force-white-icons [is='ui-icon'].spritesheet-largeicons,
+[is='ui-icon'].force-white-icons.spritesheet-largeicons,
 -theme-preserve {
   background: $selFg !important;
 }
 
-:host-context(.force-white-icons) [is=ui-icon].spritesheet-mediumicon,
-.force-white-icons [is=ui-icon].spritesheet-mediumicons,
-[is=ui-icon].force-white-icons.spritesheet-mediumicons,
+:host-context(.force-white-icons) [is='ui-icon'].spritesheet-mediumicon,
+.force-white-icons [is='ui-icon'].spritesheet-mediumicons,
+[is='ui-icon'].force-white-icons.spritesheet-mediumicons,
 -theme-preserve {
   background: $selFg !important;
 }
@@ -140,7 +140,7 @@ input {
 .harmony-input:not([type]):invalid,
 .harmony-input[type='number']:invalid,
 .harmony-input[type='text']:invalid {
-  box-shadow: $error-color 0px 0px 0px 1px;
+  box-shadow: $error-color 0 0 0 1px;
 }
 
 .chrome-select {
@@ -155,7 +155,7 @@ input {
 .chrome-select:enabled:focus,
 .chrome-select:enabled:hover {
   background-color: $lighterBg;
-  box-shadow: $highlight 0px 1px 2px;
+  box-shadow: $highlight 0 1px 2px;
 }
 
 .chrome-select:enabled:active {
@@ -163,7 +163,7 @@ input {
 }
 
 .chrome-select:enabled:focus {
-  box-shadow: $highlight 0px 1px 2px, $highlight 0px 0px 0px 2px;
+  box-shadow: $highlight 0 1px 2px, $highlight 0 0 0 2px;
 }
 
 .chrome-select optgroup,

@@ -18,24 +18,27 @@
 }
 
 .text-button:not(:disabled):focus {
-  box-shadow: $highlight 0px 1px 2px, $highlight 0px 0px 0px 2px;
+  box-shadow: $highlight 0 1px 2px, $highlight 0 0 0 2px;
 }
 
 .text-button.primary-button {
   background: $accent1;
-  color: $foreground;
-}
-
-[type="button"].text-button.primary-button:not(:disabled):focus,
-[type="button"].text-button.primary-button:not(:disabled):hover,
-[type="button"].text-button.primary-button:not(:disabled):active {
-  background-color: $accent1;
+  filter: opacity(0.8);
   color: $selFg;
 }
 
-[type="button"].text-button:not(.primary-button):not(:disabled):focus,
-[type="button"].text-button:not(.primary-button):not(:disabled):hover,
-[type="button"].text-button:not(.primary-button):not(:disabled):active {
+[type='button'].text-button.primary-button:not(:disabled):focus,
+[type='button'].text-button.primary-button:not(:disabled):hover,
+[type='button'].text-button.primary-button:not(:disabled):active {
+  background-color: $accent1;
+  filter: opacity(1);
+  color: $selFg;
+}
+
+[type='button'].text-button:not(.primary-button):not(:disabled):focus,
+[type='button'].text-button:not(.primary-button):not(:disabled):hover,
+[type='button'].text-button:not(.primary-button):not(:disabled):active {
   background-color: $highlight;
+  filter: opacity(1);
   color: $selFg;
 }

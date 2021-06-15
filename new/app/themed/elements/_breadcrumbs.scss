@@ -1,4 +1,5 @@
-.crumb.selected, .crumb:hover {
+.crumb.selected,
+.crumb:hover {
   background: $highlight;
 }
 
@@ -15,13 +16,13 @@
   border-width: 0.15em 0.15em 0 0;
   content: '';
   display: inline-block;
-  height: 0.30em;
+  height: 0.3em;
   left: 0.25em;
   position: relative;
   top: 0.75em;
   transform: rotate(45deg);
   vertical-align: top;
-  width: 0.30em;
+  width: 0.3em;
 
   &:last-child {
     border: none;

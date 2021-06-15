@@ -5,6 +5,7 @@ div:not(.tabbed-pane-close-button) {
     border-radius: 50%;
     box-sizing: content-box;
     border: 2px solid var(--button);
-    background: -webkit-image-set(url(Images/smallIcons.svg) 1x, url(Images/smallIcons.svg) 2x) -19px 70px, var(--button);
+    background: -webkit-image-set(url(Images/smallIcons.svg) 1x, url(Images/smallIcons.svg) 2x) -19px 70px,
+      var(--button);
   }
 }

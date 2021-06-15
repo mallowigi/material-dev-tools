@@ -85,8 +85,12 @@
   @include indicator-right;
 }
 
-.elements-disclosure .elements-tree-outline.hide-selection-when-blurred .selected:focus[data-keyboard-focus='true'] .highlight > * {
-  box-shadow: 0px 0px 0px 2px $tree;
+.elements-disclosure
+  .elements-tree-outline.hide-selection-when-blurred
+  .selected:focus[data-keyboard-focus='true']
+  .highlight
+  > * {
+  box-shadow: 0 0 0 2px $tree;
 }
 
 .elements-disclosure .elements-tree-outline:not(.hide-selection-when-blurred) li.selected:focus .selection {
@@ -125,7 +129,8 @@
   background-color: $background;
 }
 
-.editing, .editing * {
+.editing,
+.editing * {
   color: $foreground;
 }
 

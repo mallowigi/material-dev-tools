@@ -4,6 +4,7 @@
 
 .filtered-list-widget-input {
   border-bottom: 2px solid $button;
+
   &:focus {
     border-bottom-color: $accent1;
   }
@@ -22,7 +23,6 @@
 }
 
 .filtered-list-widget {
-
   .filtered-list-widget-item {
     color: $foreground;
   }
@@ -44,7 +44,7 @@
   }
 
   .tag {
-    color: $tag-name-color;
+    color: $selFg;
   }
 
   .filtered-list-widget-item .tag .highlight {

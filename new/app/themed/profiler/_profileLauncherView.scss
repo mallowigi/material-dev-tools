@@ -11,7 +11,7 @@
 }
 
 body.inactive .profile-launcher-view-content button.running:not(.toolbar-item) {
-  color: rgb(125, 35, 35);
+  color: $errors;
 }
 
 .profile-launcher-target-list {

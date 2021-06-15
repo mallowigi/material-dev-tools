@@ -27,7 +27,7 @@
 
 .shadow-editor-button-left:hover,
 .shadow-editor-button-right:hover {
-  box-shadow: $active 0px 1px 1px;
+  box-shadow: $active 0 1px 1px;
 }
 
 .shadow-editor-button-left:focus,
@@ -46,6 +46,6 @@
 }
 
 .shadow-editor-button-left.enabled:focus,
-.shadow-editor-button-right.enabled:focus  {
+.shadow-editor-button-right.enabled:focus {
   background-color: $accent1;
 }

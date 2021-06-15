@@ -4,12 +4,12 @@
   border-bottom-color: $border;
   border-left-color: $border;
   background-color: white;
-  box-shadow: $borderLight 0px 0px 2px 0px;
+  box-shadow: $borderLight 0 0 2px 0px;
 }
 
 .spectrum-slider {
   background-color: $accent1;
-  box-shadow: $borderLight 0px 1px 4px 0px;
+  box-shadow: $borderLight 0 1px 4px 0px;
 }
 
 .spectrum-contrast-details {
@@ -17,7 +17,7 @@
   color: $foreground;
 }
 
-.spectrum-contrast-details .toolbar-state-on [is="ui-icon"] {
+.spectrum-contrast-details .toolbar-state-on [is='ui-icon'] {
   background-color: $accent2;
 }
 
@@ -25,16 +25,16 @@
   color: $foreground;
 }
 
-.contrast-details-value [is="ui-icon"] {
+.contrast-details-value [is='ui-icon'] {
   background-color: $foreground;
 }
 
-[is="ui-icon"].smallicon-no {
+[is='ui-icon'].smallicon-no {
   background-color: $error-color;
 }
 
-[is="ui-icon"].smallicon-checkmark-square,
-[is="ui-icon"].smallicon-checkmark-behind {
+[is='ui-icon'].smallicon-checkmark-square,
+[is='ui-icon'].smallicon-checkmark-behind {
   background-color: $string-color;
 }
 
@@ -58,7 +58,7 @@
   background-color: $primary;
 }
 
-[is="ui-icon"].icon-mask.copy-color-icon {
+[is='ui-icon'].icon-mask.copy-color-icon {
   background-color: $primary;
 }
 
@@ -84,7 +84,8 @@
 
 .palette-color-shades {
   background-color: $background;
-  box-shadow: rgba(230, 230, 230, 0.14) 0px 4px 5px 0px, rgba(230, 230, 230, 0.12) 0px 1px 10px 0px, rgba(230, 230, 230, 0.4) 0px 2px 4px -1px;
+  box-shadow: rgba(230, 230, 230, 0.14) 0 4px 5px 0, rgba(230, 230, 230, 0.12) 0 1px 10px 0,
+    rgba(230, 230, 230, 0.4) 0 2px 4px -1px;
 }
 
 .palette-panel {

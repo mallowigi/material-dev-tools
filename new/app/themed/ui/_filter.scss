@@ -3,7 +3,7 @@
 }
 
 .filter-bitset-filter span {
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
 }
 
 .filter-bitset-filter-divider {
@@ -14,7 +14,7 @@
 .filter-bitset-filter span:hover,
 .filter-bitset-filter span:active {
   color: $selFg;
-  text-shadow: var(--drop-shadow) 0px 1px 0px;
+  text-shadow: var(--drop-shadow) 0 1px 0;
 }
 
 .filter-bitset-filter span:hover {
@@ -34,7 +34,6 @@
   border: none;
   border-bottom: 2px solid $border;
   box-shadow: none;
-
 }
 
 .filter-input-field:hover {

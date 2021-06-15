@@ -3,7 +3,8 @@
   //box-shadow: var(--drop-shadow);
 }
 
-.dt-range-input::-webkit-slider-thumb, .-theme-preserve {
+.dt-range-input::-webkit-slider-thumb,
+.-theme-preserve {
   background: $accent1;
 }
 

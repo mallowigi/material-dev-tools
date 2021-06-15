@@ -1,8 +1,8 @@
-input[type="checkbox"]:not(.dt-checkbox-themed) {
+input[type='checkbox']:not(.dt-checkbox-themed) {
   filter: none !important;
 }
 
-input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
+input[type='checkbox']:not(.dt-checkbox-themed):not(.enabled-button) {
   position: absolute !important; // take it out of document flow
   opacity: 0 !important; // hide it
 
@@ -79,20 +79,16 @@ input[type="checkbox"]:not(.dt-checkbox-themed):not(.enabled-button) {
     background: $background !important;
     width: 2px !important;
     height: 2px !important;
-    box-shadow: 2px 0 0 $background,
-    4px 0 0 $background,
-    4px -2px 0 $background,
-    4px -4px 0 $background,
-    4px -6px 0 $background,
-    4px -8px 0 $background !important;
+    box-shadow: 2px 0 0 $background, 4px 0 0 $background, 4px -2px 0 $background, 4px -4px 0 $background,
+      4px -6px 0 $background, 4px -8px 0 $background !important;
     transform: rotate(45deg) !important;
   }
 }
 
-
 .dt-checkbox-text,
 .devices-list-title {
   overflow: visible;
+
   &::before {
     margin-top: -2px;
   }

@@ -65,25 +65,34 @@
     background-color: $accent1Alpha;
   }
   to {
-    background-color: $background
+    background-color: $background;
   }
 }
 
 @-webkit-keyframes fadeout-execution-line {
-  from {background-color: $selBg; }
-  to { background-color: $second; }
-}
-@-webkit-keyframes fadeout-execution-line-dark {
-  from {background-color: $selBg; }
-  to { background-color: $second; }
+  from {
+    background-color: $selBg;
+  }
+  to {
+    background-color: $second;
+  }
 }
 
+@-webkit-keyframes fadeout-execution-line-dark {
+  from {
+    background-color: $selBg;
+  }
+  to {
+    background-color: $second;
+  }
+}
 
 .cm-readonly-highlight {
   background-color: $second;
 }
 
-.cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber, -theme-preserve {
+.cm-breakpoint .CodeMirror-gutter-wrapper .CodeMirror-linenumber,
+-theme-preserve {
   color: $selFg;
 }
 
@@ -242,6 +251,6 @@ div.CodeMirror:focus-within span.CodeMirror-nonmatchingbracket {
 }
 
 .selection-fill {
-  opacity: .5;
+  opacity: 0.5;
   border-left: 2px solid $accent1;
 }

@@ -1,6 +1,6 @@
 /* Radios
  ========================================================================== */
-input[type="radio"] {
+input[type='radio'] {
   //opacity: 0 !important; // hide it
   margin-right: 10px !important;
   filter: none !important;
@@ -46,7 +46,7 @@ input[type="radio"] {
   // Disabled box.
   &:disabled:before {
     box-shadow: none !important;
-    background: #dddddd !important;
+    background: #ddd !important;
   }
 
   // Checkmark. Could be replaced with an image
@@ -64,8 +64,8 @@ input[type="radio"] {
   &:checked:after {
     content: '' !important;
     position: absolute !important;
-    left: 0px !important;
-    top: 0px !important;
+    left: 0 !important;
+    top: 0 !important;
     background: $accent1 !important;
     width: 14px !important;
     height: 14px !important;
@@ -87,9 +87,9 @@ input[type="radio"] {
 }
 
 ::slotted(input.dt-radio-button:checked) {
-  background-image: url("Images/radioDot.png"), linear-gradient($background, $background);
+  background-image: url('Images/radioDot.png'), linear-gradient($background, $background);
 }
 
 ::slotted(input.dt-radio-button:checked:active) {
-  background-image: url("Images/radioDot.png"), linear-gradient($accent1, $accent1);
+  background-image: url('Images/radioDot.png'), linear-gradient($accent1, $accent1);
 }

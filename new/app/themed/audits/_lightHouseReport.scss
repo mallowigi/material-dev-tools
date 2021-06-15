@@ -1,7 +1,8 @@
 .lh-vars,
 .lh-vars.dark {
   --font-family-sans: #{$uiFontFamily}, Roboto, Helvetica, Arial, sans-serif;
-  --font-family-monospace: #{$fontFamily}, 'Roboto Mono', 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
+  --font-family-monospace: #{$fontFamily}, 'Roboto Mono', 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console',
+    monospace;
   --body-background-color: #{$background};
   --body-text-color: #{$foreground};
   --subheader-color: #{$primary};
@@ -61,7 +62,7 @@
 }
 
 .lh-root summary:focus {
-  box-shadow: $accent1Alpha 0px 0px 0px 1px;
+  box-shadow: $accent1Alpha 0 0 0 1px;
 }
 
 .lh-scorescale {
@@ -221,7 +222,7 @@
 
 .lh-gauge__wrapper--plugin .lh-gauge__svg-wrapper::before {
   background-color: $accent1;
-  box-shadow: rgba($second, 0.2) 0px 0px 4px;
+  box-shadow: rgba($second, 0.2) 0 0 4px;
 }
 
 .lh-gauge__label {
@@ -243,7 +244,7 @@
 #lh-log {
   background-color: $second;
   color: $foreground;
-  box-shadow: rgba($second, 0.26) 0px 2px 5px 0px;
+  box-shadow: rgba($second, 0.26) 0 2px 5px 0;
 }
 
 .lh-table thead th {
@@ -251,7 +252,7 @@
   font-weight: bold;
 }
 
-.lh-table tbody tr:nth-child(2n+1) {
+.lh-table tbody tr:nth-child(2n + 1) {
   background-color: $highlight;
 }
 

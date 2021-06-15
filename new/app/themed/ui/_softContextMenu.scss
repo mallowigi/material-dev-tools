@@ -23,7 +23,7 @@
 }
 
 .soft-context-menu-shortcut {
-  color: $primary
+  color: $primary;
 }
 
 .soft-context-menu-item-mouse-over .checkmark,
@@ -35,4 +35,3 @@
   -webkit-mask-image: -webkit-image-set(url(Images/smallIcons.svg) 1x, url(Images/smallIcons.svg) 2x);
   -webkit-mask-position: var(--spritesheet-position);
 }
-
