@@ -12,7 +12,7 @@
     "polka": "0.5.2",
     "prismjs": "1.23.0",
     "sirv": "1.0.12",
-    "sirv-cli": "^0.4.4"
+    "sirv-cli": "^1.0.0"
   },
   "scripts": {
     "build": "rollup -c",
